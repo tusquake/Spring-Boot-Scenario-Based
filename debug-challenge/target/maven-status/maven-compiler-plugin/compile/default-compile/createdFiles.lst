@@ -7,6 +7,7 @@ com\interview\debug\controller\OrderController.class
 com\interview\debug\repository\OrderRepository.class
 com\interview\debug\config\FilterConfig.class
 com\interview\debug\DebugApplication.class
+com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\config\WebConfig.class
 com\interview\debug\controller\AuthController.class
 com\interview\debug\controller\DebugErrorController.class
