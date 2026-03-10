@@ -17,9 +17,9 @@ import java.time.Duration;
 @EnableCaching
 public class CacheConfig {
 
-    // LOCAL PROFILE: Use Caffeine
+    // DEFAULT/LOCAL PROFILE: Use Caffeine
     @Bean
-    @Profile("local")
+    @Profile("!prod")
     public CacheManager caffeineCacheManager() {
         CaffeineCacheManager cacheManager = new CaffeineCacheManager();
         cacheManager.setCaffeine(Caffeine.newBuilder()

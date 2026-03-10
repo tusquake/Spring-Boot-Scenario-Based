@@ -1,0 +1,24 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+/logs/
+*.log
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Maven ###
+.mvn/
+mvnw
+mvnw.cmd
+
+### Others ###
+*.swp
+*.DS_Store
+*.tmp
+*.bak
