@@ -1,6 +1,5 @@
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\filter\CustomLogFilter.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\DebugApplication.java
-C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\FilteredUserDto.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\NotificationService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\UserService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\OrderRepository.java
@@ -13,6 +12,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\SecurityConfig.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\OrderController.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\util\JwtUtil.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\dto\FilteredUserDto.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\AsyncConfig.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\exception\GlobalExceptionHandler.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\ReportService.java

@@ -1,4 +1,4 @@
-package com.interview.debug.model;
+package com.interview.debug.dto;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
 
