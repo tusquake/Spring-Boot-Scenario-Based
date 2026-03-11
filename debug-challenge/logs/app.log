@@ -1,246 +1,86 @@
-2026-03-10T08:47:57.109+05:30  INFO 21124 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 21124 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
-2026-03-10T08:47:57.135+05:30 DEBUG 21124 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-10T08:47:57.137+05:30  INFO 21124 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-10T08:48:04.132+05:30  INFO 21124 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T08:48:04.214+05:30  INFO 21124 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-10T08:48:05.428+05:30  INFO 21124 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1169 ms. Found 1 JPA repository interface.
-2026-03-10T08:48:05.628+05:30  INFO 21124 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T08:48:05.636+05:30  INFO 21124 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-10T08:48:05.707+05:30  INFO 21124 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T08:48:05.709+05:30  INFO 21124 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2026-03-10T08:48:11.760+05:30  INFO 21124 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
-2026-03-10T08:48:11.809+05:30  INFO 21124 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-10T08:48:11.810+05:30  INFO 21124 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2026-03-10T08:48:12.139+05:30  INFO 21124 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-10T08:48:12.141+05:30  INFO 21124 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14329 ms
-2026-03-10T08:48:12.357+05:30  INFO 21124 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-10T08:48:13.016+05:30  INFO 21124 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-03-10T08:48:13.022+05:30  INFO 21124 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-10T08:48:13.060+05:30  INFO 21124 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-03-10T08:48:13.329+05:30 DEBUG 21124 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
-2026-03-10T08:48:14.291+05:30  INFO 21124 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-10T08:48:14.469+05:30  INFO 21124 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-03-10T08:48:14.595+05:30  INFO 21124 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-10T08:48:15.283+05:30  INFO 21124 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-10T08:48:18.348+05:30  INFO 21124 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-10T08:48:18.558+05:30  INFO 21124 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-10T08:48:19.001+05:30  WARN 21124 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-10T08:48:19.055+05:30  WARN 21124 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-03-11T04:11:43.784+05:30  WARN 24344 --- [debug-challenge] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h11m2s775ms667µs100ns).
+2026-03-11T04:47:42.342+05:30  WARN 24344 --- [debug-challenge] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m7s339ms965µs500ns).
+2026-03-11T07:38:00.201+05:30  WARN 24344 --- [debug-challenge] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m15s705ms673µs800ns).
+2026-03-11T21:34:26.346+05:30  INFO 28036 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 28036 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
+2026-03-11T21:34:26.349+05:30 DEBUG 28036 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-11T21:34:26.350+05:30  INFO 28036 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-11T21:34:27.085+05:30  INFO 28036 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-11T21:34:27.085+05:30  INFO 28036 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11T21:34:27.285+05:30  INFO 28036 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 2 JPA repository interfaces.
+2026-03-11T21:34:27.569+05:30  INFO 28036 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-11T21:34:27.571+05:30  INFO 28036 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-11T21:34:27.600+05:30  INFO 28036 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-11T21:34:27.602+05:30  INFO 28036 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-11T21:34:27.602+05:30  INFO 28036 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2026-03-11T21:34:28.779+05:30  INFO 28036 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
+2026-03-11T21:34:28.798+05:30  INFO 28036 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-11T21:34:28.798+05:30  INFO 28036 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-11T21:34:28.891+05:30  INFO 28036 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-11T21:34:28.892+05:30  INFO 28036 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2463 ms
+2026-03-11T21:34:28.938+05:30  INFO 28036 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-11T21:34:29.219+05:30  INFO 28036 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-11T21:34:29.222+05:30  INFO 28036 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-11T21:34:29.235+05:30  INFO 28036 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-11T21:34:29.301+05:30 DEBUG 28036 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
+2026-03-11T21:34:29.428+05:30  INFO 28036 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11T21:34:29.548+05:30  INFO 28036 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-11T21:34:29.611+05:30  INFO 28036 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-11T21:34:30.074+05:30  INFO 28036 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11T21:34:31.419+05:30  INFO 28036 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11T21:34:31.524+05:30  INFO 28036 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11T21:34:32.059+05:30  INFO 28036 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-11T21:34:32.665+05:30  WARN 28036 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11T21:34:32.695+05:30  WARN 28036 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 0f44871e-e518-4245-87c4-476750d1670f
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-03-10T08:48:19.832+05:30  INFO 21124 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18174bd9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3af6d7a7, org.springframework.security.web.context.SecurityContextHolderFilter@793248d, org.springframework.security.web.header.HeaderWriterFilter@76c2d002, org.springframework.web.filter.CorsFilter@18711946, org.springframework.security.web.authentication.logout.LogoutFilter@55d98bbb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@768f2398, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f4fa465, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b8b5d9e, org.springframework.security.web.access.ExceptionTranslationFilter@2c5b4b91, org.springframework.security.web.access.intercept.AuthorizationFilter@19877453]
-2026-03-10T08:48:21.451+05:30  INFO 21124 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-10T08:48:23.050+05:30  INFO 21124 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
-2026-03-10T08:48:23.072+05:30  INFO 21124 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 31.914 seconds (process running for 36.505)
-2026-03-10T08:50:00.731+05:30  INFO 21124 --- [debug-challenge] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-10T08:50:00.734+05:30  INFO 21124 --- [debug-challenge] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-10T08:50:00.739+05:30  INFO 21124 --- [debug-challenge] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-03-10T09:01:33.418+05:30  INFO 28280 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 28280 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
-2026-03-10T09:01:33.426+05:30 DEBUG 28280 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-10T09:01:33.429+05:30  INFO 28280 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-10T09:01:35.928+05:30  INFO 28280 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T09:01:35.934+05:30  INFO 28280 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-10T09:01:36.432+05:30  INFO 28280 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 467 ms. Found 1 JPA repository interface.
-2026-03-10T09:01:36.498+05:30  INFO 28280 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T09:01:36.502+05:30  INFO 28280 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-10T09:01:36.551+05:30  INFO 28280 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T09:01:36.551+05:30  INFO 28280 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2026-03-10T09:01:38.610+05:30  INFO 28280 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
-2026-03-10T09:01:38.653+05:30  INFO 28280 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-10T09:01:38.654+05:30  INFO 28280 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2026-03-10T09:01:38.860+05:30  INFO 28280 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-10T09:01:38.860+05:30  INFO 28280 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5272 ms
-2026-03-10T09:01:39.007+05:30  INFO 28280 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-10T09:01:39.777+05:30  INFO 28280 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-03-10T09:01:39.783+05:30  INFO 28280 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-10T09:01:39.814+05:30  INFO 28280 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-03-10T09:01:39.948+05:30 DEBUG 28280 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
-2026-03-10T09:01:40.183+05:30  INFO 28280 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-10T09:01:40.410+05:30  INFO 28280 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-03-10T09:01:40.545+05:30  INFO 28280 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-10T09:01:41.450+05:30  INFO 28280 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-10T09:01:44.109+05:30  INFO 28280 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-10T09:01:44.435+05:30  INFO 28280 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-10T09:01:44.977+05:30  WARN 28280 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-10T09:01:45.063+05:30  WARN 28280 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: f3544fb6-9e55-47dd-aa34-86c0032ad6d0
+Using generated security password: f74bdf75-7221-4704-ab4a-44cd39605feb
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-03-10T09:01:46.045+05:30  INFO 28280 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b3b2290, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47d7e4b6, org.springframework.security.web.context.SecurityContextHolderFilter@6e4bccc, org.springframework.security.web.header.HeaderWriterFilter@769a9b7a, org.springframework.web.filter.CorsFilter@623ed5ed, org.springframework.security.web.authentication.logout.LogoutFilter@355b4c34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d2ff73a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@736a8aea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49e92724, org.springframework.security.web.access.ExceptionTranslationFilter@36696821, org.springframework.security.web.access.intercept.AuthorizationFilter@13e6c544]
-2026-03-10T09:01:48.151+05:30  INFO 28280 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-10T09:01:49.691+05:30  INFO 28280 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
-2026-03-10T09:01:49.720+05:30  INFO 28280 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 17.743 seconds (process running for 19.201)
-2026-03-10T09:02:05.875+05:30  INFO 28280 --- [debug-challenge] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-10T09:02:05.877+05:30  INFO 28280 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-10T09:02:05.880+05:30  INFO 28280 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-03-10T09:08:49.528+05:30  INFO 20600 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 20600 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
-2026-03-10T09:08:49.532+05:30 DEBUG 20600 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-10T09:08:49.532+05:30  INFO 20600 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-10T09:08:52.893+05:30  WARN 20600 --- [debug-challenge] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.interview.debug.DebugApplication]
-2026-03-10T09:08:53.174+05:30 ERROR 20600 --- [debug-challenge] [main] o.s.boot.SpringApplication               : Application run failed
+2026-03-11T21:34:33.232+05:30  INFO 28036 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75dc995f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51c660c8, org.springframework.security.web.context.SecurityContextHolderFilter@761d679f, org.springframework.security.web.header.HeaderWriterFilter@1cfb59e, org.springframework.web.filter.CorsFilter@498102a4, org.springframework.security.web.authentication.logout.LogoutFilter@54eea16c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6789b471, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1eb3a6a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8829ecd, org.springframework.security.web.access.ExceptionTranslationFilter@2c78771b, org.springframework.security.web.access.intercept.AuthorizationFilter@19203ff3]
+2026-03-11T21:34:33.993+05:30  INFO 28036 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
+2026-03-11T21:34:34.005+05:30  INFO 28036 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 8.233 seconds (process running for 8.74)
+2026-03-11T21:34:42.590+05:30  INFO 28036 --- [debug-challenge] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11T21:34:42.591+05:30  INFO 28036 --- [debug-challenge] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-11T21:34:42.592+05:30  INFO 28036 --- [debug-challenge] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-11T21:38:20.670+05:30  INFO 14704 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 14704 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
+2026-03-11T21:38:20.674+05:30 DEBUG 14704 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-11T21:38:20.675+05:30  INFO 14704 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-11T21:38:21.655+05:30  INFO 14704 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-11T21:38:21.656+05:30  INFO 14704 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11T21:38:21.887+05:30  INFO 14704 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 2 JPA repository interfaces.
+2026-03-11T21:38:22.249+05:30  INFO 14704 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-11T21:38:22.250+05:30  INFO 14704 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-11T21:38:22.300+05:30  INFO 14704 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-11T21:38:22.303+05:30  INFO 14704 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-11T21:38:22.303+05:30  INFO 14704 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2026-03-11T21:38:23.257+05:30  INFO 14704 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
+2026-03-11T21:38:23.270+05:30  INFO 14704 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-11T21:38:23.271+05:30  INFO 14704 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-11T21:38:23.363+05:30  INFO 14704 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-11T21:38:23.363+05:30  INFO 14704 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2592 ms
+2026-03-11T21:38:23.414+05:30  INFO 14704 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-11T21:38:23.685+05:30  INFO 14704 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-11T21:38:23.688+05:30  INFO 14704 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-11T21:38:23.699+05:30  INFO 14704 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-11T21:38:23.769+05:30 DEBUG 14704 --- [debug-challenge] [main] c.i.d.filter.JwtAuthenticationFilter     : Filter 'jwtAuthenticationFilter' configured for use
+2026-03-11T21:38:23.770+05:30 DEBUG 14704 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
+2026-03-11T21:38:23.876+05:30  INFO 14704 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11T21:38:23.994+05:30  INFO 14704 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-11T21:38:24.132+05:30  INFO 14704 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-11T21:38:24.558+05:30  INFO 14704 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11T21:38:26.019+05:30  INFO 14704 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11T21:38:26.106+05:30  INFO 14704 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11T21:38:26.509+05:30  INFO 14704 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-11T21:38:27.039+05:30  WARN 14704 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11T21:38:27.063+05:30  WARN 14704 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.interview.debug.DebugApplication]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:251) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.2.jar:3.2.2]
-	at com.interview.debug.DebugApplication.main(DebugApplication.java:11) ~[classes/:na]
-Caused by: java.io.FileNotFoundException: class path resource [com/interview/debug/service/NotificationService.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:215) ~[spring-core-6.1.3.jar:6.1.3]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54) ~[spring-core-6.1.3.jar:6.1.3]
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.1.3.jar:6.1.3]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.1.3.jar:6.1.3]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-3.2.2.jar:3.2.2]
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:314) ~[spring-context-6.1.3.jar:6.1.3]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.1.3.jar:6.1.3]
-	... 15 common frames omitted
-
-2026-03-10T09:11:18.435+05:30  INFO 7008 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 7008 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
-2026-03-10T09:11:18.445+05:30 DEBUG 7008 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-10T09:11:18.449+05:30  INFO 7008 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-10T09:11:20.764+05:30  INFO 7008 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T09:11:20.772+05:30  INFO 7008 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-10T09:11:21.468+05:30  INFO 7008 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 663 ms. Found 2 JPA repository interfaces.
-2026-03-10T09:11:21.529+05:30  INFO 7008 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T09:11:21.536+05:30  INFO 7008 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-10T09:11:21.608+05:30  INFO 7008 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T09:11:21.613+05:30  INFO 7008 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T09:11:21.615+05:30  INFO 7008 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
-2026-03-10T09:11:23.704+05:30  INFO 7008 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
-2026-03-10T09:11:23.742+05:30  INFO 7008 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-10T09:11:23.742+05:30  INFO 7008 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2026-03-10T09:11:23.959+05:30  INFO 7008 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-10T09:11:23.967+05:30  INFO 7008 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5334 ms
-2026-03-10T09:11:24.050+05:30  INFO 7008 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-10T09:11:24.622+05:30  INFO 7008 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-03-10T09:11:24.628+05:30  INFO 7008 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-10T09:11:24.651+05:30  INFO 7008 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-03-10T09:11:24.782+05:30 DEBUG 7008 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
-2026-03-10T09:11:25.265+05:30  INFO 7008 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-10T09:11:25.567+05:30  INFO 7008 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-03-10T09:11:25.753+05:30  INFO 7008 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-10T09:11:26.828+05:30  INFO 7008 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-10T09:11:29.695+05:30  INFO 7008 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-10T09:11:29.860+05:30  INFO 7008 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-10T09:11:30.801+05:30  INFO 7008 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-10T09:11:32.084+05:30  WARN 7008 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-10T09:11:32.125+05:30  WARN 7008 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 3f55d9d0-e8a6-48b5-880a-988e869b7619
+Using generated security password: b4de3004-fa6a-4e06-a9ea-d97421cbccef
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-03-10T09:11:33.008+05:30  INFO 7008 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49c3487f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e6a8d01, org.springframework.security.web.context.SecurityContextHolderFilter@44189797, org.springframework.security.web.header.HeaderWriterFilter@37672aa7, org.springframework.web.filter.CorsFilter@63c07eaf, org.springframework.security.web.authentication.logout.LogoutFilter@1c8746a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2100d881, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59881424, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34b4c82a, org.springframework.security.web.access.ExceptionTranslationFilter@17c0d43c, org.springframework.security.web.access.intercept.AuthorizationFilter@316987c4]
-2026-03-10T09:11:34.671+05:30  INFO 7008 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
-2026-03-10T09:11:34.693+05:30  INFO 7008 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 17.54 seconds (process running for 19.167)
-2026-03-10T10:31:28.908+05:30  WARN 7008 --- [debug-challenge] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11m4s61ms545ï¿½s100ns).
-2026-03-10T11:28:54.267+05:30  INFO 7008 --- [debug-challenge] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-10T11:28:54.274+05:30  INFO 7008 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-10T11:28:54.392+05:30  INFO 7008 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 117 ms
-2026-03-10T11:28:54.910+05:30  WARN 7008 --- [debug-challenge] [http-nio-8000-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42104, SQLState: 42S04
-2026-03-10T11:28:54.911+05:30 ERROR 7008 --- [debug-challenge] [http-nio-8000-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "BANK_ACCOUNT" not found (this database is empty); SQL statement:
-insert into bank_account (account_holder,balance,version,id) values (?,?,?,default) [42104-224]
-2026-03-10T11:45:48.483+05:30  WARN 7008 --- [debug-challenge] [http-nio-8000-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42104, SQLState: 42S04
-2026-03-10T11:45:48.484+05:30 ERROR 7008 --- [debug-challenge] [http-nio-8000-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "BANK_ACCOUNT" not found (this database is empty); SQL statement:
-insert into bank_account (account_holder,balance,version,id) values (?,?,?,default) [42104-224]
-2026-03-10T11:48:08.284+05:30  INFO 29868 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 29868 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
-2026-03-10T11:48:08.287+05:30 DEBUG 29868 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-10T11:48:08.289+05:30  INFO 29868 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-10T11:48:09.164+05:30  INFO 29868 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T11:48:09.165+05:30  INFO 29868 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-10T11:48:09.396+05:30  INFO 29868 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216 ms. Found 2 JPA repository interfaces.
-2026-03-10T11:48:09.777+05:30  INFO 29868 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T11:48:09.779+05:30  INFO 29868 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-10T11:48:09.819+05:30  INFO 29868 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T11:48:09.823+05:30  INFO 29868 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T11:48:09.824+05:30  INFO 29868 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
-2026-03-10T11:48:10.880+05:30  INFO 29868 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
-2026-03-10T11:48:10.901+05:30  INFO 29868 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-10T11:48:10.901+05:30  INFO 29868 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2026-03-10T11:48:11.001+05:30  INFO 29868 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-10T11:48:11.002+05:30  INFO 29868 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2610 ms
-2026-03-10T11:48:11.065+05:30  INFO 29868 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-10T11:48:11.344+05:30  INFO 29868 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-03-10T11:48:11.347+05:30  INFO 29868 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-10T11:48:11.362+05:30  INFO 29868 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-03-10T11:48:11.428+05:30 DEBUG 29868 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
-2026-03-10T11:48:11.554+05:30  INFO 29868 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-10T11:48:11.661+05:30  INFO 29868 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-03-10T11:48:11.718+05:30  INFO 29868 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-10T11:48:12.128+05:30  INFO 29868 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-10T11:48:13.723+05:30  INFO 29868 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-10T11:48:13.822+05:30  INFO 29868 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-10T11:48:14.230+05:30  INFO 29868 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-10T11:48:15.236+05:30  WARN 29868 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-10T11:48:15.297+05:30  WARN 29868 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 52a3205e-c300-4631-b4ee-f45d37a66150
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-03-10T11:48:16.031+05:30  INFO 29868 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@262ea940, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6aa152b7, org.springframework.security.web.context.SecurityContextHolderFilter@2940eec0, org.springframework.security.web.header.HeaderWriterFilter@1fcef7, org.springframework.web.filter.CorsFilter@54b88247, org.springframework.security.web.authentication.logout.LogoutFilter@53115ee0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5854e526, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@289fff3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54eea16c, org.springframework.security.web.access.ExceptionTranslationFilter@2c841ac4, org.springframework.security.web.access.intercept.AuthorizationFilter@16750a5e]
-2026-03-10T11:48:17.447+05:30  INFO 29868 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
-2026-03-10T11:48:17.462+05:30  INFO 29868 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 10.252 seconds (process running for 10.96)
-2026-03-10T11:52:59.905+05:30  INFO 29868 --- [debug-challenge] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-10T11:52:59.906+05:30  INFO 29868 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-10T11:52:59.907+05:30  INFO 29868 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-03-10T12:50:59.457+05:30  INFO 19424 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Starting DebugApplication using Java 17.0.12 with PID 19424 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
-2026-03-10T12:50:59.463+05:30 DEBUG 19424 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Running with Spring Boot v3.2.2, Spring v6.1.3
-2026-03-10T12:50:59.464+05:30  INFO 19424 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : No active profile set, falling back to 1 default profile: "default"
-2026-03-10T12:51:02.064+05:30  INFO 19424 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T12:51:02.065+05:30  INFO 19424 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-10T12:51:02.875+05:30  INFO 19424 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 759 ms. Found 2 JPA repository interfaces.
-2026-03-10T12:51:03.910+05:30  INFO 19424 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-10T12:51:03.919+05:30  INFO 19424 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-10T12:51:04.056+05:30  INFO 19424 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T12:51:04.063+05:30  INFO 19424 --- [debug-challenge] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-10T12:51:04.064+05:30  INFO 19424 --- [debug-challenge] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 0 Redis repository interfaces.
-2026-03-10T12:51:07.594+05:30  INFO 19424 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
-2026-03-10T12:51:07.666+05:30  INFO 19424 --- [debug-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-03-10T12:51:07.668+05:30  INFO 19424 --- [debug-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2026-03-10T12:51:08.029+05:30  INFO 19424 --- [debug-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-03-10T12:51:08.031+05:30  INFO 19424 --- [debug-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8357 ms
-2026-03-10T12:51:08.244+05:30  INFO 19424 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-10T12:51:09.437+05:30  INFO 19424 --- [debug-challenge] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-03-10T12:51:09.449+05:30  INFO 19424 --- [debug-challenge] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-10T12:51:09.508+05:30  INFO 19424 --- [debug-challenge] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-03-10T12:51:09.784+05:30 DEBUG 19424 --- [debug-challenge] [main] c.i.debug.filter.CustomLogFilter         : Filter 'loggingFilter' configured for use
-2026-03-10T12:51:10.271+05:30  INFO 19424 --- [debug-challenge] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-10T12:51:10.760+05:30  INFO 19424 --- [debug-challenge] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-03-10T12:51:11.010+05:30  INFO 19424 --- [debug-challenge] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-03-10T12:51:12.744+05:30  INFO 19424 --- [debug-challenge] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-10T12:51:18.339+05:30  INFO 19424 --- [debug-challenge] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-10T12:51:18.697+05:30  INFO 19424 --- [debug-challenge] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-10T12:51:20.453+05:30  INFO 19424 --- [debug-challenge] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-10T12:51:22.665+05:30  WARN 19424 --- [debug-challenge] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-10T12:51:22.771+05:30  WARN 19424 --- [debug-challenge] [main] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 3395d4d4-4943-4a8d-b24b-7117b2474827
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-03-10T12:51:24.712+05:30  INFO 19424 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1014c825, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5acc6ca1, org.springframework.security.web.context.SecurityContextHolderFilter@40bac624, org.springframework.security.web.header.HeaderWriterFilter@19984625, org.springframework.web.filter.CorsFilter@100235c7, org.springframework.security.web.authentication.logout.LogoutFilter@628190ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c8746a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@613d42ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ca43e5d, org.springframework.security.web.access.ExceptionTranslationFilter@6872201, org.springframework.security.web.access.intercept.AuthorizationFilter@56739ee9]
-2026-03-10T12:51:27.890+05:30  INFO 19424 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
-2026-03-10T12:51:27.937+05:30  INFO 19424 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 30.139 seconds (process running for 33.067)
-2026-03-10T12:57:01.009+05:30  INFO 19424 --- [debug-challenge] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-10T12:57:01.011+05:30  INFO 19424 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-03-10T12:57:01.015+05:30  INFO 19424 --- [debug-challenge] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-03-11T21:38:27.503+05:30  INFO 14704 --- [debug-challenge] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57421e4e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a75bad4, org.springframework.security.web.context.SecurityContextHolderFilter@262ea940, org.springframework.security.web.header.HeaderWriterFilter@56a34c0e, org.springframework.web.filter.CorsFilter@77227b1f, org.springframework.security.web.authentication.logout.LogoutFilter@17da6e45, com.interview.debug.filter.JwtAuthenticationFilter@2db86a7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54b88247, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54eea16c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73136174, org.springframework.security.web.access.ExceptionTranslationFilter@697797e4, org.springframework.security.web.access.intercept.AuthorizationFilter@55bf08a5]
+2026-03-11T21:38:28.267+05:30  INFO 14704 --- [debug-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
+2026-03-11T21:38:28.278+05:30  INFO 14704 --- [debug-challenge] [main] com.interview.debug.DebugApplication     : Started DebugApplication in 8.688 seconds (process running for 9.598)
+2026-03-11T21:45:31.274+05:30  INFO 14704 --- [debug-challenge] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11T21:45:31.274+05:30  INFO 14704 --- [debug-challenge] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-11T21:45:31.276+05:30  INFO 14704 --- [debug-challenge] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
