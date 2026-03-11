@@ -20,6 +20,7 @@ com\interview\debug\service\NotificationService.class
 com\interview\debug\service\OrderProcessingService.class
 com\interview\debug\util\JwtUtil.class
 com\interview\debug\config\SecurityConfig.class
+com\interview\debug\repository\CustomerRepository.class
 com\interview\debug\controller\Scenario7Controller.class
 com\interview\debug\DebugApplication.class
 com\interview\debug\controller\Scenario1Controller.class
@@ -29,6 +30,7 @@ com\interview\debug\controller\AuthController.class
 com\interview\debug\service\AsyncService.class
 com\interview\debug\config\AsyncConfig.class
 com\interview\debug\controller\Scenario6Controller.class
+com\interview\debug\controller\Scenario9Controller.class
 com\interview\debug\controller\JsonFilterController.class
 com\interview\external\service\OrderService.class
 com\interview\debug\service\TokenBlacklistService.class
