@@ -209,3 +209,15 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
     1. Call `/api/scenario24/trace-me`.
     2. Check the logs (both console and `app.log`).
     3. Verify that the `traceId` is consistent across all log statements for that request.
+
+---
+
+### 2️⃣5️⃣ Scenario 25: API Versioning Strategies
+*   **Concept**: API Evolution and Compatibility.
+*   **The Problem**: How do you introduce breaking changes to an API without breaking existing clients?
+*   **Solution**: Implement three versioning strategies:
+    1.  **URL Versioning**: `/api/v1/data`
+    2.  **Custom Header Versioning**: `X-API-VERSION: 2`
+    3.  **Media Type (Content Negotiation)**: `Accept: application/vnd.company.v3+json`
+*   **Test**: 
+    1. Use `curl` with different URLs, headers, and Accept values to see the different responses.

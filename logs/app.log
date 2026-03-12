@@ -2006,3 +2006,125 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2026-03-12 21:16:21,617 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-12 21:16:21,622 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
 2026-03-12 21:16:21,627 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
+2026-03-12 21:16:24,555 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-12 21:16:24,627 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 8556 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-12 21:16:24,628 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-12 21:16:24,630 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-12 21:16:25,829 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-12 21:16:25,830 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-12 21:16:26,011 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 168 ms. Found 7 JPA repository interfaces.
+2026-03-12 21:16:26,739 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-12 21:16:26,742 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-12 21:16:26,783 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,786 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,787 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,790 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,794 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,796 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,797 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-12 21:16:26,798 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
+2026-03-12 21:16:28,475 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-12 21:16:28,489 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-12 21:16:28,494 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-12 21:16:28,496 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-12 21:16:28,627 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-12 21:16:28,628 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 3921 ms
+2026-03-12 21:16:29,294 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-12 21:16:29,552 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-12 21:16:29,556 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-12 21:16:29,572 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-12 21:16:29,823 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-12 21:16:29,826 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'webMvcObservationFilter' configured for use
+2026-03-12 21:16:29,827 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-12 21:16:30,061 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-12 21:16:30,062 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-12 21:16:30,063 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-12 21:16:30,191 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-12 21:16:30,207 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-12 21:16:30,287 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-12 21:16:30,298 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 1 migration (execution time 00:00.044s)
+2026-03-12 21:16:30,313 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-12 21:16:30,393 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-12 21:16:30,409 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-12 21:16:30,461 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.032s)
+2026-03-12 21:16:30,724 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-12 21:16:30,856 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-12 21:16:30,939 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-12 21:16:31,451 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-12 21:16:33,805 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-12 21:16:34,036 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 21:16:34,905 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-12 21:16:37,066 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-12 21:16:37,173 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: adef17cc-bc3a-43eb-b0d7-4563a74c93ed
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-12 21:16:38,517 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-03-12 21:16:38,783 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@418e1cd6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26505df2, org.springframework.security.web.context.SecurityContextHolderFilter@7316742f, org.springframework.security.web.header.HeaderWriterFilter@1bd5577e, org.springframework.web.filter.CorsFilter@6a584533, org.springframework.security.web.authentication.logout.LogoutFilter@5f7a911f, com.interview.debug.filter.JwtAuthenticationFilter@807c1e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3186b07d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7740d2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cfb035c, org.springframework.security.web.access.ExceptionTranslationFilter@68efc9a2, org.springframework.security.web.access.intercept.AuthorizationFilter@13666880]
+2026-03-12 21:16:40,553 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-12 21:16:40,621 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-12 21:16:40,660 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 16.763 seconds (process running for 17.438)
+2026-03-12 21:16:43,505 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-12 21:16:43,505 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-12 21:16:43,506 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] [debug-challenge,,] Detected StandardServletMultipartResolver
+2026-03-12 21:16:43,507 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] [debug-challenge,,] Detected AcceptHeaderLocaleResolver
+2026-03-12 21:16:43,508 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] [debug-challenge,,] Detected FixedThemeResolver
+2026-03-12 21:16:43,510 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] [debug-challenge,,] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@65b4a0d2
+2026-03-12 21:16:43,512 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] [debug-challenge,,] Detected org.springframework.web.servlet.support.SessionFlashMapManager@60b33bc
+2026-03-12 21:16:43,513 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-03-12 21:16:43,514 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 8 ms
+2026-03-12 21:16:43,649 INFO c.i.d.f.MdcDebuggingFilter [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] Current MDC Keys: [traceId, spanId]
+2026-03-12 21:16:43,679 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] GET "/api/scenario24/trace-me", parameters={}
+2026-03-12 21:16:43,719 INFO c.i.d.c.Scenario24Controller [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] Received request to trace-me endpoint
+2026-03-12 21:16:43,723 DEBUG c.i.d.c.Scenario24Controller [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] Starting some internal processing...
+2026-03-12 21:16:43,830 DEBUG c.i.d.c.Scenario24Controller [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] Internal processing complete.
+2026-03-12 21:16:43,833 INFO c.i.d.c.Scenario24Controller [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] Finished processing request
+2026-03-12 21:16:43,876 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,69b2dfe31e1ed2dc7360f2f94da6a275,b7210693a00f7935] Completed 200 OK
+2026-03-12 21:16:44,702 WARN z.r.AsyncReporter$BoundedAsyncReporter [AsyncReporter{org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender@47b4ac83}] [debug-challenge,,] Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2026-03-12 21:16:44,703 WARN z.r.AsyncReporter$BoundedAsyncReporter [AsyncReporter{org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender@47b4ac83}] [debug-challenge,,] Dropped 5 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information)
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender$RestTemplateHttpPostCall.doExecute(ZipkinRestTemplateSender.java:68)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender$RestTemplateHttpPostCall.doExecute(ZipkinRestTemplateSender.java:48)
+	at zipkin2.Call$Base.execute(Call.java:391)
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299)
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:534)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:639)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:282)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:409)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1308)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1241)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1127)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1056)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 8 common frames omitted
+2026-03-12 21:16:55,843 INFO c.i.d.f.MdcDebuggingFilter [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] Current MDC Keys: [traceId, spanId]
+2026-03-12 21:16:55,845 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] GET "/api/scenario24/trace-me", parameters={}
+2026-03-12 21:16:55,846 INFO c.i.d.c.Scenario24Controller [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] Received request to trace-me endpoint
+2026-03-12 21:16:55,847 DEBUG c.i.d.c.Scenario24Controller [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] Starting some internal processing...
+2026-03-12 21:16:55,950 DEBUG c.i.d.c.Scenario24Controller [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] Internal processing complete.
+2026-03-12 21:16:55,951 INFO c.i.d.c.Scenario24Controller [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] Finished processing request
+2026-03-12 21:16:55,956 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-4] [debug-challenge,69b2dfeff01a06e542192c0eae166d8c,d249878c89e69b9c] Completed 200 OK
+2026-03-12 21:34:11,926 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-12 21:34:11,989 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-12 21:34:12,334 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-12 21:34:12,341 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-12 21:34:12,391 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
