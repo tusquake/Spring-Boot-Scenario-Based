@@ -18,6 +18,7 @@ com\interview\debug\config\SecurityConfig.class
 com\interview\debug\repository\CustomerRepository.class
 com\interview\debug\DebugApplication.class
 com\interview\debug\repository\BankRepository.class
+com\interview\debug\repository\ProjectDataRepository.class
 com\interview\debug\config\WebConfig.class
 com\interview\debug\controller\Scenario14Controller.class
 com\interview\debug\controller\AuthController.class
@@ -34,6 +35,7 @@ com\interview\debug\exception\GlobalExceptionHandler.class
 com\interview\debug\controller\OrderController.class
 com\interview\debug\config\FilterConfig.class
 com\interview\debug\controller\Scenario12Controller.class
+com\interview\debug\controller\Scenario15Controller.class
 com\interview\debug\controller\DebugErrorController.class
 com\interview\debug\filter\CustomLogFilter.class
 com\interview\debug\service\UserService.class
@@ -48,6 +50,7 @@ com\interview\debug\model\UserSecret.class
 com\interview\debug\idempotency\Idempotent.class
 com\interview\debug\config\AsyncConfig.class
 com\interview\debug\controller\JsonFilterController.class
+com\interview\debug\model\ProjectData.class
 com\interview\debug\repository\ProductRepository.class
 com\interview\external\service\OrderService.class
 com\interview\debug\model\IdempotencyRecord.class
