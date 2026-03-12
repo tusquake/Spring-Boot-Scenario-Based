@@ -1,4 +1,5 @@
 com\interview\debug\controller\Scenario24Controller.class
+com\interview\debug\controller\Scenario27Controller.class
 com\interview\debug\model\ValidationUser.class
 com\interview\debug\repository\OrderRepository.class
 com\interview\debug\security\JwtUtils.class
@@ -31,6 +32,7 @@ com\interview\debug\controller\Scenario6Controller.class
 com\interview\debug\controller\Scenario9Controller.class
 com\interview\debug\controller\Scenario11Controller.class
 com\interview\debug\service\DownstreamService.class
+com\interview\debug\aspect\PerformanceTrackerAspect.class
 com\interview\debug\model\SoftDeleteProduct.class
 com\interview\debug\controller\Scenario8Controller.class
 com\interview\debug\model\Customer.class
@@ -54,6 +56,7 @@ com\interview\debug\controller\Scenario16Controller.class
 com\interview\debug\ratelimit\RateLimitingService.class
 com\interview\debug\repository\SecretRepository.class
 com\interview\debug\service\OrderProcessingService.class
+com\interview\debug\annotation\TrackTime.class
 com\interview\debug\controller\Scenario7Controller.class
 com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\exception\ResourceNotFoundException.class

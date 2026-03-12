@@ -232,3 +232,16 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
     - Show how non-blocking I/O keeps the CPU busy without wasting threads.
 *   **Test**: 
     1. Call `/api/scenario26/flux-stream` and observe the data arriving "bit by bit" in real-time.
+
+---
+
+### 2️⃣7️⃣ Scenario 27: Performance Monitoring with Custom AOP
+*   **Concept**: Aspect-Oriented Programming (AOP) and Observability.
+*   **The Problem**: You need to track the execution time of critical business methods across the entire app without cluttering every method with "Start Time/End Time" boilerplate code.
+*   **Solution**: 
+    - Create a custom annotation `@TrackTime`.
+    - Implement an **AOP Aspect** that intercepts methods marked with this annotation.
+    - Use **Micrometer's Timer** to record and expose these metrics via Actuator.
+*   **Test**: 
+    1. Call `/api/scenario27/slow-task`.
+    2. Check `/actuator/metrics/method.execution.time` to see the recorded stats.
