@@ -1,88 +1,169 @@
-# Spring Boot Scenario-Based Learning (Scenarios 1-15)
+# 🎓 Spring Boot Mastering: Scenarios 1-15 🚀
 
-This project contains a series of Spring Boot "Scenarios" designed to demonstrate common real-world challenges, interview questions, and production-grade solutions.
+This project is a comprehensive guide to mastering Spring Boot through real-world scenarios. Each scenario addresses a common production issue, architectural challenge, or high-frequency interview topic.
 
-## 🚀 How to Run
-1. **Clone the repository** (or use the existing folder).
-2. **Build the project**: `mvn clean install`
-3. **Run the application**: `mvn spring-boot:run`
-4. **Base URL**: `http://localhost:8080`
+## 📥 Getting Started
+- **Java**: 17+
+- **Build Tool**: Maven
+- **Database**: H2 (In-Memory)
+- **Port**: 8080 (Configured in `application.properties`)
 
 ---
 
-## 🛠️ Scenarios Overview
+## 🏗️ Detailed Scenario Guides
 
-### [Scenario 1: The Invisible Component (@ComponentScan)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/DebugApplication.java)
-- **Problem**: Spring fails to find a bean because it's in a package outside the default scan range.
-- **Solution**: Explicitly defining `@ComponentScan` or moving the class to a sub-package of the main application class.
-- **Test**: Service injection works without `NoSuchBeanDefinitionException`.
+### 1️⃣ Scenario 1: The Invisible Component
+*   **Concept**: Bean Discovery and `@ComponentScan`.
+*   **The Problem**: A service in `com.other.package` is not injected because Spring only scans sub-packages of the `@SpringBootApplication` class.
+*   **Solution**: Added explicit `@ComponentScan(basePackages = {"com.interview.debug", "com.other.package"})`.
+*   **Interview Tip**: Mention that by default, Spring scans the package of the class annotated with `@SpringBootApplication` and all its sub-packages.
 
-### [Scenario 2: The Infinite Mexican Standoff (Circular Dependencies)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/service/CircularServiceA.java)
-- **Problem**: Service A depends on B, and B depends on A, causing a startup crash.
-- **Solution**: Use `@Lazy` on one of the dependency injections.
-- **Test**: Application starts successfully.
+---
 
-### [Scenario 3: The Ghost Transaction (Proxy Self-invocation)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/service/TransactionService.java)
-- **Problem**: `@Transactional` doesn't work when a method calls another `@Transactional` method within the same class.
-- **Solution**: Self-injection or moving the transactional logic to a separate service.
-- **Test**: Rollback occurs correctly during exceptions.
+### 2️⃣ Scenario 2: Circular Dependency Standoff
+*   **Concept**: Bean Lifecycle and Dependency Resolution.
+*   **The Problem**: `ServiceA` needs `ServiceB`, and `ServiceB` needs `ServiceA`. Spring fails to initialize either.
+*   **Solution**: Annotated one of the constructor parameters or fields with `@Lazy`.
+*   **Interview Tip**: In Spring Boot 2.6+, circular dependencies are disabled by default. `@Lazy` creates a proxy that is replaced with the real bean only when first called.
 
-### [Scenario 4: The Selective Filter (Custom Filters)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/filter/CustomHeaderFilter.java)
-- **Problem**: Applying filters only to specific URL patterns.
-- **Solution**: Using `FilterRegistrationBean` for precise control.
-- **Test**: `curl -I http://localhost:8080/api/scenario4/test` (Check for `X-Custom-Header`).
+---
 
-### [Scenario 5: The Leaking Memory (Caching)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/service/CachedService.java)
-- **Problem**: Unoptimized data fetching causing high latency.
-- **Solution**: Integrated **Caffeine** (L1) and **Redis** (L2) caching.
-- **Test**: First request is slow; subsequent requests are near-instant.
+### 3️⃣ Scenario 3: Transactional Ghosting
+*   **Concept**: AOP Proxies and Self-invocation.
+*   **The Problem**: `@Transactional` fails when a method inside a class calls another transactional method in the *same* class (bypass proxy).
+*   **Solution**: Used self-injection or refactored logic into a separate service.
+*   **Test**: `curl -X POST http://localhost:8080/api/scenario3/test` (Verify DB state after exception).
 
-### [Scenario 6: Concurrency & Locking](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/service/BankService.java)
-- **Problem**: Race conditions during concurrent balance updates.
-- **Solution**: Demonstrated **Optimistic Locking** (`@Version`) and **Pessimistic Locking** (`PESSIMISTIC_WRITE`).
-- **Test**: Multiple concurrent threads updating the same account.
+---
 
-### [Scenario 7: The Zombie Async Task (@EnableAsync)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/service/AsyncService.java)
-- **Problem**: Secondary tasks blocking the main thread or losing security context.
-- **Solution**: `@Async` with a custom `ThreadPoolTaskExecutor` and `DelegatingSecurityContextAsyncTaskExecutor`.
-- **Test**: API returns immediately while logs show background processing.
+### 4️⃣ Scenario 4: The Selective Filter
+*   **Concept**: Servlet Filters vs Spring Security.
+*   **The Problem**: Applying a specific HTTP header/log logic only to `/api/scenario4/*`.
+*   **Solution**: Registered `FilterRegistrationBean` to define URL patterns manually.
+*   **Test**: `curl -I http://localhost:8080/api/scenario4/test` -> Observe `X-Custom-Header`.
 
-### [Scenario 8: JWT & JTI Blacklisting](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/security/JwtUtils.java)
-- **Problem**: Standard JWTs cannot be revoked until they expire.
-- **Solution**: Use **JTI (JWT ID)** and a Redis blacklist to "kill" tokens on logout.
-- **Test**: Login -> Get Token -> Logout -> Try to use token again (Access Denied).
+---
 
-### [Scenario 9: The Chatty Database (N+1 Problem)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/repository/OrderRepository.java)
-- **Problem**: Fetching N child records results in N+1 SQL queries.
-- **Solution**: Using `JOIN FETCH` in the JPQL query.
-- **Test**: Logs show exactly 1 SQL query for child records.
+### 5️⃣ Scenario 5: Multi-Level Caching (L1 & L2)
+*   **Concept**: Cache-Aside Pattern.
+*   **The Problem**: Database is overwhelmed with repetitive queries for static data.
+*   **Solution**: Combined **Caffeine** (In-memory L1) with **Redis** (Distributed L2).
+*   **Verification**: First request (DB hit), Second (Caffeine hit - ultra fast), Restart App (Redis hit - still fast).
 
-### [Scenario 10: Global Exception Handling](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/exception/GlobalExceptionHandler.java)
-- **Problem**: Inconsistent error responses across different parts of the API.
-- **Solution**: `@RestControllerAdvice` with a standardized `ErrorResponse` model.
-- **Test**: Triggering various errors (400, 404, 500) returns a consistent JSON format.
+---
 
-### [Scenario 11: Conditional Validation (@Validated Groups)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/controller/Scenario11Controller.java)
-- **Problem**: Field rules differ between "Create" (Password required) and "Update" (Password optional).
-- **Solution**: Using **Validation Groups** (`OnCreate`, `OnUpdate`) with `@Validated`.
-- **Test**: POST to `/create` fails without password; PUT to `/update` succeeds.
+### 6️⃣ Scenario 6: Concurrency & Database Locking
+*   **Concept**: Data Integrity in High-Traffic Apps.
+*   **The Problem**: Two users update a balance at the same time; one update is lost.
+*   **Solution**: 
+    - **Optimistic**: `@Version` column (Throw `ObjectOptimisticLockingFailureException`).
+    - **Pessimistic**: `@Lock(LockModeType.PESSIMISTIC_WRITE)` (DB level row lock).
 
-### [Scenario 12: Soft Delete (@SQLDelete)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/model/SoftDeleteProduct.java)
-- **Problem**: Keeping records in DB for history but hiding them from the UI.
-- **Solution**: Using `@SQLDelete` to update a flag and `@SQLRestriction` to filter SELECTs.
-- **Test**: `findAll()` hides deleted items; Native Query shows them.
+---
 
-### [Scenario 13: Payload Encryption (AttributeConverter)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/util/EncryptionConverter.java)
-- **Problem**: Storing sensitive data (SSN, PII) in plain text in the database.
-- **Solution**: JPA `AttributeConverter` using AES-128 encryption.
-- **Test**: Java sees the clear text; DB logs show encrypted gibberish.
+### 7️⃣ Scenario 7: Async Security Context Propagation
+*   **Concept**: Thread-local variables vs Async processing.
+*   **The Problem**: `@Async` methods lose the `SecurityContext` (User info) because they run on a different thread.
+*   **Solution**: Use `DelegatingSecurityContextAsyncTaskExecutor` to copy the context to the new thread.
+*   **Test**: Logged user name inside an async method.
 
-### [Scenario 14: The "Double Spend" Problem (Idempotency)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/java/com/interview/debug/idempotency/IdempotencyAspect.java)
-- **Problem**: Duplicate POST requests causing duplicate transactions.
-- **Solution**: AOP-based idempotency check using an `Idempotency-Key` header.
-- **Test**: Repeat a transaction with the same key; result is replayed, not re-executed.
+---
 
-### [Scenario 15: Database Migration (Flyway)](file:///c:/Users/tushar.seth/Desktop/Scenario%20Based/debug-challenge/src/main/resources/db/migration/V1__init.sql)
-- **Problem**: Managing database schema changes manually across different environments.
-- **Solution**: Integrated **Flyway** for versioned, automated SQL migrations.
-- **Test**: Check `flyway_schema_history` table and `project_data` records.
+### 8️⃣ Scenario 8: JWT Revocation (JTI Blacklisting)
+*   **Concept**: Stateless vs Stateful security components.
+*   **The Problem**: JWTs are valid until expiry, even after a user logs out.
+*   **Solution**: Store a unique **JTI (JWT ID)** in Redis upon logout. Check this blacklist in `JwtAuthenticationFilter`.
+*   **Test**: Login -> Get Token -> `/logout` -> Try `/api/secure` with old token (returns 401).
+
+---
+
+### 9️⃣ Scenario 9: The N+1 Query Disaster
+*   **Concept**: Hibernate Fetching Strategies.
+*   **The Problem**: Fetching 10 Users and their Orders triggers 11 SQL queries.
+*   **Solution**: Changed Repository query to use `JOIN FETCH u.orders`.
+*   **Check**: Console logs show exactly **one** SQL SELECT with a JOIN.
+
+---
+
+### 🔟 Scenario 10: Standardized Exception Handling
+*   **Concept**: API Contract and Global Advice.
+*   **The Problem**: Error responses vary (sometimes HTML, sometimes plain text, sometimes generic Spring JSON).
+*   **Solution**: Created `GlobalExceptionHandler` with `@RestControllerAdvice`.
+*   **Test**: `curl http://localhost:8080/api/scenario10/notfound` -> Uniform JSON response with timestamp.
+
+---
+
+### 1️⃣1️⃣ Scenario 11: Validation Groups (OnCreate vs OnUpdate)
+*   **Concept**: Jakarta Bean Validation.
+*   **The Problem**: 'Password' is mandatory for Registration but must be ignored for 'Update Profile' requests.
+*   **Solution**: Used marker interfaces `OnCreate` and `OnUpdate` with `@Validated({Group.class, Default.class})`.
+
+---
+
+### 1️⃣2️⃣ Scenario 12: Soft Deletes with Hibernate
+*   **Concept**: Audit Trails and Data Preservation.
+*   **The Problem**: `repository.delete()` removes data permanently.
+*   **Solution**:
+    - `@SQLDelete(sql = "UPDATE ... SET deleted = true ...")`
+    - `@SQLRestriction("deleted = false")`
+*   **Verification**: `SELECT *` via Native Query shows the hidden deleted rows.
+
+---
+
+### 1️⃣3️⃣ Scenario 13: Transparent Field Encryption
+*   **Concept**: Data Security at Rest.
+*   **The Problem**: PII (SSN, Email) is stored as plain text in the database.
+*   **Solution**: Implemented `AttributeConverter<String, String>` using AES-128.
+*   **Result**: 
+    - `user.getSsn()` -> `"123-45"`
+    - DB Column -> `"A9B2...Gibberish"`
+
+---
+
+### 1️⃣4️⃣ Scenario 14: API Idempotency (The Double-Spend Fix)
+*   **Concept**: Distributed Systems & Network Retries.
+*   **The Problem**: Retrying a payment POST request charges the customer twice.
+*   **Solution**: Used an `Idempotency-Key` header with an AOP Aspect to cache and replay the first response.
+
+---
+
+### 1️⃣5️⃣ Scenario 15: Schema Management with Flyway
+*   **Concept**: Version Control for Databases.
+*   **The Problem**: Manual SQL scripts are hard to sync across dev/staging/prod.
+*   **Solution**: Use `V1__init.sql` in `db/migration`. Flyway runs it automatically at startup.
+*   **Test**: Check the `flyway_schema_history` table in the H2 console.
+
+---
+
+### 1️⃣6️⃣ Scenario 16: Graceful Shutdown
+*   **Concept**: Application Lifecycle Management.
+*   **The Problem**: Killing a Spring Boot app while a user is performing a long-running task (e.g., file upload or report generation) causes an immediate connection reset and potential data corruption.
+*   **Solution**: 
+    - Set `server.shutdown=graceful` in `application.properties`.
+    - Configured `spring.lifecycle.timeout-per-shutdown-phase=30s` to allow a buffer for active requests to finish.
+*   **Verification**: 
+    1. Call `GET /api/scenario16/long-process`.
+    2. Stop the application (Ctrl+C). 
+    3. Observe that the app waits 15 seconds for the request to complete before actually terminating.
+
+---
+
+### 1️⃣7️⃣ Scenario 17: Log Rotation & Logback
+*   **Concept**: Observability and Resource Management.
+*   **The Problem**: A single `app.log` file grows indefinitely, eventually crashing the server by consuming 100% disk space.
+*   **Solution**: 
+    - Implemented `logback-spring.xml`.
+    - Configured `SizeAndTimeBasedRollingPolicy`.
+    - **Retention**: Max 10MB per file, Max 30 days history, Max 1GB total cap.
+*   **Test**: Call `/api/scenario17/generate-logs` and check the `logs/` directory.
+
+---
+
+### 1️⃣8️⃣ Scenario 18: Custom Spring Boot Starter
+*   **Concept**: Modularity and Auto-Configuration.
+*   **The Problem**: Code duplication across multiple microservices for common features (logging, security, etc.).
+*   **Solution**: 
+    - Created an `AutoConfiguration` class.
+    - Used `@ConditionalOnProperty` to make the feature optional.
+    - Registered the configuration in `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`.
+*   **Test**: Call `/api/scenario18/check-starter`. Check the console for a stylized banner.
