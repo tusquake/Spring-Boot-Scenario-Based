@@ -37,6 +37,12 @@ public class Scenario12Controller {
         return productRepository.findAll();
     }
 
+    @GetMapping("/all-including-deleted")
+    public List<SoftDeleteProduct> getAllIncludingDeleted() {
+        // This uses a native query to skip the @SQLRestriction
+        return productRepository.findAllIncludingDeleted();
+    }
+
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable Long id) {
         // This will trigger the @SQLDelete update instead of a real delete
