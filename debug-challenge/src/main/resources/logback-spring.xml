@@ -2,11 +2,12 @@
 <configuration>
 
     <property name="LOGS" value="./logs" />
+    <springProperty scope="context" name="appName" source="spring.application.name"/>
 
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} [${appName:-},%X{traceId:-},%X{spanId:-}] - %msg%n
             </Pattern>
         </layout>
     </appender>
@@ -14,7 +15,7 @@
     <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOGS}/app.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d %p %C{1} [%t] %m%n</Pattern>
+            <Pattern>%d %p %C{1} [%t] [${appName:-},%X{traceId:-},%X{spanId:-}] %m%n</Pattern>
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">

@@ -167,3 +167,45 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
     - Used `@ConditionalOnProperty` to make the feature optional.
     - Registered the configuration in `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`.
 *   **Test**: Call `/api/scenario18/check-starter`. Check the console for a stylized banner.
+
+---
+
+### 2️⃣2️⃣ Scenario 22: API Rate Limiting (Bucket4j)
+*   **Concept**: Protection against DDoS and API Abuse.
+*   **The Problem**: A malicious user or a buggy script calls your API 1,000 times per second, crashing the database or costing you money on third-party APIs.
+*   **Solution**: 
+    - Implemented **Bucket4j** library.
+    - Configured a **Token Bucket** strategy (e.g., 5 requests per minute).
+    - Added a `RateLimitingFilter` to intercept requests and return `429 Too Many Requests`.
+*   **Test**: 
+    1. Call `curl -I http://localhost:8080/api/scenario22/test-limit`.
+    2. Repeat the command 6 times quickly.
+    3. Observe the `429` status and `X-Rate-Limit-Remaining` header.
+
+---
+
+### 2️⃣3️⃣ Scenario 23: Circuit Breaker Pattern (Resilience4j)
+*   **Concept**: Fault Tolerance and Cascading Failure Prevention.
+*   **The Problem**: A downstream API (e.g., a payment gateway or weather service) is slow or failing. Your application threads get blocked waiting for it, eventually running out of resources and crashing.
+*   **Solution**: 
+    - Implement **Resilience4j CircuitBreaker**.
+    - Define thresholds for failure rates and slow calls.
+    - Provide a **Fallback** method to return cached or default data when the circuit is OPEN.
+*   **Test**: 
+    1. Call `/api/scenario23/unstable-call`.
+    2. Repeatedly trigger failures (e.g., via a param or by simulating a crash).
+    3. Observe the state transition to `OPEN` and the fallback response.
+
+---
+
+### 2️⃣4️⃣ Scenario 24: Distributed Tracing (Micrometer Tracing)
+*   **Concept**: Observability and Log Correlation.
+*   **The Problem**: How do you track a single request's journey through a complex system of microservices? If an error occurs, how do you find all related logs across different logs?
+*   **Solution**: 
+    - Implement **Micrometer Tracing** with a **Brave** bridge.
+    - Observe how every request is automatically assigned a `traceId` and `spanId`.
+    - Configure logging to include these IDs in the MDC (Mapped Diagnostic Context).
+*   **Test**: 
+    1. Call `/api/scenario24/trace-me`.
+    2. Check the logs (both console and `app.log`).
+    3. Verify that the `traceId` is consistent across all log statements for that request.
