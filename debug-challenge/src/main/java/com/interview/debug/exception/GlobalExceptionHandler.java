@@ -18,6 +18,27 @@ public class GlobalExceptionHandler {
         return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage());
     }
 
+    // 1.5 Handle Validation Errors (e.g., @NotBlank, @Size)
+    @ExceptionHandler(org.springframework.web.bind.MethodArgumentNotValidException.class)
+    public ResponseEntity<Object> handleValidationExceptions(org.springframework.web.bind.MethodArgumentNotValidException ex) {
+        Map<String, String> errors = new java.util.HashMap<>();
+        ex.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = (error instanceof org.springframework.validation.FieldError) ? 
+                               ((org.springframework.validation.FieldError) error).getField() : 
+                               error.getObjectName();
+            String errorMessage = error.getDefaultMessage();
+            errors.put(fieldName, errorMessage);
+        });
+        
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("status", HttpStatus.BAD_REQUEST.value());
+        body.put("error", "Validation Failed");
+        body.put("details", errors);
+        
+        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+    }
+
     // 2. Handle Resource Not Found (e.g., 404 Not Found)
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<Object> handleNotFound(ResourceNotFoundException ex) {
@@ -27,14 +48,14 @@ public class GlobalExceptionHandler {
     // 2.5 Handle Built-in ResponseStatusException (to keep format consistent)
     @ExceptionHandler(org.springframework.web.server.ResponseStatusException.class)
     public ResponseEntity<Object> handleResponseStatusException(org.springframework.web.server.ResponseStatusException ex) {
-        return buildResponse((HttpStatus) ex.getStatusCode(), ex.getReason());
+        HttpStatus status = HttpStatus.resolve(ex.getStatusCode().value());
+        return buildResponse(status != null ? status : HttpStatus.INTERNAL_SERVER_ERROR, ex.getReason());
     }
 
     // 3. Global Fallback (500 Internal Server Error)
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleGlobalException(Exception ex) {
-        // Log the actual stack trace here for developers
-        ex.printStackTrace(); 
+        ex.printStackTrace(); // Log to console
         return buildResponse(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected server error occurred.");
     }
 
