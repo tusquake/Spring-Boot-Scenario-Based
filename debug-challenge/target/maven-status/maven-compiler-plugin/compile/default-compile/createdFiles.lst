@@ -18,6 +18,8 @@ com\interview\debug\util\JwtUtil.class
 com\interview\debug\config\SecurityConfig.class
 com\interview\debug\repository\CustomerRepository.class
 com\interview\debug\controller\Scenario23Controller.class
+com\interview\debug\controller\Scenario26Controller.class
+com\interview\debug\DebugApplication.class
 com\interview\debug\repository\BankRepository.class
 com\interview\debug\repository\ProjectDataRepository.class
 com\interview\debug\config\WebConfig.class
@@ -55,7 +57,6 @@ com\interview\debug\service\OrderProcessingService.class
 com\interview\debug\controller\Scenario7Controller.class
 com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\exception\ResourceNotFoundException.class
-DebugApplication.class
 com\interview\debug\model\UserSecret.class
 com\interview\debug\starter\CustomBannerService.class
 com\interview\debug\idempotency\Idempotent.class

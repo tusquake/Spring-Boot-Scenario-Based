@@ -221,3 +221,14 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
     3.  **Media Type (Content Negotiation)**: `Accept: application/vnd.company.v3+json`
 *   **Test**: 
     1. Use `curl` with different URLs, headers, and Accept values to see the different responses.
+
+---
+
+### 2️⃣6️⃣ Scenario 26: Reactive Programming with Spring WebFlux
+*   **Concept**: Non-blocking I/O and Backpressure.
+*   **The Problem**: Your traditional MVC application crashes under high load because it runs out of worker threads (Thread Pool Exhaustion) while waiting for slow database or API calls.
+*   **Solution**: 
+    - Implement a **Reactive Controller** using `Mono` and `Flux`.
+    - Show how non-blocking I/O keeps the CPU busy without wasting threads.
+*   **Test**: 
+    1. Call `/api/scenario26/flux-stream` and observe the data arriving "bit by bit" in real-time.
