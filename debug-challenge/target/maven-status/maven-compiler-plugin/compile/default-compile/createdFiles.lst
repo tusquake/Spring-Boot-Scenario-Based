@@ -12,12 +12,14 @@ com\interview\debug\service\ReportService.class
 com\interview\debug\filter\JwtAuthenticationFilter.class
 com\interview\debug\service\BankService.class
 com\interview\debug\util\EncryptionConverter.class
+com\interview\debug\repository\IdempotencyRepository.class
 com\interview\debug\util\JwtUtil.class
 com\interview\debug\config\SecurityConfig.class
 com\interview\debug\repository\CustomerRepository.class
 com\interview\debug\DebugApplication.class
 com\interview\debug\repository\BankRepository.class
 com\interview\debug\config\WebConfig.class
+com\interview\debug\controller\Scenario14Controller.class
 com\interview\debug\controller\AuthController.class
 com\interview\debug\service\AsyncService.class
 com\interview\debug\controller\Scenario6Controller.class
@@ -26,6 +28,7 @@ com\interview\debug\controller\Scenario11Controller.class
 com\interview\debug\model\SoftDeleteProduct.class
 com\interview\debug\controller\Scenario8Controller.class
 com\interview\debug\model\Customer.class
+com\interview\debug\idempotency\IdempotencyAspect.class
 com\interview\debug\model\BankAccount.class
 com\interview\debug\exception\GlobalExceptionHandler.class
 com\interview\debug\controller\OrderController.class
@@ -42,8 +45,10 @@ com\interview\debug\controller\Scenario7Controller.class
 com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\exception\ResourceNotFoundException.class
 com\interview\debug\model\UserSecret.class
+com\interview\debug\idempotency\Idempotent.class
 com\interview\debug\config\AsyncConfig.class
 com\interview\debug\controller\JsonFilterController.class
 com\interview\debug\repository\ProductRepository.class
 com\interview\external\service\OrderService.class
+com\interview\debug\model\IdempotencyRecord.class
 com\interview\debug\service\TokenBlacklistService.class
