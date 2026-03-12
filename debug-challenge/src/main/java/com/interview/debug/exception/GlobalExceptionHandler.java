@@ -19,10 +19,15 @@ public class GlobalExceptionHandler {
     }
 
     // 2. Handle Resource Not Found (e.g., 404 Not Found)
-    // In a real app, you'd create a custom 'ResourceNotFoundException'
-    @ExceptionHandler(NullPointerException.class) 
-    public ResponseEntity<Object> handleNotFound(NullPointerException ex) {
-        return buildResponse(HttpStatus.NOT_FOUND, "The requested resource was not found.");
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<Object> handleNotFound(ResourceNotFoundException ex) {
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    // 2.5 Handle Built-in ResponseStatusException (to keep format consistent)
+    @ExceptionHandler(org.springframework.web.server.ResponseStatusException.class)
+    public ResponseEntity<Object> handleResponseStatusException(org.springframework.web.server.ResponseStatusException ex) {
+        return buildResponse((HttpStatus) ex.getStatusCode(), ex.getReason());
     }
 
     // 3. Global Fallback (500 Internal Server Error)

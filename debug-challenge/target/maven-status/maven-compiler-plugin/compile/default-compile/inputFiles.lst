@@ -14,10 +14,12 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\util\JwtUtil.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\JwtUtils.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\AsyncConfig.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\exception\ResourceNotFoundException.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\OrderProcessingService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\AuthController.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\TokenBlacklistService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario9Controller.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario10Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario5Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\DebugApplication.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\UserService.java
