@@ -245,3 +245,15 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 *   **Test**: 
     1. Call `/api/scenario27/slow-task`.
     2. Check `/actuator/metrics/method.execution.time` to see the recorded stats.
+
+---
+
+### 2️⃣8️⃣ Scenario 28: Decoupling with Spring Events
+*   **Concept**: Event-Driven Service Orchestration.
+*   **The Problem**: A single business method (e.g., User Registration) is performing too many unrelated tasks (DB save, email, Slack, logs). This makes the code hard to maintain and slow to respond.
+*   **Solution**: 
+    - Publish a `CustomTaskEvent` after the primary action.
+    - Implement multiple **Asynchronous Listeners** to handle side-effects independently.
+*   **Test**: 
+    1. Call `/api/scenario28/register`.
+    2. Check the console for "Email Sent" and "Slack Notified" log lines appearing asynchronously.

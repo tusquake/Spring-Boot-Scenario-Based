@@ -3,6 +3,7 @@ com\interview\debug\controller\Scenario27Controller.class
 com\interview\debug\model\ValidationUser.class
 com\interview\debug\repository\OrderRepository.class
 com\interview\debug\security\JwtUtils.class
+com\interview\debug\listener\SlackNotificationListener.class
 com\interview\debug\validation\OnCreate.class
 com\interview\debug\validation\OnUpdate.class
 com\interview\debug\controller\Scenario10Controller.class
@@ -25,6 +26,7 @@ com\interview\debug\repository\BankRepository.class
 com\interview\debug\repository\ProjectDataRepository.class
 com\interview\debug\config\WebConfig.class
 com\interview\debug\controller\Scenario14Controller.class
+com\interview\debug\listener\EmailNotificationListener.class
 com\interview\debug\controller\AuthController.class
 com\interview\debug\service\AsyncService.class
 com\interview\debug\controller\Scenario17Controller.class
@@ -35,6 +37,7 @@ com\interview\debug\service\DownstreamService.class
 com\interview\debug\aspect\PerformanceTrackerAspect.class
 com\interview\debug\model\SoftDeleteProduct.class
 com\interview\debug\controller\Scenario8Controller.class
+com\interview\debug\event\UserRegistrationEvent.class
 com\interview\debug\model\Customer.class
 com\interview\debug\idempotency\IdempotencyAspect.class
 com\interview\debug\model\BankAccount.class
@@ -48,6 +51,7 @@ com\interview\debug\controller\DebugErrorController.class
 com\interview\debug\filter\CustomLogFilter.class
 com\interview\debug\service\UserService.class
 com\interview\debug\controller\Scenario5Controller.class
+com\interview\debug\controller\Scenario28Controller.class
 com\interview\debug\starter\CustomStarterAutoConfiguration.class
 com\interview\debug\controller\Scenario25Controller.class
 com\interview\debug\service\NotificationService.class
