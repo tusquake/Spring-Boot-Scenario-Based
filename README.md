@@ -284,3 +284,17 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
     2. Test `/api/scenario30/page?page=100&size=10`
     3. Test `/api/scenario30/slice?page=100&size=10`
     4. Test `/api/scenario30/cursor?cursor={opaque_string}`
+
+---
+
+### 3️⃣1️⃣ Scenario 31: Dynamic Filtering with JPA Specifications
+*   **Concept**: Type-safe, dynamic query building.
+*   **The Analogy**: **The Tinder Filter**. 📱
+    - You want someone who is `Age 25-30` AND `Lives in NYC` AND `Interest: Java`.
+    - If you only select `NYC`, it works. If you select all three, it works. 
+    - You don't want to write 10 different Repository methods for every combination of filters (\"findByName\", \"findByNameAndAge\", \"findByNameAndAgeAndCity\").
+*   **The Problem**: Writing search logic where multiple filter fields are optional leads to "if-else hell" and messy `Query` strings.
+*   **Solution**: Use `JpaSpecificationExecutor`. Build a list of `Predicate` objects dynamically based on which parameters the user provided.
+*   **Test**: 
+    1. Call `/api/scenario31/search?name=Customer&minId=500&email=example.com`.
+    2. Try different combinations (only `name`, only `minId`, or empty) and observe how the SQL `WHERE` clause changes.
