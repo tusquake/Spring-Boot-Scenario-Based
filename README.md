@@ -128,6 +128,41 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 
 ---
 
+### 4️⃣2️⃣ Scenario 42: JPA Auditing (@CreatedDate, @LastModifiedDate)
+*   **Concept**: Automatic timestamping of entities.
+*   **The Problem**: Manually setting `createdAt` and `updatedAt` in every service is tedious and error-prone.
+*   **Solution**: Enabled `JpaAuditing` and created an `Auditable` base class.
+*   **Test**: `GET /api/scenario42/create`. This will create a user and show you the `createdDate` and `lastModifiedDate` filled by Spring Data JPA.
+
+---
+
+### 4️⃣3️⃣ Scenario 43: Custom Validation (Custom Annotation)
+*   **Concept**: Domain-specific validation logic.
+*   **The Problem**: Standard annotations like `@NotBlank` are not enough for complex business rules (e.g., specific coupon patterns).
+*   **Solution**: Created `@ValidCouponCode` and a corresponding `CouponCodeValidator`.
+*   **Test**: `POST /api/scenario43/apply` with JSON `{"code": "DISCOUNT_WINTER"}`.
+
+---
+
+### 4️⃣4️⃣ Scenario 44: Request Parameters (@RequestParam Defaults)
+*   **Concept**: Handling optional inputs gracefully.
+*   **The Problem**: If a user forgets a query parameter, the API might explode or return a generic 400.
+*   **Solution**: Used `defaultValue` and `required=false` to provide a robust API.
+*   **Test**: `GET /api/scenario44/search`.
+
+---
+
+### 4️⃣5️⃣ Scenario 45: Hibernate Envers (History Tracking)
+*   **Concept**: Full object versioning and audit tables.
+*   **The Problem**: JPA Auditing (Scenario 42) only keeps the *latest* update. If a user changes their email 5 times, we lose the first 4.
+*   **Solution**: Integrated `Hibernate Envers`. It creates a `CUSTOMERS_AUD` table and a `REVINFO` table.
+*   **Test**:
+    1.  Create a customer (via Scenario 42): `GET /api/scenario42/create` (Note the ID, e.g., `11`).
+    2.  Update the name: `GET /api/scenario45/update/11/NewName`.
+    3.  View history: `GET /api/scenario45/history/11`.
+
+---
+
 ### 9️⃣ Scenario 9: The N+1 Query Disaster
 *   **Concept**: Hibernate Fetching Strategies.
 *   **The Problem**: Fetching 10 Users and their Orders triggers 11 SQL queries.

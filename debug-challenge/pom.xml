@@ -133,6 +133,10 @@
 			<artifactId>shedlock-provider-jdbc-template</artifactId>
 			<version>5.10.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-envers</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

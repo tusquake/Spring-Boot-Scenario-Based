@@ -1440,3 +1440,556 @@ This generated password is for development use only. Your security configuration
 2026-03-14 21:09:55,239 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b5813cb80f77f9467b0519dabf3d55,467b0519dabf3d55] [scheduling-pool-1] ?? HEAVY END -> Time: 21:09:55
 2026-03-14 21:10:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:10:00.004160700
 2026-03-14 21:10:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:10:23,169 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:10:23,180 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-14 21:10:23,478 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-14 21:10:23,656 INFO o.s.s.q.SchedulerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-14 21:10:23,785 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-14 21:10:23,844 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:10:23,889 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-14 21:10:24,573 INFO c.i.d.l.LifecycleDemoBean [SpringApplicationShutdownHook] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-14 21:10:24,609 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:10:24,646 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-14 21:10:24,743 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
+2026-03-14 21:18:24,987 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 21:18:25,354 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 1880 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-14 21:18:25,358 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-14 21:18:25,363 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-14 21:18:29,654 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:18:29,656 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14 21:18:30,389 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 680 ms. Found 7 JPA repository interfaces.
+2026-03-14 21:18:32,634 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:18:32,644 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-14 21:18:32,793 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,804 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,807 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,810 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,829 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,832 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,841 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:18:32,845 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 139 ms. Found 0 Redis repository interfaces.
+2026-03-14 21:18:41,188 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-14 21:18:41,276 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:18:41,346 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-14 21:18:41,385 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-14 21:18:42,011 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-14 21:18:42,013 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 16384 ms
+2026-03-14 21:18:46,021 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-14 21:18:49,327 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-14 21:18:49,425 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-14 21:18:49,558 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-14 21:18:50,806 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-14 21:18:50,823 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-14 21:18:51,674 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-14 21:18:51,677 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-14 21:18:51,691 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-14 21:18:51,970 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-14 21:18:51,988 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-14 21:18:52,133 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-14 21:18:52,141 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.059s)
+2026-03-14 21:18:52,180 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-14 21:18:52,284 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-14 21:18:52,304 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-14 21:18:52,375 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-14 21:18:52,413 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.043s)
+2026-03-14 21:18:52,932 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 21:18:53,306 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-14 21:18:53,506 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-14 21:18:55,467 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14 21:19:00,518 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 21:19:00,671 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:19:05,513 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-14 21:19:14,033 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-14 21:19:16,446 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-14 21:19:17,467 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-14 21:19:17,607 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-14 21:19:17,611 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-14 21:19:18,219 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14 21:19:18,379 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: f086bfbb-a3fa-48c4-8d66-04d7a33e8f1e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-14 21:19:24,682 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-03-14 21:19:25,502 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c1539bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@790801f2, org.springframework.security.web.context.SecurityContextHolderFilter@70cd0c14, org.springframework.security.web.header.HeaderWriterFilter@67aa004d, org.springframework.web.filter.CorsFilter@5c772cba, org.springframework.security.web.authentication.logout.LogoutFilter@5476f67a, com.interview.debug.filter.JwtAuthenticationFilter@10b3ea72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@524d3e47, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37443848, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23cfcd4a, org.springframework.security.web.access.ExceptionTranslationFilter@d13ba95, org.springframework.security.web.access.intercept.AuthorizationFilter@447a115e]
+2026-03-14 21:19:30,222 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-14 21:19:30,282 INFO o.q.c.SchedulerSignalerImpl [main] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-14 21:19:30,285 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-14 21:19:30,289 INFO o.q.s.RAMJobStore [main] [debug-challenge,,] RAMJobStore initialized.
+2026-03-14 21:19:30,294 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-14 21:19:30,298 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-14 21:19:30,300 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-14 21:19:30,302 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@48d46169
+2026-03-14 21:19:31,111 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:19:31,174 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-14 21:19:31,182 INFO o.s.s.q.SchedulerFactoryBean [main] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-14 21:19:31,185 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-14 21:19:31,260 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:19:31.260143700
+2026-03-14 21:19:31,265 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:19:31,284 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 68.416 seconds (process running for 70.001)
+2026-03-14 21:19:31,372 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b5838be6862a2300a4713edc9a69a6,00a4713edc9a69a6] [scheduling-pool-1] ?? HEAVY START -> Time: 21:19:31
+2026-03-14 21:19:31,372 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5838b96b7e41096425714a157c19b,96425714a157c19b] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 21:19:31,559 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b5838bdee9c3d18f731550f85cfa05,8f731550f85cfa05] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 21:19:31
+2026-03-14 21:19:33,432 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5838b96b7e41096425714a157c19b,96425714a157c19b] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 21:19:33,824 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14 21:19:33,825 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-14 21:19:33,831 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 5 ms
+2026-03-14 21:19:46,404 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b5838be6862a2300a4713edc9a69a6,00a4713edc9a69a6] [scheduling-pool-1] ?? HEAVY END -> Time: 21:19:46
+2026-03-14 21:20:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:20:00.003135500
+2026-03-14 21:20:00,008 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:20:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:20:30.004787500
+2026-03-14 21:20:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:21:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:21:00.004714600
+2026-03-14 21:21:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:21:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:21:30.003663100
+2026-03-14 21:21:30,007 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:22:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:22:00.003618400
+2026-03-14 21:22:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:22:30,001 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:22:30.001893700
+2026-03-14 21:22:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:23:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:23:00.003086900
+2026-03-14 21:23:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:23:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:23:30.002569
+2026-03-14 21:23:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:24:00,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:24:00.002573900
+2026-03-14 21:24:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:24:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:24:30.002783700
+2026-03-14 21:24:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:24:52,264 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:24:52,271 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-14 21:24:52,332 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-14 21:24:52,439 INFO o.s.s.q.SchedulerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-14 21:24:52,441 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-14 21:24:52,442 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:24:52,442 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-14 21:24:52,491 INFO c.i.d.l.LifecycleDemoBean [SpringApplicationShutdownHook] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-14 21:24:52,497 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:24:52,509 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-14 21:24:52,523 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
+2026-03-14 21:24:59,309 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 21:24:59,541 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 10996 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-14 21:24:59,546 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-14 21:24:59,550 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-14 21:25:03,071 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:25:03,071 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14 21:25:03,598 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 493 ms. Found 7 JPA repository interfaces.
+2026-03-14 21:25:05,940 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:25:05,948 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-14 21:25:06,114 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,128 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,137 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,148 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,181 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,185 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,194 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:25:06,198 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 190 ms. Found 0 Redis repository interfaces.
+2026-03-14 21:25:11,198 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-14 21:25:11,250 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:25:11,261 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-14 21:25:11,264 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-14 21:25:11,601 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-14 21:25:11,603 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 11700 ms
+2026-03-14 21:25:12,955 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-14 21:25:13,659 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-14 21:25:13,670 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-14 21:25:13,722 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-14 21:25:14,354 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-14 21:25:14,359 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-14 21:25:14,994 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-14 21:25:14,995 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-14 21:25:14,996 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-14 21:25:15,168 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-14 21:25:15,185 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-14 21:25:15,337 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-14 21:25:15,348 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.049s)
+2026-03-14 21:25:15,373 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-14 21:25:15,480 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-14 21:25:15,499 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-14 21:25:15,609 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-14 21:25:15,634 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.093s)
+2026-03-14 21:25:16,213 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 21:25:16,541 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-14 21:25:16,719 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-14 21:25:17,779 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14 21:25:23,948 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 21:25:24,087 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:25:26,812 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-14 21:25:31,304 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-14 21:25:34,051 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-14 21:25:35,744 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-14 21:25:35,970 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-14 21:25:35,972 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-14 21:25:36,772 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14 21:25:37,079 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: c2a2e775-4a07-4dc6-b7b5-bed4bf836553
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-14 21:25:43,667 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-03-14 21:25:44,435 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ce4a581, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70cd0c14, org.springframework.security.web.context.SecurityContextHolderFilter@7d028b1d, org.springframework.security.web.header.HeaderWriterFilter@50659a9a, org.springframework.web.filter.CorsFilter@666b19cb, org.springframework.security.web.authentication.logout.LogoutFilter@4101747a, com.interview.debug.filter.JwtAuthenticationFilter@2a60981c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27d74c62, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6acdbe95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5482bdbc, org.springframework.security.web.access.ExceptionTranslationFilter@46550324, org.springframework.security.web.access.intercept.AuthorizationFilter@4475b4b1]
+2026-03-14 21:25:51,722 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-14 21:25:51,810 INFO o.q.c.SchedulerSignalerImpl [main] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-14 21:25:51,812 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-14 21:25:51,817 INFO o.q.s.RAMJobStore [main] [debug-challenge,,] RAMJobStore initialized.
+2026-03-14 21:25:51,821 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-14 21:25:51,835 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-14 21:25:51,840 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-14 21:25:51,842 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3cd39478
+2026-03-14 21:25:52,590 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:25:52,656 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-14 21:25:52,662 INFO o.s.s.q.SchedulerFactoryBean [main] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-14 21:25:52,665 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-14 21:25:52,761 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 55.511 seconds (process running for 58.351)
+2026-03-14 21:25:52,881 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b58508e060f1838736413a5716997a,8736413a5716997a] [scheduling-pool-2] ?? HEAVY START -> Time: 21:25:52
+2026-03-14 21:25:52,882 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b58508f44413f79ccd9148c6b7ec3f,9ccd9148c6b7ec3f] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 21:25:53,035 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b585089abe69e2887cb9f43f1a90cf,887cb9f43f1a90cf] [scheduling-pool-1] ? FIXED RATE [10s] -> Execution Time: 21:25:53
+2026-03-14 21:25:54,902 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b58508f44413f79ccd9148c6b7ec3f,9ccd9148c6b7ec3f] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 21:25:56,253 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14 21:25:56,255 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-14 21:25:56,259 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 4 ms
+2026-03-14 21:26:00,099 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:26:00.099450300
+2026-03-14 21:26:00,103 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:26:07,903 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b58508e060f1838736413a5716997a,8736413a5716997a] [scheduling-pool-2] ?? HEAVY END -> Time: 21:26:07
+2026-03-14 21:26:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:26:30.003153200
+2026-03-14 21:26:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:27:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:27:00.005213200
+2026-03-14 21:27:00,015 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:27:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:27:30.002988700
+2026-03-14 21:27:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:28:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:28:00.003534
+2026-03-14 21:28:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:28:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:28:30.004069200
+2026-03-14 21:28:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:29:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:29:00.003817
+2026-03-14 21:29:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:29:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:29:30.003012500
+2026-03-14 21:29:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:30:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:30:00.003747600
+2026-03-14 21:30:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:30:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:30:30.003544200
+2026-03-14 21:30:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:31:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:31:00.003056400
+2026-03-14 21:31:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:31:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:31:30.004796
+2026-03-14 21:31:30,007 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:32:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:32:00.003880600
+2026-03-14 21:32:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:32:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:32:30.003215400
+2026-03-14 21:32:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:33:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:33:00.003471500
+2026-03-14 21:33:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:33:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:33:30.005602600
+2026-03-14 21:33:30,009 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:34:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:34:00.004404700
+2026-03-14 21:34:00,009 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:34:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:34:30.003938500
+2026-03-14 21:34:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:35:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:35:00.005067500
+2026-03-14 21:35:00,007 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:35:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:35:30.004681600
+2026-03-14 21:35:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:36:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:36:00.004504100
+2026-03-14 21:36:00,007 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:36:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:36:30.002031300
+2026-03-14 21:36:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:37:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:37:00.004423900
+2026-03-14 21:37:00,012 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:37:30,001 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:37:30.001750900
+2026-03-14 21:37:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:38:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:38:00.002760600
+2026-03-14 21:38:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:38:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:38:30.003312800
+2026-03-14 21:38:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:39:00,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:39:00.002827300
+2026-03-14 21:39:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:39:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:39:30.002869800
+2026-03-14 21:39:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:40:00,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:40:00.002920700
+2026-03-14 21:40:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:40:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:40:30.003151
+2026-03-14 21:40:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:41:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:41:00.004048900
+2026-03-14 21:41:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:41:30,001 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:41:30.001936300
+2026-03-14 21:41:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:42:00,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:42:00.002373700
+2026-03-14 21:42:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:42:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:42:30.003540200
+2026-03-14 21:42:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:43:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:43:00.003302900
+2026-03-14 21:43:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:43:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:43:30.002664500
+2026-03-14 21:43:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:44:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:44:00.003246
+2026-03-14 21:44:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:44:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:44:30.003758900
+2026-03-14 21:44:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:45:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:45:00.004185700
+2026-03-14 21:45:00,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:45:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:45:30.002893100
+2026-03-14 21:45:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:46:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:46:00.002937100
+2026-03-14 21:46:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:46:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:46:30.003691
+2026-03-14 21:46:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:47:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:47:00.003752
+2026-03-14 21:47:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:47:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:47:30.003362400
+2026-03-14 21:47:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:48:00,001 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:48:00.001712100
+2026-03-14 21:48:00,016 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:48:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:48:30.004682
+2026-03-14 21:48:30,006 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:49:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:49:00.004402200
+2026-03-14 21:49:00,008 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:49:21,809 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:49:21,815 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-14 21:49:21,877 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-14 21:49:21,993 INFO o.s.s.q.SchedulerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-14 21:49:21,997 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-14 21:49:22,002 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:49:22,007 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-14 21:49:22,077 INFO c.i.d.l.LifecycleDemoBean [SpringApplicationShutdownHook] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-14 21:49:22,083 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:49:22,101 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-14 21:49:22,117 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
+2026-03-14 21:49:27,253 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 21:49:27,519 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 17840 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-14 21:49:27,521 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-14 21:49:27,521 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-14 21:49:30,771 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:49:30,779 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14 21:49:31,539 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 723 ms. Found 7 JPA repository interfaces.
+2026-03-14 21:49:33,689 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:49:33,696 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-14 21:49:33,896 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,904 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,905 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,911 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,920 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,931 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,936 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:49:33,938 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 181 ms. Found 0 Redis repository interfaces.
+2026-03-14 21:49:39,331 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-14 21:49:39,421 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:49:39,436 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-14 21:49:39,448 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-14 21:49:39,767 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-14 21:49:39,769 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 11943 ms
+2026-03-14 21:49:40,739 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-14 21:49:41,953 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-14 21:49:41,960 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-14 21:49:42,019 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-14 21:49:42,787 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-14 21:49:42,793 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-14 21:49:43,350 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-14 21:49:43,353 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-14 21:49:43,354 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-14 21:49:43,571 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-14 21:49:43,595 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-14 21:49:43,691 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-14 21:49:43,705 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.055s)
+2026-03-14 21:49:43,733 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-14 21:49:43,847 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-14 21:49:43,867 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-14 21:49:43,982 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-14 21:49:44,005 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.098s)
+2026-03-14 21:49:44,632 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 21:49:44,939 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-14 21:49:45,114 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-14 21:49:46,053 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14 21:49:51,218 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 21:49:51,462 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:49:53,217 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-14 21:49:56,717 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-14 21:49:59,118 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-14 21:50:00,264 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-14 21:50:00,341 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-14 21:50:00,345 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-14 21:50:00,871 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14 21:50:01,023 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: 24afca20-8b0c-47ce-9377-d3165e80b2ce
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-14 21:50:04,590 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-03-14 21:50:04,887 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bfdd7a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41a17eaa, org.springframework.security.web.context.SecurityContextHolderFilter@2d1c376b, org.springframework.security.web.header.HeaderWriterFilter@25cff0, org.springframework.web.filter.CorsFilter@1dfe6286, org.springframework.security.web.authentication.logout.LogoutFilter@5741bc9, com.interview.debug.filter.JwtAuthenticationFilter@2fb70301, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b9a2df7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@415efec4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1332f571, org.springframework.security.web.access.ExceptionTranslationFilter@1fbe9d4, org.springframework.security.web.access.intercept.AuthorizationFilter@571bce3]
+2026-03-14 21:50:09,297 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-14 21:50:09,363 INFO o.q.c.SchedulerSignalerImpl [main] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-14 21:50:09,368 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-14 21:50:09,387 INFO o.q.s.RAMJobStore [main] [debug-challenge,,] RAMJobStore initialized.
+2026-03-14 21:50:09,400 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-14 21:50:09,411 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-14 21:50:09,412 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-14 21:50:09,417 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4b0c589c
+2026-03-14 21:50:10,247 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:50:10,375 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-14 21:50:10,381 INFO o.s.s.q.SchedulerFactoryBean [main] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-14 21:50:10,384 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-14 21:50:10,445 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:50:10.445623600
+2026-03-14 21:50:10,471 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:50:10,497 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 45.019 seconds (process running for 46.707)
+2026-03-14 21:50:10,625 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b58abaac3e1344ae0bd59384a71917,ae0bd59384a71917] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 21:50:10,626 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b58aba0752cdb8317e699c6264373c,317e699c6264373c] [scheduling-pool-1] ?? HEAVY START -> Time: 21:50:10
+2026-03-14 21:50:10,806 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b58aba198fe6b995807e776683d56b,95807e776683d56b] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 21:50:10
+2026-03-14 21:50:12,634 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b58abaac3e1344ae0bd59384a71917,ae0bd59384a71917] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 21:50:25,638 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b58aba0752cdb8317e699c6264373c,317e699c6264373c] [scheduling-pool-1] ?? HEAVY END -> Time: 21:50:25
+2026-03-14 21:50:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:50:30.004598800
+2026-03-14 21:50:30,008 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-2] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:50:35,074 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14 21:50:35,076 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-14 21:50:35,084 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 5 ms
+2026-03-14 21:51:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:51:00.004176300
+2026-03-14 21:51:00,007 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-3] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:51:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:51:30.004104200
+2026-03-14 21:51:30,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-4] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:52:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:52:00.005133400
+2026-03-14 21:52:00,007 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-5] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:52:30,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:52:30.002852500
+2026-03-14 21:52:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-6] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:53:00,002 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:53:00.002948100
+2026-03-14 21:53:00,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-7] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:53:30,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:53:30.003619500
+2026-03-14 21:53:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-8] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:54:00,003 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:54:00.003359
+2026-03-14 21:54:00,005 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-9] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:54:30,004 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:54:30.004305500
+2026-03-14 21:54:30,008 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-10] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:54:46,212 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:54:46,217 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-14 21:54:46,266 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-14 21:54:46,342 INFO o.s.s.q.SchedulerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-14 21:54:46,344 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-14 21:54:46,345 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:54:46,346 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-14 21:54:46,384 INFO c.i.d.l.LifecycleDemoBean [SpringApplicationShutdownHook] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-14 21:54:46,391 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:54:46,398 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-14 21:54:46,403 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
+2026-03-14 21:54:51,282 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 21:54:51,514 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 3612 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-14 21:54:51,519 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-14 21:54:51,523 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-14 21:54:54,979 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:54:54,981 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14 21:54:55,465 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 452 ms. Found 7 JPA repository interfaces.
+2026-03-14 21:54:57,248 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 21:54:57,253 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-14 21:54:57,364 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,372 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,388 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,395 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,419 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,421 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,427 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 21:54:57,431 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 127 ms. Found 0 Redis repository interfaces.
+2026-03-14 21:55:02,431 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-14 21:55:02,467 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:55:02,471 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-14 21:55:02,471 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-14 21:55:02,792 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-14 21:55:02,801 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 10988 ms
+2026-03-14 21:55:04,351 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-14 21:55:05,630 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-14 21:55:05,639 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-14 21:55:05,713 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-14 21:55:06,712 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-14 21:55:06,718 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-14 21:55:07,374 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-14 21:55:07,376 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-14 21:55:07,377 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-14 21:55:07,627 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-14 21:55:07,653 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-14 21:55:07,758 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-14 21:55:07,779 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.064s)
+2026-03-14 21:55:07,815 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-14 21:55:07,927 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-14 21:55:07,951 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-14 21:55:08,020 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-14 21:55:08,050 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.043s)
+2026-03-14 21:55:08,667 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 21:55:09,014 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-14 21:55:09,196 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-14 21:55:10,352 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14 21:55:14,845 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 21:55:15,036 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:55:16,229 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-14 21:55:19,782 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-14 21:55:21,971 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-14 21:55:23,379 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-14 21:55:23,482 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-14 21:55:23,490 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-14 21:55:24,197 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14 21:55:24,361 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: 60734594-a615-4936-887f-0944bb86d8e3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-14 21:55:27,330 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-03-14 21:55:27,852 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@408aced7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2539b745, org.springframework.security.web.context.SecurityContextHolderFilter@de44b10, org.springframework.security.web.header.HeaderWriterFilter@73959127, org.springframework.web.filter.CorsFilter@47190563, org.springframework.security.web.authentication.logout.LogoutFilter@41a17eaa, com.interview.debug.filter.JwtAuthenticationFilter@5aeebccc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f3b3c33, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fd4377, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3141db11, org.springframework.security.web.access.ExceptionTranslationFilter@652d8ca, org.springframework.security.web.access.intercept.AuthorizationFilter@30862148]
+2026-03-14 21:55:30,884 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-14 21:55:30,927 INFO o.q.c.SchedulerSignalerImpl [main] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-14 21:55:30,929 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-14 21:55:30,931 INFO o.q.s.RAMJobStore [main] [debug-challenge,,] RAMJobStore initialized.
+2026-03-14 21:55:30,937 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-14 21:55:30,941 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-14 21:55:30,941 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-14 21:55:30,941 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2efb827e
+2026-03-14 21:55:31,418 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-14 21:55:31,473 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-14 21:55:31,483 INFO o.s.s.q.SchedulerFactoryBean [main] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-14 21:55:31,485 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-14 21:55:31,538 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ JOB [EmailJob] -> Sending enterprise report at: 2026-03-14T21:55:31.537741700
+2026-03-14 21:55:31,543 INFO c.i.d.s.EmailJob [quartzScheduler_Worker-1] [debug-challenge,,] ?? QUARTZ -> Recipient from JobDataMap: admin@pizza.com
+2026-03-14 21:55:31,570 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 41.962 seconds (process running for 43.66)
+2026-03-14 21:55:31,679 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b58bfb3892ac8fbf967414fafff4e1,bf967414fafff4e1] [scheduling-pool-1] ?? HEAVY START -> Time: 21:55:31
+2026-03-14 21:55:31,679 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b58bfbbc64411537849fdf0da96e81,37849fdf0da96e81] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 21:55:31,849 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b58bfb233ae7ac7b985cfe99353472,7b985cfe99353472] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 21:55:31
+2026-03-14 21:55:33,685 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b58bfbbc64411537849fdf0da96e81,37849fdf0da96e81] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 21:55:42,316 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14 21:55:42,319 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-14 21:55:42,369 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 31 ms
+2026-03-14 21:55:46,712 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b58bfb3892ac8fbf967414fafff4e1,bf967414fafff4e1] [scheduling-pool-1] ?? HEAVY END -> Time: 21:55:46
+2026-03-14 21:55:51,089 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:55:51,090 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-14 21:55:51,145 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-14 21:55:51,223 INFO o.s.s.q.SchedulerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-14 21:55:51,229 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-14 21:55:51,231 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-14 21:55:51,231 INFO o.q.c.QuartzScheduler [SpringApplicationShutdownHook] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-14 21:55:51,276 INFO c.i.d.l.LifecycleDemoBean [SpringApplicationShutdownHook] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-14 21:55:51,282 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 21:55:51,289 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-14 21:55:51,304 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
