@@ -257,3 +257,15 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 *   **Test**: 
     1. Call `/api/scenario28/register`.
     2. Check the console for "Email Sent" and "Slack Notified" log lines appearing asynchronously.
+
+---
+
+### 2️⃣9️⃣ Scenario 29: Optimized Multipart File Upload & Download
+*   **Concept**: Efficient I/O and Memory Management.
+*   **The Problem**: Reading large files (GBs) into `byte[]` or `String` in memory will trigger `OutOfMemoryError` and crash the server.
+*   **Solution**: 
+    - Use **Streaming**: Use `multipartFile.getInputStream()` to write directly to a `FileOutputStream`.
+    - Use **FileSystemResource**: Stream the file back to the client using Spring's `FileSystemResource` which handles chunked transfer automatically.
+*   **Test**: 
+    1. Upload a file via `POST /api/scenario29/upload`.
+    2. Download it back via `GET /api/scenario29/download/{filename}`.

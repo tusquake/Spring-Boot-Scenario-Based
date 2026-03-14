@@ -26,6 +26,7 @@ com\interview\debug\repository\BankRepository.class
 com\interview\debug\repository\ProjectDataRepository.class
 com\interview\debug\config\WebConfig.class
 com\interview\debug\controller\Scenario14Controller.class
+com\interview\debug\controller\Scenario29Controller.class
 com\interview\debug\listener\EmailNotificationListener.class
 com\interview\debug\controller\AuthController.class
 com\interview\debug\service\AsyncService.class
