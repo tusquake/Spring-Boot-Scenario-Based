@@ -269,3 +269,18 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 *   **Test**: 
     1. Upload a file via `POST /api/scenario29/upload`.
     2. Download it back via `GET /api/scenario29/download/{filename}`.
+
+---
+
+### 3️⃣0️⃣ Scenario 30: Advanced Pagination Strategies
+*   **Concept**: Data Fetching Optimization (`Page` vs `Slice` vs `Cursor`).
+*   **The Problem**: Using traditional `Page` pagination performs a `COUNT(*)` query which becomes extremely slow on millions of records. High page numbers (`OFFSET 1M`) cause the database to scan and discard rows, leading to slow queries.
+*   **Solution**: 
+    - **Page**: Use for small datasets where UI needs total page count. (Executes `COUNT`).
+    - **Slice**: Use for "Load More" buttons. Avoids the `COUNT` query but maintains `OFFSET`.
+    - **Cursor (Keyset)**: Use for Infinite Scrolling and deep pagination. Uses `WHERE id > ?`, utilizing the index instead of an `OFFSET`. Spring Boot 3+ makes this easy with `ScrollPosition` and `Window`.
+*   **Test**: 
+    1. Seed data: automatically generated.
+    2. Test `/api/scenario30/page?page=100&size=10`
+    3. Test `/api/scenario30/slice?page=100&size=10`
+    4. Test `/api/scenario30/cursor?cursor={opaque_string}`

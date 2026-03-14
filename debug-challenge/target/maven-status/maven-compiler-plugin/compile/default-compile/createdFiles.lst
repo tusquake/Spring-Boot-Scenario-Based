@@ -67,6 +67,7 @@ com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\exception\ResourceNotFoundException.class
 com\interview\debug\model\UserSecret.class
 com\interview\debug\starter\CustomBannerService.class
+com\interview\debug\controller\Scenario30Controller.class
 com\interview\debug\idempotency\Idempotent.class
 com\interview\debug\config\AsyncConfig.class
 com\interview\debug\controller\JsonFilterController.class
