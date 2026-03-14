@@ -4,6 +4,7 @@ com\interview\debug\controller\Scenario27Controller.class
 com\interview\debug\model\ValidationUser.class
 com\interview\debug\repository\OrderRepository.class
 com\interview\debug\security\JwtUtils.class
+com\interview\debug\config\SchedulerConfig.class
 com\interview\debug\listener\SlackNotificationListener.class
 com\interview\debug\validation\OnCreate.class
 com\interview\debug\validation\OnUpdate.class

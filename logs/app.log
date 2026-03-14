@@ -653,3 +653,102 @@ This generated password is for development use only. Your security configuration
 2026-03-14 18:04:22,539 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-03-14 18:04:22,543 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
 2026-03-14 18:04:22,549 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.
+2026-03-14 18:13:46,120 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 18:13:46,204 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 17700 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-14 18:13:46,205 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-14 18:13:46,206 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-14 18:13:47,869 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 18:13:47,870 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14 18:13:48,136 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 246 ms. Found 7 JPA repository interfaces.
+2026-03-14 18:13:50,141 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 18:13:50,144 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-14 18:13:50,194 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,198 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,201 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,203 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,207 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,211 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,214 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 18:13:50,216 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+2026-03-14 18:13:52,665 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-14 18:13:52,703 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-14 18:13:52,729 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-14 18:13:52,733 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-14 18:13:53,006 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-14 18:13:53,008 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 6706 ms
+2026-03-14 18:13:54,041 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-14 18:13:54,517 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-14 18:13:54,523 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-14 18:13:54,556 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-14 18:13:55,063 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-14 18:13:55,066 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-14 18:13:55,340 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-14 18:13:55,341 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-14 18:13:55,341 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-14 18:13:55,437 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-14 18:13:55,448 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-14 18:13:55,500 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-14 18:13:55,507 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 1 migration (execution time 00:00.036s)
+2026-03-14 18:13:55,527 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-14 18:13:55,593 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-14 18:13:55,604 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-14 18:13:55,637 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.016s)
+2026-03-14 18:13:55,849 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 18:13:55,978 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-14 18:13:56,061 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-14 18:13:56,596 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14 18:14:00,152 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 18:14:00,227 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 18:14:01,412 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-14 18:14:04,074 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-14 18:14:05,003 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-14 18:14:06,050 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14 18:14:06,260 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: de9d3c21-ac9c-47ac-81ed-9a90f5cd65f9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-14 18:14:09,140 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-03-14 18:14:09,587 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56502cbd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fe6a72d, org.springframework.security.web.context.SecurityContextHolderFilter@cda6100, org.springframework.security.web.header.HeaderWriterFilter@436ef272, org.springframework.web.filter.CorsFilter@d96fa9e, org.springframework.security.web.authentication.logout.LogoutFilter@2901e61e, com.interview.debug.filter.JwtAuthenticationFilter@4eb5764d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28a3c051, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52c94e6d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2303832d, org.springframework.security.web.access.ExceptionTranslationFilter@2690d8ad, org.springframework.security.web.access.intercept.AuthorizationFilter@76ad3ab9]
+2026-03-14 18:14:13,069 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-14 18:14:13,122 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-14 18:14:13,173 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 27.831 seconds (process running for 28.522)
+2026-03-14 18:14:13,225 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5581d6c89ac46c3f627b64e8fa24b,c3f627b64e8fa24b] [scheduling-pool-4] ?? HEAVY START -> Time: 18:14:13
+2026-03-14 18:14:13,230 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5581dfcd50d0d8dca2630714ea1dc,8dca2630714ea1dc] [scheduling-pool-3] ? FIXED RATE [10s] -> Execution Time: 18:14:13
+2026-03-14 18:14:13,244 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5581d5531710db1541754533c8252,b1541754533c8252] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:14:15,272 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5581d5531710db1541754533c8252,b1541754533c8252] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:14:23,178 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b55827989a64ef740f37b68bb29999,740f37b68bb29999] [scheduling-pool-1] ? FIXED RATE [10s] -> Execution Time: 18:14:23
+2026-03-14 18:14:25,316 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b558297fc4832a2653394aed08a248,2653394aed08a248] [scheduling-pool-2] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:14:27,330 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b558297fc4832a2653394aed08a248,2653394aed08a248] [scheduling-pool-2] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:14:28,231 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5581d6c89ac46c3f627b64e8fa24b,c3f627b64e8fa24b] [scheduling-pool-4] ?? HEAVY END -> Time: 18:14:28
+2026-03-14 18:14:28,232 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5582c445a99aa81af98245442162b,81af98245442162b] [scheduling-pool-4] ?? HEAVY START -> Time: 18:14:28
+2026-03-14 18:14:33,169 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-5] [debug-challenge,69b55831cd32392a5234b9f4a1a99b9c,5234b9f4a1a99b9c] [scheduling-pool-5] ? FIXED RATE [10s] -> Execution Time: 18:14:33
+2026-03-14 18:14:37,334 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b55835f85b7bd095a0e2857225290d,95a0e2857225290d] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:14:39,346 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b55835f85b7bd095a0e2857225290d,95a0e2857225290d] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:14:43,179 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b5583b69ac117db2718cc5ad24f327,b2718cc5ad24f327] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 18:14:43
+2026-03-14 18:14:43,241 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5582c445a99aa81af98245442162b,81af98245442162b] [scheduling-pool-4] ?? HEAVY END -> Time: 18:14:43
+2026-03-14 18:14:43,242 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5583b8ded0be253d25b64d290cd96,53d25b64d290cd96] [scheduling-pool-4] ?? HEAVY START -> Time: 18:14:43
+2026-03-14 18:14:49,363 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b55841417d3e0159642dffbe6a2676,59642dffbe6a2676] [scheduling-pool-1] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:14:51,365 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b55841417d3e0159642dffbe6a2676,59642dffbe6a2676] [scheduling-pool-1] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:14:53,168 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-5] [debug-challenge,69b55845bf636cdd5be4ee8f16da4cfe,5be4ee8f16da4cfe] [scheduling-pool-5] ? FIXED RATE [10s] -> Execution Time: 18:14:53
+2026-03-14 18:14:58,258 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5583b8ded0be253d25b64d290cd96,53d25b64d290cd96] [scheduling-pool-4] ?? HEAVY END -> Time: 18:14:58
+2026-03-14 18:14:58,260 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5584a0d77a1f6b82036196765c120,b82036196765c120] [scheduling-pool-4] ?? HEAVY START -> Time: 18:14:58
+2026-03-14 18:15:00,002 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b5584cc2bbefbe1203513210abae03,1203513210abae03] [scheduling-pool-2] ?? CRON TASK -> Top of the minute: 18:15:00
+2026-03-14 18:15:01,373 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5584de109e339ab5fd685a386a653,ab5fd685a386a653] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:15:03,173 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-5] [debug-challenge,69b5584ff504bcc27b787bac4822999e,7b787bac4822999e] [scheduling-pool-5] ? FIXED RATE [10s] -> Execution Time: 18:15:03
+2026-03-14 18:15:03,382 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b5584de109e339ab5fd685a386a653,ab5fd685a386a653] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:15:13,168 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-5] [debug-challenge,69b55859cf4e9977d57ff735ea9ccd1d,d57ff735ea9ccd1d] [scheduling-pool-5] ? FIXED RATE [10s] -> Execution Time: 18:15:13
+2026-03-14 18:15:13,262 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b5584a0d77a1f6b82036196765c120,b82036196765c120] [scheduling-pool-4] ?? HEAVY END -> Time: 18:15:13
+2026-03-14 18:15:13,263 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b55859e6894bcb25126ee9240d8517,25126ee9240d8517] [scheduling-pool-4] ?? HEAVY START -> Time: 18:15:13
+2026-03-14 18:15:13,386 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b558594a9229abb6820e1540420000,b6820e1540420000] [scheduling-pool-1] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:15:15,401 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b558594a9229abb6820e1540420000,b6820e1540420000] [scheduling-pool-1] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:15:23,177 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b558636b478fa8295975c4c6b8573f,295975c4c6b8573f] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 18:15:23
+2026-03-14 18:15:25,404 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-5] [debug-challenge,69b558653c7c386e9241fe14d6008c04,9241fe14d6008c04] [scheduling-pool-5] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-14 18:15:27,420 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-5] [debug-challenge,69b558653c7c386e9241fe14d6008c04,9241fe14d6008c04] [scheduling-pool-5] ? FIXED DELAY [10s] -> Finished work.
+2026-03-14 18:15:28,265 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-4] [debug-challenge,69b55859e6894bcb25126ee9240d8517,25126ee9240d8517] [scheduling-pool-4] ?? HEAVY END -> Time: 18:15:28
+2026-03-14 18:15:28,268 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-14 18:15:28,299 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-14 18:15:28,349 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 18:15:28,352 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown initiated...
+2026-03-14 18:15:28,355 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] [debug-challenge,,] HikariPool-1 - Shutdown completed.

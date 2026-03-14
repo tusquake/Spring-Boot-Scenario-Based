@@ -22,28 +22,38 @@ public class Scenario33Scheduler {
      */
     @Scheduled(fixedRate = 10000)
     public void fixedRateTask() {
-        logger.info("⏰ FIXED RATE [10s] -> Execution Time: {}", dtf.format(LocalDateTime.now()));
+        logger.info("[{}] ⏰ FIXED RATE [10s] -> Execution Time: {}", 
+                Thread.currentThread().getName(), dtf.format(LocalDateTime.now()));
     }
 
     /**
      * FIXED DELAY: Runs 10 seconds AFTER the previous execution finishes.
-     * The "Polite Alarm" - it waits for you to finish your work before starting the timer.
      */
     @Scheduled(fixedDelay = 10000)
     public void fixedDelayTask() throws InterruptedException {
-        logger.info("⏸️ FIXED DELAY [10s] -> Starting work at: {}", dtf.format(LocalDateTime.now()));
-        // Simulate some work
+        logger.info("[{}] ⏸️ FIXED DELAY [10s] -> Starting work...", 
+                Thread.currentThread().getName());
         Thread.sleep(2000);
-        logger.info("✅ FIXED DELAY [10s] -> Finished work at: {}", dtf.format(LocalDateTime.now()));
+        logger.info("[{}] ✅ FIXED DELAY [10s] -> Finished work.", 
+                Thread.currentThread().getName());
     }
 
     /**
-     * CRON EXPRESSION: Runs at the start of every minute (0th second).
-     * Format: sec min hour day month weekday
-     * The "Fancy Calendar Alarm".
+     * HEAVY TASK: This task runs every 5 seconds but takes 15 seconds to finish!
+     * With a thread pool, this won't block the FIXED RATE task from firing.
      */
+    @Scheduled(fixedRate = 5000)
+    public void heavyConcurrentTask() throws InterruptedException {
+        logger.info("[{}] 🏋️ HEAVY START -> Time: {}", 
+                Thread.currentThread().getName(), dtf.format(LocalDateTime.now()));
+        Thread.sleep(15000); // Take 15s
+        logger.info("[{}] 🏋️ HEAVY END -> Time: {}", 
+                Thread.currentThread().getName(), dtf.format(LocalDateTime.now()));
+    }
+
     @Scheduled(cron = "0 * * * * *")
     public void cronTask() {
-        logger.info("🗓️ CRON TASK -> Running at the top of the minute: {}", dtf.format(LocalDateTime.now()));
+        logger.info("[{}] 🗓️ CRON TASK -> Top of the minute: {}", 
+                Thread.currentThread().getName(), dtf.format(LocalDateTime.now()));
     }
 }
