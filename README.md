@@ -298,3 +298,17 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 *   **Test**: 
     1. Call `/api/scenario31/search?name=Customer&minId=500&email=example.com`.
     2. Try different combinations (only `name`, only `minId`, or empty) and observe how the SQL `WHERE` clause changes.
+
+---
+
+### 3️⃣2️⃣ Scenario 32: Entity Graphs & The N+1 Problem
+*   **Concept**: Fetching optimization to avoid multiple round-trips to the DB.
+*   **The Analogy**: **The Bad Waiter**. 🏃‍♂️💨
+    - You order a Pizza, a drink, and a desert. 
+    - The **Bad Waiter** makes 3 trips: one for the pizza, then goes back for the drink, then goes back for the desert (1 + 3 = 4 trips).
+    - The **Good Waiter** uses a **Big Tray**: He puts everything on one tray and brings it in **one trip**.
+*   **The Problem**: Fetching a list of 10 Customers. For each customer, Hibernate makes a separate query to fetch their `Orders`. (1 query for customers + 10 queries for orders = 11 queries!).
+*   **Solution**: Use `@EntityGraph` (The "Big Tray"). It tells Hibernate to perform a `LEFT JOIN FETCH` in the primary SQL query, bringing all data in a single round-trip.
+*   **Test**: 
+    1. Call `/api/scenario32/nplus1` -> Observe 11 queries in the logs.
+    2. Call `/api/scenario32/optimized` -> Observe exactly **1** query with a JOIN.

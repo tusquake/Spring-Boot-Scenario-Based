@@ -13,6 +13,9 @@ public class Customer {
     private String name;
     private String email;
 
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private java.util.List<Order> orders = new java.util.ArrayList<>();
+
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -20,4 +23,6 @@ public class Customer {
     public void setName(String name) { this.name = name; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+    public java.util.List<Order> getOrders() { return orders; }
+    public void setOrders(java.util.List<Order> orders) { this.orders = orders; }
 }

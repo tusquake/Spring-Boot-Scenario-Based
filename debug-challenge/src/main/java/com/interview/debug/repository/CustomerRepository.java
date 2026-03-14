@@ -19,4 +19,9 @@ public interface CustomerRepository extends JpaRepository<Customer, Long>, JpaSp
 
     // 3. Window<T> (Cursor/Keyset) avoids OFFSET and COUNT. Uses WHERE id > ?
     Window<Customer> findFirst10ByOrderByIdAsc(ScrollPosition position);
+
+    // 4. Entity Graph (The Big Tray) - Fetches Customers and Orders in 1 query
+    @org.springframework.data.jpa.repository.EntityGraph(attributePaths = {"orders"})
+    @org.springframework.data.jpa.repository.Query("SELECT c FROM Customer c")
+    java.util.List<Customer> findAllWithOrders();
 }

@@ -20,9 +20,12 @@ public class Scenario30Controller {
 
     private static final Logger logger = LoggerFactory.getLogger(Scenario30Controller.class);
     private final CustomerRepository customerRepository;
+    private final com.interview.debug.repository.OrderRepository orderRepository;
 
-    public Scenario30Controller(CustomerRepository customerRepository) {
+    public Scenario30Controller(CustomerRepository customerRepository,
+            com.interview.debug.repository.OrderRepository orderRepository) {
         this.customerRepository = customerRepository;
+        this.orderRepository = orderRepository;
     }
 
     /**
@@ -32,15 +35,30 @@ public class Scenario30Controller {
     public void seedData() {
         if (customerRepository.count() == 0) {
             logger.info("Seeding 10,000 customers for Pagination Demo...");
-            List<Customer> customers = new ArrayList<>();
-            for (int i = 1; i <= 10000; i++) {
+            for (int i = 1; i <= 100; i++) {
                 Customer c = new Customer();
                 c.setName("Customer " + i);
                 c.setEmail("customer" + i + "@example.com");
-                customers.add(c);
+                customerRepository.save(c);
+
+                // Add 2 orders for each customer
+                com.interview.debug.model.Order o1 = new com.interview.debug.model.Order();
+                o1.setProductName("Product A for " + i);
+                o1.setCustomer(c);
+                o1.setPrice(100.0);
+                o1.setOrderDate(new java.util.Date());
+
+                com.interview.debug.model.Order o2 = new com.interview.debug.model.Order();
+                o2.setProductName("Product B for " + i);
+                o2.setCustomer(c);
+                o2.setPrice(200.0);
+                o2.setOrderDate(new java.util.Date());
+
+                orderRepository.save(o1);
+                orderRepository.save(o2);
+
                 if (i % 1000 == 0) {
-                    customerRepository.saveAll(customers);
-                    customers.clear();
+                    logger.info("Seeded {} customers with orders...", i);
                 }
             }
             logger.info("Seeding complete.");
@@ -50,13 +68,14 @@ public class Scenario30Controller {
     /**
      * 1. Page (Classic offset pagination)
      * Pros: Easy, UI gets total pages.
-     * Cons: Issues a `SELECT COUNT(*)` query. Deep pagination is slow due to OFFSET.
+     * Cons: Issues a `SELECT COUNT(*)` query. Deep pagination is slow due to
+     * OFFSET.
      */
     @GetMapping("/page")
     public Page<Customer> getPage(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        
+
         logger.info("Executing PAGE query for page {}, size {}", page, size);
         return customerRepository.findAll(PageRequest.of(page, size, Sort.by("id").ascending()));
     }
@@ -70,14 +89,15 @@ public class Scenario30Controller {
     public Slice<Customer> getSlice(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
-        
+
         logger.info("Executing SLICE query for page {}, size {}", page, size);
         return customerRepository.findBy(PageRequest.of(page, size, Sort.by("id").ascending()));
     }
 
     /**
      * 3. Cursor / Keyset Pagination (Spring Boot 3 Window)
-     * Pros: NO OFFSET, NO COUNT. Uses `WHERE id > ?`. O(1) performance even for page 1,000,000.
+     * Pros: NO OFFSET, NO COUNT. Uses `WHERE id > ?`. O(1) performance even for
+     * page 1,000,000.
      * Cons: Cannot jump to a specific page (e.g., jump to page 5).
      * 
      * How to use:
@@ -86,14 +106,14 @@ public class Scenario30Controller {
      */
     @GetMapping("/cursor")
     public Map<String, Object> getCursor(@RequestParam(required = false) String cursor) {
-        
-        ScrollPosition position = (cursor != null && !cursor.trim().isEmpty()) 
+
+        ScrollPosition position = (cursor != null && !cursor.trim().isEmpty())
                 ? ScrollPosition.of(Map.of("id", Long.parseLong(cursor)), Direction.FORWARD)
                 : ScrollPosition.keyset();
-        
+
         logger.info("Executing CURSOR query with position: {}", position);
         Window<Customer> window = customerRepository.findFirst10ByOrderByIdAsc(position);
-        
+
         // Extract the next cursor value manually for simpler client usage
         String nextCursor = null;
         if (!window.isEmpty() && window.hasNext()) {
