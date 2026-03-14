@@ -1,5 +1,6 @@
 package com.interview.debug.scheduler;
 
+import net.javacrumbs.shedlock.spring.annotation.SchedulerLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -15,12 +16,12 @@ public class Scenario33Scheduler {
     private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
 
     /**
-     * FIXED RATE: Runs every 10 seconds.
-     * The "Indifferent Alarm" - it doesn't care if the previous task is still running.
-     * (Note: By default, Spring uses a single-threaded task scheduler, 
-     * so it still waits unless you configure a ThreadPoolTaskScheduler).
+     * FIXED RATE WITH SHEDLOCK:
+     * Even if you run 10 instances of this app, only ONE will run this task
+     * because it checks the 'shedlock' table first.
      */
     @Scheduled(fixedRate = 10000)
+    @SchedulerLock(name = "fixedRateTaskLock", lockAtMostFor = "1m", lockAtLeastFor = "5s")
     public void fixedRateTask() {
         logger.info("[{}] ⏰ FIXED RATE [10s] -> Execution Time: {}", 
                 Thread.currentThread().getName(), dtf.format(LocalDateTime.now()));
