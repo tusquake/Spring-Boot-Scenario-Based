@@ -31,6 +31,7 @@ com\interview\debug\controller\Scenario14Controller.class
 com\interview\debug\controller\Scenario29Controller.class
 com\interview\debug\listener\EmailNotificationListener.class
 com\interview\debug\controller\AuthController.class
+com\interview\debug\scheduler\Scenario33Scheduler.class
 com\interview\debug\service\AsyncService.class
 com\interview\debug\controller\Scenario17Controller.class
 com\interview\debug\controller\Scenario6Controller.class

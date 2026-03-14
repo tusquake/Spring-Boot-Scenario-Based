@@ -69,3 +69,373 @@ This generated password is for development use only. Your security configuration
 2026-03-14 16:58:19,301 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
 2026-03-14 16:58:19,347 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
 2026-03-14 16:58:19,385 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 39.164 seconds (process running for 39.659)
+2026-03-14 17:35:18,621 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 17:35:18,697 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 22432 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
+2026-03-14 17:35:18,697 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-14 17:35:18,698 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-14 17:35:20,131 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 17:35:20,132 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-14 17:35:20,415 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 267 ms. Found 7 JPA repository interfaces.
+2026-03-14 17:35:21,033 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-14 17:35:21,035 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-14 17:35:21,068 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,069 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,071 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,072 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,073 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,074 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,074 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-14 17:35:21,075 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2026-03-14 17:35:23,663 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-14 17:35:23,694 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-14 17:35:23,703 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-14 17:35:23,704 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-14 17:35:24,020 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-14 17:35:24,022 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 5235 ms
+2026-03-14 17:35:25,518 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-14 17:35:26,293 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-14 17:35:26,300 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-14 17:35:26,328 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-14 17:35:26,795 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-14 17:35:26,799 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-14 17:35:27,146 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-14 17:35:27,146 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-14 17:35:27,147 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-14 17:35:27,263 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-14 17:35:27,273 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-14 17:35:27,337 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-14 17:35:27,345 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 1 migration (execution time 00:00.035s)
+2026-03-14 17:35:27,357 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-14 17:35:27,408 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-14 17:35:27,422 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-14 17:35:27,459 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.015s)
+2026-03-14 17:35:27,848 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 17:35:28,095 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-14 17:35:28,206 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-14 17:35:29,676 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-14 17:35:34,187 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 17:35:34,329 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-14 17:35:36,615 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-14 17:35:39,760 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-14 17:35:40,877 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-14 17:35:41,844 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-14 17:35:41,974 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] [debug-challenge,,] 
+
+Using generated security password: f5775cca-6e13-44b8-bc37-d0ff22092626
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-03-14 17:35:43,660 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 4 endpoint(s) beneath base path '/actuator'
+2026-03-14 17:35:44,012 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@47dd6579, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e484f94, org.springframework.security.web.context.SecurityContextHolderFilter@4e3b6e, org.springframework.security.web.header.HeaderWriterFilter@11f18ed3, org.springframework.web.filter.CorsFilter@3fc00de0, org.springframework.security.web.authentication.logout.LogoutFilter@4945520, com.interview.debug.filter.JwtAuthenticationFilter@628bcf2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ef27af9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3eb53655, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51622450, org.springframework.security.web.access.ExceptionTranslationFilter@66910ced, org.springframework.security.web.access.intercept.AuthorizationFilter@4b71aee1]
+2026-03-14 17:35:47,542 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-14 17:35:47,618 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-14 17:35:47,671 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 29.808 seconds (process running for 30.559)
+2026-03-14 17:35:47,729 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f1bae07717fcb01225bab631536,cb01225bab631536] ? FIXED RATE [10s] -> Execution Time: 17:35:47
+2026-03-14 17:35:47,740 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f1bdadc8dbb9c241eeccf22e9cb,9c241eeccf22e9cb] ?? FIXED DELAY [10s] -> Starting work at: 17:35:47
+2026-03-14 17:35:49,743 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f1bdadc8dbb9c241eeccf22e9cb,9c241eeccf22e9cb] ? FIXED DELAY [10s] -> Finished work at: 17:35:49
+2026-03-14 17:35:57,669 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f254689f88192599285ecd23a2c,92599285ecd23a2c] ? FIXED RATE [10s] -> Execution Time: 17:35:57
+2026-03-14 17:35:59,755 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f27ae18b798c7b0b76c4f476423,c7b0b76c4f476423] ?? FIXED DELAY [10s] -> Starting work at: 17:35:59
+2026-03-14 17:36:01,766 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f27ae18b798c7b0b76c4f476423,c7b0b76c4f476423] ? FIXED DELAY [10s] -> Finished work at: 17:36:01
+2026-03-14 17:36:01,767 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f294b7969a79b71b5f08d166c82,9b71b5f08d166c82] ?? CRON TASK -> Running at the top of the minute: 17:36:01
+2026-03-14 17:36:07,681 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f2f53953f69d12f2060511debf2,d12f2060511debf2] ? FIXED RATE [10s] -> Execution Time: 17:36:07
+2026-03-14 17:36:11,767 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f33d037b17eef1440517300804b,ef1440517300804b] ?? FIXED DELAY [10s] -> Starting work at: 17:36:11
+2026-03-14 17:36:13,779 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f33d037b17eef1440517300804b,ef1440517300804b] ? FIXED DELAY [10s] -> Finished work at: 17:36:13
+2026-03-14 17:36:17,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f39906dc1df91da7791dba33c5e,91da7791dba33c5e] ? FIXED RATE [10s] -> Execution Time: 17:36:17
+2026-03-14 17:36:23,792 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f3f26d268e052c3638354b4afe3,52c3638354b4afe3] ?? FIXED DELAY [10s] -> Starting work at: 17:36:23
+2026-03-14 17:36:25,807 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f3f26d268e052c3638354b4afe3,52c3638354b4afe3] ? FIXED DELAY [10s] -> Finished work at: 17:36:25
+2026-03-14 17:36:27,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f43481938216604071fd5609547,6604071fd5609547] ? FIXED RATE [10s] -> Execution Time: 17:36:27
+2026-03-14 17:36:35,816 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f4b9189694e3fe039397a237a7a,3fe039397a237a7a] ?? FIXED DELAY [10s] -> Starting work at: 17:36:35
+2026-03-14 17:36:37,820 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f4b9189694e3fe039397a237a7a,3fe039397a237a7a] ? FIXED DELAY [10s] -> Finished work at: 17:36:37
+2026-03-14 17:36:37,821 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f4d5e7aa1b50e4be91152bb3578,0e4be91152bb3578] ? FIXED RATE [10s] -> Execution Time: 17:36:37
+2026-03-14 17:36:47,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f57ae69045a7418762dcd74cdbf,7418762dcd74cdbf] ? FIXED RATE [10s] -> Execution Time: 17:36:47
+2026-03-14 17:36:47,832 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f577e5a47abfc3e3e9a1e2ad0a2,fc3e3e9a1e2ad0a2] ?? FIXED DELAY [10s] -> Starting work at: 17:36:47
+2026-03-14 17:36:49,841 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f577e5a47abfc3e3e9a1e2ad0a2,fc3e3e9a1e2ad0a2] ? FIXED DELAY [10s] -> Finished work at: 17:36:49
+2026-03-14 17:36:57,667 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f6147f32a1cdf7796e97c9f2ede,df7796e97c9f2ede] ? FIXED RATE [10s] -> Execution Time: 17:36:57
+2026-03-14 17:36:59,851 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f63324e33d95e8e01852fc5b637,5e8e01852fc5b637] ?? FIXED DELAY [10s] -> Starting work at: 17:36:59
+2026-03-14 17:37:01,853 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f63324e33d95e8e01852fc5b637,5e8e01852fc5b637] ? FIXED DELAY [10s] -> Finished work at: 17:37:01
+2026-03-14 17:37:01,854 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f6530dad6a4b8d6feed242c6d1a,b8d6feed242c6d1a] ?? CRON TASK -> Running at the top of the minute: 17:37:01
+2026-03-14 17:37:07,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f6bb8069697de60d5535181c0ea,de60d5535181c0ea] ? FIXED RATE [10s] -> Execution Time: 17:37:07
+2026-03-14 17:37:11,864 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f6fa41beb7bce7925792ae465f5,ce7925792ae465f5] ?? FIXED DELAY [10s] -> Starting work at: 17:37:11
+2026-03-14 17:37:13,866 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f6fa41beb7bce7925792ae465f5,ce7925792ae465f5] ? FIXED DELAY [10s] -> Finished work at: 17:37:13
+2026-03-14 17:37:17,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f7543cd2e73a0ee27587bf73d28,a0ee27587bf73d28] ? FIXED RATE [10s] -> Execution Time: 17:37:17
+2026-03-14 17:37:23,880 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f7b0f30f7f33e94e921bc10186c,3e94e921bc10186c] ?? FIXED DELAY [10s] -> Starting work at: 17:37:23
+2026-03-14 17:37:25,882 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f7b0f30f7f33e94e921bc10186c,3e94e921bc10186c] ? FIXED DELAY [10s] -> Finished work at: 17:37:25
+2026-03-14 17:37:27,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f7f90c5cf2244bad2f3671976a6,44bad2f3671976a6] ? FIXED RATE [10s] -> Execution Time: 17:37:27
+2026-03-14 17:37:35,888 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f875a92fcb69abf593418ea6397,9abf593418ea6397] ?? FIXED DELAY [10s] -> Starting work at: 17:37:35
+2026-03-14 17:37:37,903 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f875a92fcb69abf593418ea6397,9abf593418ea6397] ? FIXED DELAY [10s] -> Finished work at: 17:37:37
+2026-03-14 17:37:37,904 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f89690add168e1ca7cb542a7d84,8e1ca7cb542a7d84] ? FIXED RATE [10s] -> Execution Time: 17:37:37
+2026-03-14 17:37:47,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f934b4d69d33ceba58e10f46bdd,3ceba58e10f46bdd] ? FIXED RATE [10s] -> Execution Time: 17:37:47
+2026-03-14 17:37:47,914 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f93be6dd4d6b7b4a85f6eea09c6,b7b4a85f6eea09c6] ?? FIXED DELAY [10s] -> Starting work at: 17:37:47
+2026-03-14 17:37:49,916 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f93be6dd4d6b7b4a85f6eea09c6,b7b4a85f6eea09c6] ? FIXED DELAY [10s] -> Finished work at: 17:37:49
+2026-03-14 17:37:57,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f9d3101a6e3cc4fafcfa141ab66,cc4fafcfa141ab66] ? FIXED RATE [10s] -> Execution Time: 17:37:57
+2026-03-14 17:37:59,922 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f9fcfc0042cf3ff4a8a956acb6f,f3ff4a8a956acb6f] ?? FIXED DELAY [10s] -> Starting work at: 17:37:59
+2026-03-14 17:38:01,938 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54f9fcfc0042cf3ff4a8a956acb6f,f3ff4a8a956acb6f] ? FIXED DELAY [10s] -> Finished work at: 17:38:01
+2026-03-14 17:38:01,939 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fa170276dc1571d85d44047dc8c,571d85d44047dc8c] ?? CRON TASK -> Running at the top of the minute: 17:38:01
+2026-03-14 17:38:07,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fa7fb296f9169ddb3361dd38c93,69ddb3361dd38c93] ? FIXED RATE [10s] -> Execution Time: 17:38:07
+2026-03-14 17:38:11,942 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54faba2ff336b66def2dbf723507d,66def2dbf723507d] ?? FIXED DELAY [10s] -> Starting work at: 17:38:11
+2026-03-14 17:38:13,953 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54faba2ff336b66def2dbf723507d,66def2dbf723507d] ? FIXED DELAY [10s] -> Finished work at: 17:38:13
+2026-03-14 17:38:17,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fb1d5b0699f2d51de4f01a5fcde,2d51de4f01a5fcde] ? FIXED RATE [10s] -> Execution Time: 17:38:17
+2026-03-14 17:38:23,956 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fb705bc5cb8b7184e9875778354,b7184e9875778354] ?? FIXED DELAY [10s] -> Starting work at: 17:38:23
+2026-03-14 17:38:25,967 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fb705bc5cb8b7184e9875778354,b7184e9875778354] ? FIXED DELAY [10s] -> Finished work at: 17:38:25
+2026-03-14 17:38:27,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fbb2faeb024edadb5b14ad5103f,edadb5b14ad5103f] ? FIXED RATE [10s] -> Execution Time: 17:38:27
+2026-03-14 17:38:35,971 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fc3419be6e1d290fda802398f88,d290fda802398f88] ?? FIXED DELAY [10s] -> Starting work at: 17:38:35
+2026-03-14 17:38:37,974 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fc3419be6e1d290fda802398f88,d290fda802398f88] ? FIXED DELAY [10s] -> Finished work at: 17:38:37
+2026-03-14 17:38:37,976 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fc577e1a379a0c9d40a0996d355,a0c9d40a0996d355] ? FIXED RATE [10s] -> Execution Time: 17:38:37
+2026-03-14 17:38:47,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fcfb796ffbe34c75cbc469c99a3,34c75cbc469c99a3] ? FIXED RATE [10s] -> Execution Time: 17:38:47
+2026-03-14 17:38:47,984 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fcf51e454e19926aeb7d9daf845,9926aeb7d9daf845] ?? FIXED DELAY [10s] -> Starting work at: 17:38:47
+2026-03-14 17:38:49,987 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fcf51e454e19926aeb7d9daf845,9926aeb7d9daf845] ? FIXED DELAY [10s] -> Finished work at: 17:38:49
+2026-03-14 17:38:57,675 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fd91346375483cbc3298101cc9f,83cbc3298101cc9f] ? FIXED RATE [10s] -> Execution Time: 17:38:57
+2026-03-14 17:38:59,988 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fdb4e39b8d169c6bd476fe420e6,69c6bd476fe420e6] ?? FIXED DELAY [10s] -> Starting work at: 17:38:59
+2026-03-14 17:39:02,000 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fdb4e39b8d169c6bd476fe420e6,69c6bd476fe420e6] ? FIXED DELAY [10s] -> Finished work at: 17:39:02
+2026-03-14 17:39:02,002 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fde94dc4e0809b7d7773606923e,09b7d7773606923e] ?? CRON TASK -> Running at the top of the minute: 17:39:02
+2026-03-14 17:39:07,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fe3608721a482bfd98c8463b515,82bfd98c8463b515] ? FIXED RATE [10s] -> Execution Time: 17:39:07
+2026-03-14 17:39:12,007 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fe8219cd132ce9c66c4e01348b6,ce9c66c4e01348b6] ?? FIXED DELAY [10s] -> Starting work at: 17:39:12
+2026-03-14 17:39:14,010 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fe8219cd132ce9c66c4e01348b6,ce9c66c4e01348b6] ? FIXED DELAY [10s] -> Finished work at: 17:39:14
+2026-03-14 17:39:17,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54fedbb20dca8bfe8224eb74e870f,bfe8224eb74e870f] ? FIXED RATE [10s] -> Execution Time: 17:39:17
+2026-03-14 17:39:24,011 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54ff472f32414cdbfb83ad4da66d0,cdbfb83ad4da66d0] ?? FIXED DELAY [10s] -> Starting work at: 17:39:24
+2026-03-14 17:39:26,026 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54ff472f32414cdbfb83ad4da66d0,cdbfb83ad4da66d0] ? FIXED DELAY [10s] -> Finished work at: 17:39:26
+2026-03-14 17:39:27,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b54ff729b2f02cbcc6ca1d3c9c7c25,bcc6ca1d3c9c7c25] ? FIXED RATE [10s] -> Execution Time: 17:39:27
+2026-03-14 17:39:36,043 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55000a89c4a27e85a7ac8bf4d6a7b,e85a7ac8bf4d6a7b] ?? FIXED DELAY [10s] -> Starting work at: 17:39:36
+2026-03-14 17:39:38,057 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55000a89c4a27e85a7ac8bf4d6a7b,e85a7ac8bf4d6a7b] ? FIXED DELAY [10s] -> Finished work at: 17:39:38
+2026-03-14 17:39:38,058 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550024f76500d5db67e9d940ebd92,5db67e9d940ebd92] ? FIXED RATE [10s] -> Execution Time: 17:39:38
+2026-03-14 17:39:47,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5500be3e6bb5a193ca9683498561a,193ca9683498561a] ? FIXED RATE [10s] -> Execution Time: 17:39:47
+2026-03-14 17:39:48,061 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5500c5101124f3756c98b4fb3cb74,3756c98b4fb3cb74] ?? FIXED DELAY [10s] -> Starting work at: 17:39:48
+2026-03-14 17:39:50,063 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5500c5101124f3756c98b4fb3cb74,3756c98b4fb3cb74] ? FIXED DELAY [10s] -> Finished work at: 17:39:50
+2026-03-14 17:39:57,667 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55015aa742a80a42bb24166daffb2,a42bb24166daffb2] ? FIXED RATE [10s] -> Execution Time: 17:39:57
+2026-03-14 17:40:00,009 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5501887c409bb53b8a15ec3ef2283,53b8a15ec3ef2283] ?? CRON TASK -> Running at the top of the minute: 17:40:00
+2026-03-14 17:40:00,070 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55018496c1d1d659dd889f3558757,659dd889f3558757] ?? FIXED DELAY [10s] -> Starting work at: 17:40:00
+2026-03-14 17:40:02,082 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55018496c1d1d659dd889f3558757,659dd889f3558757] ? FIXED DELAY [10s] -> Finished work at: 17:40:02
+2026-03-14 17:40:07,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5501f4adcf847c072e9f351c35bff,c072e9f351c35bff] ? FIXED RATE [10s] -> Execution Time: 17:40:07
+2026-03-14 17:40:12,086 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5502441d40febf299814d3ef8c68e,f299814d3ef8c68e] ?? FIXED DELAY [10s] -> Starting work at: 17:40:12
+2026-03-14 17:40:14,097 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5502441d40febf299814d3ef8c68e,f299814d3ef8c68e] ? FIXED DELAY [10s] -> Finished work at: 17:40:14
+2026-03-14 17:40:17,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550294596551f6d022b39abadc92a,6d022b39abadc92a] ? FIXED RATE [10s] -> Execution Time: 17:40:17
+2026-03-14 17:40:24,101 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55030d48665507f48366e577bdd07,7f48366e577bdd07] ?? FIXED DELAY [10s] -> Starting work at: 17:40:24
+2026-03-14 17:40:26,114 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55030d48665507f48366e577bdd07,7f48366e577bdd07] ? FIXED DELAY [10s] -> Finished work at: 17:40:26
+2026-03-14 17:40:27,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550339d8f84fa08cfcca4d731b92e,08cfcca4d731b92e] ? FIXED RATE [10s] -> Execution Time: 17:40:27
+2026-03-14 17:40:36,127 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5503cee89a2582b67025dd4a70c56,2b67025dd4a70c56] ?? FIXED DELAY [10s] -> Starting work at: 17:40:36
+2026-03-14 17:40:38,129 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5503cee89a2582b67025dd4a70c56,2b67025dd4a70c56] ? FIXED DELAY [10s] -> Finished work at: 17:40:38
+2026-03-14 17:40:38,130 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5503efb01993784e57ce143dc93af,84e57ce143dc93af] ? FIXED RATE [10s] -> Execution Time: 17:40:38
+2026-03-14 17:40:47,669 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55047544507f0b994533688b94be2,b994533688b94be2] ? FIXED RATE [10s] -> Execution Time: 17:40:47
+2026-03-14 17:40:48,139 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55048385055f5c083831f05ebbb53,c083831f05ebbb53] ?? FIXED DELAY [10s] -> Starting work at: 17:40:48
+2026-03-14 17:40:50,140 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55048385055f5c083831f05ebbb53,c083831f05ebbb53] ? FIXED DELAY [10s] -> Finished work at: 17:40:50
+2026-03-14 17:40:57,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55051bfdc074a97633cd0f3b00cb3,97633cd0f3b00cb3] ? FIXED RATE [10s] -> Execution Time: 17:40:57
+2026-03-14 17:41:00,012 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55054b3e1b7f1fc06eb5707d14015,fc06eb5707d14015] ?? CRON TASK -> Running at the top of the minute: 17:41:00
+2026-03-14 17:41:00,151 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550549add1bfb5a546010fca4de87,5a546010fca4de87] ?? FIXED DELAY [10s] -> Starting work at: 17:41:00
+2026-03-14 17:41:02,152 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550549add1bfb5a546010fca4de87,5a546010fca4de87] ? FIXED DELAY [10s] -> Finished work at: 17:41:02
+2026-03-14 17:41:07,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5505b5c8e489405d332a154f25ac8,05d332a154f25ac8] ? FIXED RATE [10s] -> Execution Time: 17:41:07
+2026-03-14 17:41:12,164 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5506050ad4f745f37aed95501b0c4,5f37aed95501b0c4] ?? FIXED DELAY [10s] -> Starting work at: 17:41:12
+2026-03-14 17:41:14,167 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5506050ad4f745f37aed95501b0c4,5f37aed95501b0c4] ? FIXED DELAY [10s] -> Finished work at: 17:41:14
+2026-03-14 17:41:17,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55065642458f245c64f9fd1e518f6,45c64f9fd1e518f6] ? FIXED RATE [10s] -> Execution Time: 17:41:17
+2026-03-14 17:41:24,173 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5506ccf46498af7053f5ce305518a,f7053f5ce305518a] ?? FIXED DELAY [10s] -> Starting work at: 17:41:24
+2026-03-14 17:41:26,175 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5506ccf46498af7053f5ce305518a,f7053f5ce305518a] ? FIXED DELAY [10s] -> Finished work at: 17:41:26
+2026-03-14 17:41:27,675 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5506f0727b39496e63f276c276fa0,96e63f276c276fa0] ? FIXED RATE [10s] -> Execution Time: 17:41:27
+2026-03-14 17:41:36,190 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55078a6ecdce3d90d8eb9d33db5f8,d90d8eb9d33db5f8] ?? FIXED DELAY [10s] -> Starting work at: 17:41:36
+2026-03-14 17:41:38,196 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55078a6ecdce3d90d8eb9d33db5f8,d90d8eb9d33db5f8] ? FIXED DELAY [10s] -> Finished work at: 17:41:38
+2026-03-14 17:41:38,198 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5507adef9f89f1b445f3fbd45396d,1b445f3fbd45396d] ? FIXED RATE [10s] -> Execution Time: 17:41:38
+2026-03-14 17:41:47,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55083abd5aa5bed78bed2c118209f,ed78bed2c118209f] ? FIXED RATE [10s] -> Execution Time: 17:41:47
+2026-03-14 17:41:48,206 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5508415fdeb83c12fee53bc1674d3,c12fee53bc1674d3] ?? FIXED DELAY [10s] -> Starting work at: 17:41:48
+2026-03-14 17:41:50,212 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5508415fdeb83c12fee53bc1674d3,c12fee53bc1674d3] ? FIXED DELAY [10s] -> Finished work at: 17:41:50
+2026-03-14 17:41:57,679 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5508d8592de144401b78250944723,4401b78250944723] ? FIXED RATE [10s] -> Execution Time: 17:41:57
+2026-03-14 17:42:00,013 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55090cbf76cc050fdf1ded70a0f7d,50fdf1ded70a0f7d] ?? CRON TASK -> Running at the top of the minute: 17:42:00
+2026-03-14 17:42:00,220 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5509089ed8d079c8f12e747fd1654,9c8f12e747fd1654] ?? FIXED DELAY [10s] -> Starting work at: 17:42:00
+2026-03-14 17:42:02,230 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5509089ed8d079c8f12e747fd1654,9c8f12e747fd1654] ? FIXED DELAY [10s] -> Finished work at: 17:42:02
+2026-03-14 17:42:07,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5509730b5dd004274f4ebfe6e3bc5,4274f4ebfe6e3bc5] ? FIXED RATE [10s] -> Execution Time: 17:42:07
+2026-03-14 17:42:12,234 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5509c19503292f80e90a71f130274,f80e90a71f130274] ?? FIXED DELAY [10s] -> Starting work at: 17:42:12
+2026-03-14 17:42:14,249 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5509c19503292f80e90a71f130274,f80e90a71f130274] ? FIXED DELAY [10s] -> Finished work at: 17:42:14
+2026-03-14 17:42:17,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550a1416a86a29517fcd9acc66d3b,9517fcd9acc66d3b] ? FIXED RATE [10s] -> Execution Time: 17:42:17
+2026-03-14 17:42:24,252 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550a8cc4c8030db778bb2b812dcd1,db778bb2b812dcd1] ?? FIXED DELAY [10s] -> Starting work at: 17:42:24
+2026-03-14 17:42:26,263 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550a8cc4c8030db778bb2b812dcd1,db778bb2b812dcd1] ? FIXED DELAY [10s] -> Finished work at: 17:42:26
+2026-03-14 17:42:27,667 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550ab2a41f0da21d2026af6e603b7,21d2026af6e603b7] ? FIXED RATE [10s] -> Execution Time: 17:42:27
+2026-03-14 17:42:36,274 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550b46326f54a87702b331252cbd5,87702b331252cbd5] ?? FIXED DELAY [10s] -> Starting work at: 17:42:36
+2026-03-14 17:42:38,288 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550b46326f54a87702b331252cbd5,87702b331252cbd5] ? FIXED DELAY [10s] -> Finished work at: 17:42:38
+2026-03-14 17:42:38,289 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550b6fbf6dfd8c1cd69584b10ffbd,c1cd69584b10ffbd] ? FIXED RATE [10s] -> Execution Time: 17:42:38
+2026-03-14 17:42:47,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550bf993c7cb5a25095e2d35f5c88,a25095e2d35f5c88] ? FIXED RATE [10s] -> Execution Time: 17:42:47
+2026-03-14 17:42:48,296 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550c0e642435b7631c8b30772c960,7631c8b30772c960] ?? FIXED DELAY [10s] -> Starting work at: 17:42:48
+2026-03-14 17:42:50,303 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550c0e642435b7631c8b30772c960,7631c8b30772c960] ? FIXED DELAY [10s] -> Finished work at: 17:42:50
+2026-03-14 17:42:57,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550c9b7e6ef9a1d60b081cee391f1,1d60b081cee391f1] ? FIXED RATE [10s] -> Execution Time: 17:42:57
+2026-03-14 17:43:00,005 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550ccd189f9da88ea83f25a44e2df,88ea83f25a44e2df] ?? CRON TASK -> Running at the top of the minute: 17:43:00
+2026-03-14 17:43:00,305 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550cca6ffcae2b83e9d1deed13a4c,b83e9d1deed13a4c] ?? FIXED DELAY [10s] -> Starting work at: 17:43:00
+2026-03-14 17:43:02,321 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550cca6ffcae2b83e9d1deed13a4c,b83e9d1deed13a4c] ? FIXED DELAY [10s] -> Finished work at: 17:43:02
+2026-03-14 17:43:07,666 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550d3fadda788b9c301684944eff6,b9c301684944eff6] ? FIXED RATE [10s] -> Execution Time: 17:43:07
+2026-03-14 17:43:12,327 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550d8245e02b4c8572af52a3c7606,c8572af52a3c7606] ?? FIXED DELAY [10s] -> Starting work at: 17:43:12
+2026-03-14 17:43:14,332 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550d8245e02b4c8572af52a3c7606,c8572af52a3c7606] ? FIXED DELAY [10s] -> Finished work at: 17:43:14
+2026-03-14 17:43:17,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550dd8522da99b8d15d263099a862,b8d15d263099a862] ? FIXED RATE [10s] -> Execution Time: 17:43:17
+2026-03-14 17:43:24,339 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550e4c85c609727a908e582adeda6,27a908e582adeda6] ?? FIXED DELAY [10s] -> Starting work at: 17:43:24
+2026-03-14 17:43:26,342 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550e4c85c609727a908e582adeda6,27a908e582adeda6] ? FIXED DELAY [10s] -> Finished work at: 17:43:26
+2026-03-14 17:43:27,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550e774e83e841613691f7b98340b,1613691f7b98340b] ? FIXED RATE [10s] -> Execution Time: 17:43:27
+2026-03-14 17:43:36,352 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550f0d6eb804a50be7b2913e8d1dd,50be7b2913e8d1dd] ?? FIXED DELAY [10s] -> Starting work at: 17:43:36
+2026-03-14 17:43:38,360 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550f0d6eb804a50be7b2913e8d1dd,50be7b2913e8d1dd] ? FIXED DELAY [10s] -> Finished work at: 17:43:38
+2026-03-14 17:43:38,361 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550f21175059b9f70421e1d71899b,9f70421e1d71899b] ? FIXED RATE [10s] -> Execution Time: 17:43:38
+2026-03-14 17:43:47,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550fb3b7a1e1153d61dcd74e2b8df,53d61dcd74e2b8df] ? FIXED RATE [10s] -> Execution Time: 17:43:47
+2026-03-14 17:43:48,363 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550fcf7f6aeab91374df167312749,91374df167312749] ?? FIXED DELAY [10s] -> Starting work at: 17:43:48
+2026-03-14 17:43:50,368 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b550fcf7f6aeab91374df167312749,91374df167312749] ? FIXED DELAY [10s] -> Finished work at: 17:43:50
+2026-03-14 17:43:57,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55105aef769a75f01003d3f22874a,5f01003d3f22874a] ? FIXED RATE [10s] -> Execution Time: 17:43:57
+2026-03-14 17:44:00,015 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5510856633d91bdbcd8c3dd221b19,bdbcd8c3dd221b19] ?? CRON TASK -> Running at the top of the minute: 17:44:00
+2026-03-14 17:44:00,372 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551082fc89b5b6ac0f8b1dce5b39a,6ac0f8b1dce5b39a] ?? FIXED DELAY [10s] -> Starting work at: 17:44:00
+2026-03-14 17:44:02,378 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551082fc89b5b6ac0f8b1dce5b39a,6ac0f8b1dce5b39a] ? FIXED DELAY [10s] -> Finished work at: 17:44:02
+2026-03-14 17:44:07,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5510f5c80b309203e55f774b2496a,203e55f774b2496a] ? FIXED RATE [10s] -> Execution Time: 17:44:07
+2026-03-14 17:44:12,381 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55114244523a8c052b6df7083e637,c052b6df7083e637] ?? FIXED DELAY [10s] -> Starting work at: 17:44:12
+2026-03-14 17:44:14,396 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55114244523a8c052b6df7083e637,c052b6df7083e637] ? FIXED DELAY [10s] -> Finished work at: 17:44:14
+2026-03-14 17:44:17,681 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551195a8fd3b0e9c3852cbcb1981d,e9c3852cbcb1981d] ? FIXED RATE [10s] -> Execution Time: 17:44:17
+2026-03-14 17:44:24,409 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551206c80c90990ada6a5b9ca47f5,90ada6a5b9ca47f5] ?? FIXED DELAY [10s] -> Starting work at: 17:44:24
+2026-03-14 17:44:26,416 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551206c80c90990ada6a5b9ca47f5,90ada6a5b9ca47f5] ? FIXED DELAY [10s] -> Finished work at: 17:44:26
+2026-03-14 17:44:27,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55123dacbf45953e36238dead8072,53e36238dead8072] ? FIXED RATE [10s] -> Execution Time: 17:44:27
+2026-03-14 17:44:36,428 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5512cd6463a3e0a2003fd1c172359,0a2003fd1c172359] ?? FIXED DELAY [10s] -> Starting work at: 17:44:36
+2026-03-14 17:44:38,443 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5512cd6463a3e0a2003fd1c172359,0a2003fd1c172359] ? FIXED DELAY [10s] -> Finished work at: 17:44:38
+2026-03-14 17:44:38,444 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5512e0af9c5092501b274c7e81bb4,2501b274c7e81bb4] ? FIXED RATE [10s] -> Execution Time: 17:44:38
+2026-03-14 17:44:47,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55137bd014fb7c07ebf233dadb575,c07ebf233dadb575] ? FIXED RATE [10s] -> Execution Time: 17:44:47
+2026-03-14 17:44:48,451 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55138b00e035631a57251f3edfa04,31a57251f3edfa04] ?? FIXED DELAY [10s] -> Starting work at: 17:44:48
+2026-03-14 17:44:50,461 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55138b00e035631a57251f3edfa04,31a57251f3edfa04] ? FIXED DELAY [10s] -> Finished work at: 17:44:50
+2026-03-14 17:44:57,665 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5514132ab86de9dd823c5064178a7,9dd823c5064178a7] ? FIXED RATE [10s] -> Execution Time: 17:44:57
+2026-03-14 17:45:00,014 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5514414faaaba17b9eb43e921742b,17b9eb43e921742b] ?? CRON TASK -> Running at the top of the minute: 17:45:00
+2026-03-14 17:45:00,466 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5514424d3c853ce155084c8ae63f2,ce155084c8ae63f2] ?? FIXED DELAY [10s] -> Starting work at: 17:45:00
+2026-03-14 17:45:02,469 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5514424d3c853ce155084c8ae63f2,ce155084c8ae63f2] ? FIXED DELAY [10s] -> Finished work at: 17:45:02
+2026-03-14 17:45:07,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5514b3f89cbaf2496d2f18470952e,2496d2f18470952e] ? FIXED RATE [10s] -> Execution Time: 17:45:07
+2026-03-14 17:45:12,472 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551504f0144e3b530f9e6d8a9a529,b530f9e6d8a9a529] ?? FIXED DELAY [10s] -> Starting work at: 17:45:12
+2026-03-14 17:45:14,481 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551504f0144e3b530f9e6d8a9a529,b530f9e6d8a9a529] ? FIXED DELAY [10s] -> Finished work at: 17:45:14
+2026-03-14 17:45:17,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551552eb3695cc533345db8e280b8,c533345db8e280b8] ? FIXED RATE [10s] -> Execution Time: 17:45:17
+2026-03-14 17:45:24,490 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5515c1b57bd353bdb87a52085b11c,3bdb87a52085b11c] ?? FIXED DELAY [10s] -> Starting work at: 17:45:24
+2026-03-14 17:45:26,502 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5515c1b57bd353bdb87a52085b11c,3bdb87a52085b11c] ? FIXED DELAY [10s] -> Finished work at: 17:45:26
+2026-03-14 17:45:27,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5515f2671eb865b03f63a5ba91375,5b03f63a5ba91375] ? FIXED RATE [10s] -> Execution Time: 17:45:27
+2026-03-14 17:45:36,509 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55168ab54737cea17959aad8a06ad,ea17959aad8a06ad] ?? FIXED DELAY [10s] -> Starting work at: 17:45:36
+2026-03-14 17:45:38,517 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55168ab54737cea17959aad8a06ad,ea17959aad8a06ad] ? FIXED DELAY [10s] -> Finished work at: 17:45:38
+2026-03-14 17:45:38,518 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5516a84070ef45b02e5cb289db550,5b02e5cb289db550] ? FIXED RATE [10s] -> Execution Time: 17:45:38
+2026-03-14 17:45:47,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5517396523cf9975d85bac205af43,975d85bac205af43] ? FIXED RATE [10s] -> Execution Time: 17:45:47
+2026-03-14 17:45:48,530 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551747c93af18ea4fa89a5e6b389f,ea4fa89a5e6b389f] ?? FIXED DELAY [10s] -> Starting work at: 17:45:48
+2026-03-14 17:45:50,544 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551747c93af18ea4fa89a5e6b389f,ea4fa89a5e6b389f] ? FIXED DELAY [10s] -> Finished work at: 17:45:50
+2026-03-14 17:45:57,678 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5517de515df679f028edc4d7d8945,9f028edc4d7d8945] ? FIXED RATE [10s] -> Execution Time: 17:45:57
+2026-03-14 17:46:00,013 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55180094a37d89297bc1c5e412892,9297bc1c5e412892] ?? CRON TASK -> Running at the top of the minute: 17:46:00
+2026-03-14 17:46:00,548 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5518081bc65e62579e8d4fccb3f4a,2579e8d4fccb3f4a] ?? FIXED DELAY [10s] -> Starting work at: 17:46:00
+2026-03-14 17:46:02,561 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5518081bc65e62579e8d4fccb3f4a,2579e8d4fccb3f4a] ? FIXED DELAY [10s] -> Finished work at: 17:46:02
+2026-03-14 17:46:07,680 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551874cea10bd7176c9735fc922cc,7176c9735fc922cc] ? FIXED RATE [10s] -> Execution Time: 17:46:07
+2026-03-14 17:46:12,573 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5518c9f1f38e2f73316d5912e7ba2,f73316d5912e7ba2] ?? FIXED DELAY [10s] -> Starting work at: 17:46:12
+2026-03-14 17:46:14,585 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5518c9f1f38e2f73316d5912e7ba2,f73316d5912e7ba2] ? FIXED DELAY [10s] -> Finished work at: 17:46:14
+2026-03-14 17:46:17,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55191d2a23e6d96f37ff4eef36972,96f37ff4eef36972] ? FIXED RATE [10s] -> Execution Time: 17:46:17
+2026-03-14 17:46:24,602 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55198a625e2559f4ee2a8a1d35372,9f4ee2a8a1d35372] ?? FIXED DELAY [10s] -> Starting work at: 17:46:24
+2026-03-14 17:46:26,608 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55198a625e2559f4ee2a8a1d35372,9f4ee2a8a1d35372] ? FIXED DELAY [10s] -> Finished work at: 17:46:26
+2026-03-14 17:46:27,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5519bb3041df0197cfadc99feb410,197cfadc99feb410] ? FIXED RATE [10s] -> Execution Time: 17:46:27
+2026-03-14 17:46:36,614 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551a4b0780af27404ef7ee0e3d55a,7404ef7ee0e3d55a] ?? FIXED DELAY [10s] -> Starting work at: 17:46:36
+2026-03-14 17:46:38,618 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551a4b0780af27404ef7ee0e3d55a,7404ef7ee0e3d55a] ? FIXED DELAY [10s] -> Finished work at: 17:46:38
+2026-03-14 17:46:38,618 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551a6c9b1c3ca91978489cf3b3a74,91978489cf3b3a74] ? FIXED RATE [10s] -> Execution Time: 17:46:38
+2026-03-14 17:46:47,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551af5ef542b4c8fd02afa282e33c,c8fd02afa282e33c] ? FIXED RATE [10s] -> Execution Time: 17:46:47
+2026-03-14 17:46:48,621 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551b0cd55af319102c6018cd72f17,9102c6018cd72f17] ?? FIXED DELAY [10s] -> Starting work at: 17:46:48
+2026-03-14 17:46:50,627 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551b0cd55af319102c6018cd72f17,9102c6018cd72f17] ? FIXED DELAY [10s] -> Finished work at: 17:46:50
+2026-03-14 17:46:57,669 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551b9d20a0e1880aa5fd2abcbc487,80aa5fd2abcbc487] ? FIXED RATE [10s] -> Execution Time: 17:46:57
+2026-03-14 17:47:00,001 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551bc1d761b36e98c17f5ec087a74,e98c17f5ec087a74] ?? CRON TASK -> Running at the top of the minute: 17:47:00
+2026-03-14 17:47:00,633 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551bca6a1c22be0d01077e361bf65,e0d01077e361bf65] ?? FIXED DELAY [10s] -> Starting work at: 17:47:00
+2026-03-14 17:47:02,639 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551bca6a1c22be0d01077e361bf65,e0d01077e361bf65] ? FIXED DELAY [10s] -> Finished work at: 17:47:02
+2026-03-14 17:47:07,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551c34af5a01579f7a2734068f4b0,79f7a2734068f4b0] ? FIXED RATE [10s] -> Execution Time: 17:47:07
+2026-03-14 17:47:12,642 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551c85c694c29ebf7494639a62c68,ebf7494639a62c68] ?? FIXED DELAY [10s] -> Starting work at: 17:47:12
+2026-03-14 17:47:14,646 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551c85c694c29ebf7494639a62c68,ebf7494639a62c68] ? FIXED DELAY [10s] -> Finished work at: 17:47:14
+2026-03-14 17:47:17,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551cd6d5889e775d0b8df1b5f53ad,75d0b8df1b5f53ad] ? FIXED RATE [10s] -> Execution Time: 17:47:17
+2026-03-14 17:47:24,651 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551d40474e958eccce7cb65600bb8,eccce7cb65600bb8] ?? FIXED DELAY [10s] -> Starting work at: 17:47:24
+2026-03-14 17:47:26,652 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551d40474e958eccce7cb65600bb8,eccce7cb65600bb8] ? FIXED DELAY [10s] -> Finished work at: 17:47:26
+2026-03-14 17:47:27,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551d76d680d2446ebcb0cbe262900,46ebcb0cbe262900] ? FIXED RATE [10s] -> Execution Time: 17:47:27
+2026-03-14 17:47:36,667 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551e01d1b03c2f0d558ff372cbe9f,f0d558ff372cbe9f] ?? FIXED DELAY [10s] -> Starting work at: 17:47:36
+2026-03-14 17:47:38,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551e01d1b03c2f0d558ff372cbe9f,f0d558ff372cbe9f] ? FIXED DELAY [10s] -> Finished work at: 17:47:38
+2026-03-14 17:47:38,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551e28c2f3da3702a35f0420a3231,702a35f0420a3231] ? FIXED RATE [10s] -> Execution Time: 17:47:38
+2026-03-14 17:47:47,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551eb3266a7e790292903929398d0,90292903929398d0] ? FIXED RATE [10s] -> Execution Time: 17:47:47
+2026-03-14 17:47:48,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551ec676668a3f4e4480b8588fd3b,f4e4480b8588fd3b] ?? FIXED DELAY [10s] -> Starting work at: 17:47:48
+2026-03-14 17:47:50,682 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551ec676668a3f4e4480b8588fd3b,f4e4480b8588fd3b] ? FIXED DELAY [10s] -> Finished work at: 17:47:50
+2026-03-14 17:47:57,675 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551f55d5e92cb7ccc3643181e6b9c,7ccc3643181e6b9c] ? FIXED RATE [10s] -> Execution Time: 17:47:57
+2026-03-14 17:48:00,002 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551f8505539c6e83b3567ed630e5a,e83b3567ed630e5a] ?? CRON TASK -> Running at the top of the minute: 17:48:00
+2026-03-14 17:48:00,687 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551f8d689b9f512373a62ab6b84a9,12373a62ab6b84a9] ?? FIXED DELAY [10s] -> Starting work at: 17:48:00
+2026-03-14 17:48:02,700 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551f8d689b9f512373a62ab6b84a9,12373a62ab6b84a9] ? FIXED DELAY [10s] -> Finished work at: 17:48:02
+2026-03-14 17:48:07,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b551ffd0568140d3b9f20fde9694f7,d3b9f20fde9694f7] ? FIXED RATE [10s] -> Execution Time: 17:48:07
+2026-03-14 17:48:12,709 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55204a3ac428d81868265b8af0602,81868265b8af0602] ?? FIXED DELAY [10s] -> Starting work at: 17:48:12
+2026-03-14 17:48:14,725 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55204a3ac428d81868265b8af0602,81868265b8af0602] ? FIXED DELAY [10s] -> Finished work at: 17:48:14
+2026-03-14 17:48:17,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55209aac0cbb66ba4004f59f02b01,6ba4004f59f02b01] ? FIXED RATE [10s] -> Execution Time: 17:48:17
+2026-03-14 17:48:24,737 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55210bb81ede964c41adce5f4fa81,64c41adce5f4fa81] ?? FIXED DELAY [10s] -> Starting work at: 17:48:24
+2026-03-14 17:48:26,743 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55210bb81ede964c41adce5f4fa81,64c41adce5f4fa81] ? FIXED DELAY [10s] -> Finished work at: 17:48:26
+2026-03-14 17:48:27,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55213e4d3f0f7d8220bcf0563da2a,d8220bcf0563da2a] ? FIXED RATE [10s] -> Execution Time: 17:48:27
+2026-03-14 17:48:36,751 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5521cc591f8221a277b246d66639f,1a277b246d66639f] ?? FIXED DELAY [10s] -> Starting work at: 17:48:36
+2026-03-14 17:48:38,756 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5521cc591f8221a277b246d66639f,1a277b246d66639f] ? FIXED DELAY [10s] -> Finished work at: 17:48:38
+2026-03-14 17:48:38,757 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5521e3bb3ff3c6ac349728888a2f9,6ac349728888a2f9] ? FIXED RATE [10s] -> Execution Time: 17:48:38
+2026-03-14 17:48:47,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55227e60f951d9cb6e3632f1c0940,9cb6e3632f1c0940] ? FIXED RATE [10s] -> Execution Time: 17:48:47
+2026-03-14 17:48:48,759 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552282c99768cc5c71be6a7035b26,c5c71be6a7035b26] ?? FIXED DELAY [10s] -> Starting work at: 17:48:48
+2026-03-14 17:48:50,760 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552282c99768cc5c71be6a7035b26,c5c71be6a7035b26] ? FIXED DELAY [10s] -> Finished work at: 17:48:50
+2026-03-14 17:48:57,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55231496aefcff0703acb54102ae6,f0703acb54102ae6] ? FIXED RATE [10s] -> Execution Time: 17:48:57
+2026-03-14 17:49:00,013 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55234252429800ba414c603d02655,0ba414c603d02655] ?? CRON TASK -> Running at the top of the minute: 17:49:00
+2026-03-14 17:49:00,765 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55234fff08641c9a99a7aa4f7b0e2,c9a99a7aa4f7b0e2] ?? FIXED DELAY [10s] -> Starting work at: 17:49:00
+2026-03-14 17:49:02,773 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55234fff08641c9a99a7aa4f7b0e2,c9a99a7aa4f7b0e2] ? FIXED DELAY [10s] -> Finished work at: 17:49:02
+2026-03-14 17:49:07,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5523b3701c1b76b0ffa2e0c7c5acb,6b0ffa2e0c7c5acb] ? FIXED RATE [10s] -> Execution Time: 17:49:07
+2026-03-14 17:49:12,785 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5524060c406e3244fcccd774f90e4,244fcccd774f90e4] ?? FIXED DELAY [10s] -> Starting work at: 17:49:12
+2026-03-14 17:49:14,793 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5524060c406e3244fcccd774f90e4,244fcccd774f90e4] ? FIXED DELAY [10s] -> Finished work at: 17:49:14
+2026-03-14 17:49:17,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55245848ddd1ece3614cbccc0e2eb,ce3614cbccc0e2eb] ? FIXED RATE [10s] -> Execution Time: 17:49:17
+2026-03-14 17:49:24,799 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5524c253f93463a52b78e6566a02d,3a52b78e6566a02d] ?? FIXED DELAY [10s] -> Starting work at: 17:49:24
+2026-03-14 17:49:26,808 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5524c253f93463a52b78e6566a02d,3a52b78e6566a02d] ? FIXED DELAY [10s] -> Finished work at: 17:49:26
+2026-03-14 17:49:27,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5524fee5f31cf5b720d1a7134a482,5b720d1a7134a482] ? FIXED RATE [10s] -> Execution Time: 17:49:27
+2026-03-14 17:49:36,825 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55258c0c80821d897f25121ca66ed,d897f25121ca66ed] ?? FIXED DELAY [10s] -> Starting work at: 17:49:36
+2026-03-14 17:49:38,837 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55258c0c80821d897f25121ca66ed,d897f25121ca66ed] ? FIXED DELAY [10s] -> Finished work at: 17:49:38
+2026-03-14 17:49:38,837 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5525acadc255e9de5ca67a6a26809,9de5ca67a6a26809] ? FIXED RATE [10s] -> Execution Time: 17:49:38
+2026-03-14 17:49:47,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55263c6f25781a6d2aad212e2a8c6,a6d2aad212e2a8c6] ? FIXED RATE [10s] -> Execution Time: 17:49:47
+2026-03-14 17:49:48,842 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55264b920cfbecaf3d67cc54f2886,caf3d67cc54f2886] ?? FIXED DELAY [10s] -> Starting work at: 17:49:48
+2026-03-14 17:49:50,849 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55264b920cfbecaf3d67cc54f2886,caf3d67cc54f2886] ? FIXED DELAY [10s] -> Finished work at: 17:49:50
+2026-03-14 17:49:57,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5526d5f6e0b01723b2bdb7688d1ed,723b2bdb7688d1ed] ? FIXED RATE [10s] -> Execution Time: 17:49:57
+2026-03-14 17:50:00,004 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552703980d5c89e23b22262842335,9e23b22262842335] ?? CRON TASK -> Running at the top of the minute: 17:50:00
+2026-03-14 17:50:00,863 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552704655ec35a75240dbc8cf8fa4,a75240dbc8cf8fa4] ?? FIXED DELAY [10s] -> Starting work at: 17:50:00
+2026-03-14 17:50:02,866 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552704655ec35a75240dbc8cf8fa4,a75240dbc8cf8fa4] ? FIXED DELAY [10s] -> Finished work at: 17:50:02
+2026-03-14 17:50:07,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552771ee05d83f07cd59a4e8aec96,f07cd59a4e8aec96] ? FIXED RATE [10s] -> Execution Time: 17:50:07
+2026-03-14 17:50:12,871 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5527c21e94985c5dfe138aea83b8f,c5dfe138aea83b8f] ?? FIXED DELAY [10s] -> Starting work at: 17:50:12
+2026-03-14 17:50:14,880 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5527c21e94985c5dfe138aea83b8f,c5dfe138aea83b8f] ? FIXED DELAY [10s] -> Finished work at: 17:50:14
+2026-03-14 17:50:17,677 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55281898c5671f2fea5e0a7e4ce75,f2fea5e0a7e4ce75] ? FIXED RATE [10s] -> Execution Time: 17:50:17
+2026-03-14 17:50:24,890 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552887cd71345716c1a3ff2760d57,716c1a3ff2760d57] ?? FIXED DELAY [10s] -> Starting work at: 17:50:24
+2026-03-14 17:50:26,895 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552887cd71345716c1a3ff2760d57,716c1a3ff2760d57] ? FIXED DELAY [10s] -> Finished work at: 17:50:26
+2026-03-14 17:50:27,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5528b9cd84b4dba834987b2c8677f,ba834987b2c8677f] ? FIXED RATE [10s] -> Execution Time: 17:50:27
+2026-03-14 17:50:36,905 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55294e7c5531daeffa758554b45ca,aeffa758554b45ca] ?? FIXED DELAY [10s] -> Starting work at: 17:50:36
+2026-03-14 17:50:38,921 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55294e7c5531daeffa758554b45ca,aeffa758554b45ca] ? FIXED DELAY [10s] -> Finished work at: 17:50:38
+2026-03-14 17:50:38,923 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55296bc59147f5697b6e174803458,5697b6e174803458] ? FIXED RATE [10s] -> Execution Time: 17:50:38
+2026-03-14 17:50:47,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5529f8405293745096488a68f712a,45096488a68f712a] ? FIXED RATE [10s] -> Execution Time: 17:50:47
+2026-03-14 17:50:48,928 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552a0e4f74245ae2f770316daf4eb,ae2f770316daf4eb] ?? FIXED DELAY [10s] -> Starting work at: 17:50:48
+2026-03-14 17:50:50,942 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552a0e4f74245ae2f770316daf4eb,ae2f770316daf4eb] ? FIXED DELAY [10s] -> Finished work at: 17:50:50
+2026-03-14 17:50:57,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552a92f0058a016138588014988ed,16138588014988ed] ? FIXED RATE [10s] -> Execution Time: 17:50:57
+2026-03-14 17:51:00,003 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552acb2cb6f5239210761d8938d6a,39210761d8938d6a] ?? CRON TASK -> Running at the top of the minute: 17:51:00
+2026-03-14 17:51:00,952 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552acd4c7a7aec710c90cb6cc6cd4,c710c90cb6cc6cd4] ?? FIXED DELAY [10s] -> Starting work at: 17:51:00
+2026-03-14 17:51:02,955 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552acd4c7a7aec710c90cb6cc6cd4,c710c90cb6cc6cd4] ? FIXED DELAY [10s] -> Finished work at: 17:51:02
+2026-03-14 17:51:07,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552b333bc6865a2fba1a4cdbb6332,a2fba1a4cdbb6332] ? FIXED RATE [10s] -> Execution Time: 17:51:07
+2026-03-14 17:51:12,958 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552b87b0b297e8ad54958256c182d,8ad54958256c182d] ?? FIXED DELAY [10s] -> Starting work at: 17:51:12
+2026-03-14 17:51:14,959 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552b87b0b297e8ad54958256c182d,8ad54958256c182d] ? FIXED DELAY [10s] -> Finished work at: 17:51:14
+2026-03-14 17:51:17,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552bdb0ea6881e50595b1afbc4004,e50595b1afbc4004] ? FIXED RATE [10s] -> Execution Time: 17:51:17
+2026-03-14 17:51:24,965 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552c4b5bcc71782aab442c784b17b,82aab442c784b17b] ?? FIXED DELAY [10s] -> Starting work at: 17:51:24
+2026-03-14 17:51:26,982 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552c4b5bcc71782aab442c784b17b,82aab442c784b17b] ? FIXED DELAY [10s] -> Finished work at: 17:51:26
+2026-03-14 17:51:27,673 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552c780b9c732cb141613d3830e0e,cb141613d3830e0e] ? FIXED RATE [10s] -> Execution Time: 17:51:27
+2026-03-14 17:51:36,988 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552d02228aaf12635c0ae6f1d9be3,2635c0ae6f1d9be3] ?? FIXED DELAY [10s] -> Starting work at: 17:51:36
+2026-03-14 17:51:38,994 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552d02228aaf12635c0ae6f1d9be3,2635c0ae6f1d9be3] ? FIXED DELAY [10s] -> Finished work at: 17:51:38
+2026-03-14 17:51:38,995 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552d28bc75c470a9568623637a72f,0a9568623637a72f] ? FIXED RATE [10s] -> Execution Time: 17:51:38
+2026-03-14 17:51:47,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552db8671a472273b9889631ebcbe,273b9889631ebcbe] ? FIXED RATE [10s] -> Execution Time: 17:51:47
+2026-03-14 17:51:49,011 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552dd9ea460fcca26d0b6a2c47f0d,ca26d0b6a2c47f0d] ?? FIXED DELAY [10s] -> Starting work at: 17:51:49
+2026-03-14 17:51:51,027 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552dd9ea460fcca26d0b6a2c47f0d,ca26d0b6a2c47f0d] ? FIXED DELAY [10s] -> Finished work at: 17:51:51
+2026-03-14 17:51:57,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552e50e65e901d31b5d9f8ec230d6,d31b5d9f8ec230d6] ? FIXED RATE [10s] -> Execution Time: 17:51:57
+2026-03-14 17:52:00,004 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552e89f095b80a3106525ccfc478a,a3106525ccfc478a] ?? CRON TASK -> Running at the top of the minute: 17:52:00
+2026-03-14 17:52:01,042 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552e96b5aaad4dc8739eaaec7e18b,dc8739eaaec7e18b] ?? FIXED DELAY [10s] -> Starting work at: 17:52:01
+2026-03-14 17:52:03,044 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552e96b5aaad4dc8739eaaec7e18b,dc8739eaaec7e18b] ? FIXED DELAY [10s] -> Finished work at: 17:52:03
+2026-03-14 17:52:07,676 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552efd7253baa61232566ba7b4b39,61232566ba7b4b39] ? FIXED RATE [10s] -> Execution Time: 17:52:07
+2026-03-14 17:52:13,049 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552f56f76e0e3080a3254e5bdbb12,080a3254e5bdbb12] ?? FIXED DELAY [10s] -> Starting work at: 17:52:13
+2026-03-14 17:52:15,051 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552f56f76e0e3080a3254e5bdbb12,080a3254e5bdbb12] ? FIXED DELAY [10s] -> Finished work at: 17:52:15
+2026-03-14 17:52:17,672 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b552f9c526ef2fe8c0633c1f4029f2,e8c0633c1f4029f2] ? FIXED RATE [10s] -> Execution Time: 17:52:17
+2026-03-14 17:52:25,058 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55301144a8ce5f0e9d5cbfb5f21b0,f0e9d5cbfb5f21b0] ?? FIXED DELAY [10s] -> Starting work at: 17:52:25
+2026-03-14 17:52:27,062 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55301144a8ce5f0e9d5cbfb5f21b0,f0e9d5cbfb5f21b0] ? FIXED DELAY [10s] -> Finished work at: 17:52:27
+2026-03-14 17:52:27,670 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55303bf6d938e23ce63e8017c0504,23ce63e8017c0504] ? FIXED RATE [10s] -> Execution Time: 17:52:27
+2026-03-14 17:52:37,068 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5530d6eb9519a5127a7866d7e2d87,5127a7866d7e2d87] ?? FIXED DELAY [10s] -> Starting work at: 17:52:37
+2026-03-14 17:52:39,075 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5530d6eb9519a5127a7866d7e2d87,5127a7866d7e2d87] ? FIXED DELAY [10s] -> Finished work at: 17:52:39
+2026-03-14 17:52:39,076 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5530fcefe0f38facea5620e69500d,facea5620e69500d] ? FIXED RATE [10s] -> Execution Time: 17:52:39
+2026-03-14 17:52:47,679 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553172d6ff918fe5f1f05bb582bd3,fe5f1f05bb582bd3] ? FIXED RATE [10s] -> Execution Time: 17:52:47
+2026-03-14 17:52:49,082 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55319ac6af0338f406d48aa9ce518,8f406d48aa9ce518] ?? FIXED DELAY [10s] -> Starting work at: 17:52:49
+2026-03-14 17:52:51,097 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55319ac6af0338f406d48aa9ce518,8f406d48aa9ce518] ? FIXED DELAY [10s] -> Finished work at: 17:52:51
+2026-03-14 17:52:57,679 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5532156cf765a32259b7eb74d6f59,32259b7eb74d6f59] ? FIXED RATE [10s] -> Execution Time: 17:52:57
+2026-03-14 17:53:00,000 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553249cfe71d850a3c73db6feaf28,50a3c73db6feaf28] ?? CRON TASK -> Running at the top of the minute: 17:53:00
+2026-03-14 17:53:01,113 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55325cd2b426d84adedd57a6ab16f,84adedd57a6ab16f] ?? FIXED DELAY [10s] -> Starting work at: 17:53:01
+2026-03-14 17:53:03,115 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b55325cd2b426d84adedd57a6ab16f,84adedd57a6ab16f] ? FIXED DELAY [10s] -> Finished work at: 17:53:03
+2026-03-14 17:53:07,678 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5532b1695086fdd37879a94efed41,dd37879a94efed41] ? FIXED RATE [10s] -> Execution Time: 17:53:07
+2026-03-14 17:53:13,118 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553311c77ec2062e11371c20a02e4,62e11371c20a02e4] ?? FIXED DELAY [10s] -> Starting work at: 17:53:13
+2026-03-14 17:53:15,130 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553311c77ec2062e11371c20a02e4,62e11371c20a02e4] ? FIXED DELAY [10s] -> Finished work at: 17:53:15
+2026-03-14 17:53:17,674 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553359a6b4369d341722866d10b9c,d341722866d10b9c] ? FIXED RATE [10s] -> Execution Time: 17:53:17
+2026-03-14 17:53:25,145 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5533d5039d7db9d3e624de25597df,9d3e624de25597df] ?? FIXED DELAY [10s] -> Starting work at: 17:53:25
+2026-03-14 17:53:27,151 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5533d5039d7db9d3e624de25597df,9d3e624de25597df] ? FIXED DELAY [10s] -> Finished work at: 17:53:27
+2026-03-14 17:53:27,671 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5533f9e7588485d7e85af67dec74a,5d7e85af67dec74a] ? FIXED RATE [10s] -> Execution Time: 17:53:27
+2026-03-14 17:53:37,165 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553497e6f3bb84df94a31b70a05cc,4df94a31b70a05cc] ?? FIXED DELAY [10s] -> Starting work at: 17:53:37
+2026-03-14 17:53:39,168 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553497e6f3bb84df94a31b70a05cc,4df94a31b70a05cc] ? FIXED DELAY [10s] -> Finished work at: 17:53:39
+2026-03-14 17:53:39,168 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5534b30195470e201c5214d28fdf3,e201c5214d28fdf3] ? FIXED RATE [10s] -> Execution Time: 17:53:39
+2026-03-14 17:53:47,668 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b553530175d4230329e9ce6245d6bd,0329e9ce6245d6bd] ? FIXED RATE [10s] -> Execution Time: 17:53:47
+2026-03-14 17:53:49,169 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5535594172e359fd945cbd1af7a82,9fd945cbd1af7a82] ?? FIXED DELAY [10s] -> Starting work at: 17:53:49
+2026-03-14 17:53:51,182 INFO c.i.d.s.Scenario33Scheduler [scheduling-1] [debug-challenge,69b5535594172e359fd945cbd1af7a82,9fd945cbd1af7a82] ? FIXED DELAY [10s] -> Finished work at: 17:53:51

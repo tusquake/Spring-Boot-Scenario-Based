@@ -312,3 +312,14 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 *   **Test**: 
     1. Call `/api/scenario32/nplus1` -> Observe 11 queries in the logs.
     2. Call `/api/scenario32/optimized` -> Observe exactly **1** query with a JOIN.
+
+---
+
+### 3️⃣3️⃣ Scenario 33: Spring Schedulers (@Scheduled)
+*   **Concept**: Running background tasks automatically at specific intervals.
+*   **The Analogy**: **The Alarm Clock** ⏰. 
+    - **Fixed Rate**: The alarm goes off every 10 seconds regardless of how long the task takes. (If you take 12 seconds to brush your teeth, the next alarm already went off!).
+    - **Fixed Delay**: The alarm goes off 10 seconds *after* you finish your previous task. (Brush teeth for 12s -> Wait 10s -> Alarm goes off).
+    - **Cron**: The "Fancy Calendar Alarm". Set it for "Every Monday at 10 AM" or "Every midnight on the 1st of the month".
+*   **Implementation**: Enable `@EnableScheduling` and use the `@Scheduled` annotation.
+*   **Test**: Watch the console logs for the scheduler output.

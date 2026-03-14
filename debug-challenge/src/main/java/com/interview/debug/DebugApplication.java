@@ -7,9 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.aop.ObservedAspect;
 
+@EnableScheduling
 @EnableAsync
 @ComponentScan(basePackages = { "com.interview.debug", "com.interview.external.service" })
 @EnableJpaRepositories(basePackages = "com.interview.debug.repository")
