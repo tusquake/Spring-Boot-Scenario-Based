@@ -74,6 +74,57 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
 *   **The Problem**: JWTs are valid until expiry, even after a user logs out.
 *   **Solution**: Store a unique **JTI (JWT ID)** in Redis upon logout. Check this blacklist in `JwtAuthenticationFilter`.
 *   **Test**: Login -> Get Token -> `/logout` -> Try `/api/secure` with old token (returns 401).
+*   **Categories**: CORS, Rate Limiting, Distributed Tracing (Observability), and Security.
+
+---
+
+### 3️⃣6️⃣ Scenario 36: Type-Safe Configuration (@ConfigurationProperties)
+*   **Concept**: Grouping related settings into a single Java object.
+*   **The Problem**: Using `@Value("${my.prop}")` in 20 different classes is hard to maintain and lacks validation.
+*   **Solution**: Created `AppConfigProps` with a prefix `app.daily-dev`.
+*   **Test**: `GET /api/scenario36/config` to see hierarchical properties.
+
+---
+
+### 3️⃣7️⃣ Scenario 37: Profile-Based Bean Switching (@Profile)
+*   **Concept**: Environment-aware behavior.
+*   **The Problem**: In Dev, you want logs to console; in Prod, you want to send Slack notifications.
+*   **Solution**: Used `@Profile("default")` vs `@Profile("prod")` on different implementations of `NotificationService`.
+*   **Test**: `GET /api/scenario37/notify?msg=Hello` 
+    - Returns "DEV [Console]" by default.
+    - Returns "PROD [Slack]" if you run with `-Dspring.profiles.active=prod`.
+
+---
+
+### 3️⃣8️⃣ Scenario 38: Custom Actuator Health Indicators
+*   **Concept**: Monitoring custom resources.
+*   **The Problem**: Actuator checks DB and Disk, but how do we check if a specific config file or external API is up?
+*   **Solution**: Implemented `HealthIndicator` to check for the existence of the `db/migration` directory.
+*   **Test**: `GET /actuator/health` and look for the `externalConfig` section.
+
+---
+
+### 3️⃣9️⃣ Scenario 39: Bean Lifecycle Hooks (@PostConstruct / @PreDestroy)
+*   **Concept**: Managing bean state during startup and shutdown.
+*   **The Problem**: You need to fetch initial data from a DB or clear a cache when the app starts/stops, but doing it in the constructor leads to `NullPointerException` because dependencies aren't injected yet.
+*   **Solution**: Use `@PostConstruct` for init and `@PreDestroy` for cleanup.
+*   **Test**: Watch the console logs on startup for `[Lifecycle]`.
+
+---
+
+### 4️⃣0️⃣ Scenario 40: Feature Toggles (@ConditionalOnProperty)
+*   **Concept**: Dynamic bean creation based on configuration.
+*   **The Problem**: You have a "Beta" feature you want to test in staging but disable in production without changing code.
+*   **Solution**: Annotated `BetaFeatureService` with `@ConditionalOnProperty`.
+*   **Test**: `GET /api/scenario40/test`. Change `app.feature.beta-enabled` in `application.properties` to see it toggle.
+
+---
+
+### 4️⃣1️⃣ Scenario 41: Advanced @Value (Defaults and SpEL)
+*   **Concept**: Safe and dynamic property injection.
+*   **The Problem**: App crashes if a property is missing, or you need to do a simple calculation on a property value.
+*   **Solution**: Used `${prop:default}` syntax for safety and `#{SpEL}` for dynamic logic.
+*   **Test**: See `LifecycleDemoBean.java` for usage.
 
 ---
 

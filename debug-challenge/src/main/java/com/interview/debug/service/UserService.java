@@ -16,6 +16,6 @@ public class UserService {
     }
 
     public void processUser() {
-        notificationService.sendNotification("Processing user...");
+        notificationService.send("Processing user...");
     }
 }
