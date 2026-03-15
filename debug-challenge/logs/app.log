@@ -296,3 +296,4 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2026-03-15 17:08:06,360 INFO c.i.d.s.BankAccountService [http-nio-8080-exec-2] [debug-challenge,1f71c161,a42bb8befbf04eb8] [Pessimistic] Start withdrawal of 100.0 from account 1
 2026-03-15 17:08:06,362 INFO c.i.d.s.BankAccountService [http-nio-8080-exec-2] [debug-challenge,1f71c161,a42bb8befbf04eb8] [Pessimistic] Acquired Lock. Current Balance: 900.0
 2026-03-15 17:08:06,363 INFO c.i.d.s.BankAccountService [http-nio-8080-exec-2] [debug-challenge,1f71c161,a42bb8befbf04eb8] [Pessimistic] Completed withdrawal. New Balance: 800.0
+2026-03-15 17:47:16,782 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] [debug-challenge,,] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m31s463ms287µs600ns).
