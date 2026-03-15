@@ -9,6 +9,9 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
+import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
+import org.springframework.security.access.PermissionEvaluator;
 import java.time.Instant;
 
 @Configuration
@@ -55,6 +58,13 @@ public class SecurityConfig {
         return source;
     }
 
+    @Bean
+    static MethodSecurityExpressionHandler methodSecurityExpressionHandler(PermissionEvaluator permissionEvaluator) {
+        DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
+        expressionHandler.setPermissionEvaluator(permissionEvaluator);
+        return expressionHandler;
+    }
+
     /**
      * For Scenario 53 Demonstration:
      * A mock JwtDecoder that allows us to run the app without a real OIDC Provider.
@@ -67,8 +77,8 @@ public class SecurityConfig {
             // Usage: Pass 'read' or 'write' as the Authorization Bearer token in curl
             return Jwt.withTokenValue(token)
                 .header("alg", "none")
-                .claim("scope", token) // The token itself is treated as the scope for demo
-                .subject("demo-user")
+                .claim("scope", token) // For RBAC: pass 'ADMIN' or 'USER'
+                .subject(token)       // For Ownership: pass the owner's name (e.g., 'Tushar')
                 .issuedAt(Instant.now())
                 .expiresAt(Instant.now().plusSeconds(3600))
                 .build();

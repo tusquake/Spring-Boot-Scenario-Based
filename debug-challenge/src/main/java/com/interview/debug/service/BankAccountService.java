@@ -5,6 +5,8 @@ import com.interview.debug.model.BankAccount;
 import com.interview.debug.repository.BankAccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,10 +29,10 @@ public class BankAccountService {
 
     /**
      * Optimistic Locking: Relies on @Version.
-     * If another transaction updates the record while we are sleeping,
-     * this save() will throw ObjectOptimisticLockingFailureException.
+     * Security: Only the owner can withdraw.
      */
     @Transactional
+    @PreAuthorize("@bankSecurity.isOwner(authentication, #id)")
     public Double withdrawOptimistic(Long id, Double amount, int delayMs) {
         logger.info("[Optimistic] Start withdrawal of {} from account {}", amount, id);
 
@@ -55,10 +57,10 @@ public class BankAccountService {
 
     /**
      * Pessimistic Locking: SELECT ... FOR UPDATE.
-     * This blocks other threads at the database level from reading/writing
-     * this specific row until this transaction finishes.
+     * Security: Demonstrating hasPermission with CustomPermissionEvaluator.
      */
     @Transactional
+    @PreAuthorize("hasPermission(#id, 'BankAccount', 'WRITE')")
     public Double withdrawPessimistic(Long id, Double amount, int delayMs) {
         logger.info("[Pessimistic] Start withdrawal of {} from account {}", amount, id);
 
@@ -79,6 +81,19 @@ public class BankAccountService {
 
         logger.info("[Pessimistic] Completed withdrawal. New Balance: {}", account.getBalance());
         return account.getBalance();
+    }
+
+    @Transactional(readOnly = true)
+    @PostAuthorize("@bankSecurity.isOwner(authentication, returnObject)")
+    public BankAccount getAccountDetails(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Account not found"));
+    }
+
+    @Transactional(readOnly = true)
+    @PreAuthorize("hasAuthority('SCOPE_ADMIN')")
+    public Iterable<BankAccount> getAllAccounts() {
+        return repository.findAll();
     }
 
     private void simulateDelay(int ms) {
