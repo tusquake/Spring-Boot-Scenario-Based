@@ -160,6 +160,19 @@ This project is a comprehensive guide to mastering Spring Boot through real-worl
     1.  Create a customer (via Scenario 42): `GET /api/scenario42/create` (Note the ID, e.g., `11`).
     2.  Update the name: `GET /api/scenario45/update/11/NewName`.
     3.  View history: `GET /api/scenario45/history/11`.
+---
+
+### 4️⃣7️⃣ Scenario 47: API Versioning (URI vs Header)
+*   **Concept**: Handling breaking changes in a REST API.
+*   **The Problem**: You need to update the response structure but can't break existing mobile apps using the old API.
+*   **Solution**: Multiple versioning strategies.
+*   **Test**:
+    1.  **URI Versioning**:
+        - `curl http://localhost:8080/api/v1/product`
+        - `curl http://localhost:8080/api/v2/product`
+    2.  **Header Versioning**:
+        - `curl -H "X-API-VERSION: 1" http://localhost:8080/api/product`
+        - `curl -H "X-API-VERSION: 2" http://localhost:8080/api/product`
 
 ---
 
