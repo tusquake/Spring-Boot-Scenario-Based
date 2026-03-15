@@ -1,32 +1,33 @@
 package com.interview.debug.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Version;
 
 @Entity
 public class BankAccount {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
-
-    private String accountHolder;
+    
+    private String owner;
     private Double balance;
 
-    @Version // THE FIX: Optimistic Locking version field
+    @Version // CRITICAL: This enables Optimistic Locking
     private Integer version;
 
     public BankAccount() {}
 
-    public BankAccount(String accountHolder, Double balance) {
-        this.accountHolder = accountHolder;
+    public BankAccount(String owner, Double balance) {
+        this.owner = owner;
         this.balance = balance;
     }
 
     // Getters and Setters
     public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getAccountHolder() { return accountHolder; }
-    public void setAccountHolder(String accountHolder) { this.accountHolder = accountHolder; }
+    public String getOwner() { return owner; }
+    public void setOwner(String owner) { this.owner = owner; }
     public Double getBalance() { return balance; }
     public void setBalance(Double balance) { this.balance = balance; }
     public Integer getVersion() { return version; }

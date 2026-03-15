@@ -29,7 +29,7 @@ public class QuartzConfig {
         return TriggerBuilder.newTrigger()
                 .forJob(emailJobDetail())
                 .withIdentity("emailTrigger")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/30 * * * * ?"))
+                .withSchedule(CronScheduleBuilder.cronSchedule("0 5 4 ? 12 SUN"))
                 .build();
     }
 }

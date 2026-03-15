@@ -1,27 +1,26 @@
 package com.interview.debug.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.CompletableFuture;
 
 @Service
 public class AsyncService {
+    private static final Logger logger = LoggerFactory.getLogger(AsyncService.class);
 
-    @Async("threadPoolTaskExecutor")
-    public CompletableFuture<String> processAsyncTask() {
-        System.out.println("Async Task started on thread: " + Thread.currentThread().getName());
+    @Async("backgroundTaskExecutor") // Matches the bean name in AsyncConfig
+    public void runLongTask(String taskName, int seconds) {
+        logger.info("[Async Service] Starting long-running task: {} (Duration: {}s)", taskName, seconds);
         
-        // Check if Security Context is available
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String user = (auth != null) ? auth.getName() : "ANONYMOUS";
+        try {
+            // Simulate heavy work like report generation or batch processing
+            Thread.sleep(seconds * 1000L);
+        } catch (InterruptedException e) {
+            logger.error("[Async Service] Task {} was interrupted!", taskName);
+            Thread.currentThread().interrupt();
+        }
         
-        System.out.println("Async Task: Current user is: " + user);
-        
-        try { Thread.sleep(2000); } catch (InterruptedException e) {}
-        
-        return CompletableFuture.completedFuture("Async Task completed for user: " + user);
+        logger.info("[Async Service] COMPLETED long-running task: {}", taskName);
     }
 }
