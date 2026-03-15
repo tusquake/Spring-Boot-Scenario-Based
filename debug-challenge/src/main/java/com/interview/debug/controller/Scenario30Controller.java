@@ -74,10 +74,13 @@ public class Scenario30Controller {
     @GetMapping("/page")
     public Page<Customer> getPage(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction) {
 
-        logger.info("Executing PAGE query for page {}, size {}", page, size);
-        return customerRepository.findAll(PageRequest.of(page, size, Sort.by("id").ascending()));
+        Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
+        logger.info("Executing PAGE query for page {}, size {}, sortBy {}, direction {}", page, size, sortBy, direction);
+        return customerRepository.findAll(PageRequest.of(page, size, sort));
     }
 
     /**
@@ -88,10 +91,13 @@ public class Scenario30Controller {
     @GetMapping("/slice")
     public Slice<Customer> getSlice(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction) {
 
-        logger.info("Executing SLICE query for page {}, size {}", page, size);
-        return customerRepository.findBy(PageRequest.of(page, size, Sort.by("id").ascending()));
+        Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
+        logger.info("Executing SLICE query for page {}, size {}, sortBy {}, direction {}", page, size, sortBy, direction);
+        return customerRepository.findBy(PageRequest.of(page, size, sort));
     }
 
     /**

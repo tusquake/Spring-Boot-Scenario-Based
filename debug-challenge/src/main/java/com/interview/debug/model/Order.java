@@ -3,7 +3,10 @@ package com.interview.debug.model;
 import jakarta.persistence.*;
 import java.util.Date;
 
+import org.hibernate.envers.Audited;
+
 @Entity
+@Audited
 @Table(name = "orders")
 public class Order {
 
