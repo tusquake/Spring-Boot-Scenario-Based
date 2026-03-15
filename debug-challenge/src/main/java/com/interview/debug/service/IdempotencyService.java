@@ -23,7 +23,7 @@ public class IdempotencyService {
      * Checks if a request has already been processed using the provided key.
      */
     public Optional<String> getResponse(String key) {
-        return repository.findById(key).map(IdempotencyRecord::getResponseJson);
+        return repository.findById(key).map(IdempotencyRecord::getResponseBody);
     }
 
     /**
@@ -33,7 +33,7 @@ public class IdempotencyService {
     public void saveResponse(String key, Object response) {
         try {
             String json = objectMapper.writeValueAsString(response);
-            repository.save(new IdempotencyRecord(key, json));
+            repository.save(new IdempotencyRecord(key, json, 200));
         } catch (Exception e) {
             throw new RuntimeException("Failed to serialize idempotency response", e);
         }
