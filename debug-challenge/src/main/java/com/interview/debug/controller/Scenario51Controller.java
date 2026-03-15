@@ -23,21 +23,25 @@ public class Scenario51Controller {
 
     @PostMapping("/withdraw/optimistic")
     public Map<String, Object> withdrawOptimistic(
-            @RequestParam Long id, 
+            @RequestParam Long id,
             @RequestParam Double amount,
             @RequestParam(defaultValue = "5000") int delay) {
-        
-        service.withdrawOptimistic(id, amount, delay);
-        return Map.of("message", "Withdrawal successful (Optimistic)");
+
+        Double newBalance = service.withdrawOptimistic(id, amount, delay);
+        return Map.of(
+                "message", "Withdrawal successful (Optimistic)",
+                "updatedBalance", newBalance);
     }
 
     @PostMapping("/withdraw/pessimistic")
     public Map<String, Object> withdrawPessimistic(
-            @RequestParam Long id, 
+            @RequestParam Long id,
             @RequestParam Double amount,
             @RequestParam(defaultValue = "5000") int delay) {
-        
-        service.withdrawPessimistic(id, amount, delay);
-        return Map.of("message", "Withdrawal successful (Pessimistic)");
+
+        Double newBalance = service.withdrawPessimistic(id, amount, delay);
+        return Map.of(
+                "message", "Withdrawal successful (Pessimistic)",
+                "updatedBalance", newBalance);
     }
 }

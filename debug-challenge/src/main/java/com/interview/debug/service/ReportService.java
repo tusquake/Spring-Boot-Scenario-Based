@@ -3,8 +3,6 @@ package com.interview.debug.service;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
 public class ReportService {
 

@@ -20,23 +20,46 @@ public class GlobalExceptionHandler {
 
     // 1.5 Handle Validation Errors (e.g., @NotBlank, @Size)
     @ExceptionHandler(org.springframework.web.bind.MethodArgumentNotValidException.class)
-    public ResponseEntity<Object> handleValidationExceptions(org.springframework.web.bind.MethodArgumentNotValidException ex) {
+    public ResponseEntity<Object> handleValidationExceptions(
+            org.springframework.web.bind.MethodArgumentNotValidException ex) {
         Map<String, String> errors = new java.util.HashMap<>();
         ex.getBindingResult().getAllErrors().forEach((error) -> {
-            String fieldName = (error instanceof org.springframework.validation.FieldError) ? 
-                               ((org.springframework.validation.FieldError) error).getField() : 
-                               error.getObjectName();
+            String fieldName = (error instanceof org.springframework.validation.FieldError)
+                    ? ((org.springframework.validation.FieldError) error).getField()
+                    : error.getObjectName();
             String errorMessage = error.getDefaultMessage();
             errors.put(fieldName, errorMessage);
         });
-        
+
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("status", HttpStatus.BAD_REQUEST.value());
         body.put("error", "Validation Failed");
         body.put("details", errors);
-        
+
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+    }
+
+    // 1.6 Handle Optimistic Locking Failures (409 Conflict)
+    @ExceptionHandler(org.springframework.orm.ObjectOptimisticLockingFailureException.class)
+    public ResponseEntity<Object> handleOptimisticLockingFailure(
+            org.springframework.orm.ObjectOptimisticLockingFailureException ex) {
+        return buildResponse(HttpStatus.CONFLICT,
+                "The record you are trying to update has been modified by another user. Please refresh and try again.");
+    }
+
+    // 1.7 Handle Pessimistic Locking Failures / timeouts (423 Locked)
+    @ExceptionHandler(org.springframework.dao.PessimisticLockingFailureException.class)
+    public ResponseEntity<Object> handlePessimisticLockingFailure(
+            org.springframework.dao.PessimisticLockingFailureException ex) {
+        return buildResponse(HttpStatus.LOCKED,
+                "The resource is currently locked by another process and the request timed out. Please try again in a moment.");
+    }
+
+    @ExceptionHandler(BalanceCannotbeNegativeException.class)
+    public ResponseEntity<Object> BalanceCannotbeNegativeException(BalanceCannotbeNegativeException ex) {
+        return buildResponse(HttpStatus.PAYMENT_REQUIRED,
+                "The Balance cannot be negative.");
     }
 
     // 2. Handle Resource Not Found (e.g., 404 Not Found)
@@ -47,7 +70,8 @@ public class GlobalExceptionHandler {
 
     // 2.5 Handle Built-in ResponseStatusException (to keep format consistent)
     @ExceptionHandler(org.springframework.web.server.ResponseStatusException.class)
-    public ResponseEntity<Object> handleResponseStatusException(org.springframework.web.server.ResponseStatusException ex) {
+    public ResponseEntity<Object> handleResponseStatusException(
+            org.springframework.web.server.ResponseStatusException ex) {
         HttpStatus status = HttpStatus.resolve(ex.getStatusCode().value());
         return buildResponse(status != null ? status : HttpStatus.INTERNAL_SERVER_ERROR, ex.getReason());
     }
@@ -66,7 +90,7 @@ public class GlobalExceptionHandler {
         body.put("status", status.value());
         body.put("error", status.getReasonPhrase());
         body.put("message", message);
-        
+
         return new ResponseEntity<>(body, status);
     }
 }
