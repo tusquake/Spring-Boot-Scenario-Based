@@ -5,9 +5,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import java.time.Instant;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 public class SecurityConfig {
 
     private final com.interview.debug.filter.JwtAuthenticationFilter jwtFilter;
@@ -24,10 +30,12 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/scenario8/login").permitAll()
                 .requestMatchers("/api/filter/**").permitAll()
-                .requestMatchers("/api/scenario52/**").permitAll() // Allow Scenario 52
+                .requestMatchers("/api/scenario52/**").permitAll()
+                .requestMatchers("/api/scenario53/public").permitAll()
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
                 .anyRequest().permitAll()
             )
+            .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
             .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
@@ -45,5 +53,25 @@ public class SecurityConfig {
         org.springframework.web.cors.UrlBasedCorsConfigurationSource source = new org.springframework.web.cors.UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/api/**", configuration);
         return source;
+    }
+
+    /**
+     * For Scenario 53 Demonstration:
+     * A mock JwtDecoder that allows us to run the app without a real OIDC Provider.
+     * In production, this would be replaced by spring.security.oauth2.resourceserver.jwt.issuer-uri
+     */
+    @Bean
+    public JwtDecoder jwtDecoder() {
+        return token -> {
+            // This is a dummy decoder for demonstration that treats the token string as the scope
+            // Usage: Pass 'read' or 'write' as the Authorization Bearer token in curl
+            return Jwt.withTokenValue(token)
+                .header("alg", "none")
+                .claim("scope", token) // The token itself is treated as the scope for demo
+                .subject("demo-user")
+                .issuedAt(Instant.now())
+                .expiresAt(Instant.now().plusSeconds(3600))
+                .build();
+        };
     }
 }

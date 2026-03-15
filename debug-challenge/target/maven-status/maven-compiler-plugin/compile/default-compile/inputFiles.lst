@@ -38,9 +38,11 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\DownstreamService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\OrderProcessingService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\AuthController.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario53Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario40Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\validation\OnCreate.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario10Controller.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario53AuthFlowController.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario23Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario36Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario49Controller.java
@@ -48,6 +50,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario25Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\CustomerRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\ConsoleNotificationService.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\OidcUserService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario12Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\SecretRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\BetaFeatureService.java

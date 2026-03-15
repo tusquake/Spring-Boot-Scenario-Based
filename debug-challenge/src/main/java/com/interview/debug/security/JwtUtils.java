@@ -19,7 +19,12 @@ public class JwtUtils {
     private final Key key = Keys.hmacShaKeyFor(SECRET.getBytes());
 
     public String generateToken(String username) {
+        return generateToken(username, new java.util.HashMap<>());
+    }
+
+    public String generateToken(String username, java.util.Map<String, Object> extraClaims) {
         return Jwts.builder()
+                .setClaims(extraClaims)
                 .setSubject(username)
                 .setId(UUID.randomUUID().toString()) // JTI: JWT ID for blacklisting
                 .setIssuedAt(new Date(System.currentTimeMillis()))

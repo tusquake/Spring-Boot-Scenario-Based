@@ -26,6 +26,7 @@ com\interview\debug\filter\MdcTracingFilter.class
 com\interview\debug\listener\EmailNotificationListener.class
 com\interview\debug\controller\AuthController.class
 com\interview\debug\service\AsyncService.class
+com\interview\debug\service\OidcUserService.class
 com\interview\debug\service\DownstreamService.class
 com\interview\debug\model\SoftDeleteProduct.class
 com\interview\debug\model\Customer.class
@@ -101,6 +102,7 @@ com\interview\debug\controller\Scenario5Controller.class
 com\interview\debug\repository\BankAccountRepository.class
 com\interview\debug\controller\Scenario28Controller.class
 com\interview\debug\controller\Scenario25Controller.class
+com\interview\debug\controller\Scenario53Controller.class
 com\interview\debug\service\NotificationService.class
 com\interview\debug\controller\Scenario22Controller.class
 com\interview\debug\validation\ValidCouponCode.class
