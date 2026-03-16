@@ -12,6 +12,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.access.PermissionEvaluator;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import java.time.Instant;
 
 @Configuration
@@ -29,6 +31,11 @@ public class SecurityConfig {
     }
 
     @Bean
+    public PasswordEncoder passwordEncoder() {
+        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
@@ -41,6 +48,8 @@ public class SecurityConfig {
                 .requestMatchers("/api/filter/**").permitAll()
                 .requestMatchers("/api/scenario52/**").permitAll()
                 .requestMatchers("/api/scenario53/public").permitAll()
+                .requestMatchers("/api/scenario58/admin/**").hasAuthority("SCOPE_ADMIN")
+                .requestMatchers("/api/scenario58/**").permitAll()
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/**").hasAuthority("SCOPE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
