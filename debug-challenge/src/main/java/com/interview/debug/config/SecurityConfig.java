@@ -29,12 +29,17 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-            .csrf(csrf -> csrf.disable()) // Disable CSRF for testing
+            .csrf(csrf -> csrf
+                .csrfTokenRepository(org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
+                .ignoringRequestMatchers("/api/scenario51/**") // Keep previous scenarios working for now
+            )
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/scenario8/login").permitAll()
                 .requestMatchers("/api/filter/**").permitAll()
                 .requestMatchers("/api/scenario52/**").permitAll()
                 .requestMatchers("/api/scenario53/public").permitAll()
+                .requestMatchers("/actuator/health").permitAll()
+                .requestMatchers("/actuator/**").hasAuthority("SCOPE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
                 .anyRequest().permitAll()
             )
