@@ -20,9 +20,12 @@ import java.time.Instant;
 public class SecurityConfig {
 
     private final com.interview.debug.filter.JwtAuthenticationFilter jwtFilter;
+    private final com.interview.debug.filter.CspNonceFilter cspNonceFilter;
 
-    public SecurityConfig(com.interview.debug.filter.JwtAuthenticationFilter jwtFilter) {
+    public SecurityConfig(com.interview.debug.filter.JwtAuthenticationFilter jwtFilter, 
+                          com.interview.debug.filter.CspNonceFilter cspNonceFilter) {
         this.jwtFilter = jwtFilter;
+        this.cspNonceFilter = cspNonceFilter;
     }
 
     @Bean
@@ -44,6 +47,15 @@ public class SecurityConfig {
                 .anyRequest().permitAll()
             )
             .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
+            .headers(headers -> headers
+                .addHeaderWriter((request, response) -> {
+                    String nonce = (String) request.getAttribute("cspNonce");
+                    if (nonce != null) {
+                        response.setHeader("Content-Security-Policy", "script-src 'self' 'nonce-" + nonce + "'; object-src 'none';");
+                    }
+                })
+            )
+            .addFilterBefore(cspNonceFilter, org.springframework.security.web.header.HeaderWriterFilter.class)
             .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

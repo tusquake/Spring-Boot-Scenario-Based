@@ -2,3 +2,229 @@
 2026-03-16 06:24:27,201 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 30520 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
 2026-03-16 06:24:27,203 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
 2026-03-16 06:24:27,205 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-16 06:24:29,456 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-16 06:24:29,458 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16 06:24:29,786 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 308 ms. Found 9 JPA repository interfaces.
+2026-03-16 06:24:30,529 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-16 06:24:30,532 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-16 06:24:30,586 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,587 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,594 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,595 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.GadgetRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,595 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,596 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,599 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,600 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,600 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 06:24:30,600 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2026-03-16 06:24:32,918 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-16 06:24:32,944 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-16 06:24:32,949 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-16 06:24:32,950 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-16 06:24:33,121 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-16 06:24:33,122 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 5808 ms
+2026-03-16 06:24:33,593 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-16 06:24:33,949 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-16 06:24:33,953 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-16 06:24:33,969 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-16 06:24:34,442 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-16 06:24:34,446 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-16 06:24:34,755 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-16 06:24:34,756 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-16 06:24:34,756 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-16 06:24:34,851 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-16 06:24:34,861 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-16 06:24:34,921 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-16 06:24:34,927 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.037s)
+2026-03-16 06:24:34,940 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-16 06:24:34,989 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-16 06:24:35,000 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-16 06:24:35,033 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-16 06:24:35,045 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.021s)
+2026-03-16 06:24:35,362 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16 06:24:35,553 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-16 06:24:35,657 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-16 06:24:35,964 INFO o.h.e.b.i.EnversServiceImpl [main] [debug-challenge,,] Envers integration enabled? : true
+2026-03-16 06:24:36,364 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16 06:24:37,246 INFO o.h.e.c.i.m.AuditMetadataGenerator [main] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Order
+2026-03-16 06:24:37,251 INFO o.h.e.c.i.m.AuditMetadataGenerator [main] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Customer
+2026-03-16 06:24:39,465 ERROR o.h.m.i.MetadataContext [main] [debug-challenge,,] HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2026-03-16 06:24:39,474 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16 06:24:39,557 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16 06:24:40,429 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-16 06:24:41,721 INFO c.i.d.c.Scenario30BController [main] [debug-challenge,,] Seeding gadgets for Scenario 30B...
+2026-03-16 06:24:41,790 INFO c.i.d.c.Scenario30BController [main] [debug-challenge,,] Gadget seeding complete.
+2026-03-16 06:24:42,295 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-16 06:24:43,610 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-16 06:24:44,516 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-16 06:24:44,568 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-16 06:24:44,569 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-16 06:24:45,016 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16 06:24:46,991 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 6 endpoint(s) beneath base path '/actuator'
+2026-03-16 06:24:47,286 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@379ebdf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@286566f, org.springframework.security.web.context.SecurityContextHolderFilter@4dc3d00d, org.springframework.security.web.header.HeaderWriterFilter@7f4c8611, org.springframework.web.filter.CorsFilter@61bfee77, org.springframework.security.web.csrf.CsrfFilter@2543d96d, org.springframework.security.web.authentication.logout.LogoutFilter@6e39ac84, com.interview.debug.filter.JwtAuthenticationFilter@acd115d, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@79d137fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c7a94c7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cf79a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bc41531, org.springframework.security.web.access.ExceptionTranslationFilter@31962524, org.springframework.security.web.access.intercept.AuthorizationFilter@4049837d]
+2026-03-16 06:24:49,226 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-16 06:24:49,246 INFO o.q.c.SchedulerSignalerImpl [main] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-16 06:24:49,246 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-16 06:24:49,248 INFO o.q.s.RAMJobStore [main] [debug-challenge,,] RAMJobStore initialized.
+2026-03-16 06:24:49,249 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-16 06:24:49,250 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-16 06:24:49,250 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-16 06:24:49,250 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@98d2074
+2026-03-16 06:24:49,544 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-16 06:24:49,561 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-16 06:24:49,564 INFO o.s.s.q.SchedulerFactoryBean [main] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-16 06:24:49,564 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-16 06:24:49,589 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 23.404 seconds (process running for 23.911)
+2026-03-16 06:24:49,619 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b754d9f50e4bfb9167000459aa73e6,9167000459aa73e6] [scheduling-pool-1] ?? HEAVY START -> Time: 06:24:49
+2026-03-16 06:24:49,619 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b754d9765012e1a62c4375f69a4792,a62c4375f69a4792] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-16 06:24:49,751 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b754d9be1d5c29928be8e04481580f,928be8e04481580f] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 06:24:49
+2026-03-16 06:24:51,621 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b754d9765012e1a62c4375f69a4792,a62c4375f69a4792] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-16 06:25:04,621 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b754d9f50e4bfb9167000459aa73e6,9167000459aa73e6] [scheduling-pool-1] ?? HEAVY END -> Time: 06:25:04
+2026-03-16 06:25:07,782 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-16 06:25:07,782 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-16 06:25:07,786 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 4 ms
+2026-03-16 06:25:08,770 WARN o.s.b.a.h.AbstractReactiveHealthIndicator [boundedElastic-1] [debug-challenge,,] Redis health check failed
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1805)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1736)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1538)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.lambda$getConnection$0(LettuceConnectionFactory.java:1518)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.doInLock(LettuceConnectionFactory.java:1478)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1515)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:1224)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:1099)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:130)
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:67)
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:228)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:350)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:215)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:112)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:112)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1734)
+	... 16 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-16 07:17:15,148 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] [debug-challenge,,] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m38s941ms656µs300ns).
+2026-03-16 07:54:19,027 INFO o.h.v.i.u.Version [background-preinit] [debug-challenge,,] HV000001: Hibernate Validator 8.0.1.Final
+2026-03-16 07:54:19,113 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 26132 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge)
+2026-03-16 07:54:19,114 DEBUG o.s.b.StartupInfoLogger [main] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-16 07:54:19,115 INFO o.s.b.SpringApplication [main] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-16 07:54:21,059 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-16 07:54:21,059 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16 07:54:21,337 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 264 ms. Found 9 JPA repository interfaces.
+2026-03-16 07:54:22,088 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-16 07:54:22,089 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-16 07:54:22,121 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,122 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,126 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,127 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.GadgetRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,127 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,127 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,129 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,130 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,130 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-16 07:54:22,130 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] [debug-challenge,,] Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2026-03-16 07:54:24,157 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-16 07:54:24,176 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-16 07:54:24,181 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting service [Tomcat]
+2026-03-16 07:54:24,182 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-16 07:54:24,337 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-16 07:54:24,337 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] [debug-challenge,,] Root WebApplicationContext: initialization completed in 5113 ms
+2026-03-16 07:54:24,852 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Starting...
+2026-03-16 07:54:25,327 INFO c.z.h.p.HikariPool [main] [debug-challenge,,] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-16 07:54:25,330 INFO c.z.h.HikariDataSource [main] [debug-challenge,,] HikariPool-1 - Start completed.
+2026-03-16 07:54:25,349 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-16 07:54:25,839 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-16 07:54:25,841 DEBUG o.s.w.f.GenericFilterBean [main] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-16 07:54:26,024 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway Community Edition 9.22.3 by Redgate
+2026-03-16 07:54:26,025 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] See release notes here: https://rd.gt/416ObMi
+2026-03-16 07:54:26,025 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] 
+2026-03-16 07:54:26,084 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-16 07:54:26,090 WARN o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-16 07:54:26,124 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-16 07:54:26,127 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.020s)
+2026-03-16 07:54:26,136 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-16 07:54:26,164 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-16 07:54:26,171 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-16 07:54:26,188 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-16 07:54:26,196 INFO o.f.c.i.l.s.Slf4jLog [main] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.010s)
+2026-03-16 07:54:26,371 INFO o.h.j.i.u.LogHelper [main] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16 07:54:26,520 INFO o.h.Version [main] [debug-challenge,,] HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-16 07:54:26,590 INFO o.h.c.i.RegionFactoryInitiator [main] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-16 07:54:26,754 INFO o.h.e.b.i.EnversServiceImpl [main] [debug-challenge,,] Envers integration enabled? : true
+2026-03-16 07:54:27,018 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16 07:54:27,527 INFO o.h.e.c.i.m.AuditMetadataGenerator [main] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Order
+2026-03-16 07:54:27,531 INFO o.h.e.c.i.m.AuditMetadataGenerator [main] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Customer
+2026-03-16 07:54:29,004 ERROR o.h.m.i.MetadataContext [main] [debug-challenge,,] HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2026-03-16 07:54:29,020 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16 07:54:29,151 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16 07:54:30,445 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] [debug-challenge,,] Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-16 07:54:32,496 INFO c.i.d.c.Scenario30BController [main] [debug-challenge,,] Seeding gadgets for Scenario 30B...
+2026-03-16 07:54:32,568 INFO c.i.d.c.Scenario30BController [main] [debug-challenge,,] Gadget seeding complete.
+2026-03-16 07:54:33,057 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-16 07:54:34,243 INFO c.i.d.c.Scenario30Controller [main] [debug-challenge,,] Seeding complete.
+2026-03-16 07:54:35,719 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-16 07:54:35,803 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-16 07:54:35,804 INFO c.i.d.l.LifecycleDemoBean [main] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-16 07:54:36,263 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16 07:54:38,374 INFO o.s.b.a.e.w.EndpointLinksResolver [main] [debug-challenge,,] Exposing 6 endpoint(s) beneath base path '/actuator'
+2026-03-16 07:54:38,704 INFO o.s.s.w.DefaultSecurityFilterChain [main] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43023c0d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6716d006, org.springframework.security.web.context.SecurityContextHolderFilter@2053befc, org.springframework.security.web.header.HeaderWriterFilter@5013c293, org.springframework.web.filter.CorsFilter@13b73714, org.springframework.security.web.csrf.CsrfFilter@7b094557, org.springframework.security.web.authentication.logout.LogoutFilter@484c6de5, com.interview.debug.filter.JwtAuthenticationFilter@5dfec221, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@45d9fe80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@269d1f84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@aa85268, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@476bf67d, org.springframework.security.web.access.ExceptionTranslationFilter@32ea52d, org.springframework.security.web.access.intercept.AuthorizationFilter@c202a19]
+2026-03-16 07:54:41,131 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-16 07:54:41,158 INFO o.q.c.SchedulerSignalerImpl [main] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-16 07:54:41,160 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-16 07:54:41,161 INFO o.q.s.RAMJobStore [main] [debug-challenge,,] RAMJobStore initialized.
+2026-03-16 07:54:41,162 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-16 07:54:41,162 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-16 07:54:41,162 INFO o.q.i.StdSchedulerFactory [main] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-16 07:54:41,163 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@39e27166
+2026-03-16 07:54:41,512 INFO o.a.j.l.DirectJDKLog [main] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-16 07:54:41,549 INFO o.s.b.w.e.t.TomcatWebServer [main] [debug-challenge,,] Tomcat started on port 8080 (http) with context path ''
+2026-03-16 07:54:41,552 INFO o.s.s.q.SchedulerFactoryBean [main] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-16 07:54:41,553 INFO o.q.c.QuartzScheduler [main] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-16 07:54:41,585 INFO o.s.b.StartupInfoLogger [main] [debug-challenge,,] Started DebugApplication in 23.259 seconds (process running for 24.22)
+2026-03-16 07:54:41,627 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b769e91b64e00274c261fe1205617b,74c261fe1205617b] [scheduling-pool-2] ?? HEAVY START -> Time: 07:54:41
+2026-03-16 07:54:41,627 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b769e9a3b689be6f557ee72463f4ea,6f557ee72463f4ea] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-16 07:54:41,708 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69b769e940b66f9f6bc6f15cb3e6b09c,6bc6f15cb3e6b09c] [scheduling-pool-1] ? FIXED RATE [10s] -> Execution Time: 07:54:41
+2026-03-16 07:54:43,643 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69b769e9a3b689be6f557ee72463f4ea,6f557ee72463f4ea] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-16 07:54:52,710 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-16 07:54:52,710 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-16 07:54:52,713 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,,] Completed initialization in 3 ms
+2026-03-16 07:54:56,628 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69b769e91b64e00274c261fe1205617b,74c261fe1205617b] [scheduling-pool-2] ?? HEAVY END -> Time: 07:54:56
