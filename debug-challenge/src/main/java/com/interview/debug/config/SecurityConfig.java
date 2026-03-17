@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.access.PermissionEvaluator;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
@@ -96,6 +97,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/scenario60/user-only").hasRole("USER")
                 .requestMatchers("/api/scenario61/protected").authenticated()
                 .requestMatchers("/api/scenario61/admin-only").hasRole("ADMIN")
+                .requestMatchers("/api/scenario62/permitted").permitAll()
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
@@ -115,6 +117,13 @@ public class SecurityConfig {
             .addFilterBefore(cspNonceFilter, org.springframework.security.web.header.HeaderWriterFilter.class)
             .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class);
         return http.build();
+    }
+
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        // WARNING: This bypasses the entire filter chain. 
+        // No CSRF, No Security Headers, No Authentication!
+        return (web) -> web.ignoring().requestMatchers("/api/scenario62/ignored");
     }
 
     @Bean
