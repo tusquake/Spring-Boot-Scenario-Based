@@ -7,7 +7,9 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario51Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Order.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\JsonFilterController.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario60Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\health\ExternalConfigHealthIndicator.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\CustomAuthenticationEntryPoint.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario45Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\ProjectDataRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\BankAccountService.java
@@ -41,6 +43,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\CustomPermissionEvaluator.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario31Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\DownstreamService.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario61Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\OrderProcessingService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\AuthController.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario53Controller.java
@@ -113,6 +116,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario22Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\TokenBlacklistService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\BankAccountRepository.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\CustomAccessDeniedHandler.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\GadgetRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\BankSecurity.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\MdcTracingService.java

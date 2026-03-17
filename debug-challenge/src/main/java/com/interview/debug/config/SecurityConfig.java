@@ -15,6 +15,10 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
+import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
+import org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl;
+import com.interview.debug.security.CustomAuthenticationEntryPoint;
+import com.interview.debug.security.CustomAccessDeniedHandler;
 import java.time.Instant;
 
 @Configuration
@@ -24,11 +28,17 @@ public class SecurityConfig {
 
     private final com.interview.debug.filter.JwtAuthenticationFilter jwtFilter;
     private final com.interview.debug.filter.CspNonceFilter cspNonceFilter;
+    private final CustomAuthenticationEntryPoint authenticationEntryPoint;
+    private final CustomAccessDeniedHandler accessDeniedHandler;
 
     public SecurityConfig(com.interview.debug.filter.JwtAuthenticationFilter jwtFilter, 
-                          com.interview.debug.filter.CspNonceFilter cspNonceFilter) {
+                          com.interview.debug.filter.CspNonceFilter cspNonceFilter,
+                          CustomAuthenticationEntryPoint authenticationEntryPoint,
+                          CustomAccessDeniedHandler accessDeniedHandler) {
         this.jwtFilter = jwtFilter;
         this.cspNonceFilter = cspNonceFilter;
+        this.authenticationEntryPoint = authenticationEntryPoint;
+        this.accessDeniedHandler = accessDeniedHandler;
     }
 
     @Bean
@@ -48,12 +58,31 @@ public class SecurityConfig {
     }
 
     @Bean
+    public RoleHierarchy roleHierarchy() {
+        RoleHierarchyImpl hierarchy = new RoleHierarchyImpl();
+        hierarchy.setHierarchy("ROLE_ADMIN > ROLE_USER");
+        return hierarchy;
+    }
+
+    @Bean
+    static MethodSecurityExpressionHandler methodSecurityExpressionHandler(RoleHierarchy roleHierarchy, PermissionEvaluator permissionEvaluator) {
+        DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
+        expressionHandler.setRoleHierarchy(roleHierarchy);
+        expressionHandler.setPermissionEvaluator(permissionEvaluator);
+        return expressionHandler;
+    }
+
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf
                 .csrfTokenRepository(org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
                 .ignoringRequestMatchers("/api/scenario51/**") // Keep previous scenarios working for now
+            )
+            .exceptionHandling(exceptions -> exceptions
+                .authenticationEntryPoint(authenticationEntryPoint)
+                .accessDeniedHandler(accessDeniedHandler)
             )
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/scenario8/login").permitAll()
@@ -64,6 +93,9 @@ public class SecurityConfig {
                 .requestMatchers("/api/scenario58/**").permitAll()
                 .requestMatchers("/api/scenario59/role-test").hasRole("ADMIN")
                 .requestMatchers("/api/scenario59/authority-test").hasAuthority("ROLE_ADMIN")
+                .requestMatchers("/api/scenario60/user-only").hasRole("USER")
+                .requestMatchers("/api/scenario61/protected").authenticated()
+                .requestMatchers("/api/scenario61/admin-only").hasRole("ADMIN")
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
@@ -100,12 +132,6 @@ public class SecurityConfig {
         return source;
     }
 
-    @Bean
-    static MethodSecurityExpressionHandler methodSecurityExpressionHandler(PermissionEvaluator permissionEvaluator) {
-        DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
-        expressionHandler.setPermissionEvaluator(permissionEvaluator);
-        return expressionHandler;
-    }
 
     /**
      * For Scenario 53 Demonstration:
