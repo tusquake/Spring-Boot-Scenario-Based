@@ -3,7 +3,6 @@ package com.interview.debug.controller;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
@@ -11,10 +10,7 @@ import java.util.Map;
 @RequestMapping("/api/scenario58")
 public class Scenario58Controller {
 
-    private final PasswordEncoder delegatingEncoder;
-
     public Scenario58Controller(PasswordEncoder passwordEncoder) {
-        this.delegatingEncoder = passwordEncoder;
     }
 
     /**

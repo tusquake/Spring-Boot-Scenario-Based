@@ -7,13 +7,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
+import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import java.time.Instant;
 
 @Configuration
@@ -36,6 +37,17 @@ public class SecurityConfig {
     }
 
     @Bean
+    public JwtAuthenticationConverter jwtAuthenticationConverter() {
+        JwtGrantedAuthoritiesConverter authoritiesConverter = new JwtGrantedAuthoritiesConverter();
+        authoritiesConverter.setAuthorityPrefix("ROLE_"); // Convert SCOPE_ADMIN to ROLE_ADMIN
+        authoritiesConverter.setAuthoritiesClaimName("scope"); // Or whichever claim holds the authorities
+
+        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
+        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(authoritiesConverter);
+        return jwtAuthenticationConverter;
+    }
+
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
@@ -48,14 +60,18 @@ public class SecurityConfig {
                 .requestMatchers("/api/filter/**").permitAll()
                 .requestMatchers("/api/scenario52/**").permitAll()
                 .requestMatchers("/api/scenario53/public").permitAll()
-                .requestMatchers("/api/scenario58/admin/**").hasAuthority("SCOPE_ADMIN")
+                .requestMatchers("/api/scenario58/admin/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/scenario58/**").permitAll()
+                .requestMatchers("/api/scenario59/role-test").hasRole("ADMIN")
+                .requestMatchers("/api/scenario59/authority-test").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/actuator/health").permitAll()
-                .requestMatchers("/actuator/**").hasAuthority("SCOPE_ADMIN")
+                .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
                 .anyRequest().permitAll()
             )
-            .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
+            .oauth2ResourceServer(oauth2 -> oauth2
+                .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
+            )
             .headers(headers -> headers
                 .addHeaderWriter((request, response) -> {
                     String nonce = (String) request.getAttribute("cspNonce");
