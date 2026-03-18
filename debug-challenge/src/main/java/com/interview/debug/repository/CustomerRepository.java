@@ -12,6 +12,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long>, JpaSpecificationExecutor<Customer> {
     
+    java.util.List<Customer> findByName(String name);
+    
     // 1. Page<T> is already provided by findAll(Pageable) -> Executes COUNT
     
     // 2. Slice<T> avoids the COUNT query but still uses LIMIT/OFFSET

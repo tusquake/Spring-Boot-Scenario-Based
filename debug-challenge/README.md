@@ -1,72 +1,72 @@
-# Spring Boot Security Interview Preparation Guide
+# Spring Boot Interview Preparation Hub: The Debug Challenge
 
-This repository contains a specialized "Debug Challenge" application modified to demonstrate core and advanced Spring Boot Security concepts. Each scenario covers a critical area often discussed in technical interviews.
-
-## Table of Contents
-1. [Scenario 56: Securing Actuator Endpoints](#scenario-56-securing-actuator-endpoints)
-2. [Scenario 57: Content Security Policy (CSP)](#scenario-57-content-security-policy-csp)
-3. [Scenario 58: Password Encoding & URL Order](#scenario-58-password-encoding--url-order)
-4. [Scenario 59: Roles vs Authorities](#scenario-59-roles-vs-authorities)
-5. [Scenario 60: Role Hierarchy](#scenario-60-role-hierarchy)
-6. [Scenario 61: Custom Exception Handling (401/403)](#scenario-61-custom-exception-handling-401403)
-7. [Scenario 62: Ignoring vs Permitting All](#scenario-62-ignoring-vs-permitting-all)
-8. [Scenario 63: Session Management](#scenario-63-session-management)
-9. [Scenario 64: Command Injection Prevention](#scenario-64-command-injection-prevention)
+This repository is a comprehensive guide to Spring Boot and Spring Security interview scenarios. Each scenario is implemented as a "Debug Challenge" to help you understand core concepts, common pitfalls, and architectural patterns.
 
 ---
 
-### Scenario 56: Securing Actuator Endpoints
-- **Concept**: Protecting sensitive management data.
-- **Implementation**: Access to `/actuator/**` is restricted to `ROLE_ADMIN`.
-- **Key Takeaway**: External monitoring tools can expose your environment variables; never leave actuators unprotected in production.
+## 🚀 Scenario Index
 
-### Scenario 57: Content Security Policy (CSP)
-- **Concept**: XSS Prevention using browser-level restrictions.
-- **Implementation**: A custom `CspNonceFilter` generates a secure random nonce for every request and injects it into the `Content-Security-Policy` header.
-- **Interview Tip**: Explain how a Nonce is better than just 'self' because it stops inline script attacks.
-
-### Scenario 58: Password Encoding & URL Order
-- **Concept**: Future-proofing security and understanding filter precedence.
-- **Implementation**: used `DelegatingPasswordEncoder` (supporting BCrypt, Argon2, etc.). Configured matcher order to ensure specific rules take precedence over general ones.
-- **Key Takeaway**: Security rules are first-match-wins. Specific paths must come BEFORE generic `/**` paths.
-
-### Scenario 59: Roles vs Authorities
-- **Concept**: The `ROLE_` prefix convention.
-- **Implementation**: Showed that `hasRole("ADMIN")` looks for `ROLE_ADMIN`, whereas `hasAuthority("ADMIN")` looks for a literal match.
-- **Implementation**: Added a `JwtAuthenticationConverter` to normalize strings like "ADMIN" into "ROLE_ADMIN".
-
-### Scenario 60: Role Hierarchy
-- **Concept**: Simplifying permissions through inheritance.
-- **Implementation**: Configured `ROLE_ADMIN > ROLE_USER`. This ensures an Admin user automatically has all access granted to a regular User.
-
-### Scenario 61: Custom Exception Handling (401/403)
-- **Concept**: Controlling API error responses outside the Controller.
-- **Implementation**:
-    - **`AuthenticationEntryPoint`**: Handles **401 Unauthorized** (invalid/missing token).
-    - **`AccessDeniedHandler`**: Handles **403 Forbidden** (authenticated but lacks role).
-- **Difference**: `@ControllerAdvice` usually can't catch these because they happen in the Filter Chain before reaching the Controller.
-
-### Scenario 62: Ignoring vs Permitting All
-- **Concept**: Performance vs Security (The Filter Bypass).
-- **Implementation**: 
-    - `web.ignoring()`: Bypasses the chain. NO security headers, NO CSRF. Best for static assets (CSS/Images).
-    - `http.permitAll()`: Stays in the chain. Includes security headers and protection. Best for public APIs (Login/Register).
-
-### Scenario 63: Session Management
-- **Concept**: Stateless tracking and Fixation protection.
-- **Implementation**:
-    - **Fixation**: Using `migrateSession()` to change IDs upon login.
-    - **Concurrency**: `maximumSessions(1)` to prevent multiple logins (The Netflix Model).
-    - **Policy**: `IF_REQUIRED` vs `STATELESS`.
-
-### Scenario 64: Command Injection Prevention
-- **Concept**: Securely interacting with the OS.
-- **Implementation**: Replaced unsafe String concatenation in `Runtime.exec()` with **Strict Regex Validation** and **ProcessBuilder** (passing arguments as a list).
-- **Key Takeaway**: ProcessBuilder prevents the shell from interpreting characters like `&&` or `;` as separate commands.
+| Scenario | Topic | Key Concepts |
+| :--- | :--- | :--- |
+| **01** | [Bean Lifecycle](file:///documentation/Scenario1/README.md) | `@PostConstruct`, `@PreDestroy`, Bean Initialization |
+| **05** | [Circular Dependencies](file:///documentation/Scenario5/README.md) | Injection patterns, `@Lazy` resolution |
+| **06** | [Concurrency Control](file:///documentation/Scenario6/README.md) | Race Conditions, Pessimistic vs Optimistic Locking |
+| **07** | [Async Processing](file:///documentation/Scenario7/README.md) | `@Async`, SecurityContext propagation |
+| **08** | [JWT Auth](file:///documentation/Scenario8/README.md) | Token generation, validation, blacklisting |
+| **09** | [JPA N+1 Problem](file:///documentation/Scenario9/README.md) | `JOIN FETCH`, Entity Graphs |
+| **10** | [Validation logic](file:///documentation/Scenario10/README.md) | Custom `@Constraint`, Hibernate Validator |
+| **11** | [Global Exception Handling](file:///documentation/Scenario11/README.md) | `@ControllerAdvice`, `ProblemDetail` |
+| **12** | [Spring Events](file:///documentation/Scenario12/README.md) | `@EventListener`, Async Events |
+| **13** | [Caching (Redis)](file:///documentation/Scenario13/README.md) | `@Cacheable`, TTL, Cache Eviction |
+| **14** | [Idempotency](file:///documentation/Scenario14/README.md) | Idempotent keys, Distributed Locks |
+| **15** | [Rate Limiting](file:///documentation/Scenario15/README.md) | Bucket4j, API Throtelling |
+| **16** | [Profiles & Config](file:///documentation/Scenario16/README.md) | `@Profile`, Conditional Beans |
+| **17** | [AOP Introduction](file:///documentation/Scenario17/README.md) | Aspect, Pointcuts, Advices |
+| **18** | [Transaction Propagation](file:///documentation/Scenario18/README.md) | `REQUIRED`, `REQUIRES_NEW`, Rollback rules |
+| **22** | [Custom Annotations](file:///documentation/Scenario22/README.md) | Creating custom AOP-driven decorators |
+| **23** | [Pagination & Sorting](file:///documentation/Scenario23/README.md) | `Pageable`, `Sort`, HATEOAS basics |
+| **24** | [Content Negotiation](file:///documentation/Scenario24/README.md) | JSON vs XML, Accept headers |
+| **25** | [Observability](file:///documentation/Scenario25/README.md) | Micrometer, Tracing, Spans |
+| **26** | [CORS Deep Dive](file:///documentation/Scenario26/README.md) | Preflight requests, Allowed Origins |
+| **27** | [AOP Advices (Masterclass)](file:///documentation/Scenario27/README.md) | `@Around`, `@Before`, `@After` depth |
+| **28** | [Rest Client (WebClient)](file:///documentation/Scenario28/README.md) | Reactive vs RestTemplate |
+| **29** | [Flyway Migrations](file:///documentation/Scenario29/README.md) | Version control for Databases |
+| **30** | [Secondary DB Config](file:///documentation/Scenario30/README.md) | Multiple DataSources |
+| **31** | [Scheduling Thread Pool](file:///documentation/Scenario31/README.md) | `TaskScheduler` configuration |
+| **32** | [Actuator Customization](file:///documentation/Scenario32/README.md) | Custom `HealthIndicator` |
+| **33** | [Task Scheduling (@Scheduled)](file:///documentation/Scenario33/README.md) | `fixedRate` vs `fixedDelay` |
+| **35** | [Filter vs Interceptor](file:///documentation/Scenario35/README.md) | Chain of responsibility, Context access |
+| **36** | [Jackson Customization](file:///documentation/Scenario36/README.md) | `@JsonView`, Custom Serializers |
+| **37** | [Swagger/OpenAPI](file:///documentation/Scenario37/README.md) | API Documentation best practices |
+| **40** | [Logback & ELK](file:///documentation/Scenario40/README.md) | Structured logging, Log rotation |
+| **42** | [Spring Batch Basics](file:///documentation/Scenario42/README.md) | Job, Step, ItemReader |
+| **43** | [Websockets/STOMP](file:///documentation/Scenario43/README.md) | Real-time communication |
+| **44** | [Proxying & Final Class](file:///documentation/Scenario44/README.md) | CGLIB vs JDK Dynamic Proxy |
+| **45** | [Circuit Breaker Basics](file:///documentation/Scenario45/README.md) | Resilience4j intro |
+| **47** | [Method Security](file:///documentation/Scenario47/README.md) | `@PreAuthorize`, `@PostAuthorize` |
+| **48** | [OAuth2 Client Flow](file:///documentation/Scenario48/README.md) | Social Login integration |
+| **49** | [Resource Server](file:///documentation/Scenario49/README.md) | Serving protected resources |
+| **51** | [SSL/TLS (HTTPS)](file:///documentation/Scenario51/README.md) | Keystores, Truststores |
+| **52** | [CSRF Protection](file:///documentation/Scenario52/README.md) | Tokens, Cookies, SameSite |
+| **53** | [Authentication Flow](file:///documentation/Scenario53/README.md) | ProviderManager, AuthProvider |
+| **54** | [UserDetailsService](file:///documentation/Scenario54/README.md) | Custom User loading logic |
+| **55** | [Password Upgrading](file:///documentation/Scenario55/README.md) | `DelegatingPasswordEncoder` |
+| **56** | [Securing Actuators](file:///documentation/Scenario56/README.md) | Restricted management endpoints |
+| **57** | [CSP (Content Security Policy)](file:///documentation/Scenario57/README.md) | XSS Prevention using Nonce |
+| **58** | [URL Order & Matchers](file:///documentation/Scenario58/README.md) | First-match-wins rule |
+| **59** | [Roles vs Authorities](file:///documentation/Scenario59/README.md) | `ROLE_` prefix convention |
+| **60** | [Role Hierarchy](file:///documentation/Scenario60/README.md) | Permission inheritance |
+| **61** | [Auth Exception Handling](file:///documentation/Scenario61/README.md) | 401 Unauth vs 403 Forbidden |
+| **62** | [Ignoring vs Permitting](file:///documentation/Scenario62/README.md) | Performance vs Security (The Filter Bypass) |
+| **63** | [Session Management](file:///documentation/Scenario63/README.md) | Stateless, Fixation, Concurrency |
+| **64** | [Command Injection](file:///documentation/Scenario64/README.md) | Safe OS interaction |
+| **65** | [SQL Injection](file:///documentation/Scenario65/README.md) | Parameterized Queries vs Fragments |
+| **67** | [Saga Pattern](file:///documentation/Scenario67/README.md) | Distributed Transactions, Orchestration |
 
 ---
 
-## How to Run & Verify
-- Start the app: `mvn spring-boot:run`
-- Use individual scenario endpoints in `/api/scenarioXX/...` to test behaviors.
-- Review `SecurityConfig.java` for centralized configuration.
+## 🛠️ How to Run
+1.  **Clone** the repository.
+2.  **Start the app**: `mvn spring-boot:run`
+3.  **Explore**: Each scenario has its own endpoint at `/api/scenarioXX/...`.
+4.  **Verify**: Check the specific `README.md` for each scenario to see `curl` commands and expected results.
