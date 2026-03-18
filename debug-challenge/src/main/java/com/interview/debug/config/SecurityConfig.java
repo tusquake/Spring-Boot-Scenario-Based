@@ -81,7 +81,7 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf
                 .csrfTokenRepository(org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**") // Ignore CSRF for demo
+                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**") // Ignore CSRF for demo
             )
             .exceptionHandling(exceptions -> exceptions
                 .authenticationEntryPoint(authenticationEntryPoint)
@@ -116,6 +116,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/scenario62/permitted").permitAll()
                 .requestMatchers("/api/scenario64/**").permitAll()
                 .requestMatchers("/api/scenario65/**").permitAll()
+                .requestMatchers("/api/scenario66/**").permitAll()
                 .requestMatchers("/api/scenario67/**").permitAll()
                 .requestMatchers("/api/scenario68/**").permitAll()
                 .requestMatchers("/api/scenario69/**").permitAll()

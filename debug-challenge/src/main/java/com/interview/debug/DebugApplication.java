@@ -11,6 +11,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.aop.ObservedAspect;
 
+import org.springframework.retry.annotation.EnableRetry;
+
+@EnableRetry
 @EnableScheduling
 @EnableAsync
 @ComponentScan(basePackages = { "com.interview.debug", "com.interview.external.service" })
