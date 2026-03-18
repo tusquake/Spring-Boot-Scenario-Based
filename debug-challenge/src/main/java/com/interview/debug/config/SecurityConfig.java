@@ -115,6 +115,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/scenario61/admin-only").hasRole("ADMIN")
                 .requestMatchers("/api/scenario62/permitted").permitAll()
                 .requestMatchers("/api/scenario64/**").permitAll()
+                .requestMatchers("/api/scenario65/**").permitAll()
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
