@@ -35,7 +35,7 @@ public class Scenario30Controller {
     public void seedData() {
         if (customerRepository.count() == 0) {
             logger.info("Seeding 10,000 customers for Pagination Demo...");
-            for (int i = 1; i <= 100; i++) {
+            for (int i = 1; i <= 10; i++) {
                 Customer c = new Customer();
                 c.setName("Customer " + i);
                 c.setEmail("customer" + i + "@example.com");
@@ -79,7 +79,8 @@ public class Scenario30Controller {
             @RequestParam(defaultValue = "asc") String direction) {
 
         Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
-        logger.info("Executing PAGE query for page {}, size {}, sortBy {}, direction {}", page, size, sortBy, direction);
+        logger.info("Executing PAGE query for page {}, size {}, sortBy {}, direction {}", page, size, sortBy,
+                direction);
         return customerRepository.findAll(PageRequest.of(page, size, sort));
     }
 
@@ -96,7 +97,8 @@ public class Scenario30Controller {
             @RequestParam(defaultValue = "asc") String direction) {
 
         Sort sort = direction.equalsIgnoreCase("desc") ? Sort.by(sortBy).descending() : Sort.by(sortBy).ascending();
-        logger.info("Executing SLICE query for page {}, size {}, sortBy {}, direction {}", page, size, sortBy, direction);
+        logger.info("Executing SLICE query for page {}, size {}, sortBy {}, direction {}", page, size, sortBy,
+                direction);
         return customerRepository.findBy(PageRequest.of(page, size, sort));
     }
 
