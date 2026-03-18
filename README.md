@@ -1,424 +1,72 @@
-# 🎓 Spring Boot Mastering: Scenarios 1-15 🚀
+# Spring Boot Interview Preparation Hub: The Debug Challenge
 
-This project is a comprehensive guide to mastering Spring Boot through real-world scenarios. Each scenario addresses a common production issue, architectural challenge, or high-frequency interview topic.
-
-## 📥 Getting Started
-- **Java**: 17+
-- **Build Tool**: Maven
-- **Database**: H2 (In-Memory)
-- **Port**: 8080 (Configured in `application.properties`)
+This repository is a comprehensive guide to Spring Boot and Spring Security interview scenarios. Each scenario is implemented as a "Debug Challenge" to help you understand core concepts, common pitfalls, and architectural patterns.
 
 ---
 
-## 🏗️ Detailed Scenario Guides
+## 🚀 Scenario Index
 
-### 1️⃣ Scenario 1: The Invisible Component
-*   **Concept**: Bean Discovery and `@ComponentScan`.
-*   **The Problem**: A service in `com.other.package` is not injected because Spring only scans sub-packages of the `@SpringBootApplication` class.
-*   **Solution**: Added explicit `@ComponentScan(basePackages = {"com.interview.debug", "com.other.package"})`.
-*   **Interview Tip**: Mention that by default, Spring scans the package of the class annotated with `@SpringBootApplication` and all its sub-packages.
-
----
-
-### 2️⃣ Scenario 2: Circular Dependency Standoff
-*   **Concept**: Bean Lifecycle and Dependency Resolution.
-*   **The Problem**: `ServiceA` needs `ServiceB`, and `ServiceB` needs `ServiceA`. Spring fails to initialize either.
-*   **Solution**: Annotated one of the constructor parameters or fields with `@Lazy`.
-*   **Interview Tip**: In Spring Boot 2.6+, circular dependencies are disabled by default. `@Lazy` creates a proxy that is replaced with the real bean only when first called.
-
----
-
-### 3️⃣ Scenario 3: Transactional Ghosting
-*   **Concept**: AOP Proxies and Self-invocation.
-*   **The Problem**: `@Transactional` fails when a method inside a class calls another transactional method in the *same* class (bypass proxy).
-*   **Solution**: Used self-injection or refactored logic into a separate service.
-*   **Test**: `curl -X POST http://localhost:8080/api/scenario3/test` (Verify DB state after exception).
-
----
-
-### 4️⃣ Scenario 4: The Selective Filter
-*   **Concept**: Servlet Filters vs Spring Security.
-*   **The Problem**: Applying a specific HTTP header/log logic only to `/api/scenario4/*`.
-*   **Solution**: Registered `FilterRegistrationBean` to define URL patterns manually.
-*   **Test**: `curl -I http://localhost:8080/api/scenario4/test` -> Observe `X-Custom-Header`.
-
----
-
-### 5️⃣ Scenario 5: Multi-Level Caching (L1 & L2)
-*   **Concept**: Cache-Aside Pattern.
-*   **The Problem**: Database is overwhelmed with repetitive queries for static data.
-*   **Solution**: Combined **Caffeine** (In-memory L1) with **Redis** (Distributed L2).
-*   **Verification**: First request (DB hit), Second (Caffeine hit - ultra fast), Restart App (Redis hit - still fast).
-
----
-
-### 6️⃣ Scenario 6: Concurrency & Database Locking
-*   **Concept**: Data Integrity in High-Traffic Apps.
-*   **The Problem**: Two users update a balance at the same time; one update is lost.
-*   **Solution**: 
-    - **Optimistic**: `@Version` column (Throw `ObjectOptimisticLockingFailureException`).
-    - **Pessimistic**: `@Lock(LockModeType.PESSIMISTIC_WRITE)` (DB level row lock).
-
----
-
-### 7️⃣ Scenario 7: Async Security Context Propagation
-*   **Concept**: Thread-local variables vs Async processing.
-*   **The Problem**: `@Async` methods lose the `SecurityContext` (User info) because they run on a different thread.
-*   **Solution**: Use `DelegatingSecurityContextAsyncTaskExecutor` to copy the context to the new thread.
-*   **Test**: Logged user name inside an async method.
-
----
-
-### 8️⃣ Scenario 8: JWT Revocation (JTI Blacklisting)
-*   **Concept**: Stateless vs Stateful security components.
-*   **The Problem**: JWTs are valid until expiry, even after a user logs out.
-*   **Solution**: Store a unique **JTI (JWT ID)** in Redis upon logout. Check this blacklist in `JwtAuthenticationFilter`.
-*   **Test**: Login -> Get Token -> `/logout` -> Try `/api/secure` with old token (returns 401).
-*   **Categories**: CORS, Rate Limiting, Distributed Tracing (Observability), and Security.
+| Scenario | Topic | Key Concepts |
+| :--- | :--- | :--- |
+| **01** | [Bean Lifecycle](file:///documentation/Scenario1/README.md) | `@PostConstruct`, `@PreDestroy`, Bean Initialization |
+| **05** | [Circular Dependencies](file:///documentation/Scenario5/README.md) | Injection patterns, `@Lazy` resolution |
+| **06** | [Concurrency Control](file:///documentation/Scenario6/README.md) | Race Conditions, Pessimistic vs Optimistic Locking |
+| **07** | [Async Processing](file:///documentation/Scenario7/README.md) | `@Async`, SecurityContext propagation |
+| **08** | [JWT Auth](file:///documentation/Scenario8/README.md) | Token generation, validation, blacklisting |
+| **09** | [JPA N+1 Problem](file:///documentation/Scenario9/README.md) | `JOIN FETCH`, Entity Graphs |
+| **10** | [Validation logic](file:///documentation/Scenario10/README.md) | Custom `@Constraint`, Hibernate Validator |
+| **11** | [Global Exception Handling](file:///documentation/Scenario11/README.md) | `@ControllerAdvice`, `ProblemDetail` |
+| **12** | [Spring Events](file:///documentation/Scenario12/README.md) | `@EventListener`, Async Events |
+| **13** | [Caching (Redis)](file:///documentation/Scenario13/README.md) | `@Cacheable`, TTL, Cache Eviction |
+| **14** | [Idempotency](file:///documentation/Scenario14/README.md) | Idempotent keys, Distributed Locks |
+| **15** | [Rate Limiting](file:///documentation/Scenario15/README.md) | Bucket4j, API Throtelling |
+| **16** | [Profiles & Config](file:///documentation/Scenario16/README.md) | `@Profile`, Conditional Beans |
+| **17** | [AOP Introduction](file:///documentation/Scenario17/README.md) | Aspect, Pointcuts, Advices |
+| **18** | [Transaction Propagation](file:///documentation/Scenario18/README.md) | `REQUIRED`, `REQUIRES_NEW`, Rollback rules |
+| **22** | [Custom Annotations](file:///documentation/Scenario22/README.md) | Creating custom AOP-driven decorators |
+| **23** | [Pagination & Sorting](file:///documentation/Scenario23/README.md) | `Pageable`, `Sort`, HATEOAS basics |
+| **24** | [Content Negotiation](file:///documentation/Scenario24/README.md) | JSON vs XML, Accept headers |
+| **25** | [Observability](file:///documentation/Scenario25/README.md) | Micrometer, Tracing, Spans |
+| **26** | [CORS Deep Dive](file:///documentation/Scenario26/README.md) | Preflight requests, Allowed Origins |
+| **27** | [AOP Advices (Masterclass)](file:///documentation/Scenario27/README.md) | `@Around`, `@Before`, `@After` depth |
+| **28** | [Rest Client (WebClient)](file:///documentation/Scenario28/README.md) | Reactive vs RestTemplate |
+| **29** | [Flyway Migrations](file:///documentation/Scenario29/README.md) | Version control for Databases |
+| **30** | [Secondary DB Config](file:///documentation/Scenario30/README.md) | Multiple DataSources |
+| **31** | [Scheduling Thread Pool](file:///documentation/Scenario31/README.md) | `TaskScheduler` configuration |
+| **32** | [Actuator Customization](file:///documentation/Scenario32/README.md) | Custom `HealthIndicator` |
+| **33** | [Task Scheduling (@Scheduled)](file:///documentation/Scenario33/README.md) | `fixedRate` vs `fixedDelay` |
+| **35** | [Filter vs Interceptor](file:///documentation/Scenario35/README.md) | Chain of responsibility, Context access |
+| **36** | [Jackson Customization](file:///documentation/Scenario36/README.md) | `@JsonView`, Custom Serializers |
+| **37** | [Swagger/OpenAPI](file:///documentation/Scenario37/README.md) | API Documentation best practices |
+| **40** | [Logback & ELK](file:///documentation/Scenario40/README.md) | Structured logging, Log rotation |
+| **42** | [Spring Batch Basics](file:///documentation/Scenario42/README.md) | Job, Step, ItemReader |
+| **43** | [Websockets/STOMP](file:///documentation/Scenario43/README.md) | Real-time communication |
+| **44** | [Proxying & Final Class](file:///documentation/Scenario44/README.md) | CGLIB vs JDK Dynamic Proxy |
+| **45** | [Circuit Breaker Basics](file:///documentation/Scenario45/README.md) | Resilience4j intro |
+| **47** | [Method Security](file:///documentation/Scenario47/README.md) | `@PreAuthorize`, `@PostAuthorize` |
+| **48** | [OAuth2 Client Flow](file:///documentation/Scenario48/README.md) | Social Login integration |
+| **49** | [Resource Server](file:///documentation/Scenario49/README.md) | Serving protected resources |
+| **51** | [SSL/TLS (HTTPS)](file:///documentation/Scenario51/README.md) | Keystores, Truststores |
+| **52** | [CSRF Protection](file:///documentation/Scenario52/README.md) | Tokens, Cookies, SameSite |
+| **53** | [Authentication Flow](file:///documentation/Scenario53/README.md) | ProviderManager, AuthProvider |
+| **54** | [UserDetailsService](file:///documentation/Scenario54/README.md) | Custom User loading logic |
+| **55** | [Password Upgrading](file:///documentation/Scenario55/README.md) | `DelegatingPasswordEncoder` |
+| **56** | [Securing Actuators](file:///documentation/Scenario56/README.md) | Restricted management endpoints |
+| **57** | [CSP (Content Security Policy)](file:///documentation/Scenario57/README.md) | XSS Prevention using Nonce |
+| **58** | [URL Order & Matchers](file:///documentation/Scenario58/README.md) | First-match-wins rule |
+| **59** | [Roles vs Authorities](file:///documentation/Scenario59/README.md) | `ROLE_` prefix convention |
+| **60** | [Role Hierarchy](file:///documentation/Scenario60/README.md) | Permission inheritance |
+| **61** | [Auth Exception Handling](file:///documentation/Scenario61/README.md) | 401 Unauth vs 403 Forbidden |
+| **62** | [Ignoring vs Permitting](file:///documentation/Scenario62/README.md) | Performance vs Security (The Filter Bypass) |
+| **63** | [Session Management](file:///documentation/Scenario63/README.md) | Stateless, Fixation, Concurrency |
+| **64** | [Command Injection](file:///documentation/Scenario64/README.md) | Safe OS interaction |
+| **65** | [SQL Injection](file:///documentation/Scenario65/README.md) | Parameterized Queries vs Fragments |
+| **67** | [Saga Pattern](file:///documentation/Scenario67/README.md) | Distributed Transactions, Orchestration |
 
 ---
 
-### 3️⃣6️⃣ Scenario 36: Type-Safe Configuration (@ConfigurationProperties)
-*   **Concept**: Grouping related settings into a single Java object.
-*   **The Problem**: Using `@Value("${my.prop}")` in 20 different classes is hard to maintain and lacks validation.
-*   **Solution**: Created `AppConfigProps` with a prefix `app.daily-dev`.
-*   **Test**: `GET /api/scenario36/config` to see hierarchical properties.
-
----
-
-### 3️⃣7️⃣ Scenario 37: Profile-Based Bean Switching (@Profile)
-*   **Concept**: Environment-aware behavior.
-*   **The Problem**: In Dev, you want logs to console; in Prod, you want to send Slack notifications.
-*   **Solution**: Used `@Profile("default")` vs `@Profile("prod")` on different implementations of `NotificationService`.
-*   **Test**: `GET /api/scenario37/notify?msg=Hello` 
-    - Returns "DEV [Console]" by default.
-    - Returns "PROD [Slack]" if you run with `-Dspring.profiles.active=prod`.
-
----
-
-### 3️⃣8️⃣ Scenario 38: Custom Actuator Health Indicators
-*   **Concept**: Monitoring custom resources.
-*   **The Problem**: Actuator checks DB and Disk, but how do we check if a specific config file or external API is up?
-*   **Solution**: Implemented `HealthIndicator` to check for the existence of the `db/migration` directory.
-*   **Test**: `GET /actuator/health` and look for the `externalConfig` section.
-
----
-
-### 3️⃣9️⃣ Scenario 39: Bean Lifecycle Hooks (@PostConstruct / @PreDestroy)
-*   **Concept**: Managing bean state during startup and shutdown.
-*   **The Problem**: You need to fetch initial data from a DB or clear a cache when the app starts/stops, but doing it in the constructor leads to `NullPointerException` because dependencies aren't injected yet.
-*   **Solution**: Use `@PostConstruct` for init and `@PreDestroy` for cleanup.
-*   **Test**: Watch the console logs on startup for `[Lifecycle]`.
-
----
-
-### 4️⃣0️⃣ Scenario 40: Feature Toggles (@ConditionalOnProperty)
-*   **Concept**: Dynamic bean creation based on configuration.
-*   **The Problem**: You have a "Beta" feature you want to test in staging but disable in production without changing code.
-*   **Solution**: Annotated `BetaFeatureService` with `@ConditionalOnProperty`.
-*   **Test**: `GET /api/scenario40/test`. Change `app.feature.beta-enabled` in `application.properties` to see it toggle.
-
----
-
-### 4️⃣1️⃣ Scenario 41: Advanced @Value (Defaults and SpEL)
-*   **Concept**: Safe and dynamic property injection.
-*   **The Problem**: App crashes if a property is missing, or you need to do a simple calculation on a property value.
-*   **Solution**: Used `${prop:default}` syntax for safety and `#{SpEL}` for dynamic logic.
-*   **Test**: See `LifecycleDemoBean.java` for usage.
-
----
-
-### 4️⃣2️⃣ Scenario 42: JPA Auditing (@CreatedDate, @LastModifiedDate)
-*   **Concept**: Automatic timestamping of entities.
-*   **The Problem**: Manually setting `createdAt` and `updatedAt` in every service is tedious and error-prone.
-*   **Solution**: Enabled `JpaAuditing` and created an `Auditable` base class.
-*   **Test**: `GET /api/scenario42/create`. This will create a user and show you the `createdDate` and `lastModifiedDate` filled by Spring Data JPA.
-
----
-
-### 4️⃣3️⃣ Scenario 43: Custom Validation (Custom Annotation)
-*   **Concept**: Domain-specific validation logic.
-*   **The Problem**: Standard annotations like `@NotBlank` are not enough for complex business rules (e.g., specific coupon patterns).
-*   **Solution**: Created `@ValidCouponCode` and a corresponding `CouponCodeValidator`.
-*   **Test**: `POST /api/scenario43/apply` with JSON `{"code": "DISCOUNT_WINTER"}`.
-
----
-
-### 4️⃣4️⃣ Scenario 44: Request Parameters (@RequestParam Defaults)
-*   **Concept**: Handling optional inputs gracefully.
-*   **The Problem**: If a user forgets a query parameter, the API might explode or return a generic 400.
-*   **Solution**: Used `defaultValue` and `required=false` to provide a robust API.
-*   **Test**: `GET /api/scenario44/search`.
-
----
-
-### 4️⃣5️⃣ Scenario 45: Hibernate Envers (History Tracking)
-*   **Concept**: Full object versioning and audit tables.
-*   **The Problem**: JPA Auditing (Scenario 42) only keeps the *latest* update. If a user changes their email 5 times, we lose the first 4.
-*   **Solution**: Integrated `Hibernate Envers`. It creates a `CUSTOMERS_AUD` table and a `REVINFO` table.
-*   **Test**:
-    1.  Create a customer (via Scenario 42): `GET /api/scenario42/create` (Note the ID, e.g., `11`).
-    2.  Update the name: `GET /api/scenario45/update/11/NewName`.
-    3.  View history: `GET /api/scenario45/history/11`.
----
-
-### 4️⃣7️⃣ Scenario 47: API Versioning (URI vs Header)
-*   **Concept**: Handling breaking changes in a REST API.
-*   **The Problem**: You need to update the response structure but can't break existing mobile apps using the old API.
-*   **Solution**: Multiple versioning strategies.
-*   **Test**:
-    1.  **URI Versioning**:
-        - `curl http://localhost:8080/api/v1/product`
-        - `curl http://localhost:8080/api/v2/product`
-    2.  **Header Versioning**:
-        - `curl -H "X-API-VERSION: 1" http://localhost:8080/api/product`
-        - `curl -H "X-API-VERSION: 2" http://localhost:8080/api/product`
-
----
-
-### 9️⃣ Scenario 9: The N+1 Query Disaster
-*   **Concept**: Hibernate Fetching Strategies.
-*   **The Problem**: Fetching 10 Users and their Orders triggers 11 SQL queries.
-*   **Solution**: Changed Repository query to use `JOIN FETCH u.orders`.
-*   **Check**: Console logs show exactly **one** SQL SELECT with a JOIN.
-
----
-
-### 🔟 Scenario 10: Standardized Exception Handling
-*   **Concept**: API Contract and Global Advice.
-*   **The Problem**: Error responses vary (sometimes HTML, sometimes plain text, sometimes generic Spring JSON).
-*   **Solution**: Created `GlobalExceptionHandler` with `@RestControllerAdvice`.
-*   **Test**: `curl http://localhost:8080/api/scenario10/notfound` -> Uniform JSON response with timestamp.
-
----
-
-### 1️⃣1️⃣ Scenario 11: Validation Groups (OnCreate vs OnUpdate)
-*   **Concept**: Jakarta Bean Validation.
-*   **The Problem**: 'Password' is mandatory for Registration but must be ignored for 'Update Profile' requests.
-*   **Solution**: Used marker interfaces `OnCreate` and `OnUpdate` with `@Validated({Group.class, Default.class})`.
-
----
-
-### 1️⃣2️⃣ Scenario 12: Soft Deletes with Hibernate
-*   **Concept**: Audit Trails and Data Preservation.
-*   **The Problem**: `repository.delete()` removes data permanently.
-*   **Solution**:
-    - `@SQLDelete(sql = "UPDATE ... SET deleted = true ...")`
-    - `@SQLRestriction("deleted = false")`
-*   **Verification**: `SELECT *` via Native Query shows the hidden deleted rows.
-
----
-
-### 1️⃣3️⃣ Scenario 13: Transparent Field Encryption
-*   **Concept**: Data Security at Rest.
-*   **The Problem**: PII (SSN, Email) is stored as plain text in the database.
-*   **Solution**: Implemented `AttributeConverter<String, String>` using AES-128.
-*   **Result**: 
-    - `user.getSsn()` -> `"123-45"`
-    - DB Column -> `"A9B2...Gibberish"`
-
----
-
-### 1️⃣4️⃣ Scenario 14: API Idempotency (The Double-Spend Fix)
-*   **Concept**: Distributed Systems & Network Retries.
-*   **The Problem**: Retrying a payment POST request charges the customer twice.
-*   **Solution**: Used an `Idempotency-Key` header with an AOP Aspect to cache and replay the first response.
-
----
-
-### 1️⃣5️⃣ Scenario 15: Schema Management with Flyway
-*   **Concept**: Version Control for Databases.
-*   **The Problem**: Manual SQL scripts are hard to sync across dev/staging/prod.
-*   **Solution**: Use `V1__init.sql` in `db/migration`. Flyway runs it automatically at startup.
-*   **Test**: Check the `flyway_schema_history` table in the H2 console.
-
----
-
-### 1️⃣6️⃣ Scenario 16: Graceful Shutdown
-*   **Concept**: Application Lifecycle Management.
-*   **The Problem**: Killing a Spring Boot app while a user is performing a long-running task (e.g., file upload or report generation) causes an immediate connection reset and potential data corruption.
-*   **Solution**: 
-    - Set `server.shutdown=graceful` in `application.properties`.
-    - Configured `spring.lifecycle.timeout-per-shutdown-phase=30s` to allow a buffer for active requests to finish.
-*   **Verification**: 
-    1. Call `GET /api/scenario16/long-process`.
-    2. Stop the application (Ctrl+C). 
-    3. Observe that the app waits 15 seconds for the request to complete before actually terminating.
-
----
-
-### 1️⃣7️⃣ Scenario 17: Log Rotation & Logback
-*   **Concept**: Observability and Resource Management.
-*   **The Problem**: A single `app.log` file grows indefinitely, eventually crashing the server by consuming 100% disk space.
-*   **Solution**: 
-    - Implemented `logback-spring.xml`.
-    - Configured `SizeAndTimeBasedRollingPolicy`.
-    - **Retention**: Max 10MB per file, Max 30 days history, Max 1GB total cap.
-*   **Test**: Call `/api/scenario17/generate-logs` and check the `logs/` directory.
-
----
-
-### 1️⃣8️⃣ Scenario 18: Custom Spring Boot Starter
-*   **Concept**: Modularity and Auto-Configuration.
-*   **The Problem**: Code duplication across multiple microservices for common features (logging, security, etc.).
-*   **Solution**: 
-    - Created an `AutoConfiguration` class.
-    - Used `@ConditionalOnProperty` to make the feature optional.
-    - Registered the configuration in `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`.
-*   **Test**: Call `/api/scenario18/check-starter`. Check the console for a stylized banner.
-
----
-
-### 2️⃣2️⃣ Scenario 22: API Rate Limiting (Bucket4j)
-*   **Concept**: Protection against DDoS and API Abuse.
-*   **The Problem**: A malicious user or a buggy script calls your API 1,000 times per second, crashing the database or costing you money on third-party APIs.
-*   **Solution**: 
-    - Implemented **Bucket4j** library.
-    - Configured a **Token Bucket** strategy (e.g., 5 requests per minute).
-    - Added a `RateLimitingFilter` to intercept requests and return `429 Too Many Requests`.
-*   **Test**: 
-    1. Call `curl -I http://localhost:8080/api/scenario22/test-limit`.
-    2. Repeat the command 6 times quickly.
-    3. Observe the `429` status and `X-Rate-Limit-Remaining` header.
-
----
-
-### 2️⃣3️⃣ Scenario 23: Circuit Breaker Pattern (Resilience4j)
-*   **Concept**: Fault Tolerance and Cascading Failure Prevention.
-*   **The Problem**: A downstream API (e.g., a payment gateway or weather service) is slow or failing. Your application threads get blocked waiting for it, eventually running out of resources and crashing.
-*   **Solution**: 
-    - Implement **Resilience4j CircuitBreaker**.
-    - Define thresholds for failure rates and slow calls.
-    - Provide a **Fallback** method to return cached or default data when the circuit is OPEN.
-*   **Test**: 
-    1. Call `/api/scenario23/unstable-call`.
-    2. Repeatedly trigger failures (e.g., via a param or by simulating a crash).
-    3. Observe the state transition to `OPEN` and the fallback response.
-
----
-
-### 2️⃣4️⃣ Scenario 24: Distributed Tracing (Micrometer Tracing)
-*   **Concept**: Observability and Log Correlation.
-*   **The Problem**: How do you track a single request's journey through a complex system of microservices? If an error occurs, how do you find all related logs across different logs?
-*   **Solution**: 
-    - Implement **Micrometer Tracing** with a **Brave** bridge.
-    - Observe how every request is automatically assigned a `traceId` and `spanId`.
-    - Configure logging to include these IDs in the MDC (Mapped Diagnostic Context).
-*   **Test**: 
-    1. Call `/api/scenario24/trace-me`.
-    2. Check the logs (both console and `app.log`).
-    3. Verify that the `traceId` is consistent across all log statements for that request.
-
----
-
-### 2️⃣5️⃣ Scenario 25: API Versioning Strategies
-*   **Concept**: API Evolution and Compatibility.
-*   **The Problem**: How do you introduce breaking changes to an API without breaking existing clients?
-*   **Solution**: Implement three versioning strategies:
-    1.  **URL Versioning**: `/api/v1/data`
-    2.  **Custom Header Versioning**: `X-API-VERSION: 2`
-    3.  **Media Type (Content Negotiation)**: `Accept: application/vnd.company.v3+json`
-*   **Test**: 
-    1. Use `curl` with different URLs, headers, and Accept values to see the different responses.
-
----
-
-### 2️⃣6️⃣ Scenario 26: Reactive Programming with Spring WebFlux
-*   **Concept**: Non-blocking I/O and Backpressure.
-*   **The Problem**: Your traditional MVC application crashes under high load because it runs out of worker threads (Thread Pool Exhaustion) while waiting for slow database or API calls.
-*   **Solution**: 
-    - Implement a **Reactive Controller** using `Mono` and `Flux`.
-    - Show how non-blocking I/O keeps the CPU busy without wasting threads.
-*   **Test**: 
-    1. Call `/api/scenario26/flux-stream` and observe the data arriving "bit by bit" in real-time.
-
----
-
-### 2️⃣7️⃣ Scenario 27: Performance Monitoring with Custom AOP
-*   **Concept**: Aspect-Oriented Programming (AOP) and Observability.
-*   **The Problem**: You need to track the execution time of critical business methods across the entire app without cluttering every method with "Start Time/End Time" boilerplate code.
-*   **Solution**: 
-    - Create a custom annotation `@TrackTime`.
-    - Implement an **AOP Aspect** that intercepts methods marked with this annotation.
-    - Use **Micrometer's Timer** to record and expose these metrics via Actuator.
-*   **Test**: 
-    1. Call `/api/scenario27/slow-task`.
-    2. Check `/actuator/metrics/method.execution.time` to see the recorded stats.
-
----
-
-### 2️⃣8️⃣ Scenario 28: Decoupling with Spring Events
-*   **Concept**: Event-Driven Service Orchestration.
-*   **The Problem**: A single business method (e.g., User Registration) is performing too many unrelated tasks (DB save, email, Slack, logs). This makes the code hard to maintain and slow to respond.
-*   **Solution**: 
-    - Publish a `CustomTaskEvent` after the primary action.
-    - Implement multiple **Asynchronous Listeners** to handle side-effects independently.
-*   **Test**: 
-    1. Call `/api/scenario28/register`.
-    2. Check the console for "Email Sent" and "Slack Notified" log lines appearing asynchronously.
-
----
-
-### 2️⃣9️⃣ Scenario 29: Optimized Multipart File Upload & Download
-*   **Concept**: Efficient I/O and Memory Management.
-*   **The Problem**: Reading large files (GBs) into `byte[]` or `String` in memory will trigger `OutOfMemoryError` and crash the server.
-*   **Solution**: 
-    - Use **Streaming**: Use `multipartFile.getInputStream()` to write directly to a `FileOutputStream`.
-    - Use **FileSystemResource**: Stream the file back to the client using Spring's `FileSystemResource` which handles chunked transfer automatically.
-*   **Test**: 
-    1. Upload a file via `POST /api/scenario29/upload`.
-    2. Download it back via `GET /api/scenario29/download/{filename}`.
-
----
-
-### 3️⃣0️⃣ Scenario 30: Advanced Pagination Strategies
-*   **Concept**: Data Fetching Optimization (`Page` vs `Slice` vs `Cursor`).
-*   **The Problem**: Using traditional `Page` pagination performs a `COUNT(*)` query which becomes extremely slow on millions of records. High page numbers (`OFFSET 1M`) cause the database to scan and discard rows, leading to slow queries.
-*   **Solution**: 
-    - **Page**: Use for small datasets where UI needs total page count. (Executes `COUNT`).
-    - **Slice**: Use for "Load More" buttons. Avoids the `COUNT` query but maintains `OFFSET`.
-    - **Cursor (Keyset)**: Use for Infinite Scrolling and deep pagination. Uses `WHERE id > ?`, utilizing the index instead of an `OFFSET`. Spring Boot 3+ makes this easy with `ScrollPosition` and `Window`.
-*   **Test**: 
-    1. Seed data: automatically generated.
-    2. Test `/api/scenario30/page?page=100&size=10`
-    3. Test `/api/scenario30/slice?page=100&size=10`
-    4. Test `/api/scenario30/cursor?cursor={opaque_string}`
-
----
-
-### 3️⃣1️⃣ Scenario 31: Dynamic Filtering with JPA Specifications
-*   **Concept**: Type-safe, dynamic query building.
-*   **The Analogy**: **The Tinder Filter**. 📱
-    - You want someone who is `Age 25-30` AND `Lives in NYC` AND `Interest: Java`.
-    - If you only select `NYC`, it works. If you select all three, it works. 
-    - You don't want to write 10 different Repository methods for every combination of filters (\"findByName\", \"findByNameAndAge\", \"findByNameAndAgeAndCity\").
-*   **The Problem**: Writing search logic where multiple filter fields are optional leads to "if-else hell" and messy `Query` strings.
-*   **Solution**: Use `JpaSpecificationExecutor`. Build a list of `Predicate` objects dynamically based on which parameters the user provided.
-*   **Test**: 
-    1. Call `/api/scenario31/search?name=Customer&minId=500&email=example.com`.
-    2. Try different combinations (only `name`, only `minId`, or empty) and observe how the SQL `WHERE` clause changes.
-
----
-
-### 3️⃣2️⃣ Scenario 32: Entity Graphs & The N+1 Problem
-*   **Concept**: Fetching optimization to avoid multiple round-trips to the DB.
-*   **The Analogy**: **The Bad Waiter**. 🏃‍♂️💨
-    - You order a Pizza, a drink, and a desert. 
-    - The **Bad Waiter** makes 3 trips: one for the pizza, then goes back for the drink, then goes back for the desert (1 + 3 = 4 trips).
-    - The **Good Waiter** uses a **Big Tray**: He puts everything on one tray and brings it in **one trip**.
-*   **The Problem**: Fetching a list of 10 Customers. For each customer, Hibernate makes a separate query to fetch their `Orders`. (1 query for customers + 10 queries for orders = 11 queries!).
-*   **Solution**: Use `@EntityGraph` (The "Big Tray"). It tells Hibernate to perform a `LEFT JOIN FETCH` in the primary SQL query, bringing all data in a single round-trip.
-*   **Test**: 
-    1. Call `/api/scenario32/nplus1` -> Observe 11 queries in the logs.
-    2. Call `/api/scenario32/optimized` -> Observe exactly **1** query with a JOIN.
-
----
-
-### 3️⃣3️⃣ Scenario 33: Spring Schedulers (@Scheduled)
-*   **Concept**: Running background tasks automatically at specific intervals.
-*   **The Analogy**: **The Alarm Clock** ⏰. 
-    - **Fixed Rate**: The alarm goes off every 10 seconds regardless of how long the task takes. (If you take 12 seconds to brush your teeth, the next alarm already went off!).
-    - **Fixed Delay**: The alarm goes off 10 seconds *after* you finish your previous task. (Brush teeth for 12s -> Wait 10s -> Alarm goes off).
-    - **Cron**: The "Fancy Calendar Alarm". Set it for "Every Monday at 10 AM" or "Every midnight on the 1st of the month".
-*   **Implementation**: Enable `@EnableScheduling` and use the `@Scheduled` annotation.
-*   **Test**: Watch the console logs for the scheduler output.
+## 🛠️ How to Run
+1.  **Clone** the repository.
+2.  **Start the app**: `mvn spring-boot:run`
+3.  **Explore**: Each scenario has its own endpoint at `/api/scenarioXX/...`.
+4.  **Verify**: Check the specific `README.md` for each scenario to see `curl` commands and expected results.
