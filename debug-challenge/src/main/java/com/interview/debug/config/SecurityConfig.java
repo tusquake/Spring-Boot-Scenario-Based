@@ -12,6 +12,8 @@ import org.springframework.security.access.expression.method.DefaultMethodSecuri
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
@@ -84,6 +86,20 @@ public class SecurityConfig {
             .exceptionHandling(exceptions -> exceptions
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler)
+            )
+            .sessionManagement(session -> session
+                // IF_REQUIRED: Spring Security will only create a session if it needs one.
+                // For APIs, STATELESS is usually preferred, but we use IF_REQUIRED here to show session behavior.
+                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+                
+                // Session Fixation: Protects against attackers setting a session ID before login.
+                // migrateSession(): Creates a new session and copies existing attributes.
+                .sessionFixation(fixation -> fixation.migrateSession())
+                
+                // Concurrent Session Control: Prevents a user from being logged in multiple times.
+                .maximumSessions(1)
+                // If true, the second login is prevented. If false (default), the first session is expired.
+                .maxSessionsPreventsLogin(false) 
             )
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/scenario8/login").permitAll()
@@ -160,5 +176,14 @@ public class SecurityConfig {
                 .expiresAt(Instant.now().plusSeconds(3600))
                 .build();
         };
+    }
+
+    /**
+     * Required for concurrent session management to work correctly.
+     * It tells Spring Security when a session has ended so it can update the session registry.
+     */
+    @Bean
+    public HttpSessionEventPublisher httpSessionEventPublisher() {
+        return new HttpSessionEventPublisher();
     }
 }

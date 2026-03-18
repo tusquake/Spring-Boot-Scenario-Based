@@ -54,6 +54,7 @@ com\interview\debug\controller\Scenario7Controller.class
 com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\controller\Scenario45Controller$AuditLogDto.class
 com\interview\debug\controller\Scenario60Controller.class
+com\interview\debug\controller\Scenario63Controller.class
 com\interview\debug\starter\CustomBannerService.class
 com\interview\debug\controller\Scenario45Controller.class
 com\interview\debug\controller\Scenario30Controller.class
