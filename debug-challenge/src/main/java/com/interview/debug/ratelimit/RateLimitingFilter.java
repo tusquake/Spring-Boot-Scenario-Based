@@ -25,8 +25,9 @@ public class RateLimitingFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
-        // Only apply to Scenario 22 endpoints
-        if (!httpRequest.getRequestURI().startsWith("/api/scenario22")) {
+        // Only apply to Scenario 22 and 69 endpoints
+        String uri = httpRequest.getRequestURI();
+        if (!uri.startsWith("/api/scenario22") && !uri.startsWith("/api/scenario69")) {
             chain.doFilter(request, response);
             return;
         }
