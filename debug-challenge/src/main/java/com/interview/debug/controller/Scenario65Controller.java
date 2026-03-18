@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.jdbc.core.simple.SimpleJdbcCall;
+import jakarta.annotation.PostConstruct;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/api/scenario65")
@@ -17,10 +20,26 @@ public class Scenario65Controller {
 
     private final JdbcTemplate jdbcTemplate;
     private final CustomerRepository customerRepository;
+    private SimpleJdbcCall simpleJdbcCall;
 
     public Scenario65Controller(JdbcTemplate jdbcTemplate, CustomerRepository customerRepository) {
         this.jdbcTemplate = jdbcTemplate;
         this.customerRepository = customerRepository;
+    }
+
+    @PostConstruct
+    public void init() {
+        // Create a dummy stored procedure in H2 for demonstration
+        jdbcTemplate.execute("CREATE ALIAS IF NOT EXISTS GET_CUSTOMER_BY_NAME AS ' " +
+                "java.sql.ResultSet getCustomerByName(java.sql.Connection conn, String name) throws java.sql.SQLException { " +
+                "    java.sql.PreparedStatement ps = conn.prepareStatement(\"SELECT * FROM customers WHERE name = ?\"); " +
+                "    ps.setString(1, name); " +
+                "    return ps.executeQuery(); " +
+                "}'");
+        
+        // Setup SimpleJdbcCall
+        this.simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate)
+                .withProcedureName("GET_CUSTOMER_BY_NAME");
     }
 
     /**
@@ -59,5 +78,19 @@ public class Scenario65Controller {
         
         // Note: In a real app, you'd use customerRepository.findByName(name)
         // which is also perfectly safe.
+    }
+
+    /**
+     * SECURE (Stored Procedure): Uses Parameterized Call.
+     * In H2, we call the alias like a function. This demonstration
+     * shows that parameters are still safe from injection.
+     */
+    @GetMapping("/secure/procedure/search")
+    public List<Map<String, Object>> secureProcedureSearch(@RequestParam String name) {
+        System.out.println("Executing SECURE Stored Procedure call for name: " + name);
+        
+        // In H2, ALIASes are called via CALL statement
+        String sql = "CALL GET_CUSTOMER_BY_NAME(?)";
+        return jdbcTemplate.queryForList(sql, name);
     }
 }

@@ -33,6 +33,24 @@ return jdbcTemplate.queryForList(sql, name);
 
 ## Interview Theory: SQLi Prevention
 - **Primary Defense**: Always use **Parameterized Queries** (Prepared Statements).
-- **secondary Defense**: Use an ORM like **Spring Data JPA** or **Hibernate**, which handles parameterization for you.
-- **Stored Procedures**: Note that stored procedures are NOT inherently safe unless they also use parameterization internally.
+- **Secondary Defense**: Use an ORM like **Spring Data JPA** or **Hibernate**, which handles parameterization for you.
 - **Least Privilege**: Ensure the database user your app uses only has the permissions it needs (e.g., no `DROP TABLE` permissions).
+
+---
+
+## 🏛️ Special Topic: Stored Procedures
+
+A **Stored Procedure** is a "function" that lives inside your database. Instead of writing SQL in Java, you call the procedure by name.
+
+### Are they safe?
+**Yes, if used correctly.** 
+Most procedures use parameters, which enforce the "Data vs Command" separation just like Prepared Statements. However, if a procedure uses **Dynamic SQL** (concatenation) internally, it is **still vulnerable**.
+
+### Pros & Cons
+- **Pros**: 
+  - **Performance**: Pre-compiled by the DB.
+  - **Security**: You can grant permission to execute the *procedure* without giving access to the *tables*.
+  - **Traffic**: Only the call command is sent over the network.
+- **Cons**: 
+  - **Portability**: Different syntax for Oracle, MySQL, etc.
+  - **Maintenance**: Business logic is split between Java and SQL files.
