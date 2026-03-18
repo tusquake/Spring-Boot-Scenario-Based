@@ -17,14 +17,20 @@ public class Scenario27Controller {
     @TrackTime("slowTask")
     @GetMapping("/slow-task")
     public Map<String, Object> slowTask() throws InterruptedException {
-        // Simulate a task with variable execution time (500ms to 2000ms)
         int sleepTime = 500 + random.nextInt(1500);
         Thread.sleep(sleepTime);
-        
-        return Map.of(
-            "status", "completed",
-            "simulatedTimeMs", sleepTime,
-            "message", "This method execution was tracked via AOP!"
-        );
+        return Map.of("status", "completed", "simulatedTimeMs", sleepTime);
+    }
+
+    @TrackTime("successTask")
+    @GetMapping("/success-task")
+    public String successTask() {
+        return "Task processed successfully!";
+    }
+
+    @TrackTime("failTask")
+    @GetMapping("/fail-task")
+    public String failTask() {
+        throw new RuntimeException("Simulated error in business logic!");
     }
 }
