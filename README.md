@@ -60,8 +60,12 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **62** | [Ignoring vs Permitting](file:///documentation/Scenario62/README.md) | Performance vs Security (The Filter Bypass) |
 | **63** | [Session Management](file:///documentation/Scenario63/README.md) | Stateless, Fixation, Concurrency |
 | **64** | [Command Injection](file:///documentation/Scenario64/README.md) | Safe OS interaction |
-| **65** | [SQL Injection](file:///documentation/Scenario65/README.md) | Parameterized Queries vs Fragments |
-| **67** | [Saga Pattern](file:///documentation/Scenario67/README.md) | Distributed Transactions, Orchestration |
+| **65** | [SQL Injection](file:///debug-challenge/documentation/Scenario65/README.md) | Parameterized Queries vs Fragments |
+| **66** | [Retry Patterns](file:///debug-challenge/documentation/Scenario66/README.md) | `@Retryable`, Exponential Backoff, Jitter |
+| **67** | [Saga Pattern](file:///debug-challenge/documentation/Scenario67/README.md) | Distributed Transactions, Orchestration |
+| **68** | [File Upload Security](file:///debug-challenge/documentation/Scenario68/README.md) | Path Traversal, RCE, Content Validation |
+| **69** | [DDoS Protection](file:///debug-challenge/documentation/Scenario69/README.md) | Bucket4j, Rate Limiting, Throttling |
+| **70** | [API Documentation](file:///debug-challenge/documentation/Scenario70/README.md) | Swagger UI, OpenAPI 3, Annotations |
 
 ---
 

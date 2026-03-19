@@ -81,7 +81,7 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf
                 .csrfTokenRepository(org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**") // Ignore CSRF for demo
+                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/v3/api-docs/**", "/swagger-ui/**") // Ignore CSRF for demo
             )
             .exceptionHandling(exceptions -> exceptions
                 .authenticationEntryPoint(authenticationEntryPoint)
@@ -120,6 +120,8 @@ public class SecurityConfig {
                 .requestMatchers("/api/scenario67/**").permitAll()
                 .requestMatchers("/api/scenario68/**").permitAll()
                 .requestMatchers("/api/scenario69/**").permitAll()
+                .requestMatchers("/api/scenario70/**").permitAll()
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()

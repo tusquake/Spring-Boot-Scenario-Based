@@ -12,6 +12,7 @@ import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.aop.ObservedAspect;
 
 import org.springframework.retry.annotation.EnableRetry;
+import org.springdoc.core.models.GroupedOpenApi;
 
 @EnableRetry
 @EnableScheduling
@@ -23,6 +24,14 @@ import org.springframework.retry.annotation.EnableRetry;
 public class DebugApplication {
     public static void main(String[] args) {
         SpringApplication.run(DebugApplication.class, args);
+    }
+
+    @Bean
+    public GroupedOpenApi publicApi() {
+        return GroupedOpenApi.builder()
+                .group("public")
+                .pathsToMatch("/api/**")
+                .build();
     }
 
     @Bean
