@@ -69,6 +69,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **71** | [Clickjacking Protection](file:///debug-challenge/documentation/Scenario71/README.md) | X-Frame-Options, CSP frame-ancestors |
 | **72** | [Insecure Deserialization](file:///debug-challenge/documentation/Scenario72/README.md) | Look-ahead validation, Allowlisting, RCE |
 | **73** | [Timeout Chain Coherence](file:///debug-challenge/documentation/Scenario73/README.md) | Resilience4j, Timeouts, Bulkheads |
+| **74** | [SSRF Protection](file:///debug-challenge/documentation/Scenario74/README.md) | URL Validation, Internal IP Blocking |
+| **75** | [ABAC Security](file:///debug-challenge/documentation/Scenario75/README.md) | SpEL, PermissionEvaluator |
 
 ---
 
