@@ -2311,3 +2311,294 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2026-03-19 14:37:09,347 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] [debug-challenge,d2a1c12d,a2502db11151c4ee] Writing [{timestamp=2026-03-19T14:37:09.335981700, status=500, error=Internal Server Error, message=An unexpe (truncated)...]
 2026-03-19 14:37:09,351 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] [debug-challenge,d2a1c12d,a2502db11151c4ee] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/scenario70/ping.]
 2026-03-19 14:37:09,358 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,d2a1c12d,a2502db11151c4ee] Completed 500 INTERNAL_SERVER_ERROR
+2026-03-19 14:47:35,661 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] [debug-challenge,,] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-03-19 14:47:35,676 INFO o.q.c.QuartzScheduler [Thread-21] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-19 14:47:35,788 INFO o.s.b.w.e.t.GracefulShutdown [Thread-21] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:47:35,871 INFO o.a.j.l.DirectJDKLog [tomcat-shutdown] [debug-challenge,,] Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:47:35,927 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-19 14:47:35,940 INFO o.a.j.l.DirectJDKLog [Thread-21] [debug-challenge,,] Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:47:35,946 INFO o.s.s.q.SchedulerFactoryBean [Thread-21] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-19 14:47:35,947 INFO o.q.c.QuartzScheduler [Thread-21] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-19 14:47:35,950 INFO o.q.c.QuartzScheduler [Thread-21] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-19 14:47:35,951 INFO o.q.c.QuartzScheduler [Thread-21] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-19 14:47:35,979 INFO c.i.d.l.LifecycleDemoBean [Thread-21] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-19 14:47:35,983 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-21] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 14:47:36,001 WARN o.s.b.f.s.DisposableBeanAdapter [Thread-21] [debug-challenge,,] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-03-19 14:47:36,013 INFO c.z.h.HikariDataSource [Thread-21] [debug-challenge,,] HikariPool-5 - Shutdown initiated...
+2026-03-19 14:47:36,028 INFO c.z.h.HikariDataSource [Thread-21] [debug-challenge,,] HikariPool-5 - Shutdown completed.
+2026-03-19 14:47:36,888 INFO o.s.b.StartupInfoLogger [restartedMain] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 19292 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-19 14:47:36,891 DEBUG o.s.b.StartupInfoLogger [restartedMain] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-19 14:47:36,892 INFO o.s.b.SpringApplication [restartedMain] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:47:39,074 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-19 14:47:39,076 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19 14:47:39,177 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Finished Spring Data repository scanning in 99 ms. Found 9 JPA repository interfaces.
+2026-03-19 14:47:39,778 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-19 14:47:39,780 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-19 14:47:39,802 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,806 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,808 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,810 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.GadgetRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,812 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,813 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,817 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,818 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,820 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:47:39,822 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
+2026-03-19 14:47:40,984 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-19 14:47:40,992 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:47:40,995 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Starting service [Tomcat]
+2026-03-19 14:47:41,000 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-19 14:47:41,138 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-19 14:47:41,139 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] [debug-challenge,,] Root WebApplicationContext: initialization completed in 4238 ms
+2026-03-19 14:47:41,712 INFO c.z.h.HikariDataSource [restartedMain] [debug-challenge,,] HikariPool-6 - Starting...
+2026-03-19 14:47:41,719 INFO c.z.h.p.HikariPool [restartedMain] [debug-challenge,,] HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:testdb user=SA
+2026-03-19 14:47:41,721 INFO c.z.h.HikariDataSource [restartedMain] [debug-challenge,,] HikariPool-6 - Start completed.
+2026-03-19 14:47:41,723 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-19 14:47:42,473 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 14:47:42,475 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'webMvcObservationFilter' configured for use
+2026-03-19 14:47:42,476 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-19 14:47:42,479 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'cspNonceFilter' configured for use
+2026-03-19 14:47:42,669 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-19 14:47:42,673 WARN o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-19 14:47:42,685 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-19 14:47:42,688 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.011s)
+2026-03-19 14:47:42,705 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-19 14:47:42,718 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-19 14:47:42,739 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-19 14:47:42,757 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-19 14:47:42,772 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.009s)
+2026-03-19 14:47:42,999 INFO o.h.j.i.u.LogHelper [restartedMain] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19 14:47:43,028 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-19 14:47:43,043 INFO o.h.e.b.i.EnversServiceImpl [restartedMain] [debug-challenge,,] Envers integration enabled? : true
+2026-03-19 14:47:43,053 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19 14:47:43,109 INFO o.h.e.c.i.m.AuditMetadataGenerator [restartedMain] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Order
+2026-03-19 14:47:43,110 INFO o.h.e.c.i.m.AuditMetadataGenerator [restartedMain] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Customer
+2026-03-19 14:47:43,349 ERROR o.h.m.i.MetadataContext [restartedMain] [debug-challenge,,] HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2026-03-19 14:47:43,356 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19 14:47:43,390 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 14:47:44,438 INFO c.i.d.c.Scenario30BController [restartedMain] [debug-challenge,,] Seeding gadgets for Scenario 30B...
+2026-03-19 14:47:44,452 INFO c.i.d.c.Scenario30BController [restartedMain] [debug-challenge,,] Gadget seeding complete.
+2026-03-19 14:47:44,683 INFO c.i.d.c.Scenario30Controller [restartedMain] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-19 14:47:44,981 INFO c.i.d.c.Scenario30Controller [restartedMain] [debug-challenge,,] Seeding complete.
+2026-03-19 14:47:47,740 INFO c.i.d.l.LifecycleDemoBean [restartedMain] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-19 14:47:47,744 INFO c.i.d.l.LifecycleDemoBean [restartedMain] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-19 14:47:47,744 INFO c.i.d.l.LifecycleDemoBean [restartedMain] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-19 14:47:48,388 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19 14:47:48,751 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [restartedMain] [debug-challenge,,] 126 mappings in 'requestMappingHandlerMapping'
+2026-03-19 14:47:48,932 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] [debug-challenge,,] Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-03-19 14:47:49,399 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] [debug-challenge,,] Exposing 6 endpoint(s) beneath base path '/actuator'
+2026-03-19 14:47:49,663 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@249a553a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62e0e79a, org.springframework.security.web.context.SecurityContextHolderFilter@201a2181, com.interview.debug.filter.CspNonceFilter@4e033041, org.springframework.security.web.header.HeaderWriterFilter@31f5d816, org.springframework.web.filter.CorsFilter@576452b2, org.springframework.security.web.csrf.CsrfFilter@46013500, org.springframework.security.web.authentication.logout.LogoutFilter@54fbc1e2, com.interview.debug.filter.JwtAuthenticationFilter@4db162b2, org.springframework.security.web.session.ConcurrentSessionFilter@34f56aed, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@1b3cfbf8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@545ba68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1362749, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27daf1e8, org.springframework.security.web.session.SessionManagementFilter@6edd96b0, org.springframework.security.web.access.ExceptionTranslationFilter@29e7f0ac, org.springframework.security.web.access.intercept.AuthorizationFilter@33db809a]
+2026-03-19 14:47:49,695 WARN o.s.s.c.a.w.b.WebSecurity [restartedMain] [debug-challenge,,] You are asking Spring Security to ignore DispatcherServletDelegating [ant = Ant [pattern='/api/scenario62/ignored'], mvc = Mvc [pattern='/api/scenario62/ignored']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-03-19 14:47:49,696 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] [debug-challenge,,] Will not secure DispatcherServletDelegating [ant = Ant [pattern='/api/scenario62/ignored'], mvc = Mvc [pattern='/api/scenario62/ignored']]
+2026-03-19 14:47:50,145 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] [debug-challenge,,] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-19 14:47:50,246 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [restartedMain] [debug-challenge,,] ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-19 14:47:52,746 INFO o.q.i.StdSchedulerFactory [restartedMain] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-19 14:47:52,750 INFO o.q.c.SchedulerSignalerImpl [restartedMain] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-19 14:47:52,751 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-19 14:47:52,752 INFO o.q.s.RAMJobStore [restartedMain] [debug-challenge,,] RAMJobStore initialized.
+2026-03-19 14:47:52,752 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-19 14:47:52,752 INFO o.q.i.StdSchedulerFactory [restartedMain] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-19 14:47:52,754 INFO o.q.i.StdSchedulerFactory [restartedMain] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-19 14:47:52,755 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@24ca37f1
+2026-03-19 14:47:53,119 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] [debug-challenge,,] LiveReload server is running on port 35729
+2026-03-19 14:47:53,196 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:47:53,206 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] [debug-challenge,,] Tomcat started on port 8080 (http) with context path '/debug-application'
+2026-03-19 14:47:53,207 INFO o.s.s.q.SchedulerFactoryBean [restartedMain] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-19 14:47:53,209 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-19 14:47:53,227 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69bbbf41740d5e0c16b7991a993ddcc9,16b7991a993ddcc9] [scheduling-pool-3] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-19 14:47:53,228 INFO o.s.b.StartupInfoLogger [restartedMain] [debug-challenge,,] Started DebugApplication in 16.833 seconds (process running for 1967.071)
+2026-03-19 14:47:53,227 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69bbbf41291ce446bf0c9c919a87ea55,bf0c9c919a87ea55] [scheduling-pool-1] ?? HEAVY START -> Time: 14:47:53
+2026-03-19 14:47:53,234 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69bbbf412057773d77de0899a50af362,77de0899a50af362] [scheduling-pool-2] ? FIXED RATE [10s] -> Execution Time: 14:47:53
+2026-03-19 14:47:53,240 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] [debug-challenge,,] Condition evaluation unchanged
+2026-03-19 14:47:54,815 INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] [debug-challenge,,] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-19 14:47:54,820 INFO o.q.c.QuartzScheduler [Thread-25] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-19 14:47:55,229 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69bbbf41740d5e0c16b7991a993ddcc9,16b7991a993ddcc9] [scheduling-pool-3] ? FIXED DELAY [10s] -> Finished work.
+2026-03-19 14:48:04,834 INFO o.s.c.s.DefaultLifecycleProcessor$LifecycleGroup [Thread-25] [debug-challenge,,] Failed to shut down 1 bean with phase value 2147483647 within timeout of 10000ms: [taskScheduler]
+2026-03-19 14:48:04,839 INFO o.s.b.w.e.t.GracefulShutdown [Thread-25] [debug-challenge,,] Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19 14:48:04,843 INFO o.a.j.l.DirectJDKLog [tomcat-shutdown] [debug-challenge,,] Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:48:04,900 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] [debug-challenge,,] Graceful shutdown complete
+2026-03-19 14:48:04,903 INFO o.a.j.l.DirectJDKLog [Thread-25] [debug-challenge,,] Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:48:04,908 INFO o.s.s.q.SchedulerFactoryBean [Thread-25] [debug-challenge,,] Shutting down Quartz Scheduler
+2026-03-19 14:48:04,913 INFO o.q.c.QuartzScheduler [Thread-25] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-03-19 14:48:04,913 INFO o.q.c.QuartzScheduler [Thread-25] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-03-19 14:48:04,917 INFO o.q.c.QuartzScheduler [Thread-25] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-03-19 14:48:04,959 INFO c.i.d.l.LifecycleDemoBean [Thread-25] [debug-challenge,,] [Lifecycle] ? @PreDestroy: Application is shutting down. Cleaning up resources...
+2026-03-19 14:48:04,959 ERROR o.s.s.s.TaskUtils$LoggingErrorHandler [scheduling-pool-1] [debug-challenge,,] Unexpected error occurred in scheduled task
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at com.interview.debug.scheduler.Scenario33Scheduler.heavyConcurrentTask(Scenario33Scheduler.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.interview.debug.scheduler.Scenario33Scheduler$$SpringCGLIB$$0.heavyConcurrentTask(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:499)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2026-03-19 14:48:04,975 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-25] [debug-challenge,,] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 14:48:05,023 WARN o.s.b.f.s.DisposableBeanAdapter [Thread-25] [debug-challenge,,] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2026-03-19 14:48:05,030 INFO c.z.h.HikariDataSource [Thread-25] [debug-challenge,,] HikariPool-6 - Shutdown initiated...
+2026-03-19 14:48:05,040 INFO c.z.h.HikariDataSource [Thread-25] [debug-challenge,,] HikariPool-6 - Shutdown completed.
+2026-03-19 14:48:05,702 INFO o.s.b.StartupInfoLogger [restartedMain] [debug-challenge,,] Starting DebugApplication using Java 17.0.12 with PID 19292 (C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\target\classes started by tushar.seth in C:\Users\tushar.seth\Desktop\Scenario Based)
+2026-03-19 14:48:05,713 DEBUG o.s.b.StartupInfoLogger [restartedMain] [debug-challenge,,] Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-03-19 14:48:05,722 INFO o.s.b.SpringApplication [restartedMain] [debug-challenge,,] No active profile set, falling back to 1 default profile: "default"
+2026-03-19 14:48:09,349 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-19 14:48:09,351 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19 14:48:09,737 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Finished Spring Data repository scanning in 384 ms. Found 9 JPA repository interfaces.
+2026-03-19 14:48:11,029 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-19 14:48:11,050 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-19 14:48:11,199 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankAccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,247 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.BankRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,266 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.CustomerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,287 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.GadgetRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,307 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.IdempotencyRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,325 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,329 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,333 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.ProjectDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,337 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [restartedMain] [debug-challenge,,] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.interview.debug.repository.SecretRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-19 14:48:11,353 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] [debug-challenge,,] Finished Spring Data repository scanning in 282 ms. Found 0 Redis repository interfaces.
+2026-03-19 14:48:14,397 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] [debug-challenge,,] Tomcat initialized with port 8080 (http)
+2026-03-19 14:48:14,400 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:48:14,402 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Starting service [Tomcat]
+2026-03-19 14:48:14,404 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-19 14:48:14,766 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Initializing Spring embedded WebApplicationContext
+2026-03-19 14:48:14,768 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] [debug-challenge,,] Root WebApplicationContext: initialization completed in 9031 ms
+2026-03-19 14:48:17,887 INFO c.z.h.HikariDataSource [restartedMain] [debug-challenge,,] HikariPool-7 - Starting...
+2026-03-19 14:48:17,935 INFO c.z.h.p.HikariPool [restartedMain] [debug-challenge,,] HikariPool-7 - Added connection conn60: url=jdbc:h2:mem:testdb user=SA
+2026-03-19 14:48:18,039 INFO c.z.h.HikariDataSource [restartedMain] [debug-challenge,,] HikariPool-7 - Start completed.
+2026-03-19 14:48:18,818 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] [debug-challenge,,] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-03-19 14:48:21,069 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'jwtAuthenticationFilter' configured for use
+2026-03-19 14:48:21,403 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'webMvcObservationFilter' configured for use
+2026-03-19 14:48:21,655 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'loggingFilter' configured for use
+2026-03-19 14:48:21,777 DEBUG o.s.w.f.GenericFilterBean [restartedMain] [debug-challenge,,] Filter 'cspNonceFilter' configured for use
+2026-03-19 14:48:22,849 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-03-19 14:48:30,048 WARN o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-03-19 14:48:30,133 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-03-19 14:48:30,157 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Successfully validated 2 migrations (execution time 00:00.035s)
+2026-03-19 14:48:30,205 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-03-19 14:48:30,333 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Current version of schema "PUBLIC": << Empty Schema >>
+2026-03-19 14:48:30,381 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Migrating schema "PUBLIC" to version "1 - init"
+2026-03-19 14:48:30,477 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Migrating schema "PUBLIC" to version "2 - add shedlock table"
+2026-03-19 14:48:30,601 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] [debug-challenge,,] Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.150s)
+2026-03-19 14:48:31,876 INFO o.h.j.i.u.LogHelper [restartedMain] [debug-challenge,,] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-19 14:48:32,050 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] [debug-challenge,,] HHH000026: Second-level cache disabled
+2026-03-19 14:48:32,228 INFO o.h.e.b.i.EnversServiceImpl [restartedMain] [debug-challenge,,] Envers integration enabled? : true
+2026-03-19 14:48:32,351 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] [debug-challenge,,] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19 14:48:32,849 INFO o.h.e.c.i.m.AuditMetadataGenerator [restartedMain] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Order
+2026-03-19 14:48:32,909 INFO o.h.e.c.i.m.AuditMetadataGenerator [restartedMain] [debug-challenge,,] Adding properties for entity: com.interview.debug.model.Customer
+2026-03-19 14:48:33,763 ERROR o.h.m.i.MetadataContext [restartedMain] [debug-challenge,,] HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2026-03-19 14:48:33,816 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] [debug-challenge,,] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19 14:48:34,677 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] [debug-challenge,,] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19 14:48:40,861 INFO c.i.d.c.Scenario30BController [restartedMain] [debug-challenge,,] Seeding gadgets for Scenario 30B...
+2026-03-19 14:48:41,876 INFO c.i.d.c.Scenario30BController [restartedMain] [debug-challenge,,] Gadget seeding complete.
+2026-03-19 14:48:42,939 INFO c.i.d.c.Scenario30Controller [restartedMain] [debug-challenge,,] Seeding 10,000 customers for Pagination Demo...
+2026-03-19 14:48:51,098 INFO c.i.d.c.Scenario30Controller [restartedMain] [debug-challenge,,] Seeding complete.
+2026-03-19 14:49:05,013 INFO c.i.d.l.LifecycleDemoBean [restartedMain] [debug-challenge,,] [Lifecycle] ?? Constructor: Dependencies NOT injected yet. API Key: null
+2026-03-19 14:49:05,063 INFO c.i.d.l.LifecycleDemoBean [restartedMain] [debug-challenge,,] [Lifecycle] ? @PostConstruct: Dependencies ARE injected. API Key: DEFAULT_DEVELOPMENT_KEY
+2026-03-19 14:49:05,106 INFO c.i.d.l.LifecycleDemoBean [restartedMain] [debug-challenge,,] [Lifecycle] ?? Session Timeout calculated via SpEL: 20 minutes
+2026-03-19 14:49:06,933 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] [debug-challenge,,] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19 14:49:08,385 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [restartedMain] [debug-challenge,,] 126 mappings in 'requestMappingHandlerMapping'
+2026-03-19 14:49:09,210 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [restartedMain] [debug-challenge,,] Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-03-19 14:49:11,149 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] [debug-challenge,,] Exposing 6 endpoint(s) beneath base path '/actuator'
+2026-03-19 14:49:12,445 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] [debug-challenge,,] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a77f688, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cf3c755, org.springframework.security.web.context.SecurityContextHolderFilter@7b70e276, com.interview.debug.filter.CspNonceFilter@7799bb87, org.springframework.security.web.header.HeaderWriterFilter@129190b3, org.springframework.web.filter.CorsFilter@7a2a66b5, org.springframework.security.web.csrf.CsrfFilter@1de0f227, org.springframework.security.web.authentication.logout.LogoutFilter@2309be6b, com.interview.debug.filter.JwtAuthenticationFilter@b2bc764, org.springframework.security.web.session.ConcurrentSessionFilter@4343bf71, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@1f38e651, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47d59378, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14753366, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@599c1b9, org.springframework.security.web.session.SessionManagementFilter@11f55714, org.springframework.security.web.access.ExceptionTranslationFilter@260c9daf, org.springframework.security.web.access.intercept.AuthorizationFilter@52c654f7]
+2026-03-19 14:49:12,694 WARN o.s.s.c.a.w.b.WebSecurity [restartedMain] [debug-challenge,,] You are asking Spring Security to ignore DispatcherServletDelegating [ant = Ant [pattern='/api/scenario62/ignored'], mvc = Mvc [pattern='/api/scenario62/ignored']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-03-19 14:49:12,774 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] [debug-challenge,,] Will not secure DispatcherServletDelegating [ant = Ant [pattern='/api/scenario62/ignored'], mvc = Mvc [pattern='/api/scenario62/ignored']]
+2026-03-19 14:49:14,644 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [restartedMain] [debug-challenge,,] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-19 14:49:14,864 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [restartedMain] [debug-challenge,,] ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-19 14:49:19,035 INFO o.q.i.StdSchedulerFactory [restartedMain] [debug-challenge,,] Using default implementation for ThreadExecutor
+2026-03-19 14:49:19,041 INFO o.q.c.SchedulerSignalerImpl [restartedMain] [debug-challenge,,] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-03-19 14:49:19,042 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] Quartz Scheduler v.2.3.2 created.
+2026-03-19 14:49:19,043 INFO o.q.s.RAMJobStore [restartedMain] [debug-challenge,,] RAMJobStore initialized.
+2026-03-19 14:49:19,043 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-03-19 14:49:19,045 INFO o.q.i.StdSchedulerFactory [restartedMain] [debug-challenge,,] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-03-19 14:49:19,046 INFO o.q.i.StdSchedulerFactory [restartedMain] [debug-challenge,,] Quartz scheduler version: 2.3.2
+2026-03-19 14:49:19,047 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1dc35926
+2026-03-19 14:49:19,485 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] [debug-challenge,,] LiveReload server is running on port 35729
+2026-03-19 14:49:19,572 INFO o.a.j.l.DirectJDKLog [restartedMain] [debug-challenge,,] Starting ProtocolHandler ["http-nio-8080"]
+2026-03-19 14:49:19,586 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] [debug-challenge,,] Tomcat started on port 8080 (http) with context path '/debug-application'
+2026-03-19 14:49:19,588 INFO o.s.s.q.SchedulerFactoryBean [restartedMain] [debug-challenge,,] Starting Quartz Scheduler now
+2026-03-19 14:49:19,588 INFO o.q.c.QuartzScheduler [restartedMain] [debug-challenge,,] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2026-03-19 14:49:19,607 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69bbbf9713b185146c0e26f2be874bde,6c0e26f2be874bde] [scheduling-pool-1] ?? HEAVY START -> Time: 14:49:19
+2026-03-19 14:49:19,608 INFO o.s.b.StartupInfoLogger [restartedMain] [debug-challenge,,] Started DebugApplication in 74.116 seconds (process running for 2053.451)
+2026-03-19 14:49:19,609 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69bbbf97b71ae9f6a4282a00a4d0d465,a4282a00a4d0d465] [scheduling-pool-2] ?? FIXED DELAY [10s] -> Starting work...
+2026-03-19 14:49:19,613 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] [debug-challenge,,] Condition evaluation unchanged
+2026-03-19 14:49:19,613 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-3] [debug-challenge,69bbbf97e0ad7b89d7e9f0836ec4b2fa,d7e9f0836ec4b2fa] [scheduling-pool-3] ? FIXED RATE [10s] -> Execution Time: 14:49:19
+2026-03-19 14:49:21,611 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-2] [debug-challenge,69bbbf97b71ae9f6a4282a00a4d0d465,a4282a00a4d0d465] [scheduling-pool-2] ? FIXED DELAY [10s] -> Finished work.
+2026-03-19 14:49:34,611 INFO c.i.d.s.Scenario33Scheduler [scheduling-pool-1] [debug-challenge,69bbbf9713b185146c0e26f2be874bde,6c0e26f2be874bde] [scheduling-pool-1] ?? HEAVY END -> Time: 14:49:34
+2026-03-19 14:49:45,430 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] [debug-challenge,,] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19 14:49:45,722 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] [debug-challenge,,] Initializing Servlet 'dispatcherServlet'
+2026-03-19 14:49:45,927 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] [debug-challenge,,] Detected StandardServletMultipartResolver
+2026-03-19 14:49:46,008 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] [debug-challenge,,] Detected AcceptHeaderLocaleResolver
+2026-03-19 14:49:46,110 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] [debug-challenge,,] Detected FixedThemeResolver
+2026-03-19 14:49:46,224 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] [debug-challenge,,] Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@8fb2aae
+2026-03-19 14:49:46,341 DEBUG o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] [debug-challenge,,] Detected org.springframework.web.servlet.support.SessionFlashMapManager@6dad44b3
+2026-03-19 14:49:46,374 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] [debug-challenge,,] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-03-19 14:49:46,483 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] [debug-challenge,,] Completed initialization in 559 ms
+2026-03-19 14:49:46,652 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] [debug-challenge,69bbbfb2ba6df30ec1c523cb9ae3d05c,c1c523cb9ae3d05c] Securing GET /api/scenario71/sensitive-page
+2026-03-19 14:49:46,656 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] [debug-challenge,69bbbfb2d130d8682cd382136ed110c9,2cd382136ed110c9] Securing GET /api/scenario71/sensitive-page
+2026-03-19 14:49:46,822 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-1] [debug-challenge,69bbbfb2ba6df30ec1c523cb9ae3d05c,9b9d24eba133516f] Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19 14:49:46,872 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-2] [debug-challenge,69bbbfb2d130d8682cd382136ed110c9,fd7d89726e415f88] Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19 14:49:47,011 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-1] [debug-challenge,69bbbfb2ba6df30ec1c523cb9ae3d05c,3ca7c2709ada3a3f] Secured GET /api/scenario71/sensitive-page
+2026-03-19 14:49:47,135 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] [debug-challenge,69bbbfb2d130d8682cd382136ed110c9,1028679b3c9dc886] Secured GET /api/scenario71/sensitive-page
+2026-03-19 14:49:47,206 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] [debug-challenge,281a061f,3ca7c2709ada3a3f] GET "/debug-application/api/scenario71/sensitive-page", parameters={}
+2026-03-19 14:49:47,296 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] [debug-challenge,af3a052e,1028679b3c9dc886] GET "/debug-application/api/scenario71/sensitive-page", parameters={}
+2026-03-19 14:49:47,320 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-1] [debug-challenge,281a061f,3ca7c2709ada3a3f] Mapped to com.interview.debug.controller.Scenario71Controller#getSensitivePage()
+2026-03-19 14:49:47,434 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] [debug-challenge,af3a052e,1028679b3c9dc886] Mapped to com.interview.debug.controller.Scenario71Controller#getSensitivePage()
+2026-03-19 14:49:47,533 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] [debug-challenge,af3a052e,1028679b3c9dc886] Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/html]
+2026-03-19 14:49:47,534 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] [debug-challenge,281a061f,3ca7c2709ada3a3f] Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/html]
+2026-03-19 14:49:47,594 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] [debug-challenge,af3a052e,1028679b3c9dc886] Writing ["<html><head><title>Secure Banking Page</title></head><body style='font-family: Arial, sans-serif; pa (truncated)..."]
+2026-03-19 14:49:47,787 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-1] [debug-challenge,281a061f,3ca7c2709ada3a3f] Writing ["<html><head><title>Secure Banking Page</title></head><body style='font-family: Arial, sans-serif; pa (truncated)..."]
+2026-03-19 14:49:48,008 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] [debug-challenge,af3a052e,1028679b3c9dc886] Completed 200 OK
+2026-03-19 14:49:48,138 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] [debug-challenge,281a061f,3ca7c2709ada3a3f] Completed 200 OK
+2026-03-19 14:58:34,450 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] [debug-challenge,69bbc1c2a1db426dc7cd6af8b5bc60ba,c7cd6af8b5bc60ba] Securing GET /api/scenario71/sensitive-page
+2026-03-19 14:58:34,452 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-6] [debug-challenge,69bbc1c2a1db426dc7cd6af8b5bc60ba,0668aed89f8e0f2e] Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19 14:58:34,458 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-6] [debug-challenge,69bbc1c2a1db426dc7cd6af8b5bc60ba,c745eb7762b0a13c] Secured GET /api/scenario71/sensitive-page
+2026-03-19 14:58:34,458 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] [debug-challenge,b17f9e8f,c745eb7762b0a13c] GET "/debug-application/api/scenario71/sensitive-page", parameters={}
+2026-03-19 14:58:34,465 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-6] [debug-challenge,b17f9e8f,c745eb7762b0a13c] Mapped to com.interview.debug.controller.Scenario71Controller#getSensitivePage()
+2026-03-19 14:58:34,469 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] [debug-challenge,b17f9e8f,c745eb7762b0a13c] Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/html]
+2026-03-19 14:58:34,477 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-6] [debug-challenge,b17f9e8f,c745eb7762b0a13c] Writing ["<html><head><title>Secure Banking Page</title></head><body style='font-family: Arial, sans-serif; pa (truncated)..."]
+2026-03-19 14:58:34,481 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-6] [debug-challenge,b17f9e8f,c745eb7762b0a13c] Completed 200 OK
+2026-03-19 14:59:30,080 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] [debug-challenge,69bbc1fa2525a0c1afc8cc88a612a78b,afc8cc88a612a78b] Securing GET /api/scenario71/status
+2026-03-19 14:59:30,083 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-8] [debug-challenge,69bbc1fa2525a0c1afc8cc88a612a78b,a139c00eb5a5d7f3] Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19 14:59:30,088 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-8] [debug-challenge,69bbc1fa2525a0c1afc8cc88a612a78b,1f30bb3bb30a9cd0] Secured GET /api/scenario71/status
+2026-03-19 14:59:30,092 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-8] [debug-challenge,18ddb97a,1f30bb3bb30a9cd0] GET "/debug-application/api/scenario71/status", parameters={}
+2026-03-19 14:59:30,095 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-8] [debug-challenge,18ddb97a,1f30bb3bb30a9cd0] Mapped to com.interview.debug.controller.Scenario71Controller#getStatus()
+2026-03-19 14:59:30,108 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-8] [debug-challenge,18ddb97a,1f30bb3bb30a9cd0] Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/plain, */*, application/json, application/*+json, application/xml;charset=UTF-8, text/xml;charset=UTF-8, application/*+xml;charset=UTF-8]
+2026-03-19 14:59:30,111 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-8] [debug-challenge,18ddb97a,1f30bb3bb30a9cd0] Writing ["Clickjacking scenario is active. Check /sensitive-page to test embedding."]
+2026-03-19 14:59:30,115 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-8] [debug-challenge,18ddb97a,1f30bb3bb30a9cd0] Completed 200 OK
+2026-03-19 14:59:38,821 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] [debug-challenge,69bbc202b2932a3066444b903431388c,66444b903431388c] Securing GET /api/scenario71/sensitive-page
+2026-03-19 14:59:38,824 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter [http-nio-8080-exec-2] [debug-challenge,69bbc202b2932a3066444b903431388c,a3c91687709c9457] Set SecurityContextHolder to anonymous SecurityContext
+2026-03-19 14:59:38,832 DEBUG o.s.s.w.FilterChainProxy [http-nio-8080-exec-2] [debug-challenge,69bbc202b2932a3066444b903431388c,57f23a5ac7382bea] Secured GET /api/scenario71/sensitive-page
+2026-03-19 14:59:38,834 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] [debug-challenge,aa168040,57f23a5ac7382bea] GET "/debug-application/api/scenario71/sensitive-page", parameters={}
+2026-03-19 14:59:38,839 DEBUG o.s.w.s.h.AbstractHandlerMapping [http-nio-8080-exec-2] [debug-challenge,aa168040,57f23a5ac7382bea] Mapped to com.interview.debug.controller.Scenario71Controller#getSensitivePage()
+2026-03-19 14:59:38,842 DEBUG o.s.w.s.m.m.a.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-2] [debug-challenge,aa168040,57f23a5ac7382bea] Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/html]
+2026-03-19 14:59:38,845 DEBUG o.s.c.l.LogFormatUtils [http-nio-8080-exec-2] [debug-challenge,aa168040,57f23a5ac7382bea] Writing ["<html><head><title>Secure Banking Page</title></head><body style='font-family: Arial, sans-serif; pa (truncated)..."]
+2026-03-19 14:59:38,848 DEBUG o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] [debug-challenge,aa168040,57f23a5ac7382bea] Completed 200 OK

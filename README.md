@@ -66,6 +66,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **68** | [File Upload Security](file:///debug-challenge/documentation/Scenario68/README.md) | Path Traversal, RCE, Content Validation |
 | **69** | [DDoS Protection](file:///debug-challenge/documentation/Scenario69/README.md) | Bucket4j, Rate Limiting, Throttling |
 | **70** | [API Documentation](file:///debug-challenge/documentation/Scenario70/README.md) | Swagger UI, OpenAPI 3, Annotations |
+| **71** | [Clickjacking Protection](file:///debug-challenge/documentation/Scenario71/README.md) | X-Frame-Options, CSP frame-ancestors |
+| **72** | [Timeout Chain Coherence](file:///debug-challenge/documentation/Scenario72/README.md) | Resilience4j, Timeouts, Bulkheads |
 
 ---
 

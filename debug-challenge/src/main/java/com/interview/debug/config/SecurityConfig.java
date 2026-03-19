@@ -131,10 +131,22 @@ public class SecurityConfig {
                 .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
             )
             .headers(headers -> headers
+                .frameOptions(frame -> frame.deny()) // X-Frame-Options: DENY
+                .contentSecurityPolicy(csp -> csp
+                    .policyDirectives("frame-ancestors 'none';") // Modern Clickjacking protection
+                )
                 .addHeaderWriter((request, response) -> {
                     String nonce = (String) request.getAttribute("cspNonce");
                     if (nonce != null) {
-                        response.setHeader("Content-Security-Policy", "script-src 'self' 'nonce-" + nonce + "'; object-src 'none';");
+                        // Concatenate existing policy with nonce script-src if needed. 
+                        // Note: .contentSecurityPolicy() above already sets a header, 
+                        // this manual writer might overwrite it if not careful.
+                        // Best practice: use .contentSecurityPolicy() for static directives 
+                        // and this for dynamic ones.
+                        String currentCsp = response.getHeader("Content-Security-Policy");
+                        String scriptCsp = "script-src 'self' 'nonce-" + nonce + "'; object-src 'none';";
+                        response.setHeader("Content-Security-Policy", 
+                            (currentCsp != null ? currentCsp + " " : "") + scriptCsp);
                     }
                 })
             )
