@@ -71,7 +71,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **73** | [Timeout Chain Coherence](file:///debug-challenge/documentation/Scenario73/README.md) | Resilience4j, Timeouts, Bulkheads |
 | **74** | [SSRF Protection](file:///debug-challenge/documentation/Scenario74/README.md) | URL Validation, Internal IP Blocking |
 | **75** | [Custom Validations](file:///debug-challenge/documentation/Scenario75/README.md) | Cross-field logic, DB-driven checks, i18n |
-| **76** | [ABAC Security](file:///debug-challenge/documentation/Scenario76/README.md) | SpEL, PermissionEvaluator |
+| **76** | [@Value vs @ConfigProps](file:///debug-challenge/documentation/Scenario76/README.md) | Type-safety, Relaxed binding, Validation |
+| **77** | [ABAC Security](file:///debug-challenge/documentation/Scenario77/README.md) | SpEL, PermissionEvaluator |
 
 ---
 
