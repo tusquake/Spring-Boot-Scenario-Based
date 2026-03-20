@@ -81,7 +81,7 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf
                 .csrfTokenRepository(org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/api/scenario71/**", "/api/scenario72/**", "/api/scenario73/**", "/api/scenario74/**", "/v3/api-docs/**", "/swagger-ui/**") // Ignore CSRF for demo
+                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/api/scenario71/**", "/api/scenario72/**", "/api/scenario73/**", "/api/scenario74/**", "/api/scenario75/**", "/v3/api-docs/**", "/swagger-ui/**") // Ignore CSRF for demo
             )
             .exceptionHandling(exceptions -> exceptions
                 .authenticationEntryPoint(authenticationEntryPoint)
@@ -125,6 +125,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/scenario72/**").permitAll()
                 .requestMatchers("/api/scenario73/**").permitAll()
                 .requestMatchers("/api/scenario74/**").permitAll()
+                .requestMatchers("/api/scenario75/**").permitAll()
                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/actuator/health").permitAll()
                 .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
