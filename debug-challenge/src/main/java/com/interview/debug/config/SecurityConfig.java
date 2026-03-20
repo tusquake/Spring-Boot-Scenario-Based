@@ -34,10 +34,10 @@ public class SecurityConfig {
     private final CustomAuthenticationEntryPoint authenticationEntryPoint;
     private final CustomAccessDeniedHandler accessDeniedHandler;
 
-    public SecurityConfig(com.interview.debug.filter.JwtAuthenticationFilter jwtFilter, 
-                          com.interview.debug.filter.CspNonceFilter cspNonceFilter,
-                          CustomAuthenticationEntryPoint authenticationEntryPoint,
-                          CustomAccessDeniedHandler accessDeniedHandler) {
+    public SecurityConfig(com.interview.debug.filter.JwtAuthenticationFilter jwtFilter,
+            com.interview.debug.filter.CspNonceFilter cspNonceFilter,
+            CustomAuthenticationEntryPoint authenticationEntryPoint,
+            CustomAccessDeniedHandler accessDeniedHandler) {
         this.jwtFilter = jwtFilter;
         this.cspNonceFilter = cspNonceFilter;
         this.authenticationEntryPoint = authenticationEntryPoint;
@@ -68,7 +68,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    static MethodSecurityExpressionHandler methodSecurityExpressionHandler(RoleHierarchy roleHierarchy, PermissionEvaluator permissionEvaluator) {
+    static MethodSecurityExpressionHandler methodSecurityExpressionHandler(RoleHierarchy roleHierarchy,
+            PermissionEvaluator permissionEvaluator) {
         DefaultMethodSecurityExpressionHandler expressionHandler = new DefaultMethodSecurityExpressionHandler();
         expressionHandler.setRoleHierarchy(roleHierarchy);
         expressionHandler.setPermissionEvaluator(permissionEvaluator);
@@ -78,94 +79,102 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-            .csrf(csrf -> csrf
-                .csrfTokenRepository(org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**", "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/api/scenario71/**", "/api/scenario72/**", "/api/scenario73/**", "/api/scenario74/**", "/api/scenario75/**", "/api/scenario76/**", "/v3/api-docs/**", "/swagger-ui/**") // Ignore CSRF for demo
-            )
-            .exceptionHandling(exceptions -> exceptions
-                .authenticationEntryPoint(authenticationEntryPoint)
-                .accessDeniedHandler(accessDeniedHandler)
-            )
-            .sessionManagement(session -> session
-                // IF_REQUIRED: Spring Security will only create a session if it needs one.
-                // For APIs, STATELESS is usually preferred, but we use IF_REQUIRED here to show session behavior.
-                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
-                
-                // Session Fixation: Protects against attackers setting a session ID before login.
-                // migrateSession(): Creates a new session and copies existing attributes.
-                .sessionFixation(fixation -> fixation.migrateSession())
-                
-                // Concurrent Session Control: Prevents a user from being logged in multiple times.
-                .maximumSessions(1)
-                // If true, the second login is prevented. If false (default), the first session is expired.
-                .maxSessionsPreventsLogin(false) 
-            )
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/scenario8/login").permitAll()
-                .requestMatchers("/api/filter/**").permitAll()
-                .requestMatchers("/api/scenario52/**").permitAll()
-                .requestMatchers("/api/scenario53/public").permitAll()
-                .requestMatchers("/api/scenario58/admin/**").hasAuthority("ROLE_ADMIN")
-                .requestMatchers("/api/scenario58/**").permitAll()
-                .requestMatchers("/api/scenario59/role-test").hasRole("ADMIN")
-                .requestMatchers("/api/scenario59/authority-test").hasAuthority("ROLE_ADMIN")
-                .requestMatchers("/api/scenario60/user-only").hasRole("USER")
-                .requestMatchers("/api/scenario61/protected").authenticated()
-                .requestMatchers("/api/scenario61/admin-only").hasRole("ADMIN")
-                .requestMatchers("/api/scenario62/permitted").permitAll()
-                .requestMatchers("/api/scenario64/**").permitAll()
-                .requestMatchers("/api/scenario65/**").permitAll()
-                .requestMatchers("/api/scenario66/**").permitAll()
-                .requestMatchers("/api/scenario67/**").permitAll()
-                .requestMatchers("/api/scenario68/**").permitAll()
-                .requestMatchers("/api/scenario69/**").permitAll()
-                .requestMatchers("/api/scenario70/**").permitAll()
-                .requestMatchers("/api/scenario71/**").permitAll()
-                .requestMatchers("/api/scenario72/**").permitAll()
-                .requestMatchers("/api/scenario73/**").permitAll()
-                .requestMatchers("/api/scenario74/**").permitAll()
-                .requestMatchers("/api/scenario75/**").permitAll()
-                .requestMatchers("/api/scenario76/**").permitAll()
-                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                .requestMatchers("/actuator/health").permitAll()
-                .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
-                .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
-                .anyRequest().permitAll()
-            )
-            .oauth2ResourceServer(oauth2 -> oauth2
-                .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
-            )
-            .headers(headers -> headers
-                .frameOptions(frame -> frame.deny()) // X-Frame-Options: DENY
-                .contentSecurityPolicy(csp -> csp
-                    .policyDirectives("frame-ancestors 'none';") // Modern Clickjacking protection
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+                .csrf(csrf -> csrf
+                        .csrfTokenRepository(
+                                org.springframework.security.web.csrf.CookieCsrfTokenRepository.withHttpOnlyFalse())
+                        .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**",
+                                "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/api/scenario71/**",
+                                "/api/scenario72/**", "/api/scenario73/**", "/api/scenario74/**", "/api/scenario75/**",
+                                "/api/scenario76/**", "/api/scenario77/**", "/actuator/**", "/v3/api-docs/**",
+                                "/swagger-ui/**") // Ignore CSRF for demo
                 )
-                .addHeaderWriter((request, response) -> {
-                    String nonce = (String) request.getAttribute("cspNonce");
-                    if (nonce != null) {
-                        // Concatenate existing policy with nonce script-src if needed. 
-                        // Note: .contentSecurityPolicy() above already sets a header, 
-                        // this manual writer might overwrite it if not careful.
-                        // Best practice: use .contentSecurityPolicy() for static directives 
-                        // and this for dynamic ones.
-                        String currentCsp = response.getHeader("Content-Security-Policy");
-                        String scriptCsp = "script-src 'self' 'nonce-" + nonce + "'; object-src 'none';";
-                        response.setHeader("Content-Security-Policy", 
-                            (currentCsp != null ? currentCsp + " " : "") + scriptCsp);
-                    }
-                })
-            )
-            .addFilterBefore(cspNonceFilter, org.springframework.security.web.header.HeaderWriterFilter.class)
-            .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class);
+                .exceptionHandling(exceptions -> exceptions
+                        .authenticationEntryPoint(authenticationEntryPoint)
+                        .accessDeniedHandler(accessDeniedHandler))
+                .sessionManagement(session -> session
+                        // IF_REQUIRED: Spring Security will only create a session if it needs one.
+                        // For APIs, STATELESS is usually preferred, but we use IF_REQUIRED here to show
+                        // session behavior.
+                        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+
+                        // Session Fixation: Protects against attackers setting a session ID before
+                        // login.
+                        // migrateSession(): Creates a new session and copies existing attributes.
+                        .sessionFixation(fixation -> fixation.migrateSession())
+
+                        // Concurrent Session Control: Prevents a user from being logged in multiple
+                        // times.
+                        .maximumSessions(1)
+                        // If true, the second login is prevented. If false (default), the first session
+                        // is expired.
+                        .maxSessionsPreventsLogin(false))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/scenario8/login").permitAll()
+                        .requestMatchers("/api/filter/**").permitAll()
+                        .requestMatchers("/api/scenario52/**").permitAll()
+                        .requestMatchers("/api/scenario53/public").permitAll()
+                        .requestMatchers("/api/scenario58/admin/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/api/scenario58/**").permitAll()
+                        .requestMatchers("/api/scenario59/role-test").hasRole("ADMIN")
+                        .requestMatchers("/api/scenario59/authority-test").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/api/scenario60/user-only").hasRole("USER")
+                        .requestMatchers("/api/scenario61/protected").authenticated()
+                        .requestMatchers("/api/scenario61/admin-only").hasRole("ADMIN")
+                        .requestMatchers("/api/scenario62/permitted").permitAll()
+                        .requestMatchers("/api/scenario64/**").permitAll()
+                        .requestMatchers("/api/scenario65/**").permitAll()
+                        .requestMatchers("/api/scenario66/**").permitAll()
+                        .requestMatchers("/api/scenario67/**").permitAll()
+                        .requestMatchers("/api/scenario68/**").permitAll()
+                        .requestMatchers("/api/scenario69/**").permitAll()
+                        .requestMatchers("/api/scenario70/**").permitAll()
+                        .requestMatchers("/api/scenario71/**").permitAll()
+                        .requestMatchers("/api/scenario72/**").permitAll()
+                        .requestMatchers("/api/scenario73/**").permitAll()
+                        .requestMatchers("/api/scenario74/**").permitAll()
+                        .requestMatchers("/api/scenario75/**").permitAll()
+                        .requestMatchers("/api/scenario76/**").permitAll()
+                        .requestMatchers("/api/scenario77/**").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/actuator/health", "/actuator/info", "/actuator/metrics",
+                                "/actuator/system-status")
+                        .permitAll()
+                        .requestMatchers("/actuator/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/api/scenario8/protected", "/api/scenario8/logout").authenticated()
+                        .anyRequest().permitAll())
+                .oauth2ResourceServer(oauth2 -> oauth2
+                        .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))
+                .headers(headers -> headers
+                        .frameOptions(frame -> frame.deny()) // X-Frame-Options: DENY
+                        .contentSecurityPolicy(csp -> csp
+                                .policyDirectives("frame-ancestors 'none';") // Modern Clickjacking protection
+                        )
+                        .addHeaderWriter((request, response) -> {
+                            String nonce = (String) request.getAttribute("cspNonce");
+                            if (nonce != null) {
+                                // Concatenate existing policy with nonce script-src if needed.
+                                // Note: .contentSecurityPolicy() above already sets a header,
+                                // this manual writer might overwrite it if not careful.
+                                // Best practice: use .contentSecurityPolicy() for static directives
+                                // and this for dynamic ones.
+                                String currentCsp = response.getHeader("Content-Security-Policy");
+                                String scriptCsp = "script-src 'self' 'nonce-" + nonce + "'; object-src 'none';";
+                                response.setHeader("Content-Security-Policy",
+                                        (currentCsp != null ? currentCsp + " " : "") + scriptCsp);
+                            }
+                        }))
+                .addFilterBefore(cspNonceFilter, org.springframework.security.web.header.HeaderWriterFilter.class)
+                .addFilterBefore(jwtFilter,
+                        org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        // WARNING: This bypasses the entire filter chain. 
+        // WARNING: This bypasses the entire filter chain.
         // No CSRF, No Security Headers, No Authentication!
-        return (web) -> web.ignoring().requestMatchers("/api/scenario62/ignored");
+        return (web) -> web.ignoring().requestMatchers("/actuator/**");
     }
 
     @Bean
@@ -183,30 +192,32 @@ public class SecurityConfig {
         return source;
     }
 
-
     /**
      * For Scenario 53 Demonstration:
      * A mock JwtDecoder that allows us to run the app without a real OIDC Provider.
-     * In production, this would be replaced by spring.security.oauth2.resourceserver.jwt.issuer-uri
+     * In production, this would be replaced by
+     * spring.security.oauth2.resourceserver.jwt.issuer-uri
      */
     @Bean
     public JwtDecoder jwtDecoder() {
         return token -> {
-            // This is a dummy decoder for demonstration that treats the token string as the scope
+            // This is a dummy decoder for demonstration that treats the token string as the
+            // scope
             // Usage: Pass 'read' or 'write' as the Authorization Bearer token in curl
             return Jwt.withTokenValue(token)
-                .header("alg", "none")
-                .claim("scope", token) // For RBAC: pass 'ADMIN' or 'USER'
-                .subject(token)       // For Ownership: pass the owner's name (e.g., 'Tushar')
-                .issuedAt(Instant.now())
-                .expiresAt(Instant.now().plusSeconds(3600))
-                .build();
+                    .header("alg", "none")
+                    .claim("scope", token) // For RBAC: pass 'ADMIN' or 'USER'
+                    .subject(token) // For Ownership: pass the owner's name (e.g., 'Tushar')
+                    .issuedAt(Instant.now())
+                    .expiresAt(Instant.now().plusSeconds(3600))
+                    .build();
         };
     }
 
     /**
      * Required for concurrent session management to work correctly.
-     * It tells Spring Security when a session has ended so it can update the session registry.
+     * It tells Spring Security when a session has ended so it can update the
+     * session registry.
      */
     @Bean
     public HttpSessionEventPublisher httpSessionEventPublisher() {

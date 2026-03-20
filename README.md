@@ -72,7 +72,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **74** | [SSRF Protection](file:///debug-challenge/documentation/Scenario74/README.md) | URL Validation, Internal IP Blocking |
 | **75** | [Custom Validations](file:///debug-challenge/documentation/Scenario75/README.md) | Cross-field logic, DB-driven checks, i18n |
 | **76** | [@Value vs @ConfigProps](file:///debug-challenge/documentation/Scenario76/README.md) | Type-safety, Relaxed binding, Validation |
-| **77** | [ABAC Security](file:///debug-challenge/documentation/Scenario77/README.md) | SpEL, PermissionEvaluator |
+| **77** | [Actuator & Monitoring](file:///debug-challenge/documentation/Scenario77/README.md) | Metrics, Custom Endpoints, Security |
+| **78** | [ABAC Security](file:///debug-challenge/documentation/Scenario78/README.md) | SpEL, PermissionEvaluator |
 
 ---
 
