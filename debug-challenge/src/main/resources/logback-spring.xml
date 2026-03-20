@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="LOGS" value="./logs" />
-    <springProperty scope="context" name="appName" source="spring.application.name"/>
+    <!-- Import Spring Boot default settings (like colors and standard patterns) -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    
+    <!-- Define the log pattern -->
+    <property name="LOG_PATTERN" value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx" />
 
-    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} [${appName:-},%X{traceId:-},%X{spanId:-}] - %msg%n
-            </Pattern>
-        </layout>
-    </appender>
+    <!-- CONSOLE APPENDER (Active in DEV profile) -->
+    <springProfile name="dev | default">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${LOG_PATTERN}</pattern>
+            </encoder>
+        </appender>
+        
+        <root level="INFO">
+            <appender-ref ref="CONSOLE" />
+        </root>
+        <logger name="com.interview.debug" level="DEBUG" />
+    </springProfile>
 
-    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/app.log</file>
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>%d %p %C{1} [%t] [${appName:-},%X{traceId:-},%X{spanId:-}] %m%n</Pattern>
-        </encoder>
+    <!-- FILE APPENDER (Active in PROD profile) -->
+    <springProfile name="prod">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>logs/app-prod.log</file>
+            <encoder>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${PID:- } --- [%t] %-40.40logger{39} : %m%n%wEx</pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!-- Roll daily and whenever the file reaches 10MB -->
+                <fileNamePattern>logs/archived/app-prod-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <maxFileSize>10MB</maxFileSize>
+                <maxHistory>30</maxHistory>
+                <totalSizeCap>1GB</totalSizeCap>
+            </rollingPolicy>
+        </appender>
 
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <!-- 롤오버 시 파일 이름 패턴 -->
-            <fileNamePattern>${LOGS}/archived/app-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <!-- 파일 하나당 최대 10MB -->
-            <maxFileSize>10MB</maxFileSize>
-            <!-- 최대 30일치 보관 -->
-            <maxHistory>30</maxHistory>
-            <!-- 전체 로그 크기 최대 1GB -->
-            <totalSizeCap>1GB</totalSizeCap>
-        </rollingPolicy>
-    </appender>
-
-    <!-- Project-specific logging level -->
-    <logger name="com.interview.debug" level="debug" additivity="false">
-        <appender-ref ref="Console" />
-        <appender-ref ref="RollingFile" />
-    </logger>
-
-    <root level="info">
-        <appender-ref ref="Console" />
-        <appender-ref ref="RollingFile" />
-    </root>
+        <root level="INFO">
+            <appender-ref ref="FILE" />
+        </root>
+    </springProfile>
 
 </configuration>

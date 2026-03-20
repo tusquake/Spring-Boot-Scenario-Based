@@ -86,7 +86,8 @@ public class SecurityConfig {
                         .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**",
                                 "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/api/scenario71/**",
                                 "/api/scenario72/**", "/api/scenario73/**", "/api/scenario74/**", "/api/scenario75/**",
-                                "/api/scenario76/**", "/api/scenario77/**", "/api/scenario78/**", "/actuator/**",
+                                "/api/scenario76/**", "/api/scenario77/**", "/api/scenario78/**", "/api/scenario79/**",
+                                "/actuator/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**") // Ignore CSRF for demo
                 )
@@ -138,6 +139,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/scenario76/**").permitAll()
                         .requestMatchers("/api/scenario77/**").permitAll()
                         .requestMatchers("/api/scenario78/**").permitAll()
+                        .requestMatchers("/api/scenario79/**").permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/actuator/health", "/actuator/info", "/actuator/metrics",
                                 "/actuator/system-status")
