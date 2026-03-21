@@ -80,6 +80,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **82** | [Web Scopes](file:///debug-challenge/documentation/Scenario82/README.md) | Request, Session, Scoped Proxies |
 | **83** | [ABAC Security](file:///debug-challenge/documentation/Scenario83/README.md) | SpEL, PermissionEvaluator |
 | **84** | [MVC Interceptors](file:///debug-challenge/documentation/Scenario84/README.md) | preHandle, postHandle, afterCompletion |
+| **85** | [Filter Types](file:///debug-challenge/documentation/Scenario85/README.md) | Standard vs OncePerRequest, Registration |
 
 ---
 
