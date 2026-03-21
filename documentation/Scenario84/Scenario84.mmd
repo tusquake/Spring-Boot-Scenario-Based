@@ -1,0 +1,50 @@
+graph TD
+    subgraph "External World"
+        A[Browser / Mobile App]
+    end
+
+    subgraph "Layer 1: Servlet Container (Tomcat)"
+        B["Filters (GZIP, CORS, JWT-Auth)"]
+    end
+
+    subgraph "Spring Framework Context"
+        C["Layer 2: DispatcherServlet (Front Controller)"]
+        
+        subgraph "Spring MVC Execution Chain"
+            D["Layer 3: Interceptors (preHandle)"]
+            E["Layer 4: Controller (@RestController)"]
+            F["Layer 3: Interceptors (postHandle / afterCompletion)"]
+        end
+
+        subgraph "Core Business Phase"
+            G["Layer 5: Service Layer (@Service)"]
+            H["Layer 6: Repository Layer (@Repository)"]
+        end
+    end
+
+    subgraph "Persistence"
+        I[("Layer 7: Database (H2/MySQL)")]
+    end
+
+    %% Flow of Request
+    A ---|Request| B
+    B ---|Raw HTTP| C
+    C ---|Chain Start| D
+    D ---|Pass| E
+    E ---|Business Logic| G
+    G ---|Data Access| H
+    H ---|SQL| I
+
+    %% Flow of Response
+    I -.->|Result| H
+    H -.->|Entity| G
+    G -.->|DTO| E
+    E -.->|ModelAndView / JSON| F
+    F -.->|Return| C
+    C -.->|Rendered Response| B
+    B -.->|Bytes| A
+
+    style A fill:#f9f,stroke:#333Msg,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:4px
+    style E fill:#bfb,stroke:#333,stroke-width:3px
+    style I fill:#f96,stroke:#333,stroke-width:2px
