@@ -76,7 +76,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **78** | [Profiles & Config](file:///debug-challenge/documentation/Scenario78/README.md) | Env-specific files, @Profile beans |
 | **79** | [Advanced Logging](file:///debug-challenge/documentation/Scenario79/README.md) | Logback-spring.xml, Rotation, Colors |
 | **80** | [Custom JPA Queries](file:///debug-challenge/documentation/Scenario80/README.md) | Derived Methods, JPQL, Native SQL |
-| **81** | [ABAC Security](file:///debug-challenge/documentation/Scenario81/README.md) | SpEL, PermissionEvaluator |
+| **81** | [JPA Auditing](file:///debug-challenge/documentation/Scenario81/README.md) | @CreatedDate, @CreatedBy, AuditorAware |
+| **82** | [ABAC Security](file:///debug-challenge/documentation/Scenario82/README.md) | SpEL, PermissionEvaluator |
 
 ---
 
