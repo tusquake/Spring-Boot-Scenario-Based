@@ -83,6 +83,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **85** | [Filter Types](file:///debug-challenge/documentation/Scenario85/README.md) | Standard vs OncePerRequest, Registration |
 | **86** | [URL Data Extraction](file:///debug-challenge/documentation/Scenario86/README.md) | @RequestParam vs @PathVariable, Regex Validation |
 | **87** | [JPA One-to-One](file:///debug-challenge/documentation/Scenario87/README.md) | Bidirectional, Cascade.ALL, Lazy Loading |
+| **88** | [One-to-Many Masterclass](file:///debug-challenge/documentation/Scenario88/README.md) | Hierarchical Mappings, Set vs List, Sync Helpers |
 
 ---
 
