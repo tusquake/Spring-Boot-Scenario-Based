@@ -81,6 +81,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **83** | [ABAC Security](file:///debug-challenge/documentation/Scenario83/README.md) | SpEL, PermissionEvaluator |
 | **84** | [MVC Interceptors](file:///debug-challenge/documentation/Scenario84/README.md) | preHandle, postHandle, afterCompletion |
 | **85** | [Filter Types](file:///debug-challenge/documentation/Scenario85/README.md) | Standard vs OncePerRequest, Registration |
+| **86** | [URL Data Extraction](file:///debug-challenge/documentation/Scenario86/README.md) | @RequestParam vs @PathVariable, Regex Validation |
 
 ---
 
