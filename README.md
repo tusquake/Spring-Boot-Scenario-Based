@@ -39,6 +39,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **31** | [Scheduling Thread Pool](file:///documentation/Scenario31/README.md) | `TaskScheduler` configuration |
 | **32** | [Actuator Customization](file:///documentation/Scenario32/README.md) | Custom `HealthIndicator` |
 | **33** | [Task Scheduling (@Scheduled)](file:///documentation/Scenario33/README.md) | `fixedRate` vs `fixedDelay` |
+| **34** | [Async Return Types](file:///documentation/Scenario34/README.md) | `CompletableFuture`, Parallel Orchestration |
 | **35** | [Filter vs Interceptor](file:///documentation/Scenario35/README.md) | Chain of responsibility, Context access |
 | **36** | [Jackson Customization](file:///documentation/Scenario36/README.md) | `@JsonView`, Custom Serializers |
 | **38** | [API Versioning Strategies](file:///documentation/Scenario38/README.md) | URI vs Header vs Media Type |
