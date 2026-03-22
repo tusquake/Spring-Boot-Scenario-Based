@@ -27,8 +27,26 @@ graph TD
 
 ---
 
+## ⚔️ The Comparison: @Value vs @ConfigurationProperties
+
+| Feature | `@Value` 🎯 | `@ConfigurationProperties` 🏗️ |
+| :--- | :--- | :--- |
+| **Usage** | Individual, ad-hoc properties | Structured, prefixed groups |
+| **Type Safety** | No (String-based) | **Yes** (Strictly typed) |
+| **Relaxed Binding** | Limited | **Full** (camelCase, kebab-case) |
+| **Validation** | No | **Yes** (JSR-303 support) |
+
+---
+
+## 🛠️ Mixed Implementation
+In `Scenario20Config.java`, we demonstrate both styles loading from the same external file:
+- **Style 1 (@Value)**: For simple metadata like `app.name`.
+- **Style 2 (@ConfigurationProperties)**: For structured blocks like `server.*`.
+
+---
+
 ## 🧪 Testing the Scenario
-Run this `curl` command to see the values loaded from the custom file:
+Run this `curl` command to see data from both injection styles:
 
 ```bash
 curl http://localhost:8080/debug-application/api/scenario20/config
@@ -37,15 +55,25 @@ curl http://localhost:8080/debug-application/api/scenario20/config
 ### Expected Output:
 ```json
 {
-  "app_name": "The Debug Challenge - Externalized",
-  "app_version": "v2.0-CUSTOM",
-  "description": "This value was loaded using @PropertySource from a separate file!",
-  "source": "@PropertySource(scenario20.properties)"
+  "via_value_annotation": {
+    "name": "The Debug Challenge - Externalized",
+    "version": "v2.0-CUSTOM",
+    "description": "This value was loaded using @PropertySource from a separate file!"
+  },
+  "via_configuration_properties": {
+    "host": "127.0.0.1",
+    "port": 8081,
+    "timeout": 5000
+  },
+  "analysis": "Use @Value for ad-hoc properties; use @ConfigurationProperties for structured, type-safe groups."
 }
 ```
 
 ---
 
 ## Interview Tip 💡
+**Q**: *"When should you prefer @ConfigurationProperties over @Value?"*
+**A**: *"Prefer `@ConfigurationProperties` for related settings with a common prefix. It offers type-safety and relaxed binding. Use `@Value` only for isolated properties or when you specifically need SpEL (Spring Expression Language) support."*
+
 **Q**: *"Does @PropertySource work with YAML files?"*
-**A**: *"No, not by default. The standard `@PropertySource` only supports `.properties` and `.xml` files. To load a YAML file using this annotation, you would need to implement a custom `PropertySourceFactory`. Alternatively, for YAML, it's better to use the `spring.config.import` property in your main application config."*
+**A**: *"No, not by default. The standard `@PropertySource` only supports `.properties` and `.xml` files. To load a YAML file using this annotation, you would need to implement a custom `PropertySourceFactory`."*
