@@ -3,6 +3,27 @@
 ## Overview
 A **One-to-One** relationship represents a link where one entity is associated with exactly one instance of another entity. While simple in theory, managing it in JPA requires understanding the **Owning Side**, **Inverse Side**, and performance implications of **Fetch Types**.
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Controller
+    participant Service
+    participant Repository
+    participant DB
+
+    Client->>Controller: POST /person (JSON)
+    Controller->>Service: createPerson(Person)
+    Service->>Repository: save(Person)
+    Note over Repository,DB: CascadeType.ALL triggers Address save
+    Repository->>DB: INSERT INTO scenario87_person
+    Repository->>DB: INSERT INTO scenario87_address
+    DB-->>Repository: IDs generated
+    Repository-->>Service: Saved Entity
+    Service-->>Controller: Person Object
+    Note over Controller,Client: @JsonManagedReference & @JsonBackReference break loop
+    Controller-->>Client: 200 OK (JSON)
+```
+
 ---
 
 ## 🛂 Analogy: The Traveler and the Passport

@@ -10,6 +10,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | :--- | :--- | :--- |
 | **01** | [Bean Lifecycle](file:///documentation/Scenario1/README.md) | `@PostConstruct`, `@PreDestroy`, Bean Initialization |
 | **02** | [Bean Scopes Masterclass](file:///documentation/Scenario2/README.md) | Singleton vs Prototype, Injection Pitfalls |
+| **03** | [Injection Patterns](file:///documentation/Scenario3/README.md) | Constructor vs Field vs Setter, Best Practices |
 | **05** | [Circular Dependencies](file:///documentation/Scenario5/README.md) | Injection patterns, `@Lazy` resolution |
 | **06** | [Concurrency Control](file:///documentation/Scenario6/README.md) | Race Conditions, Pessimistic vs Optimistic Locking |
 | **07** | [Async Processing](file:///documentation/Scenario7/README.md) | `@Async`, SecurityContext propagation |

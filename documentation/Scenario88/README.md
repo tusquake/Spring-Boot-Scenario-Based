@@ -3,6 +3,37 @@
 ## Overview
 A **One-to-Many** relationship is the most common pattern in database design (e.g., One User has many Posts, One Order has many Items). In JPA, this is typically implemented as a **bidirectional** relationship.
 
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Controller
+    participant Service
+    participant Repository
+    participant DB
+
+    Note over Client,DB: Creating Hierarchical Data
+    Client->>Controller: POST /class (JSON)
+    Controller->>Service: createClassWithStudents(...)
+    Note right of Service: Manual Sync (student.setSchoolClass)
+    Service->>Repository: save(Class)
+    Repository->>DB: INSERT INTO scenario88_class
+    Repository->>DB: INSERT INTO scenario88_student (Batch)
+    DB-->>Repository: Success
+    Repository-->>Service: Saved Hierarchy
+    Service-->>Controller: Class Object
+    Controller-->>Client: 200 OK (JSON Students @JsonIgnored)
+
+    Note over Client,DB: On-Demand Fetching (REST Best Practice)
+    Client->>Controller: GET /class/1/students
+    Controller->>Service: getStudentsByClass(1)
+    Service->>Repository: findById(1)
+    Repository->>DB: SELECT * FROM scenario88_class WHERE id=1
+    Note right of Service: Accessing Set triggers LAZY load
+    Service->>DB: SELECT * FROM scenario88_student WHERE class_id=1
+    Service-->>Controller: Set<Student>
+    Controller-->>Client: JSON Student List
+```
+
 ---
 
 ## 🏫 Analogy: The Teacher and the Class
