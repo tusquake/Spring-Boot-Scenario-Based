@@ -86,7 +86,12 @@ public class SecurityConfig {
                         .ignoringRequestMatchers("/api/scenario51/**", "/api/scenario66/**", "/api/scenario67/**",
                                 "/api/scenario68/**", "/api/scenario69/**", "/api/scenario70/**", "/api/scenario71/**",
                                 "/api/scenario72/**", "/api/scenario73/**", "/api/scenario74/**", "/api/scenario75/**",
-                                "/api/scenario76/**", "/api/scenario77/**", "/api/scenario78/**", "/api/scenario79/**", "/api/scenario80/**", "/api/scenario81/**", "/api/scenario82/**", "/api/scenario83/**", "/api/scenario84/**", "/api/scenario85/**", "/api/scenario86/**", "/api/scenario87/**", "/api/scenario88/**", "/api/scenario89/**", "/api/scenario2/**", "/api/scenario3/**", "/api/scenario4/**", "/api/scenario38/**", "/api/scenario20/**", "/api/scenario34/**", "/api/scenario90/**",
+                                "/api/scenario76/**", "/api/scenario77/**", "/api/scenario78/**", "/api/scenario79/**",
+                                "/api/scenario80/**", "/api/scenario81/**", "/api/scenario82/**", "/api/scenario83/**",
+                                "/api/scenario84/**", "/api/scenario85/**", "/api/scenario86/**", "/api/scenario87/**",
+                                "/api/scenario88/**", "/api/scenario89/**", "/api/scenario2/**", "/api/scenario3/**",
+                                "/api/scenario4/**", "/api/scenario38/**", "/api/scenario20/**", "/api/scenario34/**",
+                                "/api/scenario90/**", "/api/scenario91/**",
                                 "/actuator/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**") // Ignore CSRF for demo
@@ -143,7 +148,11 @@ public class SecurityConfig {
                         .requestMatchers("/api/scenario80/**").permitAll()
                         .requestMatchers("/api/scenario81/**").permitAll()
                         .requestMatchers("/api/scenario82/**").permitAll()
-                        .requestMatchers("/api/scenario83/**", "/api/scenario84/**", "/api/scenario85/**", "/api/scenario86/**", "/api/scenario87/**", "/api/scenario88/**", "/api/scenario89/**", "/api/scenario2/**", "/api/scenario3/**", "/api/scenario4/**", "/api/scenario38/**", "/api/scenario20/**", "/api/scenario34/**", "/api/scenario90/**").permitAll()
+                        .requestMatchers("/api/scenario83/**", "/api/scenario84/**", "/api/scenario85/**",
+                                "/api/scenario86/**", "/api/scenario87/**", "/api/scenario88/**", "/api/scenario89/**",
+                                "/api/scenario2/**", "/api/scenario3/**", "/api/scenario4/**", "/api/scenario38/**",
+                                "/api/scenario20/**", "/api/scenario34/**", "/api/scenario90/**", "/api/scenario91/**")
+                        .permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/actuator/health", "/actuator/info", "/actuator/metrics",
                                 "/actuator/system-status")
