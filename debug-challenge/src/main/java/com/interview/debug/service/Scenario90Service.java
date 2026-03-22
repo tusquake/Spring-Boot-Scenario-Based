@@ -55,7 +55,7 @@ public class Scenario90Service {
         log.info("🧵 Running in thread: {}", Thread.currentThread().getName());
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }

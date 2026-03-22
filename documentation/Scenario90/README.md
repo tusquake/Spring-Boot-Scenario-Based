@@ -22,6 +22,33 @@ Resilience4j provides two distinct ways to build a bulkhead. Choosing the right 
 | **Overhead** | Very Low (just a counter). | Higher (context switching). |
 | **Isolation** | **Partial**: Limits concurrency, but caller waits. | **Total**: Caller is independent of pool health. |
 | **Best For** | High-volume, already fast services. | Slow, I/O intensive, or risky services. |
+| **Logic** | **Counter-based** (Permits) | **Queue-based** (Pool + Multi-Core) |
+
+### 🟢 Semaphore Bulkhead Flow
+```mermaid
+graph TD
+    A[Incoming Request] --> B{Permit Available?}
+    B -- Yes --> C[Acquire Permit]
+    C --> D[Execute on Caller Thread]
+    D --> E[Release Permit]
+    B -- No --> F[Fallback Method]
+    F --> G[Return Fallback Response]
+    E --> H[Return Success Response]
+```
+
+### 🧵 Thread Pool Bulkhead Flow
+```mermaid
+graph TD
+    A[Incoming Request] --> B[ThreadPool Administrator]
+    B -- 1. Core Thread Available? --> C[Execute in Core Thread]
+    B -- 2. Core Full, Queue Space Available? --> D[Wait in Queue]
+    B -- 3. Queue Full, Max Thread Available? --> E[Execute in New Thread]
+    B -- 4. All Slots Full --> F[Fallback Method]
+    C --> H[CompletableFuture]
+    D --> H
+    E --> H
+    F --> H
+```
 
 > [!IMPORTANT]
 > **Technical Requirement**: Resilience4j's `THREADPOOL` bulkhead **MUST** return a `CompletableFuture` (or `CompletionStage`). This is because the execution is delegated to a separate thread pool, and the calling thread needs a future to track the result.
