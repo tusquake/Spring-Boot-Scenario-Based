@@ -40,8 +40,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **33** | [Task Scheduling (@Scheduled)](file:///documentation/Scenario33/README.md) | `fixedRate` vs `fixedDelay` |
 | **35** | [Filter vs Interceptor](file:///documentation/Scenario35/README.md) | Chain of responsibility, Context access |
 | **36** | [Jackson Customization](file:///documentation/Scenario36/README.md) | `@JsonView`, Custom Serializers |
-| **37** | [Swagger/OpenAPI](file:///documentation/Scenario37/README.md) | API Documentation best practices |
-| **40** | [Logback & ELK](file:///documentation/Scenario40/README.md) | Structured logging, Log rotation |
+| **38** | [API Versioning Strategies](file:///documentation/Scenario38/README.md) | URI vs Header vs Media Type |
 | **42** | [Spring Batch Basics](file:///documentation/Scenario42/README.md) | Job, Step, ItemReader |
 | **43** | [Websockets/STOMP](file:///documentation/Scenario43/README.md) | Real-time communication |
 | **44** | [Proxying & Final Class](file:///documentation/Scenario44/README.md) | CGLIB vs JDK Dynamic Proxy |
