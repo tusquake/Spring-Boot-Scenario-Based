@@ -49,13 +49,13 @@ Use these `curl` commands to verify that the application automatically switches 
 
 ### Step 1: Verify Write (Primary)
 ```bash
-curl http://localhost:8080/api/scenario92/write
+curl http://localhost:8080/debug-application/api/scenario92/write
 ```
 *Expected: `{"mode": "WRITE", "database": "PRIMARYDB"}`*
 
 ### Step 2: Verify Read (Replica)
 ```bash
-curl http://localhost:8080/api/scenario92/read
+curl http://localhost:8080/debug-application/api/scenario92/read
 ```
 *Expected: `{"mode": "READ_ONLY", "database": "REPLICADB"}`*
 

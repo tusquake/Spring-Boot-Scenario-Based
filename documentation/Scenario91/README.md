@@ -45,7 +45,7 @@ Use the following `curl` commands to see how data is isolated across different "
 
 ### Step 1: Create data for Tenant A
 ```bash
-curl -X POST http://localhost:8080/api/scenario91/projects \
+curl -X POST http://localhost:8080/debug-application/api/scenario91/projects \
      -H "X-Tenant-ID: tenantA" \
      -H "Content-Type: application/json" \
      -d '{"name": "Project Alpha", "description": "Tenant A Secret"}'
@@ -53,7 +53,7 @@ curl -X POST http://localhost:8080/api/scenario91/projects \
 
 ### Step 2: Create data for Tenant B
 ```bash
-curl -X POST http://localhost:8080/api/scenario91/projects \
+curl -X POST http://localhost:8080/debug-application/api/scenario91/projects \
      -H "X-Tenant-ID: tenantB" \
      -H "Content-Type: application/json" \
      -d '{"name": "Project Beta", "description": "Tenant B Secret"}'
@@ -61,13 +61,13 @@ curl -X POST http://localhost:8080/api/scenario91/projects \
 
 ### Step 3: Verify Tenant A's View
 ```bash
-curl -H "X-Tenant-ID: tenantA" http://localhost:8080/api/scenario91/projects
+curl -H "X-Tenant-ID: tenantA" http://localhost:8080/debug-application/api/scenario91/projects
 ```
 *Expected: Only shows Project Alpha.*
 
 ### Step 4: Verify Tenant B's View
 ```bash
-curl -H "X-Tenant-ID: tenantB" http://localhost:8080/api/scenario91/projects
+curl -H "X-Tenant-ID: tenantB" http://localhost:8080/debug-application/api/scenario91/projects
 ```
 *Expected: Only shows Project Beta.*
 

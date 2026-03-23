@@ -20,7 +20,7 @@ public class Scenario92DataSourceConfig {
     public DataSource primaryDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.h2.Driver");
-        dataSource.setUrl("jdbc:h2:mem:primarydb;DB_CLOSE_DELAY=-1");
+        dataSource.setUrl("jdbc:h2:mem:scenario92db;DB_CLOSE_DELAY=-1");
         dataSource.setUsername("sa");
         dataSource.setPassword("");
         return dataSource;
@@ -30,7 +30,7 @@ public class Scenario92DataSourceConfig {
     public DataSource replicaDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.h2.Driver");
-        dataSource.setUrl("jdbc:h2:mem:replicadb;DB_CLOSE_DELAY=-1");
+        dataSource.setUrl("jdbc:h2:mem:scenario92db;DB_CLOSE_DELAY=-1");
         dataSource.setUsername("sa");
         dataSource.setPassword("");
         return dataSource;
@@ -47,7 +47,24 @@ public class Scenario92DataSourceConfig {
         routingDataSource.setTargetDataSources(targetDataSources);
         routingDataSource.setDefaultTargetDataSource(primaryDataSource());
 
+        // Initialize schemas in both databases
+        initializeDatabase(primaryDataSource());
+        initializeDatabase(replicaDataSource());
+
         return routingDataSource;
+    }
+
+    private void initializeDatabase(DataSource dataSource) {
+        try (var connection = dataSource.getConnection();
+             var statement = connection.createStatement()) {
+            statement.execute("CREATE TABLE IF NOT EXISTS scenario93_audits (" +
+                    "id BIGINT AUTO_INCREMENT PRIMARY KEY, " +
+                    "action VARCHAR(255), " +
+                    "status VARCHAR(255), " +
+                    "detail VARCHAR(255))");
+        } catch (Exception e) {
+            // It might fail if the table already exist in another way, but IF NOT EXISTS handles it usually.
+        }
     }
 
     /**
