@@ -2,7 +2,6 @@ package com.interview.debug.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
@@ -46,8 +45,7 @@ public class Scenario91DataSourceConfig {
     }
 
     @Bean
-    @Primary
-    public DataSource dataSource() {
+    public DataSource scenario91DataSource() {
         MultiTenantRoutingDataSource routingDataSource = new MultiTenantRoutingDataSource();
 
         Map<Object, Object> targetDataSources = new HashMap<>();
