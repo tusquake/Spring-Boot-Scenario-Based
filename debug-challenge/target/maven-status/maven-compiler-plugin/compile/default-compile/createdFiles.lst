@@ -32,6 +32,7 @@ com\interview\debug\controller\Scenario64Controller.class
 com\interview\debug\controller\Scenario61Controller.class
 com\interview\debug\service\AsyncService.class
 com\interview\debug\service\Scenario90Service.class
+com\interview\debug\model\Scenario99OrderItemId.class
 com\interview\debug\repository\Scenario95UserRepository.class
 com\interview\debug\controller\Scenario67Controller.class
 com\interview\debug\service\OidcUserService.class
@@ -96,6 +97,7 @@ com\interview\debug\service\ReportService.class
 com\interview\debug\controller\Scenario96Controller.class
 com\interview\debug\aspect\ReadOnlyAspect.class
 com\interview\debug\controller\Scenario90Controller.class
+com\interview\debug\controller\Scenario99Controller.class
 com\interview\debug\service\BankService.class
 com\interview\debug\model\Auditable.class
 com\interview\debug\serialization\SafeObjectInputStream.class
@@ -120,6 +122,7 @@ com\interview\debug\model\Scenario95User.class
 com\interview\debug\controller\Scenario73Controller.class
 com\interview\debug\controller\Scenario43Controller.class
 com\interview\debug\event\UserRegistrationEvent.class
+com\interview\debug\model\Scenario99OrderItem.class
 com\interview\debug\controller\OrderController.class
 com\interview\debug\validation\FieldsMatch.class
 com\interview\debug\controller\Scenario40Controller.class
@@ -219,6 +222,7 @@ com\interview\debug\idempotency\Idempotent.class
 com\interview\debug\service\DefaultMessageService.class
 com\interview\debug\model\Gadget.class
 com\interview\debug\repository\ProductRepository.class
+com\interview\debug\repository\Scenario99OrderItemRepository.class
 com\interview\debug\scope\PrototypeBean.class
 com\interview\debug\controller\Scenario53AuthFlowController.class
 com\interview\debug\model\Scenario89Course.class
@@ -262,6 +266,7 @@ com\interview\debug\config\SecuritySettings$Encryption.class
 com\interview\debug\aspect\PerformanceTrackerAspect.class
 com\interview\debug\controller\Scenario74Controller.class
 com\interview\debug\controller\Scenario8Controller.class
+com\interview\debug\model\Scenario99OrderItem$Scenario99OrderItemBuilder.class
 com\interview\debug\repository\Scenario91ProjectRepository.class
 com\interview\debug\controller\Scenario43Controller$CouponRequest.class
 com\interview\debug\idempotency\IdempotencyAspect.class
