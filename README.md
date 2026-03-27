@@ -95,6 +95,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **93** | [Transactional Essentials](file:///documentation/Scenario93/README.md) | Propagation, Proxy Pitfalls, Rollback Rules |
 | **94** | [ID GenerationTypes](file:///documentation/Scenario94/README.md) | IDENTITY vs SEQUENCE vs UUID, Batching |
 | **95** | [DTO Projections](file:///documentation/Scenario95/README.md) | Interface vs Class Projections, Open/Closed |
+| **96** | [Startup Env Validation](file:///documentation/Scenario96/README.md) | Custom @ValidateEnv, Fail-Fast Architecture |
 
 ---
 

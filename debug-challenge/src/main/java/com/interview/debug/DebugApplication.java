@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.aop.ObservedAspect;
+import io.github.tusquake.envvalidator.annotation.EnableEnvValidation;
 
 import org.springframework.retry.annotation.EnableRetry;
 import org.springdoc.core.models.GroupedOpenApi;
@@ -17,6 +18,7 @@ import org.springdoc.core.models.GroupedOpenApi;
 @EnableRetry
 @EnableScheduling
 @EnableAsync
+@EnableEnvValidation
 @ComponentScan(basePackages = { "com.interview.debug", "com.interview.external.service" })
 @EnableJpaRepositories(basePackages = "com.interview.debug.repository")
 @EntityScan(basePackages = "com.interview.debug.model")
