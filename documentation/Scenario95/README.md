@@ -13,8 +13,10 @@ Instead of returning a full Entity object (which can be huge), we define a simpl
 
 ```java
 public interface UserProjection {
-    String getName();
-    String getEmail();
+    @Value("#{target.firstName + ' ' + target.lastName}")
+    String getFullName(); // Open Projection (SpEL)
+    
+    String getEmail(); // Closed Projection
 }
 ```
 
@@ -47,7 +49,7 @@ String getFullName();
 
 ## 📊 Comparison Table
 
-| Feature | Full Entity (`SELECT *`) | DTO Projection (`SELECT name, email`) |
+| Feature | Full Entity (`SELECT *`) | DTO Projection (`SELECT firstName, lastName, email`) |
 | :--- | :--- | :--- |
 | **SQL Complexity** | High (Fetches all columns like BIO, ProfilePic, Address) | Low (Only requested columns) |
 | **Memory Footprint** | Large (Hibernate must track the full object in Persistence Context) | Tiny (Read-only, lightweight object) |
@@ -73,7 +75,7 @@ curl -X GET "http://localhost:8080/debug-application/api/scenario95/users/full"
 ```bash
 curl -X GET "http://localhost:8080/debug-application/api/scenario95/users/projection"
 ```
-*In the logs, you will see a much cleaner SQL: `SELECT u1_0.name, u1_0.email FROM scenario95_users u1_0`*
+*In the logs, you will see a much cleaner SQL: `SELECT u1_0.first_name, u1_0.last_name, u1_0.email FROM scenario95_users u1_0`*
 
 ---
 

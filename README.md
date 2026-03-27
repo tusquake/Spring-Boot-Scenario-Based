@@ -89,6 +89,12 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **87** | [JPA One-to-One](file:///debug-challenge/documentation/Scenario87/README.md) | Bidirectional, Cascade.ALL, Lazy Loading |
 | **88** | [One-to-Many Masterclass](file:///debug-challenge/documentation/Scenario88/README.md) | Hierarchical Mappings, Set vs List, Sync Helpers |
 | **89** | [Many-to-Many & Intersection Entities](file:///debug-challenge/documentation/Scenario89/README.md) | Bridge Tables, Relationship Attributes |
+| **90** | [Bulkhead Pattern](file:///documentation/Scenario90/README.md) | Semaphore vs Fixed Thread Pool, Isolation |
+| **91** | [Multi-Tenant Architecture](file:///documentation/Scenario91/README.md) | Database-per-tenant, Schema-per-tenant |
+| **92** | [Read/Write Splitting](file:///documentation/Scenario92/README.md) | Master/Slave, `AbstractRoutingDataSource` |
+| **93** | [Transactional Essentials](file:///documentation/Scenario93/README.md) | Propagation, Proxy Pitfalls, Rollback Rules |
+| **94** | [ID GenerationTypes](file:///documentation/Scenario94/README.md) | IDENTITY vs SEQUENCE vs UUID, Batching |
+| **95** | [DTO Projections](file:///documentation/Scenario95/README.md) | Interface vs Class Projections, Open/Closed |
 
 ---
 
