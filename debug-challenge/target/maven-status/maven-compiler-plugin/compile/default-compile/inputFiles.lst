@@ -16,6 +16,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\BankAccountService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario58Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario28Controller.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario98Vehicle.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario88Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\BankService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\dto\FilteredUserDto.java
@@ -26,6 +27,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario85Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\Scenario20Config.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario89Student.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario97Warehouse.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\ShedLockConfig.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario55Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\ratelimit\RateLimitingService.java
@@ -33,6 +35,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\Scenario97UserRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\DataSourceType.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\CustomPermissionEvaluator.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario98Car.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\BaseAuditableEntity.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\OrderProcessingService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\AuthController.java
@@ -59,6 +62,8 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario68Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\filter\MdcTracingFilter.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Auditable.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\Scenario98VehicleRepository.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario98Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario14Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario86Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario44Controller.java
@@ -66,6 +71,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\AsyncConfig.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario74Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\starter\CustomStarterAutoConfiguration.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\Scenario97CompanyRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario89Enrollment.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\SchedulerConfig.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario32Controller.java
@@ -101,6 +107,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario73Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\interceptor\TenantInterceptor.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\dto\UserRegistrationDTO.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\Scenario97WarehouseRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\repository\BankAccountRepository.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\security\CustomAccessDeniedHandler.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\MdcTracingService.java
@@ -165,6 +172,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario1Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario34Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\CacheConfig.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario97Company.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario8Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\SecurityConfig.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario87Controller.java
@@ -172,6 +180,7 @@ C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\in
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\config\MultiTenantRoutingDataSource.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario27Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario31Controller.java
+C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\model\Scenario98Bike.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\service\DownstreamService.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario61Controller.java
 C:\Users\tushar.seth\Desktop\Scenario Based\debug-challenge\src\main\java\com\interview\debug\controller\Scenario53Controller.java

@@ -35,6 +35,7 @@ com\interview\debug\service\Scenario90Service.class
 com\interview\debug\repository\Scenario95UserRepository.class
 com\interview\debug\controller\Scenario67Controller.class
 com\interview\debug\service\OidcUserService.class
+com\interview\debug\model\Scenario97Warehouse$Scenario97WarehouseBuilder.class
 com\interview\debug\service\DownstreamService.class
 com\interview\debug\model\SoftDeleteProduct.class
 com\interview\debug\model\Scenario93Audit.class
@@ -45,12 +46,14 @@ com\interview\debug\model\Scenario80Book$Scenario80BookBuilder.class
 com\interview\debug\model\Scenario94TableEntity$Scenario94TableEntityBuilder.class
 com\interview\debug\config\FilterConfig.class
 com\interview\debug\controller\Scenario18Controller.class
+com\interview\debug\model\Scenario97Company$Scenario97CompanyBuilder.class
 com\interview\debug\service\SlackNotificationService.class
 com\interview\debug\controller\Scenario12Controller.class
 com\interview\debug\controller\Scenario15Controller.class
 com\interview\debug\model\Scenario97Address$Scenario97AddressBuilder.class
 com\interview\debug\filter\CustomLogFilter.class
 com\interview\debug\model\Scenario88Student.class
+com\interview\debug\model\Scenario97Warehouse.class
 com\interview\debug\dto\UserRegistrationDTO.class
 com\interview\debug\controller\Scenario4Controller.class
 com\interview\debug\ratelimit\RateLimitingService.class
@@ -60,6 +63,7 @@ com\interview\debug\service\Scenario93InternalService.class
 com\interview\debug\annotation\TrackTime.class
 com\interview\debug\repository\Scenario89EnrollmentRepository.class
 com\interview\debug\controller\Scenario7Controller.class
+com\interview\debug\model\Scenario98Bike$Scenario98BikeBuilder.class
 com\interview\debug\config\Scenario84WebConfig.class
 com\interview\debug\controller\Scenario1Controller.class
 com\interview\debug\controller\Scenario45Controller$AuditLogDto.class
@@ -87,6 +91,7 @@ com\interview\debug\controller\Scenario34Controller.class
 com\interview\debug\controller\Scenario37Controller.class
 com\interview\debug\dto\FilteredUserDto.class
 com\interview\debug\model\Order.class
+com\interview\debug\model\Scenario98Vehicle$Scenario98VehicleBuilder.class
 com\interview\debug\service\ReportService.class
 com\interview\debug\controller\Scenario96Controller.class
 com\interview\debug\aspect\ReadOnlyAspect.class
@@ -106,7 +111,9 @@ com\interview\debug\controller\Scenario9Controller.class
 com\interview\debug\controller\Scenario88Controller.class
 com\interview\debug\validation\UniqueEmailValidator.class
 com\interview\debug\model\BaseAuditableEntity.class
+com\interview\debug\model\Scenario98Car$Scenario98CarBuilder.class
 com\interview\debug\controller\Scenario76Controller.class
+com\interview\debug\model\Scenario98Bike.class
 com\interview\debug\controller\Scenario70Controller.class
 com\interview\debug\controller\Scenario79Controller.class
 com\interview\debug\model\Scenario95User.class
@@ -142,6 +149,7 @@ com\interview\debug\service\Scenario87Service.class
 com\interview\debug\service\BankAccountService.class
 com\interview\debug\validation\CouponCodeValidator.class
 com\interview\debug\service\ConsoleNotificationService.class
+com\interview\debug\model\Scenario98Bike$Scenario98BikeBuilderImpl.class
 com\interview\debug\controller\Scenario72Controller$UserProfile.class
 com\interview\debug\model\ValidationUser.class
 com\interview\debug\service\FlickeringService.class
@@ -151,6 +159,7 @@ com\interview\debug\filter\Scenario85SpringFilter.class
 com\interview\debug\controller\Scenario72Controller.class
 com\interview\debug\service\Scenario94Service.class
 com\interview\debug\listener\SlackNotificationListener.class
+com\interview\debug\model\Scenario98Car.class
 com\interview\debug\controller\Scenario10Controller.class
 com\interview\debug\controller\Scenario75Controller.class
 com\interview\debug\controller\Scenario44Controller.class
@@ -171,6 +180,7 @@ com\interview\debug\model\Scenario81Product$Scenario81ProductBuilder.class
 com\interview\debug\controller\Scenario91Controller.class
 com\interview\debug\model\Scenario87Person$Scenario87PersonBuilder.class
 com\interview\debug\repository\Scenario89StudentRepository.class
+com\interview\debug\repository\Scenario98VehicleRepository.class
 com\interview\debug\repository\Scenario88SchoolClassRepository.class
 com\interview\debug\service\MessageService.class
 com\interview\debug\config\Scenario20Config.class
@@ -188,6 +198,7 @@ com\interview\debug\controller\Scenario84Controller.class
 com\interview\debug\starter\CustomStarterAutoConfiguration.class
 com\interview\debug\interceptor\Scenario84LoggingInterceptor.class
 com\interview\debug\model\Scenario75User.class
+com\interview\debug\model\Scenario98Car$Scenario98CarBuilderImpl.class
 com\interview\debug\controller\Scenario54Controller.class
 com\interview\debug\model\Scenario2PrototypeBean.class
 com\interview\debug\controller\Scenario78Controller.class
@@ -212,6 +223,7 @@ com\interview\debug\scope\PrototypeBean.class
 com\interview\debug\controller\Scenario53AuthFlowController.class
 com\interview\debug\model\Scenario89Course.class
 com\interview\debug\controller\Scenario62Controller.class
+com\interview\debug\model\Scenario97Company.class
 com\interview\debug\repository\OrderRepository.class
 com\interview\debug\model\Scenario89Enrollment.class
 com\interview\debug\service\MdcTracingService.class
@@ -227,6 +239,7 @@ com\interview\debug\filter\JwtAuthenticationFilter.class
 com\interview\debug\repository\Scenario81ProductRepository.class
 com\interview\debug\config\ReadWriteRoutingDataSource.class
 com\interview\debug\controller\Scenario20Controller.class
+com\interview\debug\repository\Scenario97WarehouseRepository.class
 com\interview\debug\service\IdempotencyService.class
 com\interview\debug\model\Scenario94Auto.class
 com\interview\debug\model\Scenario87Address.class
@@ -235,6 +248,7 @@ com\interview\debug\controller\Scenario23Controller.class
 com\interview\debug\controller\Scenario26Controller.class
 com\interview\debug\config\Scenario92DataSourceConfig.class
 com\interview\debug\model\Scenario94Sequence$Scenario94SequenceBuilder.class
+com\interview\debug\model\Scenario98Vehicle.class
 com\interview\debug\config\MultiTenantRoutingDataSource.class
 com\interview\debug\controller\Scenario14Controller.class
 com\interview\debug\controller\Scenario29Controller.class
@@ -243,6 +257,7 @@ com\interview\debug\scheduler\Scenario33Scheduler.class
 com\interview\debug\controller\Scenario17Controller.class
 com\interview\debug\service\DevMessageService.class
 com\interview\debug\controller\Scenario11Controller.class
+com\interview\debug\repository\Scenario97CompanyRepository.class
 com\interview\debug\config\SecuritySettings$Encryption.class
 com\interview\debug\aspect\PerformanceTrackerAspect.class
 com\interview\debug\controller\Scenario74Controller.class
@@ -282,6 +297,7 @@ com\interview\debug\config\AppConfigProps.class
 com\interview\debug\repository\Scenario83DocumentRepository.class
 com\interview\debug\controller\Scenario92Controller.class
 com\interview\debug\config\AsyncConfig.class
+com\interview\debug\controller\Scenario98Controller.class
 com\interview\debug\model\ProjectData.class
 com\interview\debug\model\Scenario94TableEntity.class
 com\interview\debug\repository\Scenario75UserRepository.class

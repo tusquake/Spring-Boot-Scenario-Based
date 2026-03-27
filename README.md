@@ -97,6 +97,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **95** | [DTO Projections](file:///documentation/Scenario95/README.md) | Interface vs Class Projections, Open/Closed |
 | **96** | [Startup Env Validation](file:///documentation/Scenario96/README.md) | Custom @ValidateEnv, Fail-Fast Architecture |
 | **97** | [JPA Embeddables](file:///documentation/Scenario97/README.md) | @Embeddable, @Embedded, @AttributeOverrides |
+| **98** | [JPA Inheritance](file:///documentation/Scenario98/README.md) | Single Table, @DiscriminatorColumn, Polymorphism |
 
 ---
 
