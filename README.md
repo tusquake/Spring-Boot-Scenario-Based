@@ -102,7 +102,14 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 
 ---
 
-## 🛠️ How to Run
+## 🛠️ Best Practices & Architecture
+Beyond coding scenarios, we also maintain documentation on high-level Spring Boot design:
+
+- 🚀 **[Spring Boot Anti-Patterns](file:///documentation/AntiPatterns/README.md)**: Common pitfalls and how to avoid them (Field Injection, God Services, Proxy issues, N+1, etc.).
+
+---
+
+## 🏗️ How to Run
 1.  **Clone** the repository.
 2.  **Start the app**: `mvn spring-boot:run`
 3.  **Explore**: Each scenario has its own endpoint at `/api/scenarioXX/...`.
