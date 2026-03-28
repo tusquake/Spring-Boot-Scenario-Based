@@ -1,75 +1,131 @@
 # Scenario 96: Startup Environment Validation (env-validator)
 
-## Overview
-How do you ensure that your application doesn't start if it's missing critical configuration?
-
-Hard-coding secrets is a security risk, but relying on environment variables that might be missing at runtime is an operational risk. **Scenario 96** demonstrates how to use the `env-validator` library to enforce a "Fail-Fast" architecture.
+This scenario demonstrates the use of the `env-validator` library to implement a "Fail-Fast" startup architecture.
 
 ---
 
-## 🚀 The library: `env-validator`
+# env-validator (v1.2.0)
 
-The `env-validator` library (created by @tusquake) provides a declarative way to validate environment variables during the Spring Boot startup sequence.
+A lightweight Java/Spring Boot library designed to validate required environment variables and application properties at startup. This library ensures that your application fails fast and provides clear, actionable feedback if the runtime environment is incorrectly configured.
 
-### Key Annotations:
-1.  **`@EnableEnvValidation`**: Activates the validation engine.
-2.  **`@ValidateEnv`**: Defines the validation rules (existence, regex patterns, defaults).
+![env-validator image](https://github.com/user-attachments/assets/f305f4cf-fb62-4772-be5a-6dfb9e0a5fbe)
 
 ---
 
-## 🏗️ Implementation Details
+## Why env-validator? (vs. Native Spring)
 
-In this scenario, we use two separate configuration classes to demonstrate how `env-validator` aggregates errors from across the entire application.
+A common question is: "Doesn't Spring already fail if a variable is missing?" 
 
-### Class 1: `Scenario96Config`
-- **`SCENARIO96_API_KEY`**: Mandatory existence check.
-- **`SCENARIO96_EXTERNAL_URL`**: Must match `^https://.*`.
+The answer is yes, but only partially. env-validator provides several architectural advantages for production systems:
 
-### Class 2: `Scenario96SecondaryConfig`
-- **`SCENARIO96_DB_PASS`**: Mandatory existence check.
-- **`SCENARIO96_EMAIL`**: Must match email regex.
-
----
-
-## 🆚 `env-validator` vs. Native Spring
-
-| Feature | Native Spring Boot | `env-validator` |
+| Feature | Native Spring Boot | env-validator |
 | :--- | :--- | :--- |
-| **Fail-Fast** | Fails on the FIRST missing variable and stops. | Collects ALL missing variables across all classes and reports them together. |
-| **Error Message** | Generic `BeanCreationException`. | Custom `MissingEnvException` with a formatted list of all violations. |
-| **Regex Support** | None out-of-the-box for `@Value`. | Built-in regex validation for any variable. |
+| **Error Collection** | Fails on the first missing variable. You fix it, restart, and find another one is missing. | Scans all configurations and lists ALL missing variables in one single error report. |
+| **Regex Validation** | Only checks existence. Cannot verify if a string is a valid email, URL, or UUID. | Built-in Regex support to ensure the quality of the data, not just its existence. |
+| **Declarative Contract** | Secrets are often hidden in @Value expressions deep inside service classes. | Creates a clear contract at the top of your @Configuration classes, making requirements visible. |
+| **Optional Defaults** | If you use a default value syntax, Spring won't fail, even if the app requires a real value. | You can mark variables as required even if they have default strings in Spring's properties. |
+| **External Libraries** | Doesn't validate variables used by 3rd party libs that call System.getenv() directly. | Validates any key in the Environment, regardless of where it is used in the code. |
 
 ---
 
-## 🧪 Testing the "Full Report" Behavior
-
-1.  **Preparation**: Ensure all 4 variables (`SCENARIO96_API_KEY`, `SCENARIO96_EXTERNAL_URL`, `SCENARIO96_DB_PASS`, `SCENARIO96_EMAIL`) are missing from your environment.
-2.  **Run the App**: Start the Spring Boot application.
-3.  **The Result**: Instead of failing once for many times, the `env-validator` will output a single exception containing a list of **all 4 violations**.
+## Features
+- **Annotation-based Validation**: Declaratively mark requirements using @ValidateEnv.
+- **Plug-and-play Integration**: Enable the entire validation suite with a single @EnableEnvValidation annotation.
+- **Regex Pattern Support**: Validate formats for emails, database URLs, and other string-based configurations.
+- **Default Value Handling**: Provide fallbacks while still logging information about missing variables.
+- **Support for Class and Field Levels**: Apply validation to an entire configuration class or specific fields.
+- **Lightweight**: Zero heavy dependencies beyond the core Spring context and SLF4J.
 
 ---
 
-## 🧪 Testing the Fail-Fast Behavior
+## Project Structure
+The library is organized into the following modules:
+- **annotation**: Contains @ValidateEnv and @EnableEnvValidation.
+- **core**: The heart of the library, including the ValidationEngine.
+- **exception**: Custom exception handling for formatted error reporting.
+- **spring**: Spring-specific integration including the ApplicationRunner and Configuration beans.
+- **util**: Internal utilities for property resolution.
 
-### 1. Test Failure (Missing API Key)
-Run the application without setting `SCENARIO96_API_KEY`.
-The application will throw a `MissingEnvException` and terminate immediately with a clear report of all missing variables.
+---
 
-### 2. Test Success
-Set the following environment variables:
-- `SCENARIO96_API_KEY=my-secret-key`
-- `SCENARIO96_EXTERNAL_URL=https://prod.api.com`
+## Installation (Maven)
 
-Then call the verification endpoint:
-```bash
-curl -X GET "http://localhost:8080/debug-application/api/scenario96/config"
+Add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.tusquake</groupId>
+    <artifactId>env-validator</artifactId>
+    <version>1.2.0</version>
+</dependency>
 ```
+
+---
+
+## Usage in this Project (Scenario 96)
+
+In this project, we demonstrate validation across two separate classes:
+
+### 1. Enable Validation
+Validation is enabled in `Scenario96Config.java` or via the main application class.
+
+### 2. Implementation Classes
+- **`Scenario96Config.java`**: Validates mandatory `SCENARIO96_API_KEY` and URL pattern for `SCENARIO96_EXTERNAL_URL`.
+- **`Scenario96SecondaryConfig.java`**: Validates `SCENARIO96_DB_PASS` and email pattern for `SCENARIO96_EMAIL`.
+
+---
+
+## Technical Implementation Details
+The library works by hooking into the Spring Application Life Cycle:
+1. **Importing Configuration**: The @EnableEnvValidation annotation uses @Import to register the EnvValidationConfig bean.
+2. **Context Scanning**: The EnvValidationRunner (which implements ApplicationRunner) is executed immediately after the ApplicationContext is refreshed.
+3. **Reflection-based Inspection**: The runner identifies all beans annotated with @ValidateEnv.
+4. **Validation Execution**: The ValidationEngine resolves property values via Spring's Environment, checks them against the specified rules (existence, regex, defaults), and collects any violations.
+5. **Fail-Fast**: If any violations are found, a MissingEnvException is thrown, preventing the application from continuing in an invalid state.
+
+---
+
+## 🚀 Deployment to Maven Central
+
+This library is published to Maven Central. Here is a summary of the deployment process used:
+
+1. **Namespace Verification**: Verified `io.github.tusquake` via a DNS-like check using a GitHub repository.
+2. **GPG Signing**: All artifacts are signed using GPG to ensure integrity.
+3. **Central Portal**: Used the modern [Sonatype Central Portal](https://central.sonatype.com/) with the `central-publishing-maven-plugin`.
+
+### Lessons Learned & Common Pitfalls
+
+While setting up this project, we encountered several challenges that can help you avoid similar mistakes:
+
+- **Namespace Restrictions**: Maven Central **does not allow** `com.example` or `org.example`. You must use a domain or GitHub account you own (e.g., `io.github.username`).
+- **GPG Home Directory**: On Windows/Git Bash, Maven may look for GPG keys in the wrong directory (often `/c/Users/user/.gnupg`). Always verify where your keys are stored using `gpg --list-secret-keys` and specify the `executable` path in your `pom.xml` if necessary.
+- **Spring Proxies & Annotations**: When using Spring `@Configuration` classes, Spring creates CGLIB proxies. Standard Java reflection (`clazz.isAnnotationPresent`) might fail on these proxies. We updated the `ValidationEngine` to unwrap these proxies and check the superclass for annotations.
+- **Nested Classes as Beans**: In Spring Boot, static nested classes (like `AppConfig` inside `DemoApplication`) are not always automatically detected as beans. Adding `@Component` ensures they are picked up by the validation runner.
+
+---
+
+## Version History
+
+- **v1.2.0 (Current)**: 
+    - Added support for **Repeatable Annotations** (use `@ValidateEnv` multiple times on one class).
+    - Refactored engine to collect **all errors globally** from all classes before failing.
+    - Added **Bean Name context** to error messages for better traceability.
+- **v1.1.0**: 
+    - Initial stable release with support for Class-level and Field-level validation.
+    - Added Regex pattern support and Default Value fallbacks.
+    - Published to Maven Central with GPG signing.
+
+---
+
+## Testing
+The project includes a suite of JUnit 5 tests. You can run them using:
+```bash
+mvn test
+```
+The tests verify success scenarios, missing variable failures, regex mismatches, and field-level validation across different configuration patterns.
 
 ---
 
 ## Interview Tip 💡
 **Q**: *"Why validate at startup instead of just failing when the variable is first used?"*  
-**A**: *"Failing at startup (Fail-Fast) is much safer for production. It prevents the application from entering a 'partial' or 'zombie' state where some features work but others fail subtly 2 hours later when a specific service is called. It ensures that if the environment isn't ready, the app doesn't launch."*
-
-**Q**: *"What is the benefit of collecting all errors at once?"*  
-**A**: *"Standard Spring `@Value` injection fails on the very first missing property. If you have 10 missing properties, you would have to restart the app 10 times to find them all. `env-validator` scans the entire context and gives you the full list in one go."*
+**A**: *"Failing at startup (Fail-Fast) is much safer for production. It prevents the application from entering a 'partial' or 'zombie' state where some features work but others fail subtly 2 hours later when a specific service is called."*
