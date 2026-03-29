@@ -92,7 +92,10 @@ public class SecurityConfig {
                                 "/api/scenario88/**", "/api/scenario89/**", "/api/scenario2/**", "/api/scenario3/**",
                                 "/api/scenario4/**", "/api/scenario38/**", "/api/scenario20/**", "/api/scenario34/**",
                                 "/api/scenario90/**", "/api/scenario91/**", "/api/scenario93/**", "/api/scenario94/**",
-                                "/api/scenario95/**", "/api/scenario96/**", "/api/scenario97/**", "/api/scenario98/**", "/api/scenario99/**",
+                                "/api/scenario95/**", "/api/scenario96/**", "/api/scenario97/**", "/api/scenario98/**",
+                                "/api/scenario99/**",
+                                "/api/scenario100/**",
+                                "/api/scenario101/**",
                                 "/actuator/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**") // Ignore CSRF for demo
@@ -154,7 +157,7 @@ public class SecurityConfig {
                                 "/api/scenario2/**", "/api/scenario3/**", "/api/scenario4/**", "/api/scenario38/**",
                                 "/api/scenario20/**", "/api/scenario34/**", "/api/scenario90/**", "/api/scenario91/**",
                                 "/api/scenario93/**", "/api/scenario94/**", "/api/scenario95/**", "/api/scenario96/**",
-                                "/api/scenario97/**", "/api/scenario98/**", "/api/scenario99/**")
+                                "/api/scenario97/**", "/api/scenario98/**", "/api/scenario99/**", "/api/scenario100/**")
                         .permitAll()
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/actuator/health", "/actuator/info", "/actuator/metrics",

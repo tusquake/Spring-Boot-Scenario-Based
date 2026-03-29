@@ -99,6 +99,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **97** | [JPA Embeddables](file:///documentation/Scenario97/README.md) | @Embeddable, @Embedded, @AttributeOverrides |
 | **98** | [JPA Inheritance](file:///documentation/Scenario98/README.md) | Single Table, @DiscriminatorColumn, Polymorphism |
 | **99** | [JPA Composite Keys](file:///documentation/Scenario99/README.md) | @EmbeddedId, @FieldDefaults, Serializable |
+| **100** | [JSON Column Mapping](file:///documentation/Scenario100/README.md) | Hibernate 6, @JdbcTypeCode, SqlTypes.JSON |
+| **101** | [Declarative HTTP Clients](file:///documentation/Scenario101/README.md) | Spring 6, @HttpExchange, RestClient |
 
 ---
 
