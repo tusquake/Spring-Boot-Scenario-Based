@@ -107,7 +107,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **105** | [Conversational Memory](file:///documentation/Scenario105/README.md) | ChatMemory, Session-based history |
 | **106** | [RAG: Knowledge Retrieval](file:///documentation/Scenario106/README.md) | Vector Stores, Embeddings, Document ETL |
 | **107** | [AI Function Calling](file:///documentation/Scenario107/README.md) | Tools, @Description, java.util.Function |
-| **108** | [AI Observability](file:///documentation/Scenario108/README.md) | Token Tracking, Actuator Metrics, Redaction |
+| **108** | [AI Observability](file:///documentation/Scenario108/README.md) | Metrics, Token Tracking, Actuator, Redaction |
 
 ---
 
