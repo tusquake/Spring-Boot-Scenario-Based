@@ -1,0 +1,19 @@
+# Scenario Hub: Official Company Policy (2026)
+
+## Office Schedule
+1.  **Work Hours**: 9:00 AM to 6:00 PM (Monday to Thursday).
+2.  **Alternate Fridays**: The office is closed on alternate Fridays for "Deep Coding" days.
+3.  **Lunch Break**: There is a mandatory 1-hour lunch break at 1:00 PM. No coding is allowed during this time to prevent burnout.
+
+## Benefits
+1.  **Unlimited Coffee**: We provide free, premium coffee from Ethiopia.
+2.  **Pet Policy**: Dogs ARE allowed in the office on Tuesdays and Thursdays. Cats are strictly prohibited due to the "Mouse Tracking" incident of 2024.
+
+## Vacation
+Employees get 25 days of paid vacation per year.
+
+## Deep Coding Days
+Deep Coding Days happen on alternate Fridays. During these days:
+-   No Slack or Teams messages are allowed.
+-   No meetings can be scheduled.
+-   The office is closed, and everyone works from home in their pajamas.
