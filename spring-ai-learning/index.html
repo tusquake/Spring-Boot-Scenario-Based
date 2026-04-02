@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <pre id="out"></pre>
+  <script>
+    const out = document.getElementById('out');
+    fetch('http://localhost:8081/spring-ai/api/scenario102/stream?prompt=Explain%20Spring%20AI')
+      .then(resp => {
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        function read() {
+          reader.read().then(({done, value}) => {
+            if (done) return;
+            out.textContent += decoder.decode(value, {stream:true});
+            read();               // keep reading the next chunk
+          });
+        }
+        read();
+      });
+  </script>
+</body>
+</html>
