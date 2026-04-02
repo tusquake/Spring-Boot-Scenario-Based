@@ -58,5 +58,9 @@ When you call `/api/scenario102/ask?prompt=Test`, the request flows like this:
 ## 🌟 Concept Mastery: Prompting
 At its simplest, **Prompting** is just sending a string of text. In later scenarios, we will move from "Dynamic Strings" to **Prompt Templates**, where we can structure the AI's personality and instructions.
 
+> [!TIP]
+> **Token Management**: Always set a limit for the AI's output tokens. This prevents the model from being overly verbose, saves on your "token budget," and prevents timeouts. You can set this globally in `application.properties` using:
+> `spring.ai.google.genai.chat.options.max-output-tokens=500`
+
 > [!NOTE]
 > This is a **Sync** call. The application waits while the AI generates a response. In advanced scenarios, we can use **Streaming** for a real-time experience!
