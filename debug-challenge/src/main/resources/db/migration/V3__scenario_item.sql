@@ -1,0 +1,11 @@
+CREATE TABLE scenario_item (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    price DOUBLE,
+    active BOOLEAN
+);
+
+INSERT INTO scenario_item (name, price, active) VALUES ('Laptop', 1000.0, true);
+INSERT INTO scenario_item (name, price, active) VALUES ('Mouse', 50.0, true);
+INSERT INTO scenario_item (name, price, active) VALUES ('Keyboard', 80.0, true);
+INSERT INTO scenario_item (name, price, active) VALUES ('Old Monitor', 100.0, false);
