@@ -108,6 +108,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **106** | [RAG: Knowledge Retrieval](file:///documentation/Scenario106/README.md) | Vector Stores, Embeddings, Document ETL |
 | **107** | [AI Function Calling](file:///documentation/Scenario107/README.md) | Tools, @Description, java.util.Function |
 | **108** | [AI Observability](file:///documentation/Scenario108/README.md) | Metrics, Token Tracking, Actuator, Redaction |
+| **110** | [Jackson Properties](file:///documentation/Scenario110/README.md) | @JsonProperty, @JsonIgnore, @JsonInclude, @JsonFormat |
 
 ---
 
