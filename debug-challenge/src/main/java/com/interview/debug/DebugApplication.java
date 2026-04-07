@@ -14,7 +14,6 @@ import io.github.tusquake.envvalidator.annotation.EnableEnvValidation;
 
 import org.springframework.retry.annotation.EnableRetry;
 import org.springdoc.core.models.GroupedOpenApi;
-
 @EnableRetry
 @EnableScheduling
 @EnableAsync
