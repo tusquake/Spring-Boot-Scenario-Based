@@ -111,6 +111,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **110** | [Jackson Properties](file:///documentation/Scenario110/README.md) | @JsonProperty, @JsonIgnore, @JsonInclude, @JsonFormat |
 | **111** | [External API Clients](file:///documentation/Scenario111/README.md) | RestTemplate, WebClient, RestClient, Feign, @HttpExchange |
 | **112** | [Asynchronous Masterclass](file:///documentation/Scenario112/README.md) | @Async, CompletableFuture, DeferredResult, Async Events |
+| **113** | [Spring Data REST](file:///documentation/Scenario113/README.md) | HATEOAS, HAL, Projections, @RepositoryRestResource |
 
 ---
 

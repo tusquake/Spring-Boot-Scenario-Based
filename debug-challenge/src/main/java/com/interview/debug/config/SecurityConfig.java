@@ -98,7 +98,8 @@ public class SecurityConfig {
                                 "/api/scenario101/**",
                                 "/actuator/**",
                                 "/v3/api-docs/**",
-                                "/swagger-ui/**") // Ignore CSRF for demo
+                                "/swagger-ui/**",
+                                "/data-api/**") // Ignore CSRF for Scenario 113
                 )
                 .exceptionHandling(exceptions -> exceptions
                         .authenticationEntryPoint(authenticationEntryPoint)
