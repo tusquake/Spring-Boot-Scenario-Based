@@ -115,6 +115,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **114** | [Remember Me Auth](file:///documentation/Scenario114/README.md) | Persistent Token Repository, Series/Token theft detection |
 | **115** | [@ModelAttribute](file:///documentation/Scenario115/README.md) | Form binding, Model population, Pre-population methods |
 | **116** | [@Order & Ordered](file:///documentation/Scenario116/README.md) | Bean injection order, Filter chain precedence, Priority rules |
+| **117** | [Jackson Polymorphism](file:///documentation/Scenario117/README.md) | Inheritance in JSON, @JsonTypeInfo, @JsonSubTypes |
 
 ---
 
