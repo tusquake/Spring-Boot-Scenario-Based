@@ -113,6 +113,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **112** | [Asynchronous Masterclass](file:///documentation/Scenario112/README.md) | @Async, CompletableFuture, DeferredResult, Async Events |
 | **113** | [Spring Data REST](file:///documentation/Scenario113/README.md) | HATEOAS, HAL, Projections, @RepositoryRestResource |
 | **114** | [Remember Me Auth](file:///documentation/Scenario114/README.md) | Persistent Token Repository, Series/Token theft detection |
+| **115** | [@ModelAttribute](file:///documentation/Scenario115/README.md) | Form binding, Model population, Pre-population methods |
+| **116** | [@Order & Ordered](file:///documentation/Scenario116/README.md) | Bean injection order, Filter chain precedence, Priority rules |
 
 ---
 
