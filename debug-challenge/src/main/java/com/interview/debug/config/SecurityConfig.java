@@ -123,6 +123,7 @@ public class SecurityConfig {
                                                                 "/api/scenario114/**", // Ignore CSRF for Scenario 114
                                                                                        // login demo
                                                                 "/api/scenario117/**", // Ignore CSRF for Scenario 117
+                                                                "/api/scenario118/**", // Ignore CSRF for Scenario 118
                                                                 "/data-api/**") // Ignore CSRF for Scenario 113
                                 )
                                 .exceptionHandling(exceptions -> exceptions
