@@ -118,6 +118,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **117** | [Jackson Polymorphism](file:///documentation/Scenario117/README.md) | Inheritance in JSON, @JsonTypeInfo, @JsonSubTypes |
 | **118** | [Unit vs Integration Testing](file:///documentation/Scenario118/README.md) | @SpringBootTest vs @WebMvcTest, Testing Layers |
 | **119** | [MockMvc Deep Dive](file:///documentation/Scenario119/README.md) | Controller Testing, JsonPath, Headers, Params |
+| **120** | [Service Layer Testing](file:///documentation/Scenario120/README.md) | Mockito, BDD Style, ArgumentCaptor, Interactions |
 
 ---
 
