@@ -31,7 +31,7 @@ public class Scenario92DataSourceConfig {
     public DataSource replicaDataSource() {
         HikariDataSource dataSource = new HikariDataSource();
         dataSource.setDriverClassName("org.h2.Driver");
-        dataSource.setJdbcUrl("jdbc:h2:mem:scenario92db_replica;DB_CLOSE_DELAY=-1");
+        dataSource.setJdbcUrl("jdbc:h2:mem:scenario92db;DB_CLOSE_DELAY=-1");
         dataSource.setUsername("sa");
         dataSource.setPassword("");
         dataSource.setPoolName("ReplicaPool");// For identification

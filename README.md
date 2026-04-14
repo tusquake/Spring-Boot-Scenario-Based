@@ -119,6 +119,12 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **118** | [Unit vs Integration Testing](file:///documentation/Scenario118/README.md) | @SpringBootTest vs @WebMvcTest, Testing Layers |
 | **119** | [MockMvc Deep Dive](file:///documentation/Scenario119/README.md) | Controller Testing, JsonPath, Headers, Params |
 | **120** | [Service Layer Testing](file:///documentation/Scenario120/README.md) | Mockito, BDD Style, ArgumentCaptor, Interactions |
+| **121** | [Testcontainers (Database Integration Testing)](file:///documentation/Scenario121/README.md) | Testcontainers, PostgreSQL, Integration Tests |
+| **122** | [HikariCP Connection Pool Tuning](file:///documentation/Scenario122/README.md) | HikariCP, Max Pool Size, Idle Timeout, Monitoring |
+| **123** | [Thread Dump Analysis (Debugging Deadlocks)](file:///documentation/Scenario123/README.md) | Thread Dumps, Deadlocks, jstack, VisualVM |
+| **124** | [Memory Leak Detection in Spring Boot](file:///documentation/Scenario124/README.md) | Heap Dumps, MAT, Leak Suspects, Static references |
+| **125** | [Lazy vs Eager Loading (The N+1 Problem)](file:///documentation/Scenario125/README.md) | @OneToMany, FetchType, JOIN FETCH, EntityGraph |
+| **126** | [Cache Stampede Problem & Prevention](file:///documentation/Scenario126/README.md) | @Cacheable(sync=true), Dog-piling, Database Load |
 
 ---
 
