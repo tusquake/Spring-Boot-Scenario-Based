@@ -64,6 +64,17 @@ public class Scenario92DataSourceConfig {
                     "action VARCHAR(255), " +
                     "status VARCHAR(255), " +
                     "detail VARCHAR(255))");
+            
+            // Scenario 125 Tables
+            statement.execute("CREATE TABLE IF NOT EXISTS scenario125_authors (" +
+                    "id BIGINT AUTO_INCREMENT PRIMARY KEY, " +
+                    "name VARCHAR(255))");
+            
+            statement.execute("CREATE TABLE IF NOT EXISTS scenario125_books (" +
+                    "id BIGINT AUTO_INCREMENT PRIMARY KEY, " +
+                    "title VARCHAR(255), " +
+                    "author_id BIGINT, " +
+                    "FOREIGN KEY (author_id) REFERENCES scenario125_authors(id))");
         } catch (Exception e) {
             // It might fail if the table already exist in another way, but IF NOT EXISTS handles it usually.
         }
