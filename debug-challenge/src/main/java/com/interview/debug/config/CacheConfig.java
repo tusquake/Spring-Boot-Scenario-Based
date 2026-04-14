@@ -6,6 +6,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -19,12 +20,33 @@ public class CacheConfig {
 
     // DEFAULT/LOCAL PROFILE: Use Caffeine
     @Bean
+    @Primary
     @Profile("!prod")
     public CacheManager caffeineCacheManager() {
         CaffeineCacheManager cacheManager = new CaffeineCacheManager();
         cacheManager.setCaffeine(Caffeine.newBuilder()
                 .expireAfterWrite(Duration.ofMinutes(10)) // TTL: 10 mins
                 .maximumSize(1000) // LRU: Keeps only last 1000 items
+                .recordStats());
+        return cacheManager;
+    }
+
+    // SPECIALIZED MANAGER FOR SCENARIO 128: 10s TTL
+    @Bean
+    public CacheManager scenario128TtlCacheManager() {
+        CaffeineCacheManager cacheManager = new CaffeineCacheManager();
+        cacheManager.setCaffeine(Caffeine.newBuilder()
+                .expireAfterWrite(Duration.ofSeconds(10)) 
+                .recordStats());
+        return cacheManager;
+    }
+
+    // SPECIALIZED MANAGER FOR SCENARIO 128: Max Size 2
+    @Bean
+    public CacheManager scenario128SizeCacheManager() {
+        CaffeineCacheManager cacheManager = new CaffeineCacheManager();
+        cacheManager.setCaffeine(Caffeine.newBuilder()
+                .maximumSize(2)
                 .recordStats());
         return cacheManager;
     }

@@ -126,6 +126,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **125** | [Lazy vs Eager Loading (The N+1 Problem)](file:///documentation/Scenario125/README.md) | @OneToMany, FetchType, JOIN FETCH, EntityGraph |
 | **126** | [Cache Stampede Problem & Prevention](file:///documentation/Scenario126/README.md) | @Cacheable(sync=true), Dog-piling, Database Load |
 | **127** | [Caching Strategies (Aside, Through, Behind)](file:///documentation/Scenario127/README.md) | Cache Aside, Write Through, Write Behind, @Async |
+| **128** | [In-Memory Caching with Caffeine](file:///documentation/Scenario128/README.md) | Caffeine, TTL, Size-based Eviction, Cache Stats |
 
 ---
 
