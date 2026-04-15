@@ -120,6 +120,7 @@ public class SecurityConfig {
                                                                 "/api/scenario126/**",
                                                                 "/api/scenario127/**",
                                                                 "/api/scenario128/**",
+                                                                "/api/scenario129/**",
                                                                 "/actuator/**",
                                                                 "/v3/api-docs/**",
                                                                 "/swagger-ui/**",
@@ -202,7 +203,8 @@ public class SecurityConfig {
                                                                 "/api/scenario99/**", "/api/scenario100/**",
                                                                 "/api/scenario126/**",
                                                                 "/api/scenario127/**",
-                                                                "/api/scenario128/**")
+                                                                "/api/scenario128/**",
+                                                                "/api/scenario129/**")
                                                 .permitAll()
                                                 .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                                                 .requestMatchers("/actuator/health", "/actuator/info",

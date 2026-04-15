@@ -127,6 +127,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **126** | [Cache Stampede Problem & Prevention](file:///documentation/Scenario126/README.md) | @Cacheable(sync=true), Dog-piling, Database Load |
 | **127** | [Caching Strategies (Aside, Through, Behind)](file:///documentation/Scenario127/README.md) | Cache Aside, Write Through, Write Behind, @Async |
 | **128** | [In-Memory Caching with Caffeine](file:///documentation/Scenario128/README.md) | Caffeine, TTL, Size-based Eviction, Cache Stats |
+| **129** | [Transaction Isolation Levels](file:///documentation/Scenario129/README.md) | Dirty/Phantom Reads, @Transactional, MVCC, Isolation Levels |
 
 ---
 
