@@ -282,4 +282,17 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>arch-check</id>
+			<dependencies>
+				<dependency>
+					<groupId>com.tngtech.archunit</groupId>
+					<artifactId>archunit-junit5</artifactId>
+					<version>1.2.1</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 </project>

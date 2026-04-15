@@ -129,6 +129,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **128** | [In-Memory Caching with Caffeine](file:///documentation/Scenario128/README.md) | Caffeine, TTL, Size-based Eviction, Cache Stats |
 | **129** | [Transaction Isolation Levels](file:///documentation/Scenario129/README.md) | Dirty/Phantom Reads, @Transactional, MVCC, Isolation Levels |
 | **130** | [Code Quality (PMD & Checkstyle)](file:///documentation/Scenario130/README.md) | Static Analysis, PMD, Checkstyle, CI/CD Standards |
+| **131** | [Architecture Enforcement (ArchUnit)](file:///documentation/Scenario131/README.md) | Architectural Linting, Layer Isolation, Design Rules |
 
 ---
 
