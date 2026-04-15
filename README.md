@@ -131,6 +131,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **130** | [Code Quality (PMD & Checkstyle)](file:///documentation/Scenario130/README.md) | Static Analysis, PMD, Checkstyle, CI/CD Standards |
 | **131** | [Architecture Enforcement (ArchUnit)](file:///documentation/Scenario131/README.md) | Architectural Linting, Layer Isolation, Design Rules |
 | **132** | [Mutation Testing (PITest)](file:///documentation/Scenario132/README.md) | PITest, Killed vs Survived Mutants, Test Quality |
+| **133** | [Spring Cloud Contract (CDCT)](file:///documentation/Scenario133/README.md) | Consumer Driven Contract Testing, Stubs, Producer/Consumer flow |
 
 ---
 
