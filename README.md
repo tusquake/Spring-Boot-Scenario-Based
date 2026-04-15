@@ -132,6 +132,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **131** | [Architecture Enforcement (ArchUnit)](file:///documentation/Scenario131/README.md) | Architectural Linting, Layer Isolation, Design Rules |
 | **132** | [Mutation Testing (PITest)](file:///documentation/Scenario132/README.md) | PITest, Killed vs Survived Mutants, Test Quality |
 | **133** | [Spring Cloud Contract (CDCT)](file:///documentation/Scenario133/README.md) | Consumer Driven Contract Testing, Stubs, Producer/Consumer flow |
+| **134** | [Environmental Integrity (Maven Enforcer)](file:///documentation/Scenario134/README.md) | Java/Maven Version Locking, Banned Dependencies, Convergence |
+| **135** | [Microbenchmarking (JMH)](file:///documentation/Scenario135/README.md) | Accurate Performance Testing, JVM Warmup, Dead Code Elimination |
 
 ---
 

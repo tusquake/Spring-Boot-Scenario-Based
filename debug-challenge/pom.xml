@@ -27,6 +27,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.checkerframework</groupId>
+                <artifactId>checker-qual</artifactId>
+                <version>3.37.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 	<dependencies>
@@ -320,6 +325,47 @@
 								<param>HTML</param>
 							</outputFormats>
 							<timestampedReports>false</timestampedReports>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>enforce-standards</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-enforcer-plugin</artifactId>
+						<version>3.4.1</version>
+						<executions>
+							<execution>
+								<id>enforce-rules</id>
+								<goals>
+									<goal>enforce</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>[17,)</version>
+									<message>This project requires Java 17 or higher!</message>
+								</requireJavaVersion>
+								<requireMavenVersion>
+									<version>[3.6.3,)</version>
+									<message>This project requires Maven 3.6.3 or higher!</message>
+								</requireMavenVersion>
+								<bannedDependencies>
+									<excludes>
+										<exclude>log4j:log4j</exclude>
+										<exclude>commons-logging:commons-logging</exclude>
+									</excludes>
+									<message>Legacy logging frameworks are banned. Use SLF4j/Logback.</message>
+								</bannedDependencies>
+								<dependencyConvergence/>
+							</rules>
+							<fail>true</fail>
 						</configuration>
 					</plugin>
 				</plugins>
