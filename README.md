@@ -134,6 +134,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **133** | [Spring Cloud Contract (CDCT)](documentation/Scenario133/README.md) | Consumer Driven Contract Testing, Stubs, Producer/Consumer flow |
 | **134** | [Environmental Integrity (Maven Enforcer)](documentation/Scenario134/README.md) | Java/Maven Version Locking, Banned Dependencies, Convergence |
 | **135** | [Microbenchmarking (JMH)](documentation/Scenario135/README.md) | Accurate Performance Testing, JVM Warmup, Dead Code Elimination |
+| **136** | [Database Indexing](documentation/Scenario136/README.md) | B-Tree Indexes, Query Optimization, Full Table Scan vs Index Scan |
 
 ---
 

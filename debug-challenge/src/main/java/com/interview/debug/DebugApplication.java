@@ -20,8 +20,8 @@ import org.springdoc.core.models.GroupedOpenApi;
 @EnableAsync
 @EnableEnvValidation
 @ComponentScan(basePackages = { "com.interview.debug", "com.interview.external.service" })
-@EnableJpaRepositories(basePackages = "com.interview.debug.repository")
-@EntityScan(basePackages = "com.interview.debug.model")
+@EnableJpaRepositories(basePackages = { "com.interview.debug.repository", "com.interview.debug.scenario136" })
+@EntityScan(basePackages = { "com.interview.debug.model", "com.interview.debug.scenario136" })
 public class DebugApplication {
     public static void main(String[] args) {
         SpringApplication.run(DebugApplication.class, args);

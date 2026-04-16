@@ -118,6 +118,7 @@ public class SecurityConfig {
                                                                 "/api/scenario100/**",
                                                                 "/api/scenario101/**",
                                                                 "/api/scenario126/**",
+                                                                "/api/scenario136/**",
                                                                 "/api/scenario127/**",
                                                                 "/api/scenario128/**",
                                                                 "/api/scenario129/**",
@@ -202,6 +203,7 @@ public class SecurityConfig {
                                                                 "/api/scenario97/**", "/api/scenario98/**",
                                                                 "/api/scenario99/**", "/api/scenario100/**",
                                                                 "/api/scenario126/**",
+                                                                "/api/scenario136/**",
                                                                 "/api/scenario127/**",
                                                                 "/api/scenario128/**",
                                                                 "/api/scenario129/**")
