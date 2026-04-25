@@ -26,6 +26,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **16** | [Profiles & Config](documentation/Scenario16/README.md) | `@Profile`, Conditional Beans |
 | **17** | [AOP Introduction](documentation/Scenario17/README.md) | Aspect, Pointcuts, Advices |
 | **18** | [Transaction Propagation](documentation/Scenario18/README.md) | `REQUIRED`, `REQUIRES_NEW`, Rollback rules |
+| **19** | [API Version Lifecycle](documentation/Scenario19/README.md) | Current, Deprecated, Sunset, Removed (410 Gone) |
 | **20** | [Custom @PropertySource](documentation/Scenario20/README.md) | Externalized Config, Environment Abstraction |
 | **22** | [Custom Annotations](documentation/Scenario22/README.md) | Creating custom AOP-driven decorators |
 | **23** | [Pagination & Sorting](documentation/Scenario23/README.md) | `Pageable`, `Sort`, HATEOAS basics |
