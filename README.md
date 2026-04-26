@@ -54,6 +54,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **43** | [Websockets/STOMP](documentation/Scenario43/README.md) | Real-time communication |
 | **44** | [Proxying & Final Class](documentation/Scenario44/README.md) | CGLIB vs JDK Dynamic Proxy |
 | **45** | [Circuit Breaker Basics](documentation/Scenario45/README.md) | Resilience4j intro |
+| **46** | [Docker Compose Support](documentation/Scenario46/README.md) | Zero-config Infra, Development Lifecycle, Service Connections |
 | **47** | [Method Security](documentation/Scenario47/README.md) | `@PreAuthorize`, `@PostAuthorize` |
 | **48** | [OAuth2 Client Flow](documentation/Scenario48/README.md) | Social Login integration |
 | **49** | [Resource Server](documentation/Scenario49/README.md) | Serving protected resources |
