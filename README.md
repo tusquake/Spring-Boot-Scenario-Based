@@ -58,7 +58,8 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **47** | [Method Security](documentation/Scenario47/README.md) | `@PreAuthorize`, `@PostAuthorize` |
 | **48** | [OAuth2 Client Flow](documentation/Scenario48/README.md) | Social Login integration |
 | **49** | [Resource Server](documentation/Scenario49/README.md) | Serving protected resources |
-| **51** | [SSL/TLS (HTTPS)](documentation/Scenario51/README.md) | Keystores, Truststores |
+| **50** | [GraphQL Basics](documentation/Scenario50/README.md) | Schema, QueryMapping, Over-fetching prevention |
+| **51** | [Spring WebFlux Basics](documentation/Scenario51/README.md) | Mono, Flux, Non-blocking I/O |
 | **52** | [CSRF Protection](documentation/Scenario52/README.md) | Tokens, Cookies, SameSite |
 | **53** | [Authentication Flow](documentation/Scenario53/README.md) | ProviderManager, AuthProvider |
 | **54** | [UserDetailsService](documentation/Scenario54/README.md) | Custom User loading logic |

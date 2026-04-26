@@ -1,0 +1,27 @@
+type Query {
+    projectById(id: ID!): Project
+    allProjects: [Project]
+}
+
+type Mutation {
+    addProject(input: ProjectInput!): Project
+}
+
+type Project {
+    id: ID
+    name: String
+    description: String
+    status: String
+    members: [ProjectMember] # This will demonstrate @BatchMapping
+}
+
+type ProjectMember {
+    id: ID
+    name: String
+    role: String
+}
+
+input ProjectInput {
+    name: String!
+    description: String!
+}

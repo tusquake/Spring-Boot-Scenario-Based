@@ -129,6 +129,9 @@ public class SecurityConfig {
                                                                                        // login demo
                                                                 "/api/scenario117/**", // Ignore CSRF for Scenario 117
                                                                 "/api/scenario118/**", // Ignore CSRF for Scenario 118
+                                                                "/graphql/**",         // Ignore CSRF for GraphQL
+                                                                "/graphiql/**",        // Ignore CSRF for GraphiQL
+                                                                "/graphql-ws/**",      // Ignore CSRF for GraphQL WebSocket
                                                                 "/data-api/**") // Ignore CSRF for Scenario 113
                                 )
                                 .exceptionHandling(exceptions -> exceptions

@@ -16,13 +16,12 @@ public class Scenario39Controller {
 
     @GetMapping("/info")
     public Map<String, Object> getThreadInfo() {
-        // return Map.of(
-        // "isVirtual", Thread.currentThread().isVirtual(),
-        // "threadName", Thread.currentThread().toString(),
-        // "propertyEnabled", virtualThreadsEnabled,
-        // "message",
-        // "If isVirtual is false, check if you are running on Java 21+ and have
-        // spring.threads.virtual.enabled=true");
+        return Map.of(
+            "isVirtual", false,
+            "threadName", Thread.currentThread().toString(),
+            "propertyEnabled", virtualThreadsEnabled,
+            "message", "Java 21+ required for Virtual Threads."
+        );
     }
 
     @GetMapping("/blocking")
