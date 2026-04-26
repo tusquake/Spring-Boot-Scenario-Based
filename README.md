@@ -28,6 +28,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **18** | [Transaction Propagation](documentation/Scenario18/README.md) | `REQUIRED`, `REQUIRES_NEW`, Rollback rules |
 | **19** | [API Version Lifecycle](documentation/Scenario19/README.md) | Current, Deprecated, Sunset, Removed (410 Gone) |
 | **20** | [Custom @PropertySource](documentation/Scenario20/README.md) | Externalized Config, Environment Abstraction |
+| **21** | [JPA Specifications](documentation/Scenario21/README.md) | Dynamic Filtering, Criteria API, Type-safe Queries |
 | **22** | [Custom Annotations](documentation/Scenario22/README.md) | Creating custom AOP-driven decorators |
 | **23** | [Pagination & Sorting](documentation/Scenario23/README.md) | `Pageable`, `Sort`, HATEOAS basics |
 | **24** | [Content Negotiation](documentation/Scenario24/README.md) | JSON vs XML, Accept headers |
@@ -37,13 +38,17 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **28** | [Rest Client (WebClient)](documentation/Scenario28/README.md) | Reactive vs RestTemplate |
 | **29** | [Flyway Migrations](documentation/Scenario29/README.md) | Version control for Databases |
 | **30** | [Secondary DB Config](documentation/Scenario30/README.md) | Multiple DataSources |
+| **30B** | [Secondary DB Part 2](documentation/Scenario30B/README.md) | Multi-DB Transaction Management |
 | **31** | [Scheduling Thread Pool](documentation/Scenario31/README.md) | `TaskScheduler` configuration |
 | **32** | [Actuator Customization](documentation/Scenario32/README.md) | Custom `HealthIndicator` |
 | **33** | [Task Scheduling (@Scheduled)](documentation/Scenario33/README.md) | `fixedRate` vs `fixedDelay` |
 | **34** | [Async Return Types](documentation/Scenario34/README.md) | `CompletableFuture`, Parallel Orchestration |
 | **35** | [Filter vs Interceptor](documentation/Scenario35/README.md) | Chain of responsibility, Context access |
 | **36** | [Jackson Customization](documentation/Scenario36/README.md) | `@JsonView`, Custom Serializers |
+| **37** | [Bean Selection Masterclass](documentation/Scenario37/DetailedREADME.md) | `@Primary` vs `@Qualifier` Depth |
 | **38** | [API Versioning Strategies](documentation/Scenario38/README.md) | URI vs Header vs Media Type |
+| **40** | [Feature Toggles](documentation/Scenario40/README.md) | `@ConditionalOnProperty`, Feature Flags |
+| **41** | [jOOQ: Type-Safe SQL](documentation/Scenario41/README.md) | Dynamic Native SQL, Code Generation, SQL DSL |
 | **42** | [Spring Batch Basics](documentation/Scenario42/README.md) | Job, Step, ItemReader |
 | **43** | [Websockets/STOMP](documentation/Scenario43/README.md) | Real-time communication |
 | **44** | [Proxying & Final Class](documentation/Scenario44/README.md) | CGLIB vs JDK Dynamic Proxy |
@@ -136,6 +141,10 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **134** | [Environmental Integrity (Maven Enforcer)](documentation/Scenario134/README.md) | Java/Maven Version Locking, Banned Dependencies, Convergence |
 | **135** | [Microbenchmarking (JMH)](documentation/Scenario135/README.md) | Accurate Performance Testing, JVM Warmup, Dead Code Elimination |
 | **136** | [Database Indexing](documentation/Scenario136/README.md) | B-Tree Indexes, Query Optimization, Full Table Scan vs Index Scan |
+| **137** | [Quartz Scheduler](documentation/Scenario137/DetailedREADME.md) | Persistent Jobs, Clustering, Misfire Logic |
+| **138** | [Session Management (Advanced)](documentation/Scenario138/DetailedREADME.md) | Session Fixation, Concurrent Session Control |
+| **139** | [CSP & Nonces](documentation/Scenario139/DetailedREADME.md) | Content Security Policy, XSS Prevention |
+| **140** | [Security Error Handling](documentation/Scenario140/DetailedREADME.md) | 401 Unauthorized vs 403 Forbidden |
 
 ---
 
