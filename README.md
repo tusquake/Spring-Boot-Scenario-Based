@@ -47,6 +47,7 @@ This repository is a comprehensive guide to Spring Boot and Spring Security inte
 | **36** | [Jackson Customization](documentation/Scenario36/README.md) | `@JsonView`, Custom Serializers |
 | **37** | [Bean Selection Masterclass](documentation/Scenario37/DetailedREADME.md) | `@Primary` vs `@Qualifier` Depth |
 | **38** | [API Versioning Strategies](documentation/Scenario38/README.md) | URI vs Header vs Media Type |
+| **39** | [Virtual Thread](documentation/Scenario39/README.md) | Production reliability, server.shutdown, Timeout phases |
 | **40** | [Feature Toggles](documentation/Scenario40/README.md) | `@ConditionalOnProperty`, Feature Flags |
 | **41** | [jOOQ: Type-Safe SQL](documentation/Scenario41/README.md) | Dynamic Native SQL, Code Generation, SQL DSL |
 | **42** | [Spring Batch Basics](documentation/Scenario42/README.md) | Job, Step, ItemReader |
